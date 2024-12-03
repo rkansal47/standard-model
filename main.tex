@@ -1,0 +1,134 @@
+\documentclass[12pt]{book}
+% mathptmx is a Times Roman look-alike (don't use the times package)
+% It isn't clear if Times is required. The OGS manual lists several
+% "standard fonts" but never says they need to be used.
+% \usepackage{mathptmx}
+% \usepackage[OT1]{fontenc}
+% \renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+
+% \usepackage{fontspec}
+% \setmainfont{Palatino}
+% \newfontfamily\smallcapsfont{Palatino SC}
+% % \newfontfamily\scfont{Georgia}
+% % Save the original \textsc command
+% % \let\originaltextsc\textsc
+% % Redefine \textsc to use the small caps font
+% \renewcommand{\textsc}[1]{{\smallcapsfont{#1}}}
+
+% \setmainfont[
+%     UprightFont = *-Light,   % Specify the Light version of Source Sans Pro
+% ]{SourceSansPro}
+
+\usepackage[sort&compress,numbers]{natbib}
+% \setcitestyle{maxcitenames=6}
+
+\usepackage[NoDate]{currvita}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{ragged2e}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyphenat}       % To provide more control over hyphenation
+\usepackage{xparse}
+\usepackage{pifont}
+\usepackage{nicefrac}
+\usepackage{adjustbox}
+\usepackage{xspace}
+\usepackage{resizegather}
+
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+\setlist[enumerate]{nosep}
+
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{slashed}
+\usepackage{dsfont}
+\usepackage{bbm}
+\usepackage{braket}
+\usepackage{multirow}
+\usepackage{needspace}
+\usepackage[bottom]{footmisc}
+\usepackage{changepage}
+\usepackage{booktabs} 
+\usepackage{titlesec}
+\usepackage{rotating}
+\usepackage{tocloft}
+\usepackage[normalem]{ulem}
+\usepackage{tikz}
+\usepackage[compat=1.1.0]{tikz-feynman}
+\usepackage{simplewick} 
+
+\definecolor{awesome-emerald}{HTML}{00A388}
+\definecolor{awesome-skyblue}{HTML}{0395DE}
+\definecolor{awesome-red}{HTML}{DC3522}
+\definecolor{awesome-pink}{HTML}{EF4089}
+\definecolor{awesome-orange}{HTML}{FF6138}
+\definecolor{awesome-nephritis}{HTML}{27AE60}
+\definecolor{awesome-concrete}{HTML}{95A5A6}
+\definecolor{awesome-darknight}{HTML}{131A28}
+\colorlet{awesomelinks}{awesome-skyblue}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\theoremstyle{definition}
+\newtheorem{example}{Example}[section]
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+
+\numberwithin{equation}{section}
+% \numberwithin{figure}{section}
+% \numberwithin{table}{section}
+
+\usepackage[breaklinks=true,pdfborder={0 0 0}]{hyperref}
+\hypersetup{colorlinks=true,
+            linkcolor=awesomelinks,
+            urlcolor=awesomelinks,
+            citecolor=awesomelinks,}
+
+\usepackage{doi}
+
+% for centered columns with fixed width
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\newcolumntype{C}[1]{>{\PreserveBackslash\centering}p{#1}}
+
+\bibliographystyle{apsrev4-2}
+
+\overfullrule5pt
+% ---
+
+% Required information
+\title{Notes on QFT and the Standard Model}
+\author{Raghav Kansal}
+
+
+
+% Start the document
+\begin{document}
+
+\input{notation.tex}
+\maketitle
+
+{
+\hypersetup{linkcolor=black}
+\tableofcontents
+}
+
+\setlength{\parskip}{0.6\baselineskip}
+
+\input{01-SM.tex}
+\input{01-SM-01-Symmetries.tex}
+\input{01-SM-02-QFT.tex}
+\input{01-SM-03-SM.tex}
+
+\nocite{apsrev42Control}
+\bibliography{bibliography}
+ 
+\end{document}

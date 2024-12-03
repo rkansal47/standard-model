@@ -1,0 +1,164 @@
+% feynman rules for QED
+\begin{enumerate}
+	\item Vertices: \qquad
+	\begin{tikzpicture}[baseline={(current bounding box.center)}]
+		\begin{feynman}[small]
+			\vertex (a) {\(\mu\)};
+			\vertex [right=of a] (b);
+			\vertex [above right=of b] (f1) {\(\alpha\)};
+			\vertex [below right=of b] (f2) {\(\beta\)};
+			\diagram* {
+				(a) -- [boson] (b),
+				(b) -- [fermion] (f1),
+				(b) -- [anti fermion] (f2),
+			};
+		\end{feynman}
+	\end{tikzpicture}
+	$ = -i e \gamma^\mu_{\alpha\beta}$ \\[1em]
+	\item Internal lines (propagators) \\[1em]
+	\qquad\qquad Fermions: \qquad
+	\begin{tikzpicture}[baseline={([yshift=-0.7ex]current bounding box.center)}]
+		\begin{feynman}
+			\vertex (a) {\(\alpha\)};
+			\vertex [right=of a] (b) {\(\beta\)};
+			\diagram* {
+				(a) -- [fermion, edge label={\footnotesize\(q\)}] (b),
+			};
+		\end{feynman}
+	\end{tikzpicture}
+	\quad $\, = \bigg(\cfrac{i(\slashed{q} + m)}{q^2 - M^2 + i\varepsilon}\bigg)_{\alpha\beta}$ 
+    \\[1em]
+    Photons: \qquad \;
+	\begin{tikzpicture}[baseline={([yshift=-0.7ex]current bounding box.center)}]
+		\begin{feynman}
+			\vertex (a) {\(\mu\)};
+			\vertex [right=of a] (b) {\(\nu\)};
+			\diagram* {
+				(a) -- [boson, edge label={\footnotesize\(p\)}] (b),
+			};
+		\end{feynman}
+	\end{tikzpicture}
+	\quad $\, = -i \cfrac{\eta_{\mu\nu}}{p^2 + i\epsilon}$ 
+    \\[1em]
+	\item External lines (on-shell particles)  \\
+    % \\[1.5em]
+    % % \hspace*{-\leftmargini}
+    % \begin{minipage}{0.99\textwidth}
+    \begin{tabbing}
+    Incoming fermions: 
+    \hspace*{1.5cm}
+    \=
+    \begin{tikzpicture}[baseline={([yshift=-0.8ex]current bounding box.center)}]
+        \begin{feynman}
+            \vertex (a) {\(\alpha\)};
+            \vertex [right=of a] (b);
+            \vertex [above right=of b] (f1);
+            \vertex [below right=of b] (f2);
+            \diagram* {
+                (a) -- [fermion, momentum={\footnotesize\(q, s\)}] (b),
+                (b) -- [fermion] (f1),
+                (b) -- [boson] (f2),
+            };
+        \end{feynman}
+    \end{tikzpicture}
+    \hspace*{0.4cm}
+    \=
+    $ = u^s_\alpha(q)$
+    \\[1.5em]
+    Incoming antifermions: 
+    \>
+    \begin{tikzpicture}[baseline={([yshift=-0.8ex]current bounding box.center)}]
+        \begin{feynman}
+            \vertex (a) {\(\alpha\)};
+            \vertex [right=of a] (b);
+            \vertex [above right=of b] (f1);
+            \vertex [below right=of b] (f2);
+            \diagram* {
+                (a) -- [anti fermion, momentum={\footnotesize\(q, s\)}] (b),
+                (b) -- [anti fermion] (f1),
+                (b) -- [boson] (f2),
+            };
+        \end{feynman}
+    \end{tikzpicture}
+    \>
+    $ = \bar v^s_\alpha(q)$
+    \\[1.5em]
+    Outgoing fermions: 
+    \>
+    % \hspace*{1.5cm}
+    \begin{tikzpicture}[baseline={([yshift=-0.8ex]current bounding box.center)}]
+        \begin{feynman}
+            \vertex (a);
+            \vertex [right=of a] (b) {\(\alpha\)};
+            \vertex [above left=of a] (f1);
+            \vertex [below left=of a] (f2);
+            \diagram* {
+                (f1) -- [fermion] (a),
+                (f2) -- [boson] (a),
+                (a) -- [fermion, momentum={\footnotesize\(q, s\)}] (b),
+            };
+        \end{feynman}
+    \end{tikzpicture}
+    \>
+    $ = \bar{u}^s_\alpha(q)$
+    \\[1.5em]
+    Outgoing antifermions: 
+    \>
+    % \hspace*{1.5cm}
+    \begin{tikzpicture}[baseline={([yshift=-0.8ex]current bounding box.center)}]
+        \begin{feynman}
+            \vertex (a);
+            \vertex [right=of a] (b) {\(\alpha\)};
+            \vertex [above left=of a] (f1);
+            \vertex [below left=of a] (f2);
+            \diagram* {
+                (f1) -- [anti fermion] (a),
+                (f2) -- [boson] (a),
+                (a) -- [anti fermion, momentum={\footnotesize\(q, s\)}] (b),
+            };
+        \end{feynman}
+    \end{tikzpicture}
+    \>
+    $ = v^s_\alpha(q)$
+    \\[1.5em]
+    Incoming photons: 
+    \>
+    \begin{tikzpicture}[baseline={([yshift=-0.8ex]current bounding box.center)}]
+        \begin{feynman}
+            \vertex (a) {\(\mu\)};
+            \vertex [right=of a] (b);
+            \vertex [above right=of b] (f1);
+            \vertex [below right=of b] (f2);
+            \diagram* {
+                (a) -- [boson, momentum={\footnotesize\(p, s\)}] (b),
+                (b) -- [fermion] (f1),
+                (b) -- [anti fermion] (f2),
+            };
+        \end{feynman}
+    \end{tikzpicture}
+    \>
+    $ = \epsilon^\lambda_\mu$
+    \\[1.5em]
+    Outgoing photons: 
+    \>
+    \begin{tikzpicture}[baseline={([yshift=-0.8ex]current bounding box.center)}]
+        \begin{feynman}
+            \vertex (a);
+            \vertex [right=of a] (b) {\(\mu\)};
+            \vertex [above left=of a] (f1);
+            \vertex [below left=of a] (f2);
+            \diagram* {
+                (f1) -- [fermion] (a),
+                (f2) -- [anti fermion] (a),
+                (a) -- [boson, momentum={\footnotesize\(p, s\)}] (b),
+            };
+        \end{feynman}
+    \end{tikzpicture}
+    \>
+    $ = \epsilon^{\lambda*}_\mu$
+    \\
+    \end{tabbing}
+	\item Impose momentum conservation at each vertex.
+	\item Integrate over the momentum $k$ flowing through each loop.
+	\item Figure out the sign based on statistics. 
+\end{enumerate}

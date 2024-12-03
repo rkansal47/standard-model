@@ -1,0 +1,56 @@
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+		\begin{feynman}
+			% disconnected t-channel diagram
+			\vertex (a1) at (0,1.5);
+			\vertex (a2) at (0,-1.5);
+			\vertex (b1) at (2,1.5);
+			\vertex (b2) at (2,-1.5);
+			\vertex (c) at (1, 0);
+
+			\diagram*{
+				(a1) -- [plain] (c) -- [plain] (b1),
+				(a2) -- [plain] (c) -- [plain] (b2),
+			};
+
+			\vertex (f1) at (2.25, 0);
+			\vertex (fup) at (2.25, 0.75);
+			\vertex (fdown) at (2.25, -0.75);
+
+			\diagram*{
+				(f1) -- [plain, half left] (fup),
+				(f1) -- [plain, half right] (fup),
+				(f1) -- [plain, half left] (fdown),
+				(f1) -- [plain, half right] (fdown),
+			};
+
+		\end{feynman}
+	\end{tikzpicture}
+	\hspace{3cm}
+	\begin{tikzpicture}
+		\begin{feynman}
+			% disconnected t-channel diagram
+			\vertex (a1) at (0,1.5);
+			\vertex (a2) at (0,-1.5);
+			\vertex (b1) at (2,1.5);
+			\vertex (b2) at (2,-1.5);
+			\vertex (c) at (1, 0);
+
+			\diagram*{
+				(a1) -- [plain] (c) -- [plain] (b1),
+				(a2) -- [plain] (c) -- [plain] (b2),
+			};
+
+			\vertex (loopv1) at (1.33, 0.5);  % Place the loop vertex near the upper leg
+			\vertex (loopv2) at (1.67, 1);  % Place the loop vertex near the upper leg
+
+			\diagram*{
+				(loopv1) -- [plain, half right, min distance=5mm] (loopv2),
+			};
+		\end{feynman}
+	\end{tikzpicture}
+	\vspace{5mm}
+	\caption{Examples of a disconnected (left) and an un-amputated (right) Feynman diagram.}
+	\label{fig:01_qft_interactions_feynman_disconnected}
+\end{figure}

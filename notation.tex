@@ -1,0 +1,227 @@
+\newcommand{\diag}{\ensuremath{\mathrm{diag}}\xspace}
+\newcommand{\identity}{\ensuremath{\mathbb{1}}\xspace}
+\newcommand{\mustequal}{\ensuremath{\overset{!}{=}}\xspace}
+\newcommand{\tr}[1]{\ensuremath{\mathrm{Tr}\left[#1\right]}\xspace}
+
+\NewDocumentCommand{\SO}{ o }{%
+  \ensuremath{\mathrm{SO}\IfValueT{#1}{(#1)}}\xspace
+}
+\NewDocumentCommand{\so}{ o }{%
+  \ensuremath{\mathfrak{so}\IfValueT{#1}{(#1)}}\xspace
+}
+\NewDocumentCommand{\SU}{ o }{%
+  \ensuremath{\mathrm{SU}\IfValueT{#1}{(#1)}}\xspace
+}
+\NewDocumentCommand{\su}{ o }{%
+  \ensuremath{\mathfrak{su}\IfValueT{#1}{(#1)}}\xspace
+}
+\NewDocumentCommand{\UU}{ o }{%
+  \ensuremath{\mathrm{U}\IfValueT{#1}{(#1)}}\xspace
+}
+\NewDocumentCommand{\OO}{ o }{%
+  \ensuremath{\mathrm{O}\IfValueT{#1}{(#1)}}\xspace
+}
+\NewDocumentCommand{\EE}{ o }{%
+  \ensuremath{\mathrm{E}\IfValueT{#1}{(#1)}}\xspace
+}
+
+\newcommand{\suu}{\ensuremath{\mathrm{SU}(2)\times\mathrm{U}(1)}\xspace}
+
+\newcommand{\svecp}[1]{\ensuremath{#1_{\vec{p}}\,}}
+\newcommand{\ophat}[1]{\ensuremath{\hat #1_{\vec{p}}\,}}
+\newcommand{\ophatd}[1]{\ensuremath{\hat #1^\dagger_{\vec{p}}\,}}
+
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\mus}{\ensuremath{\mu\text{s}}\xspace}
+\newcommand{\mum}{\ensuremath{\mu\text{m}}\xspace}
+\newcommand{\dd}{\ensuremath{\mathrm{d}}\xspace}
+
+\newcommand{\cl}{\ensuremath{c_{\lambda}}\xspace}
+\newcommand{\cvv}{\ensuremath{c_{2V}}\xspace}
+\newcommand{\pt}{\ensuremath{p_\mathrm{T}}\xspace}
+\newcommand{\Pl}{\textrm{l}\xspace}
+\newcommand{\Pq}{\textrm{q}\xspace}
+\newcommand{\Pg}{\textrm{g}\xspace}
+\newcommand{\Pc}{\textrm{c}\xspace}
+\newcommand{\Pb}{\textrm{b}\xspace}
+\newcommand{\PH}{\textrm{H}\xspace}
+\newcommand{\PV}{\textrm{V}\xspace}
+\newcommand{\PW}{\textrm{W}\xspace}
+\newcommand{\PZ}{\textrm{Z}\xspace}
+\newcommand{\PQt}{\textrm{t}\xspace}
+\newcommand{\PGe}{\textrm{e}\xspace}
+\newcommand{\PGn}{\ensuremath{\nu}\xspace}
+\newcommand{\PGm}{\ensuremath{\mu}\xspace}
+\newcommand{\PGt}{\ensuremath{\tau}\xspace}
+\newcommand{\PGg}{\ensuremath{\gamma}\xspace}
+\newcommand{\PQq}{\textrm{q}\xspace}
+\newcommand{\PQAq}{\bar{\PQq}\xspace}
+\newcommand{\PQc}{\textrm{c}\xspace}
+\newcommand{\PQAc}{\bar{\PQc}\xspace}
+\newcommand{\PQb}{\textrm{b}\xspace}
+\newcommand{\PQAb}{\bar{\PQb}\xspace}
+\newcommand{\PHH}{\textrm{HH}\xspace}
+\newcommand{\qqbar}{\ensuremath{\PQq\PQAq}\xspace}
+\newcommand{\ccbar}{\ensuremath{\PQc\PQAc}\xspace}
+\newcommand{\bbbar}{\ensuremath{\PQb\PQAb}\xspace}
+\newcommand{\CL}{\textrm{CL}\xspace}
+\newcommand{\CLs}{\ensuremath{\text{CL}_\text{s}}\xspace}
+
+\newcommand{\PX}{\textrm{X}\xspace}
+\newcommand{\PY}{\textrm{Y}\xspace}
+\newcommand{\PG}{\textrm{G}\xspace}
+\newcommand{\PA}{\textrm{A}\xspace}
+\newcommand{\Pa}{\textrm{a}\xspace}
+\newcommand{\Ph}{\textrm{h}\xspace}
+\newcommand{\PHsm}{\ensuremath{\PH_{125}\xspace}}
+
+\newcommand{\kapt}{\ensuremath{\kappa_{\PQt}}\xspace}
+\newcommand{\kapl}{\ensuremath{\kappa_{\lambda}}\xspace}
+\newcommand{\kapv}{\ensuremath{\kappa_{\PV}}\xspace}
+\newcommand{\kapvv}{\ensuremath{\kappa_{2\PV}}\xspace}
+\newcommand{\mH}{\ensuremath{m_{\PH}}\xspace}
+\newcommand{\mHH}{\ensuremath{m_{\PH\PH}}\xspace}
+\newcommand{\sigmaHH}{\ensuremath{\sigma_{\PH\PH}\xspace }}
+\newcommand{\BR}{\ensuremath{\mathcal{B}(\HH\to\bbbar\ww)}}
+\newcommand{\HH}{\ensuremath{{\PH\PH}}\xspace}
+\newcommand{\HHH}{\ensuremath{{\PH\PH\PH}}\xspace}
+\newcommand{\HVV}{\ensuremath{{\PH\PV\PV}}\xspace}
+\newcommand{\HHVV}{\ensuremath{{\PH\PH\PV\PV}}\xspace}
+\newcommand{\HHY}{\ensuremath{{\PH\PH/\PY}}\xspace}
+\newcommand{\VH}{\ensuremath{{\PV\PH}}\xspace}
+\newcommand{\ggH}{\ensuremath{{\Pg\Pg\PH}}\xspace}
+\newcommand{\ttH}{\ensuremath{{\ttbar\PH}}\xspace}
+\newcommand{\ggHH}{\ensuremath{{\Pg\Pg\PH\PH}}\xspace}
+\newcommand{\qqHH}{\ensuremath{{\Pq\Pq\PH\PH}}\xspace}
+\newcommand{\bbbb}{\ensuremath{\bbbar\bbbar}\xspace}
+\newcommand{\mSD}{\ensuremath{m_\text{SD}}\xspace}
+\newcommand{\ssbar}{\PQs{}\PAQs\xspace}
+\newcommand{\alpS}{\ensuremath{\alpha_s}\xspace}
+
+\newcommand{\TODO}[1]{\textcolor{red}{TODO: #1}}
+\newcommand{\gbb}{\ensuremath{\Pg\to\bbbar}\xspace}
+\newcommand{\hbb}{\ensuremath{\PH\to\bbbar}\xspace}
+\newcommand{\hqq}{\ensuremath{\PH\to\qqbar}\xspace}
+\newcommand{\htata}{\ensuremath{\PH\to\PGtp\PGtm}\xspace}
+\newcommand{\qqqq}{\ensuremath{4\Pq}\xspace}
+\newcommand{\ww}{\ensuremath{\PW\PW}\xspace}
+\newcommand{\zz}{\ensuremath{\PZ\PZ}\xspace}
+\newcommand{\vv}{\ensuremath{\PV\PV}\xspace}
+\newcommand{\bbtautau}{\ensuremath{\bbbar\PGt\PGt}\xspace}
+\newcommand{\bbgg}{\ensuremath{\bbbar\PGg\PGg}\xspace}
+\newcommand{\bbww}{\ensuremath{\bbbar\PW\PW}\xspace}
+\newcommand{\bbvv}{\ensuremath{\bbbar\PV\PV}\xspace}
+\newcommand{\bbvvq}{\ensuremath{{\bbbar(\vv\to\qqqq)}}\xspace}
+\newcommand{\wwq}{\ensuremath{\PW\PW\to\qqqq}\xspace}
+\newcommand{\vqq}{\ensuremath{\PV\to\PQq\PQq}\xspace}
+\newcommand{\vvq}{\ensuremath{\PV\PV\to\qqqq}\xspace}
+\newcommand{\hvv}{\ensuremath{\PH\to\vv}\xspace}
+\newcommand{\yvv}{\ensuremath{\PY\to\vv}\xspace}
+\newcommand{\yww}{\ensuremath{\PY\to\ww}\xspace}
+\newcommand{\hyvv}{\ensuremath{\PH/\PY\to\vv}\xspace}
+\newcommand{\hyvvq}{\ensuremath{\PH/\PY\to\vv\to\qqqq}\xspace}
+\newcommand{\hvvq}{\ensuremath{\PH\to\vv\to\qqqq}\xspace}
+\newcommand{\yvvq}{\ensuremath{\PY\to\vv\to\qqqq}\xspace}
+\newcommand{\HHbbVV}{\ensuremath{{\PH\PH\to\bbbar\vv}}\xspace}
+\newcommand{\HHbbVVq}{\ensuremath{{\PH\PH\to\bbbar(\vv\to\qqqq)}}\xspace}
+\newcommand{\XHY}{\ensuremath{{\PX\to\PH\PY}}\xspace}
+\newcommand{\XHYbbVV}{\ensuremath{{\PX\to(\PH\to\bbbar)(\PY\to\vv)}}\xspace}
+\newcommand{\XHYbbVVq}{\ensuremath{{\PX\to(\PH\to\bbbar)(\PY\to\vv\to\qqqq)}}\xspace}
+
+\newcommand{\TXbb}{\ensuremath{T_\mathrm{Xbb}}\xspace}
+\newcommand{\TXbbbb}{\ensuremath{T_\mathrm{Xbb}^\mathrm{bb}}\xspace}
+\newcommand{\THWW}{\ensuremath{T_\mathrm{HVV}}\xspace}
+\newcommand{\THWWww}{\ensuremath{T_\mathrm{HVV}^\mathrm{VV}}\xspace}
+\newcommand{\PXbb}{\ensuremath{P_\mathrm{Xbb}}\xspace}
+\newcommand{\PXcc}{\ensuremath{P_\mathrm{Xcc}}\xspace}
+\newcommand{\PXqq}{\ensuremath{P_\mathrm{Xqq}}\xspace}
+\newcommand{\PQCD}{\ensuremath{P_\mathrm{QCD}}\xspace}
+\newcommand{\PQCDcc}{\ensuremath{P_\mathrm{QCDcc}}\xspace}
+\newcommand{\PQCDbb}{\ensuremath{P_\mathrm{QCDbb}}\xspace}
+\newcommand{\PQCDc}{\ensuremath{P_\mathrm{QCDc}}\xspace}
+\newcommand{\PQCDb}{\ensuremath{P_\mathrm{QCDb}}\xspace}
+\newcommand{\PQCDothers}{\ensuremath{P_\mathrm{QCDothers}}\xspace}
+\newcommand{\PTop}{\ensuremath{P_\mathrm{Top}}\xspace}
+\newcommand{\PVJets}{\ensuremath{P_\mathrm{V+Jets}}\xspace}
+\newcommand{\PggF}{\ensuremath{P_\mathrm{ggF}}\xspace}
+\newcommand{\PVBF}{\ensuremath{P_\mathrm{VBF}}\xspace}
+\newcommand{\PHWWqqqq}{\ensuremath{P_\mathrm{HVV4q}}\xspace}
+\newcommand{\PHWWqqq}{\ensuremath{P_\mathrm{HVV3q}}\xspace}
+
+\newcommand{\ggfbdt}{\ensuremath{\mathrm{BDT}_\mathrm{ggF}}\xspace}
+\newcommand{\vbfbdt}{\ensuremath{\mathrm{BDT}_\mathrm{VBF}}\xspace}
+
+\newcommand{\tbw}{\ensuremath{\PQt\to\PQb\PW}\xspace}
+\newcommand{\tae}{\ensuremath{\PGt_{\Pe}}\xspace}
+\newcommand{\tam}{\ensuremath{\PGt_{\PGm}}\xspace}
+\newcommand{\tah}{\ensuremath{\PGt_{\mathrm{h}}}\xspace}
+
+\newcommand{\mx}{\ensuremath{{m_X}}\xspace}
+\newcommand{\mh}{\ensuremath{{m_H}}\xspace}
+\newcommand{\my}{\ensuremath{{m_Y}}\xspace}
+\newcommand{\mxmy}{\ensuremath{{\mx,\my}}\xspace}
+
+\newcommand{\msd}{\ensuremath{{m_\mathrm{SD}}}\xspace}
+\newcommand{\mreg}{\ensuremath{{m_\mathrm{reg}}}\xspace}
+\newcommand{\mregbb}{\ensuremath{{m_\mathrm{reg}^\mathrm{bb}}}\xspace}
+\newcommand{\mregvv}{\ensuremath{{m_\mathrm{reg}^\mathrm{VV}}}\xspace}
+\newcommand{\mjj}{\ensuremath{{m^\mathrm{jj}}}\xspace}
+\newcommand{\mjjvbf}{\ensuremath{{m^\mathrm{jj}_{\mathrm{VBF}}}}\xspace}
+\newcommand{\detajjvbf}{\ensuremath{{|\Delta\eta^\mathrm{jj}_{VBF}|}}\xspace}
+
+\newcommand{\pois}{\ensuremath{\mathrm{Pois}}\xspace}
+
+
+\newcommand{\NA}{\ensuremath{\text{---}}\xspace}
+\newcommand{\kt}{\ensuremath{k_{\mathrm{T}}}\xspace}
+\newcommand{\eV}{\ensuremath{\,\text{e\hspace{-.08em}V}}\xspace}
+\newcommand{\MeV}{\ensuremath{\,\text{Me\hspace{-.08em}V}}\xspace}
+\newcommand{\GeV}{\ensuremath{\,\text{Ge\hspace{-.08em}V}}\xspace}
+\newcommand{\TeV}{\ensuremath{\,\text{Te\hspace{-.08em}V}}\xspace}
+\newcommand{\unit}[1]{\ensuremath{\text{\,#1}}\xspace}
+\newcommand{\GEANTfour} {{\textsc{Geant4}}\xspace}
+\newcommand{\PYTHIA} {{\textsc{pythia}}\xspace}
+\newcommand{\HERWIG} {{\textsc{herwig}}\xspace}
+\newcommand{\SHERPA} {{\textsc{sherpa}}\xspace}
+\newcommand{\ttbar}{\ensuremath{\mathrm{t}\overline{\mathrm{t}}}\xspace}
+\newcommand{\MADGRAPH} {{\textsc{MadGraph}}\xspace}
+\newcommand{\MCATNLO} {{\textsc{MC@NLO}}\xspace}
+\newcommand{\MGvATNLO}{\MADGRAPH{}5\_a\MCATNLO\xspace}
+\providecommand{\mSD}{\ensuremath{m_\mathrm{SD}}\xspace}
+\newcommand{\rpf}{\ensuremath{R_\mathrm{P/F}}\xspace}
+
+
+\newcommand{\etarel}{\ensuremath{\eta^\mathrm{rel}}\xspace}
+\newcommand{\phirel}{\ensuremath{\phi^\mathrm{rel}}\xspace}
+\newcommand{\ptrel}{\ensuremath{\pt^\mathrm{rel}}\xspace}
+
+\newcommand{\real}[1]{\ensuremath{#1_\mathrm{real}}\xspace}
+\newcommand{\gen}[1]{\ensuremath{#1_\mathrm{gen}}\xspace}
+\newcommand{\fgdinf}{\ensuremath{\mathrm{FGD}_\infty}\xspace}
+
+\newcommand{\wass}{\ensuremath{W_1}\xspace}
+\newcommand{\wassm}{\ensuremath{W_1^\mathrm M}\xspace}
+\newcommand{\wassp}{\ensuremath{W_1^\mathrm P}\xspace}
+\newcommand{\wassefp}{\ensuremath{W_1^\mathrm{EFP}}\xspace}
+\newcommand{\wassppt}{\ensuremath{W^{\ptrel}_{1p}}\xspace}
+
+\newcommand{\jetnet}{\textsc{JetNet}\xspace}
+
+
+\newcommand{\hhexp}{69\xspace}
+\newcommand{\hhobs}{142\xspace}
+\newcommand{\cvvexp}{0.9\xspace}
+\newcommand{\cvvobs}{1.1\xspace}
+\newcommand{\kvvexplims}{\ensuremath{[0.05, 1.98]}\xspace}
+\newcommand{\kvvobslims}{\ensuremath{[-0.04, 2.05]}\xspace}
+
+\newcommand{\ri}{\ensuremath{\rho_\mathrm{in}}\xspace}
+\newcommand{\ro}{\ensuremath{\rho_\mathrm{out}}\xspace}
+\newcommand{\CX}{\ensuremath{\mathcal{X}}\xspace}
+\newcommand{\CY}{\ensuremath{\mathcal{Y}}\xspace}
+
+
+\newcommand{\parenthesis}[1]{\left( #1 \right)}
+\newcommand{\squarebracket}[1]{\left[ #1 \right]}
+\newcommand{\xmark}{\text{\ding{55}}}
+\newcommand{\order}[1]{\mathcal{O} \left( #1 \right)}

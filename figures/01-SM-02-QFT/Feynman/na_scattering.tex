@@ -1,0 +1,45 @@
+\begin{figure}[ht]
+	\centering
+	\captionsetup{justification=centering}
+	\begin{tikzpicture}
+		\begin{feynman}
+			\vertex (a);
+			\vertex [below=of a] (b);
+			\vertex [above left=of a] (i1);
+			\vertex [below left=of b] (i2);
+			\vertex [above right=of a] (f1);
+			\vertex [below right=of b] (f2);
+			\diagram* {
+				(a) -- [scalar, edge label={\footnotesize\(k\)}] (b),
+				(i1) -- [fermion, edge label'={\footnotesize\(q_{i1}\)}] (a),
+				(i2) -- [anti fermion, edge label={\footnotesize\(q_{i2}\)}] (b),
+				(a) -- [fermion, edge label'={\footnotesize\(q_{f1}\)}] (f1),
+				(b) -- [anti fermion, edge label={\footnotesize\(q_{f2}\)}] (f2),
+			};
+		\end{feynman}
+	\end{tikzpicture}
+	\hspace{3cm}
+	% s-channel
+	\raisebox{7mm}{
+	\begin{tikzpicture}
+		\begin{feynman}
+			\vertex (a);
+			\vertex [right=of a] (b);
+			\vertex [above left=of a] (i1);
+			\vertex [below left=of a] (i2);
+			\vertex [above right=of b] (f1);
+			\vertex [below right=of b] (f2);
+			\diagram* {
+				(a) -- [scalar, edge label'={\footnotesize\(k\)}] (b),
+				(i1) -- [fermion, edge label={\footnotesize\(q_{i1}\)}] (a),
+				(i2) -- [anti fermion, edge label'={\footnotesize\(q_{i2}\)}] (a),
+				(b) -- [anti fermion, edge label={\footnotesize\(q_{f1}\)}] (f1),
+				(b) -- [fermion, edge label'={\footnotesize\(q_{f2}\)}] (f2),
+			};
+		\end{feynman}
+	\end{tikzpicture}
+	}
+	\vspace{5mm}
+	\caption{The two lowest order nucleon-antinucleon scattering diagrams.}
+	\label{fig:01_qft_interactions_feynman_na_scattering}
+\end{figure}

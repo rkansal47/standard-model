@@ -1,0 +1,42 @@
+\begin{enumerate}
+	\item Vertices: \qquad
+	\begin{tikzpicture}[baseline={([yshift=-0.8ex]current bounding box.center)}]
+		\begin{feynman}[small]
+			\vertex (a);
+			\vertex [right=of a] (b);
+			\vertex [above right=of b] (f1);
+			\vertex [below right=of b] (f2);
+			\diagram* {
+				(a) -- [scalar] (b),
+				(b) -- [fermion] (f1),
+				(b) -- [anti fermion] (f2),
+			};
+		\end{feynman}
+	\end{tikzpicture}
+	$ = -ig$ \\[1em]
+	\item Internal lines (propagators) \\[1em]
+	\qquad\qquad Mesons: \quad
+	\begin{tikzpicture}[baseline={([yshift=-1.8ex]current bounding box.center)}]
+		\begin{feynman}[small]
+			\vertex (a);
+			\vertex [right=of a] (b);
+			\diagram* {
+				(a) -- [scalar, edge label={\footnotesize\(p\)}] (b) ,
+			};
+		\end{feynman}
+	\end{tikzpicture}
+	$\, = \cfrac{i}{p^2 - m^2 + i\varepsilon}$ \qquad
+	Nucleons: \quad
+	\begin{tikzpicture}[baseline={([yshift=-1.8ex]current bounding box.center)}]
+		\begin{feynman}[small]
+			\vertex (a);
+			\vertex [right=of a] (b);
+			\diagram* {
+				(a) -- [fermion, edge label={\footnotesize\(q\)}] (b),
+			};
+		\end{feynman}
+	\end{tikzpicture}
+	$\, = \cfrac{i}{q^2 - M^2 + i\varepsilon}$ \\[1em]
+	\item Impose momentum conservation at each vertex.
+	\item Integrate over the momentum $k$ flowing through each loop $\int \nicefrac{d^4k}{(2\pi)^4}$.
+\end{enumerate}
