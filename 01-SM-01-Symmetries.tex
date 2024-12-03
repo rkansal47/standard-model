@@ -405,332 +405,332 @@ We have also seen that individual states can be further labeled using the eigenv
 These representations can directly be used to derive those corresponding to the \SU[2] and \SO[3] group except that, surprisingly, the latter does not admit the half-integer irreps; essentially, \SU[2] has double the irreps because it is the double cover of \SO[3].
 Overall, the irreps of \su[2] and \su[3] are quite significant in physics, with direct applications to classical and quantum mechanics, and, moreover, they will also serve as the building blocks for the representations of the Lorentz and Poincaré groups in the next section.
 
-\section{Particles are irreps of the Poincaré group}
-\label{sec:01_symmetries_poincare}
+% \section{Particles are irreps of the Poincaré group}
+% \label{sec:01_symmetries_poincare}
 
-The Poincaré group comprises all the physical symmetries of ``flat'' spacetime (i.e, without gravity), i.e. all the transformations which leave the laws of physics invariant.
-These include Lorentz transformations (boosts and rotations) and spacetime translations.
+% The Poincaré group comprises all the physical symmetries of ``flat'' spacetime (i.e, without gravity), i.e. all the transformations which leave the laws of physics invariant.
+% These include Lorentz transformations (boosts and rotations) and spacetime translations.
 
-Particles can be defined as a ``set of states which mix only among themselves under Poincaré transformations'' (Schwartz~\cite{Schwartz:2014sze} Ch. 8.1), leaving attributes like their mass and spin invariant.
-Elementary particles are those for which there is no smaller subset of states that also have this property.
-Thus, they correspond exactly to irreducible representations of the Poincaré group!
-That the physical and seemingly nebulous concept of a particle can be so precisely defined and characterized by a mathematical analysis of the symmetries of spacetime is one of the most beautiful results of fundamental physics.
+% Particles can be defined as a ``set of states which mix only among themselves under Poincaré transformations'' (Schwartz~\cite{Schwartz:2014sze} Ch. 8.1), leaving attributes like their mass and spin invariant.
+% Elementary particles are those for which there is no smaller subset of states that also have this property.
+% Thus, they correspond exactly to irreducible representations of the Poincaré group!
+% That the physical and seemingly nebulous concept of a particle can be so precisely defined and characterized by a mathematical analysis of the symmetries of spacetime is one of the most beautiful results of fundamental physics.
 
-In this section, we describe the irreps of the Poincaré group, starting first with the Lorentz group alone.
+% In this section, we describe the irreps of the Poincaré group, starting first with the Lorentz group alone.
 
-% \subsection{Representations of the Lorentz group}
+% % \subsection{Representations of the Lorentz group}
 
-\subsubsection{The (proper, orthochronous) Lorentz group}
+% \subsubsection{The (proper, orthochronous) Lorentz group}
 
-We know from special relativity that ``flat'' spacetime (i.e., without gravity) is described by 4D Minkowski space $\mathbb R^{1, 3}$.
-This is a real vector space equipped with the metric $\eta_{\mu\nu} = \mathrm{diag}(1, -1, -1, -1)$, which defines distances, or inner products $\langle \cdot, \cdot \rangle$, between 4-vectors $x_\mu = (x_0, x_1, x_2, x_3)$ as:
-\begin{equation}
-	\label{eq:01_minkowski_metric}
-	\langle x, y \rangle \equiv x_\mu y^\mu \equiv \eta_{\mu\nu}x^\mu y^\nu = x_0 y_0 - x_1 y_1 - x_2 y_2 - x_3 y_3.
-\end{equation}
-
-\begin{definition}
-\label{def:01_lorentz_group}
-% Lorentz transformations are those which preserve the magnitude of 4-vectors in Minkowski space $\mathbb R^{1, 3}$.
-The \textit{Lorentz group} is the group of all matrices $M$ orthogonal under the Minkowski metric $M^T\eta M = \eta$, and is called \OO[1, 3].
-This is the analog in flat spacetime to distance-preserving transformations in Euclidean space (e.g., \OO[3]).
-\end{definition}
-
-\begin{definition}
-\label{def:01_proper_orthochronous}
-The \textit{proper, orthochronous} Lorentz group $\mathrm{SO}^+(1, 3)$ is the subgroup of \OO[1, 3] matrices continuously connected to the identity.
-Physically, these are the transformations that preserve the orientation of space and direction of time, and are typically what we refer to as \textit{Lorentz transformations}.
-The two transformations of \OO[1, 3] not included in $\mathrm{SO}^+(1, 3)$ are parity $P = \diag(1, -1, -1, -1)$ and time reversal $T = \diag(-1, 1, 1, 1)$ (shown in the 4-vector representation), which flip the sign of spatial and temporal components of 4-vectors, respectively.
-Surprisingly, these are not symmetries of nature ---
-they are violated by the weak interaction!
-% \TODO{We discuss this more in ...}
-Generally, in this chapter, when we talk about the Lorentz group or Lorentz invariance, we are referring only to the proper, orthochronous Lorentz group.
-\end{definition}
-
-\subsubsection{Generators of the Lorentz group}
-
-Lorentz transformations $\Lambda$ are generated by six antisymmetric matrices, three for boosts ($K_i$) and three for rotations ($J_i$).
-In the $4$-vector representation, these are:
-\begin{equation} 
-	\begin{split}
-	\label{eq:01_lorentz_generators}
-	K_x &= -i\begin{pmatrix}
-		\setlength{\arraycolsep}{10pt}
-		0 & 1 & 0 & 0 \\
-		1 & 0 & 0 & 0 \\
-		0 & 0 & 0 & 0 \\
-		0 & 0 & 0 & 0
-	\end{pmatrix}, \ 
-	K_y = -i\begin{pmatrix}
-		0 & 0 & 1 & 0 \\
-		0 & 0 & 0 & 0 \\
-		1 & 0 & 0 & 0 \\
-		0 & 0 & 0 & 0
-	\end{pmatrix}, \ 
-	K_z = -i\begin{pmatrix}
-		0 & 0 & 0 & 1 \\
-		0 & 0 & 0 & 0 \\
-		0 & 0 & 0 & 0 \\
-		1 & 0 & 0 & 0
-	\end{pmatrix}, \\[1em]
-	\setlength{\arraycolsep}{5pt}
-	J_x &= i\begin{pmatrix}
-		0 & 0 & 0 & 0 \\
-		0 & 0 & 0 & 0 \\
-		0 & 0 & 0 & -1 \\
-		0 & 0 & 1 & 0
-	\end{pmatrix}, \ 
-	J_y = i\begin{pmatrix}
-		0 & 0 & 0 & 0 \\
-		0 & 0 & 0 & 1 \\
-		0 & 0 & 0 & 0 \\
-		0 & -1 & 0 & 0
-	\end{pmatrix}, \ 
-	J_z = i\begin{pmatrix}
-		0 & 0 & 0 & 0 \\
-		0 & 0 & -1 & 0 \\
-		0 & 1 & 0 & 0 \\
-		0 & 0 & 0 & 0
-	\end{pmatrix}.
-\end{split} 
-\end{equation}
-Lorentz transformations can thus be represented as
-\begin{equation}
-	\label{eq:01_lorentz_generators_exponential}
-\Lambda(\vec{\theta}, \vec{\beta}) = e^{i(\theta_i J_i + \beta_i K_i)},
-\end{equation}
-where $\vec{\theta}$ and $\vec{\beta}$ are the rotation and boost parameters, respectively,
-% Note that these only represent the transformations of the Lorentz group continuously connected to the identity (by definition of the Lie algebra, Definition~\ref{def:01_lie_algebra}).
-
-An important property of the Lorentz group is that it is not compact.
-This is related to the fact that the generators for boosts $K_i$ in the representation above are not Hermitian, which means the corresponding group elements $e^{i\beta_i K_i}$ are not unitary.
-In fact, there are no finite-dimensional unitary representations of the Lorentz group~\cite{Wigner:1939cj}.
-Unitarity of operators is an important condition for the invariance of physical properties under transformations in QM, and the consequences of this for the SM will be discussed in Chapter~\ref{sec:01_qft_spinors}.
-
-\subsubsection{Lie algebra of the Lorentz group}
-
-From Eq.~\ref{eq:01_lorentz_generators}, we can derive the commutation relations of the generators and, hence, the Lie algebra:
-\begin{equation}
-	\begin{split}
-		\label{eq:01_lorentz_algebra}
-		[K_i, K_j] &= -i \epsilon_{ijk} J_k, \\
-		 [J_i, J_j] &= i \epsilon_{ijk} J_k, \\
-		[J_i, K_j] &= i \epsilon_{ijk} K_k.
-	\end{split}
-\end{equation}
-Moreover, if we define the operators
-\begin{equation}
-	\label{eq:01_lorentz_su2_operators}
-	J^+_i = \frac{1}{2}(J_i + iK_i), \quad J^-_i = \frac{1}{2}(J_i - iK_i),
-\end{equation}
-we find that \so[1, 3] contains two mutually commuting \su[2] subalgebras:
-\begin{equation}
-	\begin{split}
-		\label{eq:01_lorentz_su2_subalgebras}
-		[J^+_i, J^+_j] &= i \epsilon_{ijk} J^+_k, \\
-		[J^-_i, J^-_j] &= i \epsilon_{ijk} J^-_k, \\
-		[J^+_i, J^-_j] &= 0.
-	\end{split}
-\end{equation}
-This implies the irreps of \so[1, 3] are simply two copies of the irreps of \su[2] from Section~\ref{sec:01_symmetries_so3}, indexed as $(j_1, j_2)$ with $j_1, j_2 \in \mathbb Z^{\geq0}/2$ and dimension $(2j_1 + 1)(2j_2 + 1)$.
-
-With this, we can easily obtain the generators $J_i$, $K_i$ for the smallest few irreps:
-% \begin{itemize}
-% 	\item $(0, 0)$: \quad $J^+_i = J^-_i = 0 \Rightarrow J_i = K_i = 0$.
-% 	\item $(1/2, 0)$: \quad $J^+_i = \frac{1}{2} \sigma_i$, $J^-_i = 0 \Rightarrow J_i = \frac{1}{2} \sigma_i$, $K_i = -\frac{i}{2} \sigma_i$.
-% \end{itemize}
-\begin{align}
-	\label{eq:01_lorentz_irreps_00}
-	(0, 0)\text{:}& \qquad J^+_i = J^-_i = 0 \! &\Rightarrow& \qquad J_i = K_i = 0. \\
-	\label{eq:01_lorentz_irreps_weyl_left}
-	(\nicefrac{1}{2}, 0)\text{:}& \qquad J^+_i = \frac{1}{2} \sigma_i,\, J^-_i = 0 \! &\Rightarrow& \qquad J_i = \frac{1}{2} \sigma_i, K_i = -\frac{i}{2} \sigma_i. \\
-	\label{eq:01_lorentz_irreps_weyl_right}
-	(0, \nicefrac{1}{2})\text{:}& \qquad J^+_i = 0,\, J^-_i = \frac{1}{2} \sigma_i \! &\Rightarrow& \qquad J_i = \frac{1}{2} \sigma_i, K_i = \frac{i}{2} \sigma_i. \\[2mm]
-	% (\nicefrac{1}{2}, \nicefrac{1}{2})\text{:}& 
-	& \qquad\qquad\qquad\qquad\qquad \vdots \notag
-	\vspace{-10mm}
-\end{align}
-% \vspace{-2mm}
-% As you can see, the $(\nicefrac{1}{2}, 0)$ and $(0, \nicefrac{1}{2})$ irreps are quite similar, and are called the \textit{left-} and \textit{right-handed Weyl spinor} representations, where the handedness refers to the direction of a particle's spin angular momentum relative to its momentum.
-% are the left- and right-handed Weyl spinors, respectively, of the Lorentz group.
-The $(\nicefrac{1}{2}, \nicefrac{1}{2})$ irrep is actually our familiar $4$-vector representation, but it is more involved to recover the generators in the same form as Eq.~\ref{eq:01_lorentz_generators}.\footnote{See e.g. Ref.~\cite{439080}.}
-
-% For example, $(0, 0)$ is the trivial representation, with $J^+_i = J^-_i = 0 \Rightarrow J_i = K_i = 0$.
-% The $(1/2, 0)$ representation means $J^+_i = \frac{1}{2} \sigma_i$, $J^-_i = 0 \Rightarrow J_i = \frac{1}{2} \sigma_i$, $K_i = -\frac{i}{2} \sigma_i$, while in $(0, 1/2)$, $J^+_i = 0$, $J^-_i = \frac{1}{2} \sigma_i \Rightarrow J_i = \frac{1}{2} \sigma_i$, $K_i = \frac{1}{2} \sigma_i$.
-
-\subsubsection{Representations of the Lorentz group}
-
-It turns out the above four irreps of the Lorentz group are all we need for the SM.
-Their nomenclature and corresponding elementary particle fields are listed in Table~\ref{tab:01_lorentz_representations}.
-Notably, fermions are classified as those with half-integer total spin $j = j_1 + j_2$, and bosons with integer $j$.
-Their radically different behavior is a consequence of the Spin-Statistics theorem~\cite{PhysRev.110.1450} (a notoriously difficult theorem to prove~\cite{FeynmanVol3}), which states that half-integer spin particles obey Fermi-Dirac statistics and integer spin particles Bose-Einstein statistics.
-
-All known fermionic particle fields live in the $(\nicefrac{1}{2}, 0) \oplus (0, \nicefrac{1}{2})$, or \textit{Dirac spinor}, representation.
-The $(\nicefrac{1}{2}, 0)$ and $(0, \nicefrac{1}{2})$ representations are called the \textit{left-} and \textit{right-handed Weyl spinors} respectively, where the handedness refers to the direction of their spin angular momentum relative to their momentum.
-Physically, this means there is a left-handed and right-handed copy of each fermion, and they have to be packaged together in a Dirac spinor to have masses without violating parity, as we discuss in Chapter~\ref{sec:01_qft_spinors}.
-% \footnote{More fundamentally, this is necessary to resolve gauge anomalies that arise from the quantization of QED and QCD (see Tong SM~\cite{TongSM} Chapter 4.1).}
-% The Dirac spinor thus comprises both a left-handed and right-handed component, which is necessary for QED- and QCD-\textit{gauge-invariant} fermion masses.\footnote{More fundamentally, this is necessary to resolve gauge anomalies that arise from the quantization of QED and QCD (see Tong SM~\cite{TongSM} Chapter 4.1).}
-We will also see that left- and right-handed representations can be equivalently thought of as particles and antiparticles.
-
-The $(\nicefrac{1}{2}, 0) \oplus (0, \nicefrac{1}{2})$ representation technically also includes real \textit{Majorana spinors} as a subspace, which can represent neutral fermions.
-The only candidate for these in the SM are right-handed neutrinos and, in fact, the existence of such Majorana neutrinos could potentially explain the curiously small \textit{left-handed} neutrino masses through a process called the \textit{seesaw mechanism}~\cite{Foot:1988aq, Schechter:1980gr}.
-To date, however, no experimental evidence for these, such as neutrinoless double beta decay~\cite{Rodejohann:2011mu} or same-sign charged dilepton decays~\cite{CMS:2018jxx}, has been observed.
-
-On another technical note, the Lorentz group, similar to \SO[3], does not itself admit half-integer, fermionic representations.
-Thus, the true spacetime symmetry group is actually the double cover of \SO[1, 3], $\mathrm{Spin}(1,3)$!
-Indeed, there are many subtleties to the Lorentz group, some of which will be revisited in the context of Lorentz-group equivariant neural networks in Chapter~\ref{sec:06_lgae}.
-To conclude, however, it is worth emphasizing again the remarkable physical insight these seemingly abstract group-theoretic concepts deliver.
-We are able to classify a fundamental dichotomy of particle physics --- bosons versus fermions, and their completely different behavior --- simply by their representation under the Lorentz (or, rather, the $\mathrm{Spin}(1,3)$) group!
-
-\begin{table}[ht!]
-	\centering
-	\renewcommand{\arraystretch}{1.5}
-	% \setlength{\tabcolsep}{8pt}
-	% wrap table to textwidth
-	% \begin{wraptable}{r}{0.5\textwidth}
-	\resizebox{\textwidth}{!}{
-	\begin{tabular}{c|c|c}
-		% \toprule
-		\textbf{Representation $(j_1, j_2)$} & \textbf{Name} & \textbf{Elementary Fields} \\
-		\hline
-		$(0, 0)$ & Scalar & Higgs boson \\
-		$(\nicefrac{1}{2}, 0)$ & Left-handed Weyl spinor & --- \\
-		$(0, \nicefrac{1}{2})$ & Right-handed Weyl spinor & --- \\
-		$(\nicefrac{1}{2}, 0) \oplus (0, \nicefrac{1}{2})$ & Dirac spinor & All fermions \\
-		$(\nicefrac{1}{2}, \nicefrac{1}{2})$ & Vector & $g, \gamma, W^\pm,$ and $Z$ gauge bosons \\
-		% \bottomrule
-	\end{tabular}
-	}
-	\vspace{1em}
-	\caption{Representations of the Lorentz group and their associated particle fields in the SM.}
-	\label{tab:01_lorentz_representations}
-\end{table}
-
-% \subsection{Representations of the Poincaré group}
-
-\subsubsection{Lie algebra of the Poincaré group}
-
-The Poincaré group is Lorentz transformations plus spacetime translations.
-Just as angular momentum generates rotations, translations are generated by the momentum operator $P_\mu$.
-$P_\mu$ and the Lorentz generators $J_i$ and $K_i$ together comprise the generators of the Poincaré group, and its algebra is thus the Lorentz algebra (Eq.~\ref{eq:01_lorentz_algebra}) plus the commutation relations with the $P_\mu$s:\footnote{See Appendix~\ref{app:01_poincare_algebra} for a derivation.}
-\begin{equation}
-	\label{eq:01_poincare_algebra}
-	\begin{split}
-		[P_\mu, P_\nu] &= 0, \\
-		[J_i, P_0] &= 0, \\
-		[J_i, P_j] &= i \epsilon_{ijk}P_k, \\
-		[K_i, P_0] &= -i P_i, \\
-		[K_i, P_j] &= i \eta_{ij}P_0.
-	\end{split}
-\end{equation}
-As is conventional, the Greek indices run over all four spacetime dimensions, while the Latin indices only the three spatial.
-
-The Poincaré algebra can be expressed more compactly by first combining the Lorentz generators into the antisymmetric tensor $M_{\mu\nu}$:
-\begin{equation}
-\label{eq:01_lorentz_generators_mmunu}
-M_{\mu\nu} = \begin{pmatrix}
-	0 & K_x & K_y & K_z \\
-	-K_x & 0 & J_z & -J_y \\
-	-K_y & -J_z & 0 & J_x \\
-	-K_z & J_y & -J_x & 0
-\end{pmatrix}
-\quad\Rightarrow \Lambda(\omega) = e^{\frac{i}{2}\omega^{\mu\nu} M_{\mu\nu}},
-\end{equation}
-% M_{0i} = -M_{i0} = K_i, \quad M_{ij} = \epsilon_{ijk} J_k \quad\Rightarrow \Lambda(\omega) = e^{\frac{i}{2}\omega^{\mu\nu} M_{\mu\nu}},
-with $\omega_{\mu\nu}$ another antisymmetric tensor containing the six rotation and boost parameters.
-The algebra can be then written as:
-\begin{equation}
-	\begin{split}
-		\label{eq:01_poincare_algebra_mmunu}
-		[M_{\mu\nu}, M_{\rho\sigma}] &= i(\eta_{\nu\rho}M_{\mu\sigma} - \eta_{\mu\rho}M_{\nu\sigma} - \eta_{\nu\sigma}M_{\mu\rho} + \eta_{\mu\sigma}M_{\nu\rho}), \\
-		[M_{\mu\nu}, P_\rho] &= i(\eta_{\nu\rho}P_\mu - \eta_{\mu\rho}P_\nu), \\
-		[P_\mu, P_\nu] &= 0.
-	\end{split}
-\end{equation}
-
-\subsubsection{Irreps of the Poincaré group}
-
-As we saw from Section~\ref{sec:01_symmetries_so3}, we can derive the irreps of an algebra using its Casimir invariants (Definition~\ref{def:01_casimir}).
-Each set of their eigenvalues uniquely labels an irrep, while each basis state within the irreps is indexed by eigenvalues of a maximal set of commuting operators (e.g., $\{J^2, J_z\} \rightarrow \ket{j, m}$ for \so[3]).
-Note that in the following, we simply provide a sketch of the derivations and point to, for example, Zee GT~\cite{Zee:2016fuk} Chapter VII.2 and Tong SM~\cite{TongSM} Chapter 1.1.2 for more detailed proofs and discussion.
-
-The Casimirs of the Poincaré algebra are the operators
-\begin{equation}
-	\label{eq:01_poincare_casimirs}
-	P^2 = P_\mu P^\mu\ \mathrm{ and }\ W^2 = W_\mu W^\mu,
-\end{equation}
-where 
-\begin{equation}
-	\label{eq:01_poincare_wmu}
-	W_\mu = \frac{1}{2}\epsilon_{\mu\nu\rho\sigma}M^{\nu\rho}P^\sigma
-\end{equation}
-is the \textit{Pauli-Lubanski vector}, the relativistic analog of the angular momentum operator $J_i$.
-Furthermore, $P_\mu$ commutes with both, and we can label its eigenstates as $\ket{p}$,
-\begin{equation}
-	\label{eq:01_poincare_pmu_eigenstates}
-	P_\mu\ket{p} = p_\mu\ket{p}, 
-\end{equation}
-which represent single-particle states with 4-momentum $p_\mu$.
-% Note that we have an infinite number of states and, therefore, necessarily infinite-dimensional representations of the Poincaré group because it is not compact.
-These are therefore eigenstates of $P^2$ as well, with eigenvalues $m^2$, the squared mass of the particle:
-\begin{equation}
-	\label{eq:01_poincare_p2}
-	P^2\ket{p} = p_\mu p^\mu\ket{p} = m^2 \ket{p}.
-\end{equation}
-Thus, we see that the mass of a particle, $m$, is one label of the irreps, with states therein indexed by $p_\mu$.
-The other label, the particle spin $j$, is based on the eigenvalue of $W^2$:
-\begin{equation}
-	\label{eq:01_poincare_w2}
-	W^2\ket{p, j} \propto j(j+1)\ket{p, j}.
-\end{equation}
-The easiest way to see this is to, for a given $m > 0$, pick a single eigenstate $\ket{p^*}$.
-The simplest is the rest frame $p^*_\mu = (m, 0, 0, 0)$.
-The subgroup of Poincaré transformations which leave $\ket{p^*}$ invariant is called its \textit{little group}.
-In this case, it comprises all 3D rotations --- i.e., \SO[3].
-Indeed, if we look at the Pauli-Lubanski vector acting on $\ket{p^*}$,
-\begin{equation}
-	\label{eq:01_poincare_w2_eigenstates}
-	W_\mu\ket{p^*} = \frac{1}{2}\epsilon_{\mu\nu\rho\sigma}M^{\nu\rho}p^{*\sigma}\ket{p^*} \quad\Rightarrow W_0 = 0, W_i = -m J_i,
-\end{equation}
-we simply recover the generators $J_i$ of \so[3].\footnote{This also motivates why $W_\mu$ can be thought of as relativistic angular momentum.}
-Therefore,
-\begin{equation}
-	\label{eq:01_poincare_w2_eigenvalues}
-	W^2\ket{p^*, j} = m^2 J^2 \ket{p^*, j} = m^2j(j+1)\ket{p^*, j},
-\end{equation}
-using the eigenvalues of $J^2$ from Eq.~\ref{eq:01_so3_su2_casimir_eigenvalue}.
-Although we chose here to look at a specific state $\ket{p^*}$, this can be shown to hold for all states $\ket{p}$ in the irrep.\footnote{By choosing an eigenstate $\ket{p^*, j}$ of $P^2$ and looking for transformations which leave it invariant, we ``induced'' a subgroup, \SO[3], and used its representation theory to derive the irreps of the Poincaré group. Such a representation is hence called an \textit{induced representation}.}
-Thus, we see that irreps of the Poincaré group, and, hence, particles, are characterized by their mass $m$ and spin $j$.
-
-\subsubsection{Massive versus massless particles}
-
-Continuing with the massive, $m > 0$, particle case, we know as well from Section~\ref{sec:01_symmetries_so3} that the eigenstates within the $\ket{p, j}$ irreps are further labeled by their spin along a particular axis: $J_z\ket{p, j, m_j} = m_j\ket{p, j, m_j}$, with $m_j \in \{-j, -j+1, \ldots, j-1, j\}$.
-Thus, massive particles $\ket{m, j}$ exist in $2j+1$ spin states $\otimes$ an infinite number of momentum states $\ket{p},\ p_\mu p^\mu = m^2$.
-
-However, this is not the case for \textit{massless} particles, which have a different little group.
-Recall that we can never boost into the rest frame of a massless particle to define the simple $\ket{p^*}$ we did above.
-Instead, let us consider the next-best state $\ket{p'}$, $p'_\mu = (E, 0, 0, E)$.
-% It is clearly left invariant by rotations in the $x-y$ plane, but also by two translations generated by:
+% We know from special relativity that ``flat'' spacetime (i.e., without gravity) is described by 4D Minkowski space $\mathbb R^{1, 3}$.
+% This is a real vector space equipped with the metric $\eta_{\mu\nu} = \mathrm{diag}(1, -1, -1, -1)$, which defines distances, or inner products $\langle \cdot, \cdot \rangle$, between 4-vectors $x_\mu = (x_0, x_1, x_2, x_3)$ as:
 % \begin{equation}
-% 	\label{eq:01_poincare_massless_translations}
-% 	A = \begin{pmatrix}
-% 		0 & 1 & 0 & 0 \\
-% 		1 & 0 & 0 & -1 \\
-% 		0 & 0 & 0 & 0 \\
-% 		0 & 1 & 0 & 0
-% 	\end{pmatrix}
+% 	\label{eq:01_minkowski_metric}
+% 	\langle x, y \rangle \equiv x_\mu y^\mu \equiv \eta_{\mu\nu}x^\mu y^\nu = x_0 y_0 - x_1 y_1 - x_2 y_2 - x_3 y_3.
 % \end{equation}
-Its little group turns out to be $\mathrm{E}(2)$, the Euclidean group in 2D, whose representations and implications for massless particles are considerably more involved.
-However, the upshot is that it as well has irreps characterized by spin $j$ (and mass $m = 0$), but with only two \textit{helicity} eigenstates therein.
 
-As it turns out, physically, the mass of particles is based on the strength of their interactions (or lack thereof) with the Higgs boson, the particle at the center of this dissertation.
-We will discuss the mechanisms for these and all fundamental interactions in the next chapter, and see that symmetries are crucial in understanding them.
+% \begin{definition}
+% \label{def:01_lorentz_group}
+% % Lorentz transformations are those which preserve the magnitude of 4-vectors in Minkowski space $\mathbb R^{1, 3}$.
+% The \textit{Lorentz group} is the group of all matrices $M$ orthogonal under the Minkowski metric $M^T\eta M = \eta$, and is called \OO[1, 3].
+% This is the analog in flat spacetime to distance-preserving transformations in Euclidean space (e.g., \OO[3]).
+% \end{definition}
 
-% \section{Summary}
+% \begin{definition}
+% \label{def:01_proper_orthochronous}
+% The \textit{proper, orthochronous} Lorentz group $\mathrm{SO}^+(1, 3)$ is the subgroup of \OO[1, 3] matrices continuously connected to the identity.
+% Physically, these are the transformations that preserve the orientation of space and direction of time, and are typically what we refer to as \textit{Lorentz transformations}.
+% The two transformations of \OO[1, 3] not included in $\mathrm{SO}^+(1, 3)$ are parity $P = \diag(1, -1, -1, -1)$ and time reversal $T = \diag(-1, 1, 1, 1)$ (shown in the 4-vector representation), which flip the sign of spatial and temporal components of 4-vectors, respectively.
+% Surprisingly, these are not symmetries of nature ---
+% they are violated by the weak interaction!
+% % \TODO{We discuss this more in ...}
+% Generally, in this chapter, when we talk about the Lorentz group or Lorentz invariance, we are referring only to the proper, orthochronous Lorentz group.
+% \end{definition}
 
-% In this section, we introduced group theory, the mathematical framework for describing symmetries.
-% We described properties of continuous symmetry groups, their generators 
+% \subsubsection{Generators of the Lorentz group}
 
-% and their Lie algebras, defining 
+% Lorentz transformations $\Lambda$ are generated by six antisymmetric matrices, three for boosts ($K_i$) and three for rotations ($J_i$).
+% In the $4$-vector representation, these are:
+% \begin{equation} 
+% 	\begin{split}
+% 	\label{eq:01_lorentz_generators}
+% 	K_x &= -i\begin{pmatrix}
+% 		\setlength{\arraycolsep}{10pt}
+% 		0 & 1 & 0 & 0 \\
+% 		1 & 0 & 0 & 0 \\
+% 		0 & 0 & 0 & 0 \\
+% 		0 & 0 & 0 & 0
+% 	\end{pmatrix}, \ 
+% 	K_y = -i\begin{pmatrix}
+% 		0 & 0 & 1 & 0 \\
+% 		0 & 0 & 0 & 0 \\
+% 		1 & 0 & 0 & 0 \\
+% 		0 & 0 & 0 & 0
+% 	\end{pmatrix}, \ 
+% 	K_z = -i\begin{pmatrix}
+% 		0 & 0 & 0 & 1 \\
+% 		0 & 0 & 0 & 0 \\
+% 		0 & 0 & 0 & 0 \\
+% 		1 & 0 & 0 & 0
+% 	\end{pmatrix}, \\[1em]
+% 	\setlength{\arraycolsep}{5pt}
+% 	J_x &= i\begin{pmatrix}
+% 		0 & 0 & 0 & 0 \\
+% 		0 & 0 & 0 & 0 \\
+% 		0 & 0 & 0 & -1 \\
+% 		0 & 0 & 1 & 0
+% 	\end{pmatrix}, \ 
+% 	J_y = i\begin{pmatrix}
+% 		0 & 0 & 0 & 0 \\
+% 		0 & 0 & 0 & 1 \\
+% 		0 & 0 & 0 & 0 \\
+% 		0 & -1 & 0 & 0
+% 	\end{pmatrix}, \ 
+% 	J_z = i\begin{pmatrix}
+% 		0 & 0 & 0 & 0 \\
+% 		0 & 0 & -1 & 0 \\
+% 		0 & 1 & 0 & 0 \\
+% 		0 & 0 & 0 & 0
+% 	\end{pmatrix}.
+% \end{split} 
+% \end{equation}
+% Lorentz transformations can thus be represented as
+% \begin{equation}
+% 	\label{eq:01_lorentz_generators_exponential}
+% \Lambda(\vec{\theta}, \vec{\beta}) = e^{i(\theta_i J_i + \beta_i K_i)},
+% \end{equation}
+% where $\vec{\theta}$ and $\vec{\beta}$ are the rotation and boost parameters, respectively,
+% % Note that these only represent the transformations of the Lorentz group continuously connected to the identity (by definition of the Lie algebra, Definition~\ref{def:01_lie_algebra}).
 
-% and its applications to physics, emphasizing continuous groups and their Lie algebras.
+% An important property of the Lorentz group is that it is not compact.
+% This is related to the fact that the generators for boosts $K_i$ in the representation above are not Hermitian, which means the corresponding group elements $e^{i\beta_i K_i}$ are not unitary.
+% In fact, there are no finite-dimensional unitary representations of the Lorentz group~\cite{Wigner:1939cj}.
+% Unitarity of operators is an important condition for the invariance of physical properties under transformations in QM, and the consequences of this for the SM will be discussed in Chapter~\ref{sec:01_qft_spinors}.
+
+% \subsubsection{Lie algebra of the Lorentz group}
+
+% From Eq.~\ref{eq:01_lorentz_generators}, we can derive the commutation relations of the generators and, hence, the Lie algebra:
+% \begin{equation}
+% 	\begin{split}
+% 		\label{eq:01_lorentz_algebra}
+% 		[K_i, K_j] &= -i \epsilon_{ijk} J_k, \\
+% 		 [J_i, J_j] &= i \epsilon_{ijk} J_k, \\
+% 		[J_i, K_j] &= i \epsilon_{ijk} K_k.
+% 	\end{split}
+% \end{equation}
+% Moreover, if we define the operators
+% \begin{equation}
+% 	\label{eq:01_lorentz_su2_operators}
+% 	J^+_i = \frac{1}{2}(J_i + iK_i), \quad J^-_i = \frac{1}{2}(J_i - iK_i),
+% \end{equation}
+% we find that \so[1, 3] contains two mutually commuting \su[2] subalgebras:
+% \begin{equation}
+% 	\begin{split}
+% 		\label{eq:01_lorentz_su2_subalgebras}
+% 		[J^+_i, J^+_j] &= i \epsilon_{ijk} J^+_k, \\
+% 		[J^-_i, J^-_j] &= i \epsilon_{ijk} J^-_k, \\
+% 		[J^+_i, J^-_j] &= 0.
+% 	\end{split}
+% \end{equation}
+% This implies the irreps of \so[1, 3] are simply two copies of the irreps of \su[2] from Section~\ref{sec:01_symmetries_so3}, indexed as $(j_1, j_2)$ with $j_1, j_2 \in \mathbb Z^{\geq0}/2$ and dimension $(2j_1 + 1)(2j_2 + 1)$.
+
+% With this, we can easily obtain the generators $J_i$, $K_i$ for the smallest few irreps:
+% % \begin{itemize}
+% % 	\item $(0, 0)$: \quad $J^+_i = J^-_i = 0 \Rightarrow J_i = K_i = 0$.
+% % 	\item $(1/2, 0)$: \quad $J^+_i = \frac{1}{2} \sigma_i$, $J^-_i = 0 \Rightarrow J_i = \frac{1}{2} \sigma_i$, $K_i = -\frac{i}{2} \sigma_i$.
+% % \end{itemize}
+% \begin{align}
+% 	\label{eq:01_lorentz_irreps_00}
+% 	(0, 0)\text{:}& \qquad J^+_i = J^-_i = 0 \! &\Rightarrow& \qquad J_i = K_i = 0. \\
+% 	\label{eq:01_lorentz_irreps_weyl_left}
+% 	(\nicefrac{1}{2}, 0)\text{:}& \qquad J^+_i = \frac{1}{2} \sigma_i,\, J^-_i = 0 \! &\Rightarrow& \qquad J_i = \frac{1}{2} \sigma_i, K_i = -\frac{i}{2} \sigma_i. \\
+% 	\label{eq:01_lorentz_irreps_weyl_right}
+% 	(0, \nicefrac{1}{2})\text{:}& \qquad J^+_i = 0,\, J^-_i = \frac{1}{2} \sigma_i \! &\Rightarrow& \qquad J_i = \frac{1}{2} \sigma_i, K_i = \frac{i}{2} \sigma_i. \\[2mm]
+% 	% (\nicefrac{1}{2}, \nicefrac{1}{2})\text{:}& 
+% 	& \qquad\qquad\qquad\qquad\qquad \vdots \notag
+% 	\vspace{-10mm}
+% \end{align}
+% % \vspace{-2mm}
+% % As you can see, the $(\nicefrac{1}{2}, 0)$ and $(0, \nicefrac{1}{2})$ irreps are quite similar, and are called the \textit{left-} and \textit{right-handed Weyl spinor} representations, where the handedness refers to the direction of a particle's spin angular momentum relative to its momentum.
+% % are the left- and right-handed Weyl spinors, respectively, of the Lorentz group.
+% The $(\nicefrac{1}{2}, \nicefrac{1}{2})$ irrep is actually our familiar $4$-vector representation, but it is more involved to recover the generators in the same form as Eq.~\ref{eq:01_lorentz_generators}.\footnote{See e.g. Ref.~\cite{439080}.}
+
+% % For example, $(0, 0)$ is the trivial representation, with $J^+_i = J^-_i = 0 \Rightarrow J_i = K_i = 0$.
+% % The $(1/2, 0)$ representation means $J^+_i = \frac{1}{2} \sigma_i$, $J^-_i = 0 \Rightarrow J_i = \frac{1}{2} \sigma_i$, $K_i = -\frac{i}{2} \sigma_i$, while in $(0, 1/2)$, $J^+_i = 0$, $J^-_i = \frac{1}{2} \sigma_i \Rightarrow J_i = \frac{1}{2} \sigma_i$, $K_i = \frac{1}{2} \sigma_i$.
+
+% \subsubsection{Representations of the Lorentz group}
+
+% It turns out the above four irreps of the Lorentz group are all we need for the SM.
+% Their nomenclature and corresponding elementary particle fields are listed in Table~\ref{tab:01_lorentz_representations}.
+% Notably, fermions are classified as those with half-integer total spin $j = j_1 + j_2$, and bosons with integer $j$.
+% Their radically different behavior is a consequence of the Spin-Statistics theorem~\cite{PhysRev.110.1450} (a notoriously difficult theorem to prove~\cite{FeynmanVol3}), which states that half-integer spin particles obey Fermi-Dirac statistics and integer spin particles Bose-Einstein statistics.
+
+% All known fermionic particle fields live in the $(\nicefrac{1}{2}, 0) \oplus (0, \nicefrac{1}{2})$, or \textit{Dirac spinor}, representation.
+% The $(\nicefrac{1}{2}, 0)$ and $(0, \nicefrac{1}{2})$ representations are called the \textit{left-} and \textit{right-handed Weyl spinors} respectively, where the handedness refers to the direction of their spin angular momentum relative to their momentum.
+% Physically, this means there is a left-handed and right-handed copy of each fermion, and they have to be packaged together in a Dirac spinor to have masses without violating parity, as we discuss in Chapter~\ref{sec:01_qft_spinors}.
+% % \footnote{More fundamentally, this is necessary to resolve gauge anomalies that arise from the quantization of QED and QCD (see Tong SM~\cite{TongSM} Chapter 4.1).}
+% % The Dirac spinor thus comprises both a left-handed and right-handed component, which is necessary for QED- and QCD-\textit{gauge-invariant} fermion masses.\footnote{More fundamentally, this is necessary to resolve gauge anomalies that arise from the quantization of QED and QCD (see Tong SM~\cite{TongSM} Chapter 4.1).}
+% We will also see that left- and right-handed representations can be equivalently thought of as particles and antiparticles.
+
+% The $(\nicefrac{1}{2}, 0) \oplus (0, \nicefrac{1}{2})$ representation technically also includes real \textit{Majorana spinors} as a subspace, which can represent neutral fermions.
+% The only candidate for these in the SM are right-handed neutrinos and, in fact, the existence of such Majorana neutrinos could potentially explain the curiously small \textit{left-handed} neutrino masses through a process called the \textit{seesaw mechanism}~\cite{Foot:1988aq, Schechter:1980gr}.
+% To date, however, no experimental evidence for these, such as neutrinoless double beta decay~\cite{Rodejohann:2011mu} or same-sign charged dilepton decays~\cite{CMS:2018jxx}, has been observed.
+
+% On another technical note, the Lorentz group, similar to \SO[3], does not itself admit half-integer, fermionic representations.
+% Thus, the true spacetime symmetry group is actually the double cover of \SO[1, 3], $\mathrm{Spin}(1,3)$!
+% Indeed, there are many subtleties to the Lorentz group, some of which will be revisited in the context of Lorentz-group equivariant neural networks in Chapter~\ref{sec:06_lgae}.
+% To conclude, however, it is worth emphasizing again the remarkable physical insight these seemingly abstract group-theoretic concepts deliver.
+% We are able to classify a fundamental dichotomy of particle physics --- bosons versus fermions, and their completely different behavior --- simply by their representation under the Lorentz (or, rather, the $\mathrm{Spin}(1,3)$) group!
+
+% \begin{table}[ht!]
+% 	\centering
+% 	\renewcommand{\arraystretch}{1.5}
+% 	% \setlength{\tabcolsep}{8pt}
+% 	% wrap table to textwidth
+% 	% \begin{wraptable}{r}{0.5\textwidth}
+% 	\resizebox{\textwidth}{!}{
+% 	\begin{tabular}{c|c|c}
+% 		% \toprule
+% 		\textbf{Representation $(j_1, j_2)$} & \textbf{Name} & \textbf{Elementary Fields} \\
+% 		\hline
+% 		$(0, 0)$ & Scalar & Higgs boson \\
+% 		$(\nicefrac{1}{2}, 0)$ & Left-handed Weyl spinor & --- \\
+% 		$(0, \nicefrac{1}{2})$ & Right-handed Weyl spinor & --- \\
+% 		$(\nicefrac{1}{2}, 0) \oplus (0, \nicefrac{1}{2})$ & Dirac spinor & All fermions \\
+% 		$(\nicefrac{1}{2}, \nicefrac{1}{2})$ & Vector & $g, \gamma, W^\pm,$ and $Z$ gauge bosons \\
+% 		% \bottomrule
+% 	\end{tabular}
+% 	}
+% 	\vspace{1em}
+% 	\caption{Representations of the Lorentz group and their associated particle fields in the SM.}
+% 	\label{tab:01_lorentz_representations}
+% \end{table}
+
+% % \subsection{Representations of the Poincaré group}
+
+% \subsubsection{Lie algebra of the Poincaré group}
+
+% The Poincaré group is Lorentz transformations plus spacetime translations.
+% Just as angular momentum generates rotations, translations are generated by the momentum operator $P_\mu$.
+% $P_\mu$ and the Lorentz generators $J_i$ and $K_i$ together comprise the generators of the Poincaré group, and its algebra is thus the Lorentz algebra (Eq.~\ref{eq:01_lorentz_algebra}) plus the commutation relations with the $P_\mu$s:\footnote{See Appendix~\ref{app:01_poincare_algebra} for a derivation.}
+% \begin{equation}
+% 	\label{eq:01_poincare_algebra}
+% 	\begin{split}
+% 		[P_\mu, P_\nu] &= 0, \\
+% 		[J_i, P_0] &= 0, \\
+% 		[J_i, P_j] &= i \epsilon_{ijk}P_k, \\
+% 		[K_i, P_0] &= -i P_i, \\
+% 		[K_i, P_j] &= i \eta_{ij}P_0.
+% 	\end{split}
+% \end{equation}
+% As is conventional, the Greek indices run over all four spacetime dimensions, while the Latin indices only the three spatial.
+
+% The Poincaré algebra can be expressed more compactly by first combining the Lorentz generators into the antisymmetric tensor $M_{\mu\nu}$:
+% \begin{equation}
+% \label{eq:01_lorentz_generators_mmunu}
+% M_{\mu\nu} = \begin{pmatrix}
+% 	0 & K_x & K_y & K_z \\
+% 	-K_x & 0 & J_z & -J_y \\
+% 	-K_y & -J_z & 0 & J_x \\
+% 	-K_z & J_y & -J_x & 0
+% \end{pmatrix}
+% \quad\Rightarrow \Lambda(\omega) = e^{\frac{i}{2}\omega^{\mu\nu} M_{\mu\nu}},
+% \end{equation}
+% % M_{0i} = -M_{i0} = K_i, \quad M_{ij} = \epsilon_{ijk} J_k \quad\Rightarrow \Lambda(\omega) = e^{\frac{i}{2}\omega^{\mu\nu} M_{\mu\nu}},
+% with $\omega_{\mu\nu}$ another antisymmetric tensor containing the six rotation and boost parameters.
+% The algebra can be then written as:
+% \begin{equation}
+% 	\begin{split}
+% 		\label{eq:01_poincare_algebra_mmunu}
+% 		[M_{\mu\nu}, M_{\rho\sigma}] &= i(\eta_{\nu\rho}M_{\mu\sigma} - \eta_{\mu\rho}M_{\nu\sigma} - \eta_{\nu\sigma}M_{\mu\rho} + \eta_{\mu\sigma}M_{\nu\rho}), \\
+% 		[M_{\mu\nu}, P_\rho] &= i(\eta_{\nu\rho}P_\mu - \eta_{\mu\rho}P_\nu), \\
+% 		[P_\mu, P_\nu] &= 0.
+% 	\end{split}
+% \end{equation}
+
+% \subsubsection{Irreps of the Poincaré group}
+
+% As we saw from Section~\ref{sec:01_symmetries_so3}, we can derive the irreps of an algebra using its Casimir invariants (Definition~\ref{def:01_casimir}).
+% Each set of their eigenvalues uniquely labels an irrep, while each basis state within the irreps is indexed by eigenvalues of a maximal set of commuting operators (e.g., $\{J^2, J_z\} \rightarrow \ket{j, m}$ for \so[3]).
+% Note that in the following, we simply provide a sketch of the derivations and point to, for example, Zee GT~\cite{Zee:2016fuk} Chapter VII.2 and Tong SM~\cite{TongSM} Chapter 1.1.2 for more detailed proofs and discussion.
+
+% The Casimirs of the Poincaré algebra are the operators
+% \begin{equation}
+% 	\label{eq:01_poincare_casimirs}
+% 	P^2 = P_\mu P^\mu\ \mathrm{ and }\ W^2 = W_\mu W^\mu,
+% \end{equation}
+% where 
+% \begin{equation}
+% 	\label{eq:01_poincare_wmu}
+% 	W_\mu = \frac{1}{2}\epsilon_{\mu\nu\rho\sigma}M^{\nu\rho}P^\sigma
+% \end{equation}
+% is the \textit{Pauli-Lubanski vector}, the relativistic analog of the angular momentum operator $J_i$.
+% Furthermore, $P_\mu$ commutes with both, and we can label its eigenstates as $\ket{p}$,
+% \begin{equation}
+% 	\label{eq:01_poincare_pmu_eigenstates}
+% 	P_\mu\ket{p} = p_\mu\ket{p}, 
+% \end{equation}
+% which represent single-particle states with 4-momentum $p_\mu$.
+% % Note that we have an infinite number of states and, therefore, necessarily infinite-dimensional representations of the Poincaré group because it is not compact.
+% These are therefore eigenstates of $P^2$ as well, with eigenvalues $m^2$, the squared mass of the particle:
+% \begin{equation}
+% 	\label{eq:01_poincare_p2}
+% 	P^2\ket{p} = p_\mu p^\mu\ket{p} = m^2 \ket{p}.
+% \end{equation}
+% Thus, we see that the mass of a particle, $m$, is one label of the irreps, with states therein indexed by $p_\mu$.
+% The other label, the particle spin $j$, is based on the eigenvalue of $W^2$:
+% \begin{equation}
+% 	\label{eq:01_poincare_w2}
+% 	W^2\ket{p, j} \propto j(j+1)\ket{p, j}.
+% \end{equation}
+% The easiest way to see this is to, for a given $m > 0$, pick a single eigenstate $\ket{p^*}$.
+% The simplest is the rest frame $p^*_\mu = (m, 0, 0, 0)$.
+% The subgroup of Poincaré transformations which leave $\ket{p^*}$ invariant is called its \textit{little group}.
+% In this case, it comprises all 3D rotations --- i.e., \SO[3].
+% Indeed, if we look at the Pauli-Lubanski vector acting on $\ket{p^*}$,
+% \begin{equation}
+% 	\label{eq:01_poincare_w2_eigenstates}
+% 	W_\mu\ket{p^*} = \frac{1}{2}\epsilon_{\mu\nu\rho\sigma}M^{\nu\rho}p^{*\sigma}\ket{p^*} \quad\Rightarrow W_0 = 0, W_i = -m J_i,
+% \end{equation}
+% we simply recover the generators $J_i$ of \so[3].\footnote{This also motivates why $W_\mu$ can be thought of as relativistic angular momentum.}
+% Therefore,
+% \begin{equation}
+% 	\label{eq:01_poincare_w2_eigenvalues}
+% 	W^2\ket{p^*, j} = m^2 J^2 \ket{p^*, j} = m^2j(j+1)\ket{p^*, j},
+% \end{equation}
+% using the eigenvalues of $J^2$ from Eq.~\ref{eq:01_so3_su2_casimir_eigenvalue}.
+% Although we chose here to look at a specific state $\ket{p^*}$, this can be shown to hold for all states $\ket{p}$ in the irrep.\footnote{By choosing an eigenstate $\ket{p^*, j}$ of $P^2$ and looking for transformations which leave it invariant, we ``induced'' a subgroup, \SO[3], and used its representation theory to derive the irreps of the Poincaré group. Such a representation is hence called an \textit{induced representation}.}
+% Thus, we see that irreps of the Poincaré group, and, hence, particles, are characterized by their mass $m$ and spin $j$.
+
+% \subsubsection{Massive versus massless particles}
+
+% Continuing with the massive, $m > 0$, particle case, we know as well from Section~\ref{sec:01_symmetries_so3} that the eigenstates within the $\ket{p, j}$ irreps are further labeled by their spin along a particular axis: $J_z\ket{p, j, m_j} = m_j\ket{p, j, m_j}$, with $m_j \in \{-j, -j+1, \ldots, j-1, j\}$.
+% Thus, massive particles $\ket{m, j}$ exist in $2j+1$ spin states $\otimes$ an infinite number of momentum states $\ket{p},\ p_\mu p^\mu = m^2$.
+
+% However, this is not the case for \textit{massless} particles, which have a different little group.
+% Recall that we can never boost into the rest frame of a massless particle to define the simple $\ket{p^*}$ we did above.
+% Instead, let us consider the next-best state $\ket{p'}$, $p'_\mu = (E, 0, 0, E)$.
+% % It is clearly left invariant by rotations in the $x-y$ plane, but also by two translations generated by:
+% % \begin{equation}
+% % 	\label{eq:01_poincare_massless_translations}
+% % 	A = \begin{pmatrix}
+% % 		0 & 1 & 0 & 0 \\
+% % 		1 & 0 & 0 & -1 \\
+% % 		0 & 0 & 0 & 0 \\
+% % 		0 & 1 & 0 & 0
+% % 	\end{pmatrix}
+% % \end{equation}
+% Its little group turns out to be $\mathrm{E}(2)$, the Euclidean group in 2D, whose representations and implications for massless particles are considerably more involved.
+% However, the upshot is that it as well has irreps characterized by spin $j$ (and mass $m = 0$), but with only two \textit{helicity} eigenstates therein.
+
+% As it turns out, physically, the mass of particles is based on the strength of their interactions (or lack thereof) with the Higgs boson, the particle at the center of this dissertation.
+% We will discuss the mechanisms for these and all fundamental interactions in the next chapter, and see that symmetries are crucial in understanding them.
+
+% % \section{Summary}
+
+% % In this section, we introduced group theory, the mathematical framework for describing symmetries.
+% % We described properties of continuous symmetry groups, their generators 
+
+% % and their Lie algebras, defining 
+
+% % and its applications to physics, emphasizing continuous groups and their Lie algebras.
