@@ -228,7 +228,7 @@ This can then be shown to imply the existence of a conserved current $j^\mu$:
 which in turn implies the existence of a conserved charge $Q$
 \begin{equation}
 	\label{eq:01_qft_symmetries_charge}
-	Q = \int_\mathrm{all space} d^3x\ j^0.
+	Q = \int_{\mathrm{all space}} d^3x\ j^0.
 \end{equation}
 
 \subsubsection{Example: translation symmetry}
@@ -813,7 +813,7 @@ The difference in our theory is the scalar rather than fermionic nucleon, for si
 
 For treating interactions that are small perturbations to the free theory, it is most useful to employ the interaction picture of QM, a hybrid of the Schr\"odinger and Heisenberg pictures.
 Recall that in the Schr\"odinger picture, operators are fixed while states evolve with time, and vice versa in the Heisenberg picture.
-In the interaction picture, we split the Hamiltonian into the free ($H_0$) and interaction terms ($H_\mathrm{int}$), defining operators to evolve with the former and states with the latter.
+In the interaction picture, we split the Hamiltonian into the free ($H_0$) and interaction terms ($H_{\mathrm{int}}$), defining operators to evolve with the former and states with the latter.
 
 The upshot of this in QFT is that the S-matrix element can be written according to \textit{Dyson's formula}:
 \begin{equation}
@@ -823,10 +823,10 @@ The upshot of this in QFT is that the S-matrix element can be written according 
 where $T$ is the same time-ordering operator from Section~\ref{sec:01_qft_quantization_propagators} and $H_I$ is the time-evolved interaction Hamiltonian in the interaction picture:
 \begin{equation}
 	\label{eq:01_qft_interactions_interaction_hamiltonian}
-	H_I(t) = e^{iH_0t}H_\mathrm{int}e^{-iH_0t}.
+	H_I(t) = e^{iH_0t}H_{\mathrm{int}}e^{-iH_0t}.
 \end{equation}
 
-Assuming a small $H_\mathrm{int}$, Dyson's formula can be Taylor expanded as:
+Assuming a small $H_{\mathrm{int}}$, Dyson's formula can be Taylor expanded as:
 \begin{multline}
 	\label{eq:01_qft_interactions_dysons_expansion}
 	\braket{f|S|i} = \braket{f|\identity|i} + (-i) \int_{-\infty}^\infty \braket{f|H_I(t)|i}dt \\
@@ -991,7 +991,7 @@ For the left-most diagram, we see $k = q_{f1} - q_{i1} = q_{f2} - q_{i2}$, while
 Thus, the total matrix element is
 \begin{equation}
 	\label{eq:01_qft_interactions_nn_scattering_2}
-	i \mathcal M = i(\mathcal M_\mathrm{left} + \mathcal M_\mathrm{right}) = (-ig)^2 \bigg[ \cfrac{1}{(q_{f1} - q_{i1})^2 - m^2} + \cfrac{1}{(q_{f2} - q_{i1})^2 - m^2} \bigg],
+	i \mathcal M = i(\mathcal M_{\mathrm{left}} + \mathcal M_{\mathrm{right}}) = (-ig)^2 \bigg[ \cfrac{1}{(q_{f1} - q_{i1})^2 - m^2} + \cfrac{1}{(q_{f2} - q_{i1})^2 - m^2} \bigg],
 	% \begin{split}
 	% 	i \mathcal M_1 = (-ig)^2 \cdot  \cfrac{1}{(q_{f1} - q_{i1})^2 - m^2 + i\varepsilon}, \\
 	% 	i \mathcal M_2 = (-ig)^2 \cdot  \cfrac{1}{(q_{f2} - q_{i1})^2 - m^2 + i\varepsilon},
@@ -1033,8 +1033,8 @@ We can see that the matrix elements for nucleon scattering (Eq.~\ref{eq:01_qft_i
 \begin{equation}
 	\label{eq:01_qft_interactions_nn_tchannel_uchannel}
 	\begin{split}
-		i \mathcal M_\mathrm{left} = (-ig)^2 \cdot \cfrac{1}{t - m^2}, \\
-		i \mathcal M_\mathrm{right} = (-ig)^2 \cdot \cfrac{1}{u - m^2}.
+		i \mathcal M_{\mathrm{left}} = (-ig)^2 \cdot \cfrac{1}{t - m^2}, \\
+		i \mathcal M_{\mathrm{right}} = (-ig)^2 \cdot \cfrac{1}{u - m^2}.
 	\end{split}
 \end{equation}
 Hence, they are referred to as $t$-channel and $u$-channel diagrams, respectively.
@@ -1072,7 +1072,7 @@ Imposing momentum conservation we find:
 \begin{equation}
 	\label{eq:01_qft_interactions_na_scattering}
 	\begin{split}
-		i \mathcal M = i(\mathcal M_\mathrm{left} + \mathcal M_\mathrm{right}) &= (-ig)^2 \bigg[ \cfrac{1}{(q_{f1} - q_{i1})^2 - m^2} + \cfrac{1}{(q_{i1} + q_{i2})^2 - m^2} \bigg]. \\
+		i \mathcal M = i(\mathcal M_{\mathrm{left}} + \mathcal M_{\mathrm{right}}) &= (-ig)^2 \bigg[ \cfrac{1}{(q_{f1} - q_{i1})^2 - m^2} + \cfrac{1}{(q_{i1} + q_{i2})^2 - m^2} \bigg]. \\
 		&= (-ig)^2 \bigg( \cfrac{1}{t - m^2} + \cfrac{1}{s - m^2} \bigg)
 	\end{split}
 \end{equation}
@@ -1219,30 +1219,30 @@ where $\braket{f|f}$ and $\braket{i|i}$ are the normalization factors for the fi
 For the case of two incoming particles (which is what is most relevant for this dissertation), we can put all of this together to obtain the relation between differential cross section and the matrix element $\mathcal M$:
 \begin{equation}
 	\label{eq:01_qft_interactions_cross_section_matrix_element}
-	d\sigma = \frac{1}{(2E_1)(2E_2)\abs{\vec{v}_1 - \vec{v}_2}} \abs{\mathcal M}^2 d\Pi_\mathrm{LIPS},
+	d\sigma = \frac{1}{(2E_1)(2E_2)\abs{\vec{v}_1 - \vec{v}_2}} \abs{\mathcal M}^2 d\Pi_{\mathrm{LIPS}},
 \end{equation}
-where $E_1$ and $E_2$ are the energies of the incoming particles, $\vec{v}_1$ and $\vec{v}_2$ are their velocities, and $d\Pi_\mathrm{LIPS}$ is called the Lorentz-invariant phase space of the final state momenta:
+where $E_1$ and $E_2$ are the energies of the incoming particles, $\vec{v}_1$ and $\vec{v}_2$ are their velocities, and $d\Pi_{\mathrm{LIPS}}$ is called the Lorentz-invariant phase space of the final state momenta:
 \begin{equation}
 	\label{eq:01_qft_interactions_cross_section_lips}
-	d\Pi_\mathrm{LIPS} = (2\pi)^4 \delta^{(4)}(\Sigma p) \prod_{\mathrm{final\ states}\ j} \frac{d^3p_j}{(2\pi)^3} \frac{1}{2E_j}
+	d\Pi_{\mathrm{LIPS}} = (2\pi)^4 \delta^{(4)}(\Sigma p) \prod_{\mathrm{final\ states}\ j} \frac{d^3p_j}{(2\pi)^3} \frac{1}{2E_j}
 \end{equation}
 
 For the case of $2 \rightarrow 2$ scattering, in the COM frame, this simplifies considerably:
 \begin{equation}
 	\label{eq:01_qft_interactions_cross_section_com}
-	\bigg(\frac{d\sigma}{d\Omega}\bigg)_\mathrm{CM} = \frac{1}{64\pi^2E_\mathrm{CM}^2}\, \frac{\abs{\vec{p}_f}}{\abs{\vec{p}_i}} \abs{\mathcal M}^2 \theta(E_\mathrm{CM} - m_3 - m_4),
+	\bigg(\frac{d\sigma}{d\Omega}\bigg)_{\mathrm{CM}} = \frac{1}{64\pi^2E_{\mathrm{CM}}^2}\, \frac{\abs{\vec{p}_f}}{\abs{\vec{p}_i}} \abs{\mathcal M}^2 \theta(E_{\mathrm{CM}} - m_3 - m_4),
 \end{equation}
 and even more so when the all four masses are equal:
 \begin{equation}
 	\label{eq:01_qft_interactions_cross_section_com_equal_mass}
-	\bigg(\frac{d\sigma}{d\Omega}\bigg)_\mathrm{CM} = \frac{1}{64\pi^2E_\mathrm{CM}^2}\, \abs{\mathcal M}^2.
+	\bigg(\frac{d\sigma}{d\Omega}\bigg)_{\mathrm{CM}} = \frac{1}{64\pi^2E_{\mathrm{CM}}^2}\, \abs{\mathcal M}^2.
 \end{equation}
 
 For nucleon-nucleon scattering in the COM frame, for example, we have (at tree level):
 \begin{equation}
 	\label{eq:01_qft_interactions_nn_scattering_cross_section}
 	\begin{split}
-		\bigg(\frac{d\sigma(\theta)}{d\Omega}\bigg)_\mathrm{CM} &= \frac{g^4}{64\pi (2E)^2} \left(\frac{1}{t - m^2} + \frac{1}{u - m^2}\right)^2 \\
+		\bigg(\frac{d\sigma(\theta)}{d\Omega}\bigg)_{\mathrm{CM}} &= \frac{g^4}{64\pi (2E)^2} \left(\frac{1}{t - m^2} + \frac{1}{u - m^2}\right)^2 \\
 		&= \frac{g^4}{64\pi (2E)^2} \left[\frac{1}{2p^2(1 - \cos\theta) - m^2} + \frac{1}{2p^2(1 + \cos\theta) - m^2}\right]^2,
 	\end{split}
 \end{equation}
@@ -1259,7 +1259,7 @@ The decay rate $\Gamma$ is simply the probability of decay per unit time:
 Using our expression for $P$ from above and simplifying, we find:
 \begin{equation}
 	\label{eq:01_qft_interactions_differential_decay_rate}
-	d\Gamma = \frac{1}{2m} \abs{\mathcal M}^2 d\Pi_\mathrm{LIPS},
+	d\Gamma = \frac{1}{2m} \abs{\mathcal M}^2 d\Pi_{\mathrm{LIPS}},
 \end{equation}
 in the rest frame of the decaying particle, where $m$ is its mass.
 If multiple decays of the same particle are possible, we sum over the final states in the phase space integral.
@@ -1268,9 +1268,9 @@ The total $\Gamma$ is then called the \textit{width} of the particle, and $1/\Ga
 For our simple meson decay $\phi \rightarrow \psi^\dagger\psi$, we have at tree level:
 \begin{equation}
 	\label{eq:01_qft_interactions_decay_rate_meson_decay}
-	d\Gamma = \frac{g^2}{2m} d\Pi_\mathrm{LIPS} \quad \Rightarrow \quad \Gamma = \frac{g^2}{32\pi m} \left(1 - \frac{4M^2}{m^2}\right)^{1/2},
+	d\Gamma = \frac{g^2}{2m} d\Pi_{\mathrm{LIPS}} \quad \Rightarrow \quad \Gamma = \frac{g^2}{32\pi m} \left(1 - \frac{4M^2}{m^2}\right)^{1/2},
 \end{equation}
-where we performed the integral over $d\Pi_\mathrm{LIPS}$ (see Ref.~\cite{XianyuPSSolutions} 4.2).
+where we performed the integral over $d\Pi_{\mathrm{LIPS}}$ (see Ref.~\cite{XianyuPSSolutions} 4.2).
 This is in fact not too far off the expression for the decay width of the Higgs boson to fermions.
 What we are missing of course is that fermions are spin-$\cnicefrac{1}{2}$ particles, and we need to sum over their spin states.
 We will derive the correct expression (at tree level) in the next section.
@@ -1689,7 +1689,7 @@ The matrix element for meson decay into a fermion-antifermion pair with spin and
 We can calculate the decay rate as in Section~\ref{sec:01_qft_interactions_decay}, except now we have to sum over the spins of the fermions:
 \begin{equation}
 	\label{eq:01_qft_spinors_meson_decay_rate}
-	d\Gamma = \sum_{s_1, s_2}^2 \frac{1}{2m} \abs{\mathcal M}^2 d\Pi_\mathrm{LIPS} = \frac{g^2}{2m} \sum_{s_1, s_2}^2 \abs{\bar u_{s_1}(q_1) v_{s_2}(q_2)}^2 d\Pi_\mathrm{LIPS}.
+	d\Gamma = \sum_{s_1, s_2}^2 \frac{1}{2m} \abs{\mathcal M}^2 d\Pi_{\mathrm{LIPS}} = \frac{g^2}{2m} \sum_{s_1, s_2}^2 \abs{\bar u_{s_1}(q_1) v_{s_2}(q_2)}^2 d\Pi_{\mathrm{LIPS}}.
 \end{equation}
 In the COM frame, we can choose $q_1 = (\frac{m}{2}, 0, 0, q)$ and $q_2 = (\frac{m}{2}, 0, 0, -q)$, with $q^2 = \frac{m^2}{4} - M^2$ by energy conservation.
 Using the forms of $\bar u_s$ and $v_s$ we found in Eq.~\ref{eq:01_qft_spinors_dirac_solution_momentum}, we see that the sum over spin states simplifies nicely:
@@ -1697,7 +1697,7 @@ Using the forms of $\bar u_s$ and $v_s$ we found in Eq.~\ref{eq:01_qft_spinors_d
 	\label{eq:01_qft_spinors_meson_decay_sum}
 	\sum_{s_1, s_2}^2 \abs{\bar u_{s_1}(q_1) v_{s_2}(q_2)}^2 = 8q^2 = 2(m^2 - 4M^2).
 \end{equation}
-Since this is independent of the final state kinematics, the integral of $d\Pi_\mathrm{LIPS}$ is the same as for the scalar meson decay, and we obtain an overall decay rate of:
+Since this is independent of the final state kinematics, the integral of $d\Pi_{\mathrm{LIPS}}$ is the same as for the scalar meson decay, and we obtain an overall decay rate of:
 \begin{equation}
 	\label{eq:01_qft_spinors_meson_decay_rate_final}
 	\Gamma = \frac{g^2m}{16\pi} \left(1 - \frac{4M^2}{m^2}\right)^{3/2}.

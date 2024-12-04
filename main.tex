@@ -1,13 +1,17 @@
 \documentclass[12pt]{report}
-% mathptmx is a Times Roman look-alike (don't use the times package)
-% It isn't clear if Times is required. The OGS manual lists several
-% "standard fonts" but never says they need to be used.
 % \usepackage{mathptmx}
 % \usepackage[OT1]{fontenc}
 % \renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
 
-% \usepackage{fontspec}
-% \setmainfont{Palatino}
+\ifdefined\HCode%
+   \def\pgfsysdriver{pgfsys-dvisvgm4ht.def}%
+\fi%
+
+\usepackage{setspace}
+\usepackage{fontspec}
+\setmainfont{Palatino}
+
+% \Configure{FontFamily}{rmfamily}{Palatino}
 % \newfontfamily\smallcapsfont{Palatino SC}
 % % \newfontfamily\scfont{Georgia}
 % % Save the original \textsc command
@@ -91,16 +95,15 @@
 
 \usepackage{doi}
 
+\sloppy
 \bibliographystyle{apsrev4-2}
 
 \overfullrule5pt
 % ---
 
 % Required information
-\title{Notes on Quantum Field Theory and the Standard Model}
+\title{Notes on Symmetries, Quantum Field Theory and the Standard Model}
 \author{Raghav Kansal}
-
-
 
 % Start the document
 \begin{document}
@@ -111,10 +114,13 @@
 {
 \hypersetup{linkcolor=black}
 \tableofcontents
-\ifdefined\HCode 
-\TocAt{chapter,section} %show section only in chapters TOC 
-% \TocAt{section,subsection} %show subsection only in sections TOC 
-\fi 
+% \ifdefined\HCode 
+% \tableofcontents[chapter,section]
+% % \CutAt{chapter,section} 
+% % \TocAt{chapter,section}  % show section only in chapters TOC 
+% % \TocAt{section,subsection}  % show subsection only in sections TOC 
+% \else
+% \fi 
 }
 
 \setlength{\parskip}{0.6\baselineskip}
@@ -127,13 +133,15 @@
 % \end{equation}
 
 % Reference Eq.~\ref{eq:1}.
+\begin{doublespace}
 
-% \input{01-SM.tex}
-% \input{01-SM-01-Symmetries.tex}
-% \input{01-SM-02-QFT.tex}
+\input{01-SM.tex}
+\input{01-SM-01-Symmetries.tex}
+\input{01-SM-02-QFT.tex}
 \input{01-SM-03-SM.tex}
 
 \nocite{apsrev42Control}
 \bibliography{bibliography}
+\end{doublespace}
  
 \end{document}
