@@ -102,7 +102,7 @@ This can be expressed with Feynman's path integral formula, where the probabilit
 	\psi(q_f, T) = \int_{q_i}^{q_f} \mathcal{D}q(t) e^{iS[q(t)]/\hslash},
 \end{equation}
 where $\int_{q_i}^{q_f}\mathcal{D}q(t)$ is an integral over all possible paths $q(t)$ between $q_i$ and $q_f$, interfering through their complex phases $e^{iS[q(t)]/\hslash}$ that are based on the action $S[q(t)]$ of the path divided by the reduced Planck constant $\hslash$.
-In the classical limit $\nicefrac{\hslash}{S} \rightarrow 0$,\footnote{If we take $S \sim \mathrm{energy} \cdot T = \frac{\hslash c}{\lambda}\cdot T$, then the classical limit $\frac{\hslash}{S} = \frac{\lambda}{cT} \rightarrow 0$ physically is the case where the de Broglie wavelength of the particle $\lambda$ is negligible compared to the relevant length scales.} by the stationary phase approximation, only the path that extremizes the action contributes, as we expect.
+In the classical limit $\cnicefrac{\hslash}{S} \rightarrow 0$,\footnote{If we take $S \sim \mathrm{energy} \cdot T = \frac{\hslash c}{\lambda}\cdot T$, then the classical limit $\frac{\hslash}{S} = \frac{\lambda}{cT} \rightarrow 0$ physically is the case where the de Broglie wavelength of the particle $\lambda$ is negligible compared to the relevant length scales.} by the stationary phase approximation, only the path that extremizes the action contributes, as we expect.
 
 The path integral formulation was a critical development in QFT.
 The fact that the Lagrangian shows up naturally in this formulation is the reason why we ``consider it the most fundamental specification of a QFT'' (Peskin and Schroeder~\cite{Peskin:1995ev} Chapter 9).
@@ -142,7 +142,7 @@ The E-L equation for this Lagrangian is called the \textit{Klein-Gordon equation
 where we've defined the \textit{d'Alembertian} operator $\Box = \partial_\mu\partial^\mu = \partial_t^2 - \nabla^2$.	
 
 The Klein-Gordon equation is essentially the relativistic generalization of the Schrödinger equation.
-Just as the Schrödinger equation quantizes the non-relativistic EOM $E = \nicefrac{p^2}{2m}$, the Klein-Gordon equation converts the relativistic EOM for a free particle
+Just as the Schrödinger equation quantizes the non-relativistic EOM $E = \cnicefrac{p^2}{2m}$, the Klein-Gordon equation converts the relativistic EOM for a free particle
 \begin{equation}
 	\label{eq:01_qft_field_relativistic_eom}
 	E^2 = p^2c^2 + m^2c^4
@@ -168,8 +168,8 @@ Besides being notationally convenient, this means all dimensionful physical quan
 For example:
 \begin{itemize}
 	\item Mass: $E = mc^2 \rightarrow m = E$,
-	\item Compton wavelength: $\lambda = \nicefrac{\hslash}{mc} \rightarrow \lambda = \nicefrac{1}{E}$,
-	\item Momentum: $p = \nicefrac{\hbar}{\lambda} \rightarrow p = E$.
+	\item Compton wavelength: $\lambda = \cnicefrac{\hslash}{mc} \rightarrow \lambda = \cnicefrac{1}{E}$,
+	\item Momentum: $p = \cnicefrac{\hbar}{\lambda} \rightarrow p = E$.
 \end{itemize}
 We define each quantity to have a dimension in terms of energy, i.e. energy, mass, and momentum all have dimension $[E] = [m] = [p] = 1$, while length has dimension $[\lambda] = -1$.
 % The unit of energy we use is the electronvolt (eV).
@@ -193,7 +193,7 @@ Thus,
 	\label{eq:01_qft_field_kg_solutions_final}
 	\phi(\vec x, t) = \int \frac{d^3p}{(2\pi)^3} \frac{1}{\sqrt{2\omega_p}} (a(\vec{p})e^{ip\cdot x} + a^*(\vec{p})e^{-ip\cdot x}),
 \end{equation}
-where $p\cdot x$ is the 4D spacetime inner product with $p_\mu = (\omega_p, \vec{p})$, and the $\nicefrac{1}{\sqrt{2\omega_p}}$ factor is conventional.
+where $p\cdot x$ is the 4D spacetime inner product with $p_\mu = (\omega_p, \vec{p})$, and the $\cnicefrac{1}{\sqrt{2\omega_p}}$ factor is conventional.
 The coefficients $a$ and $a^*$ are complex conjugates to ensure a real sum.
 As we will see, in \textit{quantum} field theory, the form of the fields is quite similar but with $a$ and $a^*$ quantum operators.
 
@@ -456,7 +456,7 @@ The quantized Hamiltonian, from Eq.~\ref{eq:01_qft_hamiltonian_kg}, can be found
 		&= \int \frac{d^3p}{(2\pi)^3} \omega_p [\hat a^\dagger_{\vec{p}}\,\hat a_{\vec{p}} + \frac{1}{2} (2\pi)^3\delta^3(0)].
 	\end{split}
 \end{equation}
-This looks a lot like the Hamiltonian for a QHO, $H = \omega(a^\dagger a + \nicefrac{1}{2})$, for each momenta, but with an unwieldy delta function.
+This looks a lot like the Hamiltonian for a QHO, $H = \omega(a^\dagger a + \cnicefrac{1}{2})$, for each momenta, but with an unwieldy delta function.
 This latter term is called the \textit{zero-point energy} and represents the energy of the vacuum state.
 It is infinite, and, indeed, is one of the many infinities that have to be dealt with in QFT.
 
@@ -645,8 +645,8 @@ Interestingly, it can be shown that, for a particle with mass $m > 0$, for space
 	\label{eq:01_qft_quantization_propagator_spacelike}
 	D(r) \sim e^{-mr},
 \end{equation}
-i.e., it is not 0!\footnote{Mathematically, this stems from the $\nicefrac{1}{2\svecp E}$ factor in the integral required for Lorentz invariance.}
-However, it exponentially decays at rate of $\nicefrac{1}{m}$, or the Compton wavelength.
+i.e., it is not 0!\footnote{Mathematically, this stems from the $\cnicefrac{1}{2\svecp E}$ factor in the integral required for Lorentz invariance.}
+However, it exponentially decays at rate of $\cnicefrac{1}{m}$, or the Compton wavelength.
 Thus, this is telling us there is a fundamental physical limit in relativistic QM to which a particle can be localized in space (or, at least, to which we can measure its position, related to the uncertainty principle).
 
 Note, however, that this does not violate causality, since the commutator $[\phi(x), \phi(y)] = D(x- y) - D(y-x) = 0$ for spacelike separated points, meaning physically they cannot affect each other.
@@ -959,7 +959,7 @@ For our scalar Yukawa theory, the Feynman rules for calculating $i\mathcal M$ ar
 	\end{tikzpicture}
 	$\, = \cfrac{i}{q^2 - M^2 + i\varepsilon}$ \\[1em]
 	\item Impose momentum conservation at each vertex.
-	\item Integrate over the momentum $k$ flowing through each loop $\int \nicefrac{d^4k}{(2\pi)^4}$.
+	\item Integrate over the momentum $k$ flowing through each loop $\int \cnicefrac{d^4k}{(2\pi)^4}$.
 \end{enumerate}
 \end{definition}
 Note that the factors associated with internal lines are exactly the Feynman propagators from Section~\ref{sec:01_qft_quantization_propagators}, which is in line with their interpretation as the amplitude for a particle to propagate from one point to another.
@@ -1272,7 +1272,7 @@ For our simple meson decay $\phi \rightarrow \psi^\dagger\psi$, we have at tree 
 \end{equation}
 where we performed the integral over $d\Pi_\mathrm{LIPS}$ (see Ref.~\cite{XianyuPSSolutions} 4.2).
 This is in fact not too far off the expression for the decay width of the Higgs boson to fermions.
-What we are missing of course is that fermions are spin-$\nicefrac{1}{2}$ particles, and we need to sum over their spin states.
+What we are missing of course is that fermions are spin-$\cnicefrac{1}{2}$ particles, and we need to sum over their spin states.
 We will derive the correct expression (at tree level) in the next section.
 
 \section{Spinor field theory}
@@ -1286,7 +1286,7 @@ We will derive the correct expression (at tree level) in the next section.
 
 So far, we have focused on scalar fields, which live in the trivial representation of the Lorentz group and correspond to spin-$0$ bosons.
 In this section, we discuss the field theory for spin-$\frac{1}{2}$ particles, or fermions, which constitute all matter in the universe.
-% As discussed in Chapter~\ref{sec:01_symmetries_poincare}, all known elementary fermions are associated with \textit{Dirac spinor} fields, which transform under the $(\nicefrac{1}{2},0) \oplus (0,\nicefrac{1}{2})$ representation of the Lorentz group.
+% As discussed in Chapter~\ref{sec:01_symmetries_poincare}, all known elementary fermions are associated with \textit{Dirac spinor} fields, which transform under the $(\cnicefrac{1}{2},0) \oplus (0,\cnicefrac{1}{2})$ representation of the Lorentz group.
 % We describe the EOM governing free spinor fields, known as the Dirac equation, in Section~\ref{sec:01_qft_spinors_dirac}.
 % \TODO{We then...}
 % We then quantize the free spinor field in Section~\ref{sec:01_qft_spinors_quantization} and finally discuss Feynman rules for an interacting spinor theory in Section~\ref{sec:01_qft_spinors_feynman}.
@@ -1379,7 +1379,7 @@ Let's look at the rotation and boost generators individually:
 \end{equation}
 Comparing this with Eqs.~\ref{eq:01_lorentz_irreps_weyl_left} and~\ref{eq:01_lorentz_irreps_weyl_right}, we see that the top left and bottom right blocks are exactly the left- and right-handed Weyl spinor irreps of the generators.
 The handedness of a spinor is called its \textit{chirality}, and its physical significance will be discussed in a moment.
-Thus, we identify $S[\Lambda]$ with the $(\nicefrac{1}{2},0) \oplus (0,\nicefrac{1}{2})$, or Dirac spinor, representation.
+Thus, we identify $S[\Lambda]$ with the $(\cnicefrac{1}{2},0) \oplus (0,\cnicefrac{1}{2})$, or Dirac spinor, representation.
 
 This also means that, in this basis of the gamma matrices (called the \textit{Weyl}, or \textit{chiral}, basis), the Dirac spinor $\psi$ can be decomposed into two Weyl spinors:
 \begin{equation}
@@ -1528,7 +1528,7 @@ One can check using Fourier space, as we did for the Weyl equations, that
 	u(p) = \begin{pmatrix} \sqrt{p \cdot \sigma}\, \xi \\ \sqrt{p \cdot \bar\sigma}\, \xi \end{pmatrix}, \quad
 	v(p) = \begin{pmatrix} \sqrt{p \cdot \sigma}\, \eta \\ -\sqrt{p \cdot \bar\sigma}\, \eta \end{pmatrix}
 \end{equation}
-are general solutions to the Dirac equation, where $\xi$ and $\eta$ are the familiar two-component spinors from QM for spin-$\nicefrac{1}{2}$ particles (although technically they do not have this interpretation before quantization).
+are general solutions to the Dirac equation, where $\xi$ and $\eta$ are the familiar two-component spinors from QM for spin-$\cnicefrac{1}{2}$ particles (although technically they do not have this interpretation before quantization).
 As is conventional, we will use a basis of $\sigma_z$ eigenstates $\xi_1 = \eta_1 = (1, 0)^T$ and $\xi_2 = \eta_2 = (0, 1)^T$, corresponding to spin-up and spin-down, respectively.
 % , with eigenvalues $+1$ and $-1$, respectively.
 
@@ -1703,7 +1703,7 @@ Since this is independent of the final state kinematics, the integral of $d\Pi_\
 	\Gamma = \frac{g^2m}{16\pi} \left(1 - \frac{4M^2}{m^2}\right)^{3/2}.
 \end{equation}
 
-As we hinted at in Section~\ref{sec:01_qft_interactions_decay}, this is in fact the decay width of the Higgs boson to fermions at tree level, if we plug in the Higgs Yukawa coupling constant $g_f = \nicefrac{\sqrt{2} m_f}{v}$.
+As we hinted at in Section~\ref{sec:01_qft_interactions_decay}, this is in fact the decay width of the Higgs boson to fermions at tree level, if we plug in the Higgs Yukawa coupling constant $g_f = \cnicefrac{\sqrt{2} m_f}{v}$.
 Here $m_f$ is the fermion mass and $v$ is the Higgs vacuum expectation value, $246\GeV$.
 For example, for the $H\to \mu^+\mu^-$ decay, with $M = m_\mu = 105.7\MeV$ and $m = m_H = 125\GeV$, we get $\Gamma \approx 900\eV$, exactly in line with the predicted value~\cite{Denner:2011mq}!
 
@@ -2041,7 +2041,7 @@ Note that the commutator of the covariant derivative is in fact not a derivative
 Thus, we can define $F_{\mu\nu} \equiv \frac{i}{e}[D_\mu, D_\nu]$, which will prove useful for non-abelian gauge symmetries later in this section.
 % By definition, higher order covariant derivatives transform the same way as the first order, meaning $F_{\mu\nu}$ transforms as $F_{\mu\nu} \rightarrow 
 
-Generally, we choose the normalization $Q_e = -1$ for the electron field, so $e$ becomes our familiar elementary charge (in natural units) and $\alpha\equiv\nicefrac{e^2}{4\pi} \approx \nicefrac{1}{137}$ is the famous dimensionless fine structure constant.\footnote{Technically, this value varies with our energy scale, as we will discuss in Section~\ref{sec:01_qft_renormalization}, and $\nicefrac{1}{137}$ is its asymptotic value at low energies.}
+Generally, we choose the normalization $Q_e = -1$ for the electron field, so $e$ becomes our familiar elementary charge (in natural units) and $\alpha\equiv\cnicefrac{e^2}{4\pi} \approx \cnicefrac{1}{137}$ is the famous dimensionless fine structure constant.\footnote{Technically, this value varies with our energy scale, as we will discuss in Section~\ref{sec:01_qft_renormalization}, and $\cnicefrac{1}{137}$ is its asymptotic value at low energies.}
 
 \subsubsection{Interactions with spinors}
 

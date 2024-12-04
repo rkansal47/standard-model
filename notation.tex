@@ -1,7 +1,14 @@
 \newcommand{\diag}{\ensuremath{\mathrm{diag}}\xspace}
-\newcommand{\identity}{\ensuremath{\mathbb{1}}\xspace}
+\newcommand{\identity}{\ensuremath{\mathds{1}}\xspace}
 \newcommand{\mustequal}{\ensuremath{\overset{!}{=}}\xspace}
 \newcommand{\tr}[1]{\ensuremath{\mathrm{Tr}\left[#1\right]}\xspace}
+\newcommand{\cnicefrac}[2]{%
+  \ifdefined\HCode  % nicefrac not well supported by tex4ht
+    \frac{#1}{#2}
+  \else
+    \nicefrac{#1}{#2}
+  \fi
+}
 
 \NewDocumentCommand{\SO}{ o }{%
   \ensuremath{\mathrm{SO}\IfValueT{#1}{(#1)}}\xspace

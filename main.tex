@@ -1,4 +1,4 @@
-\documentclass[12pt]{book}
+\documentclass[12pt]{report}
 % mathptmx is a Times Roman look-alike (don't use the times package)
 % It isn't clear if Times is required. The OGS manual lists several
 % "standard fonts" but never says they need to be used.
@@ -35,7 +35,7 @@
 \usepackage{nicefrac}
 \usepackage{adjustbox}
 \usepackage{xspace}
-\usepackage{resizegather}
+% \usepackage{resizegather}
 
 \usepackage{enumerate}
 \usepackage[shortlabels]{enumitem}
@@ -47,7 +47,6 @@
 \usepackage{amsfonts}
 \usepackage{slashed}
 \usepackage{dsfont}
-\usepackage{bbm}
 \usepackage{braket}
 \usepackage{multirow}
 \usepackage{needspace}
@@ -72,15 +71,15 @@
 \colorlet{awesomelinks}{awesome-skyblue}
 
 \theoremstyle{definition}
-\newtheorem{definition}{Definition}[section]
+\newtheorem{definition}{Definition}[chapter]
 
 \theoremstyle{definition}
-\newtheorem{example}{Example}[section]
+\newtheorem{example}{Example}[chapter]
 
 \theoremstyle{definition}
-\newtheorem{theorem}{Theorem}[section]
+\newtheorem{theorem}{Theorem}[chapter]
 
-\numberwithin{equation}{section}
+\numberwithin{equation}{chapter}
 % \numberwithin{figure}{section}
 % \numberwithin{table}{section}
 
@@ -112,14 +111,27 @@
 {
 \hypersetup{linkcolor=black}
 \tableofcontents
+\ifdefined\HCode 
+\TocAt{chapter,section} %show section only in chapters TOC 
+% \TocAt{section,subsection} %show subsection only in sections TOC 
+\fi 
 }
 
 \setlength{\parskip}{0.6\baselineskip}
 
-\input{01-SM.tex}
-\input{01-SM-01-Symmetries.tex}
+% Test $weff$.
+
+% \begin{equation}
+%     \label{eq:1}
+%     asdfa
+% \end{equation}
+
+% Reference Eq.~\ref{eq:1}.
+
+% \input{01-SM.tex}
+% \input{01-SM-01-Symmetries.tex}
 % \input{01-SM-02-QFT.tex}
-% \input{01-SM-03-SM.tex}
+\input{01-SM-03-SM.tex}
 
 \nocite{apsrev42Control}
 \bibliography{bibliography}
