@@ -393,7 +393,7 @@ where we plugged in the plane-wave solutions for $\phi$ from Eq.~\ref{eq:01_qft_
 This is, in fact, the same as the expression for energy we derived via Noether's theorem in Eq.~\ref{eq:01_qft_symmetries_charge_translation_kg}.
 Note that, unlike the Lagrangian, the Hamiltonian is not Lorentz-invariant.
 This makes sense under the interpretation of the Hamiltonian as the energy, which is not a Lorentz scalar.
-Its Lorentz-invariance, as well as its natural connection to the path integral formulation (Section~\ref{sec:01_qft_classical_path_integral}), is the reason the Lagrangian viewpoint is preferred in QFT.
+Its Lorentz-invariance, as well as its natural connection to the path integral formulation (Section~\ref{sec:01_qft_classical_lagrangian}), is the reason the Lagrangian viewpoint is preferred in QFT.
 
 
 \section{Quantization}
@@ -942,7 +942,7 @@ For our scalar Yukawa theory, the Feynman rules for calculating $i\mathcal M$ ar
 			\vertex (a);
 			\vertex [right=of a] (b);
 			\diagram* {
-				(a) -- [scalar, edge label={\footnotesize\(p\)}] (b) ,
+				(a) -- [scalar, edge label={\footnotesize$p$}] (b) ,
 			};
 		\end{feynman}
 	\end{tikzpicture}
@@ -953,7 +953,7 @@ For our scalar Yukawa theory, the Feynman rules for calculating $i\mathcal M$ ar
 			\vertex (a);
 			\vertex [right=of a] (b);
 			\diagram* {
-				(a) -- [fermion, edge label={\footnotesize\(q\)}] (b),
+				(a) -- [fermion, edge label={\footnotesize$q$}] (b),
 			};
 		\end{feynman}
 	\end{tikzpicture}
@@ -1162,13 +1162,13 @@ Experimentally, the main consequence is that physical parameters like the mass o
 			\vertex [above right=of a] (f1);
 			\vertex [below right=of b] (f2);
 			\diagram* {
-				(a) -- [scalar, edge label={\footnotesize\(k_1\)}] (c),
-				(d) -- [scalar, edge label={\footnotesize\(k_3\)}] (b),
-				(i1) -- [fermion, edge label'={\footnotesize\(q_{i1}\)}] (a),
-				(i2) -- [fermion, edge label={\footnotesize\(q_{i2}\)}] (b),
-				(a) -- [fermion, edge label'={\footnotesize\(q_{f1}\)}] (f1),
-				(b) -- [fermion, edge label={\footnotesize\(q_{f2}\)}] (f2),
-				(c) -- [fermion, half left, edge label'={\footnotesize\(k_2\)}] (d),
+				(a) -- [scalar, edge label={\footnotesize$k_1$}] (c),
+				(d) -- [scalar, edge label={\footnotesize$k_3$}] (b),
+				(i1) -- [fermion, edge label'={\footnotesize$q_{i1}$}] (a),
+				(i2) -- [fermion, edge label={\footnotesize$q_{i2}$}] (b),
+				(a) -- [fermion, edge label'={\footnotesize$q_{f1}$}] (f1),
+				(b) -- [fermion, edge label={\footnotesize$q_{f2}$}] (f2),
+				(c) -- [fermion, half left, edge label'={\footnotesize$k_2$}] (d),
 				(d) -- [fermion, half left] (c),
 			};
 		\end{feynman}

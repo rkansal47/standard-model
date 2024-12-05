@@ -88,7 +88,7 @@
 % \numberwithin{figure}{section}
 % \numberwithin{table}{section}
 
-\usepackage[breaklinks=true,pdfborder={0 0 0}]{hyperref}
+\usepackage{hyperref}
 \hypersetup{colorlinks=true,
             linkcolor=awesomelinks,
             urlcolor=awesomelinks,
@@ -100,7 +100,7 @@
 \bibliographystyle{apsrev4-2}
 
 % Required information
-\title{Notes on Symmetries, Quantum Field Theory, and the Standard Model}
+\title{Notes on Symmetries, QFT, and the Standard Model}
 \author{Raghav Kansal}
 
 % Start the document
@@ -108,6 +108,21 @@
 
 \input{notation.tex}
 \maketitle
+
+\begin{abstract}
+\begin{doublespace}
+% \hypersetup{urlcolor=awesome-nephritis}
+\setlength{\parskip}{\baselineskip}
+These are a set of notes introducing the standard model of particle physics and the mathematical frameworks underpinning it; namely, group theory and quantum field theory.
+They were intended to be included as theoretical background in my \href{https://www.raghavkansal.com}{dissertation} but, as is perhaps evident, they quickly grew beyond that scope.
+Instead, they are now presented here as a standalone resource for anyone who may find them useful.
+
+These notes are available as both a \href{google.com}{PDF} and \href{https://rkansal47.github.io/standard-model}{website}.
+Feedback is very welcome through e-mail or as \href{google.com}{issues} on Github.
+Finally, for those interested, some more notes and tutorials, including on machine learning and statistics, are available \href{https://www.raghavkansal.com/teaching/}{here}.
+\end{doublespace}
+\end{abstract}
+
 
 {
 \hypersetup{linkcolor=black}
@@ -121,14 +136,13 @@
 % \fi 
 }
 
-\setlength{\parskip}{0.6\baselineskip}
+\setlength{\parskip}{\baselineskip}
 
 \begin{doublespace}
-
-% \input{01-SM.tex}
-% \input{01-SM-01-Symmetries.tex}
+\input{01-SM.tex}
+\input{01-SM-01-Symmetries.tex}
 \input{01-SM-02-QFT.tex}
-% \input{01-SM-03-SM.tex}
+\input{01-SM-03-SM.tex}
 \end{doublespace}
 
 \nocite{apsrev42Control}

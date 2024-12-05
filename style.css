@@ -1,12 +1,5 @@
 /* From https://github.com/michal-h21/tex4ht-doc/blob/master/style.css */
 
-/* 
-Color scheme 
-#bab5a9;
-#d5e3c6 
-
- */
-
 /* ************** */
 /* *** Fonts  *** */
 /* ************** */
@@ -15,25 +8,26 @@ Color scheme
  * The font size will be adjusted to the screen size.
  * */
 :root{
-  font-size: 16px;
+  font-size: 20px;
+  font-family: 'Palatino';
+  line-height: 2;
 }
 
-/* the min width is calculated as:
- * font-size / ( number of viewport units / 100 )
- * it means 16 / (1.5/100)
- */
-@media (min-width: 1200px){
-  :root {
-    font-size: 1.5vw;
-  }
+a{
+  text-decoration: none;
+  color: #0395DE;
 }
 
-/* Maximal font size should be 24px, so stop font scalling at some point (24 / (1.5/100)) */
+main.main-content a:hover{
+  transition: 0.3s;
+  color:#045d89;
+}
 
-@media (min-width: 1500px){
-  :root {
-    font-size: 20px;
-  }
+div.footer{
+  margin-top: 2rem;
+  text-align: center;
+  color: #6c757d;
+  font-size:16px;
 }
 
 /* ************** */
@@ -48,25 +42,58 @@ body{
   /* grid-auto-rows: auto; */
 }
 
-@media screen and (min-width: 57rem) {
+@media screen and (min-width: 50rem) {
   body{
-    display:grid;
-    grid-template-columns: 15rem 1fr;
+    display: grid;
+    grid-template-columns: 17rem 1fr;
+    max-width: 65rem;
   }
-  main.main-content, div.footnotes{max-width:40rem; grid-column: 2}
+  main.main-content, div.footnote-text, div.maketitle{
+    grid-column: 2;
+  }
   nav.TOC{
+    grid-column: 1;
     grid-row:1;
     min-height:100vh;
   }
 }
 
+div.footnotes{
+  margin-top: 1rem;
+  margin-right: auto;
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+  font-size: 20px
+}
+
+/* hide the top crosslinks */
+nav.crosslinks-top{
+  display: none;
+}
+
+/* add vertical space above the bottom crosslinks */
+nav.crosslinks-bottom{
+  margin-top: 2rem;
+  border-top: solid 3px #e9ecef;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+nav.crosslinks-bottom a{
+  margin-right: 10rem;
+  font-weight: bold;
+}
+
+div.sectionTOCS {
+  display: none;
+}
 
 /* ****************** */
 /* *** Formatting *** */
 /* ****************** */
 
-main.main-content{
-  padding:1rem;
+main.main-content, div.maketitle{
+  padding:1.5rem;
 }
 
 p.indent, p.noindent{text-indent:0}
@@ -81,8 +108,8 @@ figure pre.listings{font-size: 1em;}
 
 .chapterToc, .sectionToc, .subsectionToc{margin:0;padding:0;}
 nav.TOC{
-  padding:0.5rem;
-  font-size:0; /* trick to remove vertical space above TOC entries */
+  padding:1rem;
+  /* font-size:0; trick to remove vertical space above TOC entries */
 }
 
  .chapterToc ~ .likesectionToc, .chapterToc ~ .sectionToc, .likechapterToc ~ .likesectionToc, .likechapterToc ~ .sectionToc {padding-left:2em;margin-left:0}
@@ -91,11 +118,12 @@ nav.TOC{
 nav.TOC span{
   display:block;
   margin-top:0;
-  font-size:0.8rem;
+  font-size:18px;
 }
 
 nav.TOC a, nav.TOC a:visited{
   text-decoration:none;
+  width: 100%;
 }
 
 /* ************** */
@@ -103,28 +131,29 @@ nav.TOC a, nav.TOC a:visited{
 /* ************** */
 
 
-/* body{background-color:#dce8d0;} */
-/* It seems that dark background is better to my eyes */
-body{background-color:#B8CDA3;} 
+body{background-color:#001d3d;} 
 
-main.main-content, div.footnotes{
+main.main-content, div.maketitle{
   background-color:white;
 }
 
 nav.TOC,nav.TOC a, nav.TOC a:visited{
-  background-color:#22211f;
-  color:#cec1aa;
+  background-color:#f8f9fa;
+  color:#03071e;
+}
+
+nav.toc span{
+  transition: 0.3s;
 }
 
 nav.TOC span:hover, nav.TOC span:hover *{
-  background-color:#66635d;
+  /* color:aqua; */
+  background-color:#e9ecef;
+  transition: 0.3s;
 }
 
-
-
-figure.texsource, figure.shellcommand, figure.htmlsource, figure.luasource, figure.textsource{
-  border:1px solid #cec1aa; 
-  background-color:#d5e3c6;
+nav.TOC.mainToc a:hover{
+  background-color:#f8f9fa;
 }
 
 /* ***************** */
@@ -164,3 +193,4 @@ figure.texsource, figure.shellcommand, figure.htmlsource, figure.luasource, figu
     color: #666;
   }
 }
+
