@@ -37,6 +37,7 @@ Some notes:
  - Equation splitting has issues by default, see [config](#config).
  - `mathbbm` is not supported.
  - `nicefrac` is not well-supported and `cfrac` gives an error.
+ - `\vec` doesn't look great (switched to bold vectors instead).
 
 Mathjax-alone was briefly attempted. Was able to achieve chapter-wise number by following this answer https://tex.stackexchange.com/a/714216 but changing section $\rightarrow$ chapter.
 

@@ -47,9 +47,9 @@ Its unprecedented experimental success is why we believe ``it is the language in
 \label{sec:01_qft_classical}
 
 Historically, field theory was in part an attempt to develop \textit{local} theories rather than those, such as Newtonian gravity, implying \textit{action-at-a-distance}.\footnote{See Weinberg's notes on a history of QFT~\cite{WeinbergHistoryQFT} for a nice summary of its historical development.}
-The idea is to associate each point in space and time with a value or set of values $\phi_a(\vec{x}, t)$, called fields.
+The idea is to associate each point in space and time with a value or set of values $\phi_a(\cvec{x}, t)$, called fields.
 As long as these fields interact only at the same point in spacetime or, at most, with their immediate neighbours (via their derivatives), the theory is guaranteed to be local.
-Classic examples include the vector-valued electric and magnetic fields $\vec{E}(\vec{x}, t)$ and $\vec{B}(\vec{x}, t)$.
+Classic examples include the vector-valued electric and magnetic fields $\cvec{E}(\cvec{x}, t)$ and $\cvec{B}(\cvec{x}, t)$.
 The behavior of the fields is encapsulated by the \textit{Lagrangian} of the system, as we see next.
 
 \subsection{Lagrangian mechanics}
@@ -110,7 +110,7 @@ The fact that the Lagrangian shows up naturally in this formulation is the reaso
 \subsection{Free scalar field theory}
 \label{sec:01_qft_classical_fsft}
 
-When dealing with fields $\phi(\vec{x}, t)$ instead of particles, the Lagrangian is written as a function of the field and its derivatives:
+When dealing with fields $\phi(\cvec{x}, t)$ instead of particles, the Lagrangian is written as a function of the field and its derivatives:
 \begin{equation}
 	\label{eq:01_qft_field_lagrangian_density}
 	L(t) = \int d^3x\ \mathcal{L}(\partial_\mu\phi, \phi),
@@ -129,7 +129,7 @@ with the principle of stationary action leading to the analogous E-L equations f
 
 \subsubsection{The Klein-Gordon equation}
 
-A useful example is the Lagrangian for a \textit{free, scalar} relativistic field $\phi(\vec{x}, t)$, where ``free'' indicates no interactions, and ``scalar'' means the value of the field at each point is a single number:
+A useful example is the Lagrangian for a \textit{free, scalar} relativistic field $\phi(\cvec{x}, t)$, where ``free'' indicates no interactions, and ``scalar'' means the value of the field at each point is a single number:
 \begin{equation}
 	\label{eq:01_qft_field_kg_lagrangian}
 	\mathcal{L} = \frac{1}{2}\partial_\mu\phi\partial^\mu\phi - \frac{1}{2}m^2\phi^2,
@@ -180,20 +180,20 @@ Thus, in natural units Eqs.~\ref{eq:01_qft_field_kg_equation} and~\ref{eq:01_qft
 Using the Fourier transform, we see the solutions to the Klein-Gordon equation are plane waves:
 \begin{equation}
 	\label{eq:01_qft_field_kg_solutions}
-	\phi(\vec x, t) = \int \frac{d^3p}{(2\pi)^3} \tilde \phi(\vec{p}, t) e^{i\vec{p}\cdot\vec{x}},
+	\phi(\cvec x, t) = \int \frac{d^3p}{(2\pi)^3} \tilde \phi(\cvec{p}, t) e^{i\cvec{p}\cdot\cvec{x}},
 \end{equation}
-with $\tilde \phi(\vec{p}, t)$ satisfying the simple-harmonic oscillator (SHO) equation
+with $\tilde \phi(\cvec{p}, t)$ satisfying the simple-harmonic oscillator (SHO) equation
 \begin{equation}
 	\label{eq:01_qft_field_kg_sho}
-	(\partial_t^2 - |\vec{p}|^2 - m^2)\tilde \phi(\vec{p}, t) = 0 \quad \Rightarrow \quad \tilde \phi(\vec{p}, t) \propto e^{-i\omega_p t},
+	(\partial_t^2 - |\cvec{p}|^2 - m^2)\tilde \phi(\cvec{p}, t) = 0 \quad \Rightarrow \quad \tilde \phi(\cvec{p}, t) \propto e^{-i\omega_p t},
 \end{equation}
-with frequency $\omega_p = \abs{\sqrt{|\vec{p}|^2 + m^2}}$.
+with frequency $\omega_p = \abs{\sqrt{|\cvec{p}|^2 + m^2}}$.
 Thus, 
 \begin{equation}
 	\label{eq:01_qft_field_kg_solutions_final}
-	\phi(\vec x, t) = \int \frac{d^3p}{(2\pi)^3} \frac{1}{\sqrt{2\omega_p}} (a(\vec{p})e^{ip\cdot x} + a^*(\vec{p})e^{-ip\cdot x}),
+	\phi(\cvec x, t) = \int \frac{d^3p}{(2\pi)^3} \frac{1}{\sqrt{2\omega_p}} (a(\cvec{p})e^{ip\cdot x} + a^*(\cvec{p})e^{-ip\cdot x}),
 \end{equation}
-where $p\cdot x$ is the 4D spacetime inner product with $p_\mu = (\omega_p, \vec{p})$, and the $\cnicefrac{1}{\sqrt{2\omega_p}}$ factor is conventional.
+where $p\cdot x$ is the 4D spacetime inner product with $p_\mu = (\omega_p, \cvec{p})$, and the $\cnicefrac{1}{\sqrt{2\omega_p}}$ factor is conventional.
 The coefficients $a$ and $a^*$ are complex conjugates to ensure a real sum.
 As we will see, in \textit{quantum} field theory, the form of the fields is quite similar but with $a$ and $a^*$ quantum operators.
 
@@ -339,9 +339,9 @@ Importantly, the \textit{canonical} fields of the Hamiltonian, $\phi$ and $\pi$,
 \begin{equation}
 	\label{eq:01_qft_hamiltonian_canonical_poisson}
 	\begin{split}
-		\{\phi(\vec{x}), \phi(\vec{y})\} &= 0, \\
-		\{\pi(\vec{x}), \pi(\vec{y})\} &= 0, \\
-		\{\phi(\vec{x}), \pi(\vec{y})\} &= \delta^3(\vec{x} - \vec{y}).
+		\{\phi(\cvec{x}), \phi(\cvec{y})\} &= 0, \\
+		\{\pi(\cvec{x}), \pi(\cvec{y})\} &= 0, \\
+		\{\phi(\cvec{x}), \pi(\cvec{y})\} &= \delta^3(\cvec{x} - \cvec{y}).
 	\end{split}
 \end{equation}
 
@@ -383,7 +383,7 @@ Finally, we can explicitly confirm the canonical Poisson bracket relations for t
 For the free scalar Lagrangian in Eq.~\ref{eq:01_qft_field_kg_lagrangian}, we find
 \begin{equation}
 	\label{eq:01_qft_hamiltonian_kg_momenta}
-    \pi = \dot\phi = -i \int \frac{d^3p}{(2\pi)^3} \sqrt{\frac{\omega_p}{2}} (a(\vec{p})e^{ip\cdot x} - a^*(\vec{p})e^{-ip\cdot x}),
+    \pi = \dot\phi = -i \int \frac{d^3p}{(2\pi)^3} \sqrt{\frac{\omega_p}{2}} (a(\cvec{p})e^{ip\cdot x} - a^*(\cvec{p})e^{-ip\cdot x}),
 \end{equation}
 where we plugged in the plane-wave solutions for $\phi$ from Eq.~\ref{eq:01_qft_field_kg_solutions_final}, and
 \begin{equation}
@@ -423,24 +423,24 @@ For our free scalar field theory (Eq.~\ref{eq:01_qft_field_kg_lagrangian}), this
 \begin{equation}
 	\label{eq:01_qft_quantization_fsf_fields}
     \begin{split}
-    \phi(\vec x, t) &= \int \frac{d^3p}{(2\pi)^3} \frac{1}{\sqrt{2\omega_p}} (\hat a_{\vec{p}}\,e^{ip\cdot x} + \hat a^\dagger_{\vec{p}}\, e^{-ip\cdot x}), \\
-    \pi(\vec x, t) &= -i\int \frac{d^3p}{(2\pi)^3} \sqrt{\frac{\omega_p}{2}} (\hat a_{\vec{p}}\,e^{ip\cdot x} - \hat a^\dagger_{\vec{p}}\, e^{-ip\cdot x}),
+    \phi(\cvec x, t) &= \int \frac{d^3p}{(2\pi)^3} \frac{1}{\sqrt{2\omega_p}} (\hat a_{\cvec{p}}\,e^{ip\cdot x} + \hat a^\dagger_{\cvec{p}}\, e^{-ip\cdot x}), \\
+    \pi(\cvec x, t) &= -i\int \frac{d^3p}{(2\pi)^3} \sqrt{\frac{\omega_p}{2}} (\hat a_{\cvec{p}}\,e^{ip\cdot x} - \hat a^\dagger_{\cvec{p}}\, e^{-ip\cdot x}),
     \end{split}
 \end{equation}
-where again $p \cdot x = p_\mu x^\mu$ is the 4D spacetime inner product and $p_\mu = (\omega_p = \sqrt{\abs{\vec{p}}^2 + m^2}, \vec{p})$.
-Recall that the integration constants $a(\vec{p})$ and $a^*(\vec{p})$ arose from a SHO equation for each momentum $\vec{p}\,$ (Eq.~\ref{eq:01_qft_field_kg_sho}); thus, quantized, we expect them to correspond to the raising ($\hat a^\dagger$) and lowering ($\hat a$) operators of a quantum harmonic oscillator (QHO), again one for each momentum mode $\vec{p}$.
+where again $p \cdot x = p_\mu x^\mu$ is the 4D spacetime inner product and $p_\mu = (\omega_p = \sqrt{\abs{\cvec{p}}^2 + m^2}, \cvec{p})$.
+Recall that the integration constants $a(\cvec{p})$ and $a^*(\cvec{p})$ arose from a SHO equation for each momentum $\cvec{p}\,$ (Eq.~\ref{eq:01_qft_field_kg_sho}); thus, quantized, we expect them to correspond to the raising ($\hat a^\dagger$) and lowering ($\hat a$) operators of a quantum harmonic oscillator (QHO), again one for each momentum mode $\cvec{p}$.
 
 We can check this by deriving their commutation relations.
-%  and with energy levels $\omega_p = \abs{\sqrt{\vec{p}^2 + m^2}}$.
+%  and with energy levels $\omega_p = \abs{\sqrt{\cvec{p}^2 + m^2}}$.
 Indeed, imposing the canonical commutation relationships:
 \begin{equation}
 	\label{eq:01_qft_quantization_fsf_commutators}
-	[\phi(\vec{x}, t), \phi(\vec{y}, t)] = [\pi(\vec{x}, t), \pi(\vec{y}, t)] = 0, \quad [\phi(\vec{x}, t), \pi(\vec{y}, t)] = i\delta^3(\vec{x} - \vec{y}),
+	[\phi(\cvec{x}, t), \phi(\cvec{y}, t)] = [\pi(\cvec{x}, t), \pi(\cvec{y}, t)] = 0, \quad [\phi(\cvec{x}, t), \pi(\cvec{y}, t)] = i\delta^3(\cvec{x} - \cvec{y}),
 \end{equation}
 reproduces (continuous versions of) the raising and lowering operator commutation relationships for a QHO:
 \begin{equation}
 	\label{eq:01_qft_quantization_fsf_commutators_qho}
-	[\hat a_{\vec{p}}, \hat a_{\vec{q}}] = [\hat a^\dagger_{\vec{p}}, \hat a^\dagger_{\vec{q}}] = 0, \quad [\hat a_{\vec{p}}, \hat a^\dagger_{\vec{q}}] = (2\pi)^3\delta^3(\vec{p} - \vec{q}).
+	[\hat a_{\cvec{p}}, \hat a_{\cvec{q}}] = [\hat a^\dagger_{\cvec{p}}, \hat a^\dagger_{\cvec{q}}] = 0, \quad [\hat a_{\cvec{p}}, \hat a^\dagger_{\cvec{q}}] = (2\pi)^3\delta^3(\cvec{p} - \cvec{q}).
 \end{equation}
 Next, we look at the commutators with the Hamiltonian and the resulting Hilbert space.
 
@@ -452,8 +452,8 @@ The quantized Hamiltonian, from Eq.~\ref{eq:01_qft_hamiltonian_kg}, can be found
 	\label{eq:01_qft_quantization_hamiltonian_zeropoint}
 	\begin{split}
 		H &= \int d^3x\ \left(\frac{1}{2}\pi^2 + \frac{1}{2}(\nabla\phi)^2 + \frac{1}{2}m^2\phi^2\right) \\
-		% &= \int \frac{d^3p}{(2\pi)^3} \frac{1}{2\omega_p} (\hat a_{\vec{p}}\hat a^\dagger_{\vec{p}} + \hat a^\dagger_{\vec{p}}\hat a_{\vec{p}}) + \frac{\omega_p}{2}(\hat a_{\vec{p}}\hat a^\dagger_{\vec{p}} + \hat a^\dagger_{\vec{p}}\hat a_{\vec{p}}) \\
-		&= \int \frac{d^3p}{(2\pi)^3} \omega_p [\hat a^\dagger_{\vec{p}}\,\hat a_{\vec{p}} + \frac{1}{2} (2\pi)^3\delta^3(0)].
+		% &= \int \frac{d^3p}{(2\pi)^3} \frac{1}{2\omega_p} (\hat a_{\cvec{p}}\hat a^\dagger_{\cvec{p}} + \hat a^\dagger_{\cvec{p}}\hat a_{\cvec{p}}) + \frac{\omega_p}{2}(\hat a_{\cvec{p}}\hat a^\dagger_{\cvec{p}} + \hat a^\dagger_{\cvec{p}}\hat a_{\cvec{p}}) \\
+		&= \int \frac{d^3p}{(2\pi)^3} \omega_p [\hat a^\dagger_{\cvec{p}}\,\hat a_{\cvec{p}} + \frac{1}{2} (2\pi)^3\delta^3(0)].
 	\end{split}
 \end{equation}
 This looks a lot like the Hamiltonian for a QHO, $H = \omega(a^\dagger a + \cnicefrac{1}{2})$, for each momenta, but with an unwieldy delta function.
@@ -469,7 +469,7 @@ However, the vacuum energy density \textit{does} affect Einstein's equations of 
 Subtracting away the zero-point energy gives us
 \begin{equation}
     \label{eq:01_qft_quantization_hamiltonian}
-    H = \int \frac{d^3p}{(2\pi)^3} \omega_p \hat a^\dagger_{\vec{p}}\,\hat a_{\vec{p}},
+    H = \int \frac{d^3p}{(2\pi)^3} \omega_p \hat a^\dagger_{\cvec{p}}\,\hat a_{\cvec{p}},
 \end{equation}
 whose commutators with the raising and lowering operators are:
 \begin{equation}
@@ -489,16 +489,16 @@ This tells us that given an eigenstate of $H$, $\ket{E}$, with eigenvalue $E$, $
 To derive the Hilbert space of this theory, we first define the vacuum $\ket{0}$ as the state for which 
 \begin{equation}
     \label{eq:01_qft_quantization_hamiltonian_vacuum}
-    \ophat a \ket{0} = 0\; \forall \vec{p} \quad \Rightarrow \quad H\ket{0} = 0.
+    \ophat a \ket{0} = 0\; \forall \cvec{p} \quad \Rightarrow \quad H\ket{0} = 0.
 \end{equation}
 The remaining eigenstates are then obtained by (repeatedly) acting with $\ophatd a$ on the vacuum:
 \begin{equation}
     \label{eq:01_qft_quantization_hamiltonian_states}
     \begin{split}
-        \ket{\vec{p}} \propto \ophatd a\ket{0} \quad &\Rightarrow \quad H\ket{p} = \svecp \omega\ket{p}. \\
-        \ket{\vec{p}_1, \vec{p}_2} \propto \hat a^\dagger_{\vec{p}_1}\hat a^\dagger_{\vec{p}_2}\ket{0} \quad &\Rightarrow \quad H\ket{\vec{p}_1, \vec{p}_2} = (\omega_{\vec{p}_1} + \omega_{\vec{p}_2})\ket{\vec{p}_1, \vec{p}_2} \\
+        \ket{\cvec{p}} \propto \ophatd a\ket{0} \quad &\Rightarrow \quad H\ket{p} = \svecp \omega\ket{p}. \\
+        \ket{\cvec{p}_1, \cvec{p}_2} \propto \hat a^\dagger_{\cvec{p}_1}\hat a^\dagger_{\cvec{p}_2}\ket{0} \quad &\Rightarrow \quad H\ket{\cvec{p}_1, \cvec{p}_2} = (\omega_{\cvec{p}_1} + \omega_{\cvec{p}_2})\ket{\cvec{p}_1, \cvec{p}_2} \\
         &\vdots \\
-        \ket{\vec{p}_1, \ldots, \vec{p}_n} \propto \hat a^\dagger_{\vec{p}_1} \ldots\hat a^\dagger_{\vec{p}_n}\ket{0} \quad &\Rightarrow \quad H\ket{\vec{p}_1, \ldots, \vec{p}_n} = \bigg(\sum_{i=1}^n \omega_{\vec{p}_i}\bigg) \ket{\vec{p}_1,  \ldots, \vec{p}_n}.
+        \ket{\cvec{p}_1, \ldots, \cvec{p}_n} \propto \hat a^\dagger_{\cvec{p}_1} \ldots\hat a^\dagger_{\cvec{p}_n}\ket{0} \quad &\Rightarrow \quad H\ket{\cvec{p}_1, \ldots, \cvec{p}_n} = \bigg(\sum_{i=1}^n \omega_{\cvec{p}_i}\bigg) \ket{\cvec{p}_1,  \ldots, \cvec{p}_n}.
     \end{split}
 \end{equation}
 This is essentially the sum of the Hilbert spaces of an infinite number of QHOs, across all momenta.
@@ -509,34 +509,34 @@ It is called the \textit{Fock space}.
 To understand these states further, we can also quantize the total momentum of the field density we found from Noether's theorem (Eq.~\ref{eq:01_qft_symmetries_charge_translation_kg}):\footnote{Technically, we show here the \textit{normal-ordered} momentum.}
 \begin{equation}
     \label{eq:01_qft_quantization_momentum}
-    \vec{P} = \int d^3x\ \pi\vec{\nabla}\phi = \int \frac{d^3p}{(2\pi)^3} \vec{p}\, \ophatd a \ophat a.
+    \cvec{P} = \int d^3x\ \pi\cvec{\nabla}\phi = \int \frac{d^3p}{(2\pi)^3} \cvec{p}\, \ophatd a \ophat a.
 \end{equation}
-Acting with $\vec{P}$ on $\ket{\vec{p}}$ gives us:
+Acting with $\cvec{P}$ on $\ket{\cvec{p}}$ gives us:
 \begin{equation}
     \label{eq:01_qft_quantization_momentum_states}
     \begin{split}\,
-    \vec{P}\ket{\vec{p}} &= \int \frac{d^3k}{(2\pi)^3} \vec{k}\, \hat a^\dagger_{\vec{k}}\, \hat a_{\vec{k}} \hat a^\dagger_{\vec{p}} \ket{0} \\
-    &= \int \frac{d^3k}{(2\pi)^3} \vec{k}\, \hat a^\dagger_{\vec{k}}\, \big(\ophatd a \hat a_{\vec{k}} - (2\pi)^3 \delta^3(\vec{k} - \vec{p})\big) \ket{0} \\
-    &= \vec{p}\ket{\vec{p}}.
+    \cvec{P}\ket{\cvec{p}} &= \int \frac{d^3k}{(2\pi)^3} \cvec{k}\, \hat a^\dagger_{\cvec{k}}\, \hat a_{\cvec{k}} \hat a^\dagger_{\cvec{p}} \ket{0} \\
+    &= \int \frac{d^3k}{(2\pi)^3} \cvec{k}\, \hat a^\dagger_{\cvec{k}}\, \big(\ophatd a \hat a_{\cvec{k}} - (2\pi)^3 \delta^3(\cvec{k} - \cvec{p})\big) \ket{0} \\
+    &= \cvec{p}\ket{\cvec{p}}.
     \end{split}
 \end{equation}
-Thus the states $\ket{\vec{p}}$ are eigenstates of $\vec{P}$ as well, with eigenvalues $\vec{p}$.
-Putting this together, we have a Hilbert space spanned by the states $\ket{\vec{p}}$, which each have momentum $\vec{p}$ and energy $\omega_{\vec{p}} = \abs{\sqrt{\vec{p}^2 + m^2}}$, i.e. the relativistic energy-momentum relation for a free particle.
+Thus the states $\ket{\cvec{p}}$ are eigenstates of $\cvec{P}$ as well, with eigenvalues $\cvec{p}$.
+Putting this together, we have a Hilbert space spanned by the states $\ket{\cvec{p}}$, which each have momentum $\cvec{p}$ and energy $\omega_{\cvec{p}} = \abs{\sqrt{\cvec{p}^2 + m^2}}$, i.e. the relativistic energy-momentum relation for a free particle.
 
-Thus, we see $\ket{\vec{p}}$ exactly corresponds to the momentum eigenstate for a single particle of mass $m$ and momentum $\vec{p}$!
-One can similarly quantize the total angular momentum of the field $\vec{J}$ and show that $\vec{J}\ket{\vec{p} = 0} = 0$, i.e. the particle has spin 0.
+Thus, we see $\ket{\cvec{p}}$ exactly corresponds to the momentum eigenstate for a single particle of mass $m$ and momentum $\cvec{p}$!
+One can similarly quantize the total angular momentum of the field $\cvec{J}$ and show that $\cvec{J}\ket{\cvec{p} = 0} = 0$, i.e. the particle has spin 0.
 
 This is one of the miracles of QFT: what from quantizing a free, relativistic field looked bizarrely like an infinite series of QHOs, actually gives the intuitive physical result of discrete particle states.
-The Fock space hence is the space spanned by different numbers of discrete particles per each continuous momentum mode $\vec{p}$.
+The Fock space hence is the space spanned by different numbers of discrete particles per each continuous momentum mode $\cvec{p}$.
 The number of particles $n$ in a particular state of the Fock space is given by the number operator $N$, essentially the Hamiltonian density divided by $\svecp \omega$:
 \begin{equation}
     \label{eq:01_qft_quantization_number}
-    N = \int \frac{d^3p}{(2\pi)^3} \ophatd a \ophat a \quad \Rightarrow \quad N\ket{\vec{p}_1, \ldots, \vec{p}_n} = n\ket{\vec{p}_1, \ldots, \vec{p}_n}.
+    N = \int \frac{d^3p}{(2\pi)^3} \ophatd a \ophat a \quad \Rightarrow \quad N\ket{\cvec{p}_1, \ldots, \cvec{p}_n} = n\ket{\cvec{p}_1, \ldots, \cvec{p}_n}.
 \end{equation}
 Note that the number operator $N$ commutes with the Hamiltonian $H$, $[N, H] = 0$, which means particle number is conserved; however, this will not be the case for interacting theories in the next section.
 
 Finally, observe that for our scalar field, the creation operators commute amongst themselves. 
-This means the states $\ket{\vec{p}_1, \ldots, \vec{p}_n}$ are symmetric under exchange of particles, and thus describe \textit{bosons}.
+This means the states $\ket{\cvec{p}_1, \ldots, \cvec{p}_n}$ are symmetric under exchange of particles, and thus describe \textit{bosons}.
 
 \subsection{The complex scalar field and antiparticles}
 \label{sec:01_qft_quantization_complex}
@@ -553,8 +553,8 @@ with solutions:
 \begin{equation}
     \label{eq:01_qft_quantization_complex_solutions}
     \begin{split}
-        \psi(x) &= \int \frac{d^3p}{(2\pi)^3} \frac{1}{\sqrt{2\omega_p}} (b(\vec{p})e^{ip\cdot x} + c^*(\vec{p}) e^{-ip\cdot x}).
-        % \psi^*(x) &= \int \frac{d^3p}{(2\pi)^3} \frac{1}{\sqrt{2\omega_p}} (a^*(\vec{p})\,e^{ip\cdot x} + b(\vec{p}) e^{-ip\cdot x}).
+        \psi(x) &= \int \frac{d^3p}{(2\pi)^3} \frac{1}{\sqrt{2\omega_p}} (b(\cvec{p})e^{ip\cdot x} + c^*(\cvec{p}) e^{-ip\cdot x}).
+        % \psi^*(x) &= \int \frac{d^3p}{(2\pi)^3} \frac{1}{\sqrt{2\omega_p}} (a^*(\cvec{p})\,e^{ip\cdot x} + b(\cvec{p}) e^{-ip\cdot x}).
     \end{split}
 \end{equation}
 Note that because the field is complex, the coefficients $b$ and $c^*$ need not be complex conjugates of each other as for a real field.
@@ -562,8 +562,8 @@ This field can be quantized analogously to above:
 \begin{equation}
     \label{eq:01_qft_quantization_complex_fields}
     \begin{split}
-        \psi(\vec x, t) &= \int \frac{d^3p}{(2\pi)^3} \frac{1}{\sqrt{2\omega_p}} (\hat b_{\vec{p}}\,e^{ip\cdot x} + \hat c^\dagger_{\vec{p}}\, e^{-ip\cdot x}), \\
-        \psi^\dagger(\vec x, t) &= \int \frac{d^3p}{(2\pi)^3} \frac{1}{\sqrt{2\omega_p}} (\hat b^\dagger_{\vec{p}}\,e^{-ip\cdot x} + \hat c_{\vec{p}}\, e^{ip\cdot x}),
+        \psi(\cvec x, t) &= \int \frac{d^3p}{(2\pi)^3} \frac{1}{\sqrt{2\omega_p}} (\hat b_{\cvec{p}}\,e^{ip\cdot x} + \hat c^\dagger_{\cvec{p}}\, e^{-ip\cdot x}), \\
+        \psi^\dagger(\cvec x, t) &= \int \frac{d^3p}{(2\pi)^3} \frac{1}{\sqrt{2\omega_p}} (\hat b^\dagger_{\cvec{p}}\,e^{-ip\cdot x} + \hat c_{\cvec{p}}\, e^{ip\cdot x}),
     \end{split}
 \end{equation}
 where we now have two sets of creation and annihilation operators, $\{\hat b^\dagger, \hat b\}$ and $\{\hat c^\dagger, \hat c\}$.
@@ -575,14 +575,14 @@ Such pairs are considered particles and antiparticles.
 Finally, let us revisit and quantize the conserved charge associated with the \UU[1] symmetry (Eq.~\ref{eq:01_qft_symmetries_u1_current_charge}):
 \begin{equation}
     \label{eq:01_qft_quantization_complex_charge}
-    Q = \int d^3x\ i(\psi^*\partial^0\psi - \psi\partial^0\psi^*) \rightarrow \int \frac{d^3p}{(2\pi)^3} \left(\hat b^\dagger_{\vec{p}}\,\hat b_{\vec{p}} - \hat c^\dagger_{\vec{p}}\,\hat c_{\vec{p}}\right) = N_b - N_c.
+    Q = \int d^3x\ i(\psi^*\partial^0\psi - \psi\partial^0\psi^*) \rightarrow \int \frac{d^3p}{(2\pi)^3} \left(\hat b^\dagger_{\cvec{p}}\,\hat b_{\cvec{p}} - \hat c^\dagger_{\cvec{p}}\,\hat c_{\cvec{p}}\right) = N_b - N_c.
 \end{equation}
 This is saying the difference in the number of particles and antiparticles is conserved, which for a single charged particle-antiparticle pair, is equivalent to charge conservation.
 This will be more significant for interacting theories, in which $N_b$ and $N_c$ are not individually conserved but as long as the interactions retain the \UU[1] symmetry, $Q$ is.
 
 \subsubsection{Negative energy states?} 
 
-Note that the full, time-dependent formula for the field $\psi(\vec{x}, t)$ contains both the $e^{-ip\cdot x}\propto e^{-iEt}$ and $e^{ip\cdot x}\propto e^{iEt}$ terms.
+Note that the full, time-dependent formula for the field $\psi(\cvec{x}, t)$ contains both the $e^{-ip\cdot x}\propto e^{-iEt}$ and $e^{ip\cdot x}\propto e^{iEt}$ terms.
 As single-particle plane-wave solutions to the nonrelativistic Schr\"odinger equation, these would correspond to positive and negative energy states, the latter of which does not make physical sense.\footnote{This is related to the problem Dirac faced in developing his relativistic quantum theory of the electron, except we are dealing with bosons instead of fermions, so we cannot rely on the fermionic Dirac sea ``solution''.}
 Our solution is to refer to these states instead as \textit{positive-} and \textit{negative-frequency} modes, which, as we saw, are always associated to operators that create and destroy positive-energy (anti)particles, respectively.
 % For our complex scalar field, these are two distinct particles, while for a real scalar field we say the particle is its own antiparticle.
@@ -596,23 +596,23 @@ We now discuss briefly the concept of \textit{propagators} in QFT, primarily bec
 \subsubsection{Normalization of states and wavepackets}
 
 First, note that we have not chosen a normalized the momentum eigenstates in Eq.~\ref{eq:01_qft_quantization_hamiltonian_eigenstates}.
-We cannot do this simply as $\braket{\vec{q}|\vec{p}} = \delta^3(\vec{q} - \vec{p})$, as in nonrelativistic QM, because the delta function alone is not Lorentz-invariant.
+We cannot do this simply as $\braket{\cvec{q}|\cvec{p}} = \delta^3(\cvec{q} - \cvec{p})$, as in nonrelativistic QM, because the delta function alone is not Lorentz-invariant.
 Instead, we choose
 \begin{equation}
 	\label{eq:01_qft_quantization_normalization}
-	\ket{\vec{p}} = \sqrt{2\svecp E}\, \ophatd a \ket{0} \quad \Rightarrow \quad \braket{\vec{q}|\vec{p}} = 2\svecp E\, \delta^3(\vec{q} - \vec{p}),
+	\ket{\cvec{p}} = \sqrt{2\svecp E}\, \ophatd a \ket{0} \quad \Rightarrow \quad \braket{\cvec{q}|\cvec{p}} = 2\svecp E\, \delta^3(\cvec{q} - \cvec{p}),
 \end{equation}
 which is a Lorentz scalar.
 
-% \subparagraph{Normalization of states and wavepackets} We choose to normalize the momentum eigenstates as $\ket{\vec{p}} = \sqrt{2\svecp E}\, \ophatd a \ket{0}$.
-% This is chosen carefully so that the inner product between two states $\braket{\vec{q}|\vec{p}} = 2\svecp E\, \delta^3(\vec{q} - \vec{p})$ is Lorentz-invariant.
-Like in QM, however, these momentum eigenstates are not normalized to 1: $\braket{\vec{p}|\vec{p}} = 2\svecp E\delta^3(0)$, so they are not exactly physical one-particle states.
+% \subparagraph{Normalization of states and wavepackets} We choose to normalize the momentum eigenstates as $\ket{\cvec{p}} = \sqrt{2\svecp E}\, \ophatd a \ket{0}$.
+% This is chosen carefully so that the inner product between two states $\braket{\cvec{q}|\cvec{p}} = 2\svecp E\, \delta^3(\cvec{q} - \cvec{p})$ is Lorentz-invariant.
+Like in QM, however, these momentum eigenstates are not normalized to 1: $\braket{\cvec{p}|\cvec{p}} = 2\svecp E\delta^3(0)$, so they are not exactly physical one-particle states.
 Physical particles must exist in the form of a wavepacket:
 \begin{equation}
 	\label{eq:01_qft_quantization_wavepacket}
-	\ket{\varphi} = \int d^3p\, \varphi(\vec{p})\ket{\vec{p}},
+	\ket{\varphi} = \int d^3p\, \varphi(\cvec{p})\ket{\cvec{p}},
 \end{equation}
-with some spread in momenta $\varphi(\vec{p})$.
+with some spread in momenta $\varphi(\cvec{p})$.
 However, as long as this variation is smaller than the resolution of our detector (as we will assume), for all practical purposes and calculations we can continue to treat particles as momentum eigenstates.
 This assumption is further motivated in Peskin and Schroeder~\cite{Peskin:1995ev} Chapter 4.5.
 
@@ -623,12 +623,12 @@ We have understood the meaning of the creation, annihilation, momentum, and othe
 If we look at its action on the vacuum, plugging in its quantized form (Eq.~\ref{eq:01_qft_quantization_fsf_fields}) and our new normalization of the momentum eigenstates:
 \begin{equation}
     \label{eq:01_qft_quantization_field_vacuum}
-    \phi(\vec{x})\ket{0} = \int \frac{d^3p}{(2\pi)^3} \frac{1}{2\svecp E} e^{ip\cdot x}\ket{\vec{p}}.
+    \phi(\cvec{x})\ket{0} = \int \frac{d^3p}{(2\pi)^3} \frac{1}{2\svecp E} e^{ip\cdot x}\ket{\cvec{p}}.
 \end{equation}
 
-This is very similar to the Fourier transform of the position eigenstate $\ket{\vec{x}}$ in nonrelativistic QM, except with an integral measure that is now Lorentz-invariant due to our normalizations above.
-Thus, we can roughly interpret $\phi(\vec{x})$ as an operator which creates a particle at position $\vec{x}$.
-However, we will see next that $\phi(\vec{x})\ket{0} \equiv \ket{\vec{x}}$, unlike in QM, is not \textit{exactly} localized in position (although it's pretty close).
+This is very similar to the Fourier transform of the position eigenstate $\ket{\cvec{x}}$ in nonrelativistic QM, except with an integral measure that is now Lorentz-invariant due to our normalizations above.
+Thus, we can roughly interpret $\phi(\cvec{x})$ as an operator which creates a particle at position $\cvec{x}$.
+However, we will see next that $\phi(\cvec{x})\ket{0} \equiv \ket{\cvec{x}}$, unlike in QM, is not \textit{exactly} localized in position (although it's pretty close).
 
 
 \subsubsection{Propagators} 
@@ -640,7 +640,7 @@ We can now discuss the \textit{propagator} of a field, which is the amplitude fo
 \end{equation}
 This is also called the \textit{two-point correlation function} between $x$ and $y$.
 
-Interestingly, it can be shown that, for a particle with mass $m > 0$, for space-like separated points, e.g. $x_0 = y_0, \abs{\vec{x} - \vec{y}} \equiv r$, 
+Interestingly, it can be shown that, for a particle with mass $m > 0$, for space-like separated points, e.g. $x_0 = y_0, \abs{\cvec{x} - \cvec{y}} \equiv r$, 
 \begin{equation}
 	\label{eq:01_qft_quantization_propagator_spacelike}
 	D(r) \sim e^{-mr},
@@ -668,7 +668,7 @@ The form of $\Delta(x)$ can be found by Fourier transforming this equation to be
     \label{eq:01_qft_quantization_propagator_fourier}
     \Delta(x) = \int \frac{d^4p}{(2\pi)^4} \frac{i}{p^2 - m^2} e^{-ip\cdot x},
 \end{equation}
-This has a pole on the real line at $p^2 = m^2 \Leftrightarrow E = \pm \sqrt{\vec{p}^2 + m^2}$, which means there is an ambiguity in defining the contour integral.
+This has a pole on the real line at $p^2 = m^2 \Leftrightarrow E = \pm \sqrt{\cvec{p}^2 + m^2}$, which means there is an ambiguity in defining the contour integral.
 What's cool is that the choice of contour leads to four different Green functions, each with a different physical interpretation.
 
 The choice we care most about in QFT is the \textit{Feynman prescription}, which is often defined as
@@ -761,7 +761,7 @@ This is (one of) the ideas behind \textit{effective field theory} (EFT)~\cite{Ma
 
 The types of interactions present in a theory also determine its \textit{renormalizability}.
 Calculations in QFT are inherently plagued by infinities, one of which we encountered as the zero-point energy of the quantized free scalar field (Section~\ref{sec:01_qft_quantization_hamiltonian}).
-A general method for handling \textit{ultraviolet} (UV) infinities --- those which arise from integrating over momenta up to $\abs{\vec{p}} \rightarrow \infty$ --- is to impose a cut-off energy scale $\Lambda$ on these integrals.
+A general method for handling \textit{ultraviolet} (UV) infinities --- those which arise from integrating over momenta up to $\abs{\cvec{p}} \rightarrow \infty$ --- is to impose a cut-off energy scale $\Lambda$ on these integrals.
 
 By doing so, we are essentially admitting, rightfully so, that we do not know what is going on arbitrarily high energies; hence, we do not expect our theory to be valid beyond $\Lambda$.
 We then, after performing the integrals, can take the limit $\Lambda \rightarrow \infty$ and hope and pray our result is independent of $\Lambda$.
@@ -857,9 +857,9 @@ For given initial and final $N$-particle momentum states, these can be calculate
 
 For example, the first-order term $\braket{f|S|i}^{(1)}$ is non-zero only for processes like:
 \begin{itemize}
-	\item Meson decay $\phi \rightarrow \psi^\dagger\psi$:\quad $\ket{i} = \sqrt{2\svecp E} a^\dagger_{\vec{p}} \ket{0}$,\quad $\ket{f} = \sqrt{4 E_{\vec{q}_1} E_{\vec{q}_2}} b^\dagger_{\vec{q}_1} c^\dagger_{\vec{q}_2} \ket{0}$; and
-	\item Nucleon-antinucleon annihilation $\psi^\dagger\psi \rightarrow \phi$:\quad $\ket{i} = \sqrt{4 E_{\vec{q}_1} E_{\vec{q}_2}} b^\dagger_{\vec{q}_1} c^\dagger_{\vec{q}_2} \ket{0}$,\quad $\ket{f} = \sqrt{2\svecp E} a^\dagger_{\vec{p}} \ket{0}$.
-	% \item Meson emission $\psi \rightarrow \phi\psi$:\quad $\ket{i} = \sqrt{2E_{\vec{q}_1}} c^\dagger_{\vec{q}_1} \ket{0}$,\quad $\ket{f} = \sqrt{4\svecp E E_{\vec{q}_2}} a^\dagger_{\vec{p}\,} c^\dagger_{\vec{q}_2} \ket{0}$.
+	\item Meson decay $\phi \rightarrow \psi^\dagger\psi$:\quad $\ket{i} = \sqrt{2\svecp E} a^\dagger_{\cvec{p}} \ket{0}$,\quad $\ket{f} = \sqrt{4 E_{\cvec{q}_1} E_{\cvec{q}_2}} b^\dagger_{\cvec{q}_1} c^\dagger_{\cvec{q}_2} \ket{0}$; and
+	\item Nucleon-antinucleon annihilation $\psi^\dagger\psi \rightarrow \phi$:\quad $\ket{i} = \sqrt{4 E_{\cvec{q}_1} E_{\cvec{q}_2}} b^\dagger_{\cvec{q}_1} c^\dagger_{\cvec{q}_2} \ket{0}$,\quad $\ket{f} = \sqrt{2\svecp E} a^\dagger_{\cvec{p}} \ket{0}$.
+	% \item Meson emission $\psi \rightarrow \phi\psi$:\quad $\ket{i} = \sqrt{2E_{\cvec{q}_1}} c^\dagger_{\cvec{q}_1} \ket{0}$,\quad $\ket{f} = \sqrt{4\svecp E E_{\cvec{q}_2}} a^\dagger_{\cvec{p}\,} c^\dagger_{\cvec{q}_2} \ket{0}$.
 \end{itemize}
 The amplitude for these can be calculated to be:
 \begin{equation}
@@ -1094,23 +1094,23 @@ Figure~\ref{fig:01_qft_interactions_eezpeak} shows a great example for $e^+e^- \
 
 It is important to check our QFT recovers classical physics in the appropriate limit.
 It will also be useful to translate the somewhat abstract idea of amplitudes to the familiar concepts of forces and potentials.
-We will do so by considering the nonrelativistic limit ($\abs{\vec{p}} \ll M$) of our above amplitudes and using the Born approximation relating the scattering amplitude between two particles to the potential between them $U(\vec{r})$:
+We will do so by considering the nonrelativistic limit ($\abs{\cvec{p}} \ll M$) of our above amplitudes and using the Born approximation relating the scattering amplitude between two particles to the potential between them $U(\cvec{r})$:
 \begin{equation}
 	\label{eq:01_qft_interactions_born}
-	\mathcal M = \braket{\vec{p}_f|U(\vec{r})|\vec{p}_i} = -i \int U(\vec{r}) e^{i(\vec{p}_f - \vec{p}_i)\cdot\vec{r}} d^3r,
+	\mathcal M = \braket{\cvec{p}_f|U(\cvec{r})|\cvec{p}_i} = -i \int U(\cvec{r}) e^{i(\cvec{p}_f - \cvec{p}_i)\cdot\cvec{r}} d^3r,
 \end{equation}
-where $\vec{r}$ is the displacement between the particles.
+where $\cvec{r}$ is the displacement between the particles.
 
 First, let us consider what this potential would be classically.
 The static Klein-Gordon equation for a delta-function source:
 \begin{equation}
 	\label{eq:01_qft_interactions_static_kg}
-	(\nabla^2 - m^2) \phi(\vec{r}) = \delta^3(\vec{r}),
+	(\nabla^2 - m^2) \phi(\cvec{r}) = \delta^3(\cvec{r}),
 \end{equation}
 can be found via the Fourier transform to be:
 \begin{equation}
 	\label{eq:01_qft_interactions_static_kg_solution}
-	\phi(\vec{r}) =  \cfrac{e^{-mr}}{4\pi r}.
+	\phi(\cvec{r}) =  \cfrac{e^{-mr}}{4\pi r}.
 \end{equation}
 We can interpret this to be the profile of $\phi$ around a nucleon (the delta function source), and thus conversely the potential felt by another nucleon via the meson and the Yukawa interaction, under the assumption $M \gg m$.
 This is entirely analogous to gauge potential $A_0$ in electrostatics generated by a $\delta$-function source acting as the electric potential for a test charge.
@@ -1118,12 +1118,12 @@ This is entirely analogous to gauge potential $A_0$ in electrostatics generated 
 Going back to our amplitude for nucleon-antinucleon scattering, the $s$-channel diagram vanishes in the nonrelativistic limit (which essentially means it does not have a simple classical interpretation), while the $t$-channel diagram actually stays the same:
 \begin{equation}
 	\label{eq:01_qft_interactions_na_scattering_nr}
-	i \mathcal M = -(-ig)^2 \cdot \cfrac{1}{\abs{\vec{p}_f - \vec{p}_i}^2 - m^2}.
+	i \mathcal M = -(-ig)^2 \cdot \cfrac{1}{\abs{\cvec{p}_f - \cvec{p}_i}^2 - m^2}.
 \end{equation}
 Plugging this into the LHS of Eq.~\ref{eq:01_qft_interactions_born} and inverting the RHS integral gives us:
 \begin{equation}
 	\label{eq:01_qft_interactions_yukawa_potential}
-	U(\vec{r}) = -\cfrac{g^2}{4M^2} \cdot \cfrac{e^{-mr}}{4\pi r}.
+	U(\cvec{r}) = -\cfrac{g^2}{4M^2} \cdot \cfrac{e^{-mr}}{4\pi r}.
 \end{equation}
 This is exactly the classical potential we found in Eq.~\ref{eq:01_qft_interactions_static_kg_solution}!
 It is weighted by the coupling constant $g$ and $M$ to get the correct dimensions, and with a minus sign telling us potential is attractive.
@@ -1219,9 +1219,9 @@ where $\braket{f|f}$ and $\braket{i|i}$ are the normalization factors for the fi
 For the case of two incoming particles (which is what is most relevant for this dissertation), we can put all of this together to obtain the relation between differential cross section and the matrix element $\mathcal M$:
 \begin{equation}
 	\label{eq:01_qft_interactions_cross_section_matrix_element}
-	d\sigma = \frac{1}{(2E_1)(2E_2)\abs{\vec{v}_1 - \vec{v}_2}} \abs{\mathcal M}^2 d\Pi_{\mathrm{LIPS}},
+	d\sigma = \frac{1}{(2E_1)(2E_2)\abs{\cvec{v}_1 - \cvec{v}_2}} \abs{\mathcal M}^2 d\Pi_{\mathrm{LIPS}},
 \end{equation}
-where $E_1$ and $E_2$ are the energies of the incoming particles, $\vec{v}_1$ and $\vec{v}_2$ are their velocities, and $d\Pi_{\mathrm{LIPS}}$ is called the Lorentz-invariant phase space of the final state momenta:
+where $E_1$ and $E_2$ are the energies of the incoming particles, $\cvec{v}_1$ and $\cvec{v}_2$ are their velocities, and $d\Pi_{\mathrm{LIPS}}$ is called the Lorentz-invariant phase space of the final state momenta:
 \begin{equation}
 	\label{eq:01_qft_interactions_cross_section_lips}
 	d\Pi_{\mathrm{LIPS}} = (2\pi)^4 \delta^{(4)}(\Sigma p) \prod_{\mathrm{final\ states}\ j} \frac{d^3p_j}{(2\pi)^3} \frac{1}{2E_j}
@@ -1230,7 +1230,7 @@ where $E_1$ and $E_2$ are the energies of the incoming particles, $\vec{v}_1$ an
 For the case of $2 \rightarrow 2$ scattering, in the COM frame, this simplifies considerably:
 \begin{equation}
 	\label{eq:01_qft_interactions_cross_section_com}
-	\bigg(\frac{d\sigma}{d\Omega}\bigg)_{\mathrm{CM}} = \frac{1}{64\pi^2E_{\mathrm{CM}}^2}\, \frac{\abs{\vec{p}_f}}{\abs{\vec{p}_i}} \abs{\mathcal M}^2 \theta(E_{\mathrm{CM}} - m_3 - m_4),
+	\bigg(\frac{d\sigma}{d\Omega}\bigg)_{\mathrm{CM}} = \frac{1}{64\pi^2E_{\mathrm{CM}}^2}\, \frac{\abs{\cvec{p}_f}}{\abs{\cvec{p}_i}} \abs{\mathcal M}^2 \theta(E_{\mathrm{CM}} - m_3 - m_4),
 \end{equation}
 and even more so when the all four masses are equal:
 \begin{equation}
@@ -1412,7 +1412,7 @@ For a complex scalar field, we interpreted the conjugate as the antiparticle.
 The same interpretation applies here; hence, if a left-handed spinor describes a particle, its antiparticle is described by its conjugate, right-handed spinor.
 
 The Dirac equation can be rewritten in the Weyl basis as two coupled equations of the Weyl spinors.
-Let us define $\sigma^\mu = (\identity, \vec{\sigma})$ and $\bar{\sigma}^\mu = (\identity, -\vec{\sigma})$, so that
+Let us define $\sigma^\mu = (\identity, \cvec{\sigma})$ and $\bar{\sigma}^\mu = (\identity, -\cvec{\sigma})$, so that
 \begin{equation}
 	\label{eq:01_qft_spinors_dirac_weyl}
 	(i\gamma^\mu\partial_\mu - m)\psi = 
@@ -1436,12 +1436,12 @@ In Fourier space, these are:
 \begin{equation}
 	\label{eq:01_qft_spinors_weyl_fourier}
 	\begin{split}
-		\sigma^\mu p_\mu \psi_R = (E - \vec{\sigma}\cdot\vec{p})\psi_R = 0 \quad \Rightarrow \quad  \frac{\vec{\sigma}\cdot\vec{p}}{\abs{\vec{p}}}\, \psi_R = +\psi_R, \\
-		\bar{\sigma}^\mu p_\mu \psi_L = (E + \vec{\sigma}\cdot\vec{p})\psi_L = 0 \quad \Rightarrow \quad \frac{\vec{\sigma}\cdot\vec{p}}{\abs{\vec{p}}}\, \psi_L = -\psi_L,
+		\sigma^\mu p_\mu \psi_R = (E - \cvec{\sigma}\cdot\cvec{p})\psi_R = 0 \quad \Rightarrow \quad  \frac{\cvec{\sigma}\cdot\cvec{p}}{\abs{\cvec{p}}}\, \psi_R = +\psi_R, \\
+		\bar{\sigma}^\mu p_\mu \psi_L = (E + \cvec{\sigma}\cdot\cvec{p})\psi_L = 0 \quad \Rightarrow \quad \frac{\cvec{\sigma}\cdot\cvec{p}}{\abs{\cvec{p}}}\, \psi_L = -\psi_L,
 	\end{split}
 \end{equation}
-where we used $E = \abs{\vec{p}}$ for massless particles.
-You may recall $\frac{\vec{\sigma}\cdot\vec{p}}{\abs{\vec{p}}}$ is the helicity operator, projecting the particle spin along its momentum.
+where we used $E = \abs{\cvec{p}}$ for massless particles.
+You may recall $\frac{\cvec{\sigma}\cdot\cvec{p}}{\abs{\cvec{p}}}$ is the helicity operator, projecting the particle spin along its momentum.
 Thus, in the massless limit, we see that the left- and right-handed Weyl spinors are the $+1$ and $-1$ helicity eigenstates, respectively.
 
 This is not the case for massive particles, as helicity is no longer Lorentz invariant: one can always boost into a frame where the momentum is inverted while the spin remains the same, changing the sign of the helicity.
@@ -1558,8 +1558,8 @@ The first is that we now must sum over the two spin components of $u_s(p)$ and $
 \begin{equation}
 	\label{eq:01_qft_spinors_quantization}
 	\begin{split}
-		\psi(x) &= \sum_{s = 1, 2} \int \frac{d^3p}{(2\pi)^3} \left[\hat b^s_{\vec{p}}\, u_s(p) e^{-ip\cdot x} + c^{s\dagger}_{\vec{p}}\, v_s(p) e^{ip\cdot x}\right], \\
-		\bar\psi(x) &= \sum_{s = 1, 2} \int \frac{d^3p}{(2\pi)^3} \left[\hat b^{s\dagger}_{\vec{p}}\, \bar{u}_s(p) e^{ip\cdot x} + \hat c^s_{\vec{p}}\,  \bar{v}_s(p) e^{-ip\cdot x}\right].
+		\psi(x) &= \sum_{s = 1, 2} \int \frac{d^3p}{(2\pi)^3} \left[\hat b^s_{\cvec{p}}\, u_s(p) e^{-ip\cdot x} + c^{s\dagger}_{\cvec{p}}\, v_s(p) e^{ip\cdot x}\right], \\
+		\bar\psi(x) &= \sum_{s = 1, 2} \int \frac{d^3p}{(2\pi)^3} \left[\hat b^{s\dagger}_{\cvec{p}}\, \bar{u}_s(p) e^{ip\cdot x} + \hat c^s_{\cvec{p}}\,  \bar{v}_s(p) e^{-ip\cdot x}\right].
 	\end{split}
 \end{equation}
 As before, we have positive and negative frequency solutions, with the $b/b^\dagger$ and $c/c^\dagger$ operators associated with particles of the same mass and opposite charge.
@@ -1586,16 +1586,16 @@ The second, extremely important difference from scalar quantization is that, bec
 	\label{eq:01_qft_spinors_anticommutation}
 	\begin{split}
 		\{\psi_\alpha(x), \psi_\beta(y)\} =& \,\{\bar\psi_\alpha(x), \bar\psi_\beta(y)\} = 0, \\
-		\{\psi_\alpha(x), \bar\psi_\beta(y)\} &= \delta_{\alpha\beta}\delta^3(\vec{x} - \vec{y}),
+		\{\psi_\alpha(x), \bar\psi_\beta(y)\} &= \delta_{\alpha\beta}\delta^3(\cvec{x} - \cvec{y}),
 	\end{split}
 \end{equation}
 which also means the creation and annihilation operators satisfy:
 \begin{equation}
 	\label{eq:01_qft_spinors_anticommutation_operators}
-	% \{a_s(p), a_{r}^\dagger(q)\} = \{b_s(p), b_{r}^\dagger(q)\} = (2\pi)^3\delta^3(\vec{p} - \vec{q})\delta_{sr}.
-	\{\hat b^{s}_{\vec{p}}, \hat b^{r\dagger}_{\vec{q}}\} = \{\hat c^{s}_{\vec{p}}, \hat c^{r\dagger}_{\vec{q}}\} = (2\pi)^3\delta^3(\vec{p} - \vec{q})\delta_{sr}.
+	% \{a_s(p), a_{r}^\dagger(q)\} = \{b_s(p), b_{r}^\dagger(q)\} = (2\pi)^3\delta^3(\cvec{p} - \cvec{q})\delta_{sr}.
+	\{\hat b^{s}_{\cvec{p}}, \hat b^{r\dagger}_{\cvec{q}}\} = \{\hat c^{s}_{\cvec{p}}, \hat c^{r\dagger}_{\cvec{q}}\} = (2\pi)^3\delta^3(\cvec{p} - \cvec{q})\delta_{sr}.
 \end{equation}
-Thus, unlike bosons, exchanging two particles yields a minus sign: $\hat b^{r\dagger}_{\vec{p}_1} \hat b^{s\dagger}_{\vec{p}_1} \ket{0} = -\hat b^{s\dagger}_{\vec{p}_2} \hat b^{r\dagger}_{\vec{p}_1} \ket{0}$, confirming that spinors obey Fermi-Dirac statistics and obey the Paul-Exclusion principle.
+Thus, unlike bosons, exchanging two particles yields a minus sign: $\hat b^{r\dagger}_{\cvec{p}_1} \hat b^{s\dagger}_{\cvec{p}_1} \ket{0} = -\hat b^{s\dagger}_{\cvec{p}_2} \hat b^{r\dagger}_{\cvec{p}_1} \ket{0}$, confirming that spinors obey Fermi-Dirac statistics and obey the Paul-Exclusion principle.
 
 Were we to try and impose our earlier commutation relations for spinors (or indeed, any half-integer-spin field), we would run into several issues.
 These include the time-ordered product in the $S$-matrix not being Lorentz invariant, and antiparticles contributing arbitrarily negative energies, making the theory unstable.
@@ -1641,14 +1641,14 @@ Note as well the relative minus sign in the time-ordering operator for fermions,
 For scalars, external line terms such as $\phi \ket{p}$ simply contributed a factor of $1$ to the matrix element, where $\ket{p}$ is again a one-particle meson state with momentum $p$:
 \begin{equation}
 	\label{eq:01_qft_spinors_yukawa_scalar_external}
-	\phi \ket{p} \sim \int \frac{d^3p'}{(2\pi)^3} \frac{1}{\sqrt{2E_{p'}}} a_{\vec{p}'} e^{-ip'\cdot x} \sqrt{2E_{p}}\, a_{\vec{p}}^\dagger \ket{0} = e^{-ip\cdot x} \ket{0}.
+	\phi \ket{p} \sim \int \frac{d^3p'}{(2\pi)^3} \frac{1}{\sqrt{2E_{p'}}} a_{\cvec{p}'} e^{-ip'\cdot x} \sqrt{2E_{p}}\, a_{\cvec{p}}^\dagger \ket{0} = e^{-ip\cdot x} \ket{0}.
 \end{equation}
 (The $e^{-ip\cdot x}$ factor contributes only to the momentum conservation delta function in the $S$-matrix element.)
 For spinors, we instead end up with a spinor factor.
 For example, for an incoming fermion with momentum $q$ and spin $s$:
 \begin{equation}
 	\label{eq:01_qft_spinors_yukawa_spinor_external}
-	\psi \ket{q, s} \sim \int \frac{d^3q'}{(2\pi)^3} \frac{1}{\sqrt{2E_{q'}}} \sum_s' b^{s'}_{\vec{q}'} u^{s'}(q') e^{-iq'\cdot x} \sqrt{2E_{q}}\, b^{s\dagger}_{\vec{q}} \ket{0} = u^s(q) e^{-iq\cdot x} \ket{0}.
+	\psi \ket{q, s} \sim \int \frac{d^3q'}{(2\pi)^3} \frac{1}{\sqrt{2E_{q'}}} \sum_s' b^{s'}_{\cvec{q}'} u^{s'}(q') e^{-iq'\cdot x} \sqrt{2E_{q}}\, b^{s\dagger}_{\cvec{q}} \ket{0} = u^s(q) e^{-iq\cdot x} \ket{0}.
 \end{equation}
 We can see looking at the form of the quantized fields (Eq.~\ref{eq:01_qft_spinors_quantization}), and which terms will contribute something non-zero, that incoming (outgoing) external fermions will be associated with a $u$ $(\bar u$) and antifermions with a $\bar v$ $(v$) factor.\footnote{The ``$\sim$'' becomes an ``$=$'' for a \textit{Wick contraction}, $\contraction{}{\phi}{}{\ket{p}} \phi \ket{p}$, which is what we deal with with time-ordered operator products.}
 
@@ -1719,7 +1719,7 @@ As discussed in Chapter~\ref{sec:01_symmetries_poincare}, the full Lorentz group
 In the $4$-vector representation, they have the simple forms $P = \diag(1, -1, -1, -1)$ and $T = \diag(-1, 1, 1, 1)$, meaning
 \begin{equation}
 	\label{eq:01_qft_spinors_pt4v}
-	P: (t, \vec{x}) \rightarrow (t, -\vec{x}), \quad T: (t, \vec{x}) \rightarrow (-t, \vec{x}).
+	P: (t, \cvec{x}) \rightarrow (t, -\cvec{x}), \quad T: (t, \cvec{x}) \rightarrow (-t, \cvec{x}).
 \end{equation}
 However, their forms in other representations, such as spinors, are not as straightforward.
 
@@ -1767,9 +1767,9 @@ A further physical requirement, however, is that applying any of the operators t
 \begin{equation}
 	\label{eq:01_qft_spinors_cpt_scalars}
 	\begin{split}
-		C\mathrm{:}\; \phi(t, \vec{x}) &\rightarrow \pm\phi^*(t, \vec{x}), \\
-		P\mathrm{:}\; \phi(t, \vec{x}) &\rightarrow \pm\phi(t, -\vec{x}), \\
-		T\mathrm{:}\; \phi(t, \vec{x}) &\rightarrow \pm\phi(-t, \vec{x}).
+		C\mathrm{:}\; \phi(t, \cvec{x}) &\rightarrow \pm\phi^*(t, \cvec{x}), \\
+		P\mathrm{:}\; \phi(t, \cvec{x}) &\rightarrow \pm\phi(t, -\cvec{x}), \\
+		T\mathrm{:}\; \phi(t, \cvec{x}) &\rightarrow \pm\phi(-t, \cvec{x}).
 	\end{split}
 \end{equation}
 The time-reversal operation is a bit subtle, as it must be \textit{anti-unitary}.
@@ -1787,9 +1787,9 @@ Though we introduce vector fields in detail in the next section, their transform
 \begin{equation}
 	\label{eq:01_qft_spinors_cpt_vectors}
 	\begin{split}
-		C\mathrm{:}\; A^\mu(t, \vec{x}) &\rightarrow \pm A^{\dagger\mu}(t, \vec{x}), \\
-		P\mathrm{:}\; A^\mu(t, \vec{x}) &\rightarrow \pm \eta_{\mu\nu}A^\nu(t, -\vec{x}), \\
-		T\mathrm{:}\; A^\mu(t, \vec{x}) &\rightarrow \mp \eta_{\mu\nu}A^\nu(-t, \vec{x}),
+		C\mathrm{:}\; A^\mu(t, \cvec{x}) &\rightarrow \pm A^{\dagger\mu}(t, \cvec{x}), \\
+		P\mathrm{:}\; A^\mu(t, \cvec{x}) &\rightarrow \pm \eta_{\mu\nu}A^\nu(t, -\cvec{x}), \\
+		T\mathrm{:}\; A^\mu(t, \cvec{x}) &\rightarrow \mp \eta_{\mu\nu}A^\nu(-t, \cvec{x}),
 	\end{split}
 \end{equation}
 where $\eta_{\mu\nu}$ is the Minkowski metric (i.e. $P$ and $T$ flip the sign of the first and the last three components of $A^\mu$, respectively).
@@ -1810,7 +1810,7 @@ If $P$ is a true symmetry of the theory, after a parity transformation $\psi'(x'
 	\label{eq:01_qft_spinors_cpt_parity}
 	(i\gamma^\mu\partial'_\mu - m)\psi'(x') = 0,
 \end{equation}
-where $x^\mu \rightarrow x'^\mu = (x^0, -\vec{x})$ and $\partial_\mu' \equiv \partial/\partial x'^\mu$ under parity.
+where $x^\mu \rightarrow x'^\mu = (x^0, -\cvec{x})$ and $\partial_\mu' \equiv \partial/\partial x'^\mu$ under parity.
 One can see, by multiplying the original Dirac equation by $\gamma^0$, that this is satisfied if $\psi'(x') = \pm \gamma^0\psi(x)$:
 \begin{equation}
 	\label{eq:01_qft_spinors_cpt_parity2}
@@ -1884,7 +1884,7 @@ The time reversal operation is more subtle, as it is anti-unitary.
 We will forego a detailed discussion of these subtleties (see e.g. Schwartz ~\cite{Schwartz:2014sze} Chapter 11.6), and note that the time reversal operator $T$ is defined to transform a Dirac spinor in the Weyl basis as:
 \begin{equation}
 	\label{eq:01_qft_spinors_cpt_time_reversal}
-	T\mathrm{:\;} \psi(t, \vec{x}) \rightarrow \pm i\gamma^1\gamma^3\psi(-t, \vec{x}).
+	T\mathrm{:\;} \psi(t, \cvec{x}) \rightarrow \pm i\gamma^1\gamma^3\psi(-t, \cvec{x}).
 \end{equation}
 It flips both the spin and momenta of the fermions, and is violated as well by the weak interaction (as it must be to ensure $CPT$-invariance, given $CP$-violation).
 
@@ -1964,7 +1964,7 @@ Ultimately, these considerations are not particularly relevant to the experiment
 \label{sec:01_qft_gt_maxwell}
 
 Gauge symmetries are a generalization of internal global symmetries, such as the \UU[1] symmetry from Section~\ref{sec:01_qft_classical_symmetries}, to a \textit{local} symmetry, where the symmetry transformation can be a function of spacetime.
-We are most familiar with this concept from classical E\&M, in which Maxwell's laws are invariant under transformations of the $4$-vector potential $A_\mu = (\phi, \vec{A})$ of the form:
+We are most familiar with this concept from classical E\&M, in which Maxwell's laws are invariant under transformations of the $4$-vector potential $A_\mu = (\phi, \cvec{A})$ of the form:
 \begin{equation}
 	\label{eq:01_qft_gt_maxwell_gauge}
 	A_\mu(x) \rightarrow A_\mu(x) + \frac{1}{e}\partial_\mu\alpha(x),
@@ -1972,10 +1972,10 @@ We are most familiar with this concept from classical E\&M, in which Maxwell's l
 for an arbitrary function $\alpha(x)$, where $e$ is a conventional constant that we will soon interpret as the coupling constant of the theory.
 % Remarkably, once quantized, $A_\mu$ represents the photon field.
 
-Recall that $A_\mu$ is related to the electric and magnetic fields, $\vec{E}$ and $\vec{B}$, by:
+Recall that $A_\mu$ is related to the electric and magnetic fields, $\cvec{E}$ and $\cvec{B}$, by:
 \begin{equation}
 	\label{eq:01_qft_gt_maxwell_fields}
-	\vec{E} = -\nabla\phi - \partial_t\vec{A}, \qquad \vec{B} = \nabla\times\vec{A},
+	\cvec{E} = -\nabla\phi - \partial_t\cvec{A}, \qquad \cvec{B} = \nabla\times\cvec{A},
 \end{equation}
 and the Maxwell equations can be derived from the Lagrangian:
 \begin{equation}

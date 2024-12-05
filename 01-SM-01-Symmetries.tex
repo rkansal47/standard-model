@@ -283,7 +283,7 @@ Thus $T$ are antisymmetric matrices, of which for $N = 3$ dimensions there are t
 labeled as $x$, $y$, $z$ as they represent rotations around the respective axes.
 The factor of $i$ ensures the reality of the infinitesimal rotations in Eq.~\ref{eq:01_so3_generators_derivation} and also that the generators are Hermitian.\footnote{Note that the conventions around this factor are inconsistent in the literature and likely, despite our best efforts, will be inconsistent in this chapter as well.}
 These provide us with the fundamental representation of \so[3], and should be familiar as the angular momentum operators in quantum mechanics (QM).
-By exponentiating these, as in Eq.~\ref{eq:01_lie_group_finite}, we obtain the fundamental representation of the \SO[3] group: $R(\vec{\theta}) = e^{i\theta_i J_i}$.
+By exponentiating these, as in Eq.~\ref{eq:01_lie_group_finite}, we obtain the fundamental representation of the \SO[3] group: $R(\cvec{\theta}) = e^{i\theta_i J_i}$.
 % Note that conventions around the factor of $i$ in the representations and commutation relations are annoyingly inconsistent in the literature and likely, despite our best efforts, in this chapter as well.
 
 To find the fundamental representation of \su[2], we can follow the same procedure as above, using the unitarity constraint $R^\dagger R = \identity$ for $N = 2$ dimensional complex matrices, which yields:
@@ -497,9 +497,9 @@ In the $4$-vector representation, these are:
 Lorentz transformations can thus be represented as
 \begin{equation}
 	\label{eq:01_lorentz_generators_exponential}
-\Lambda(\vec{\theta}, \vec{\beta}) = e^{i(\theta_i J_i + \beta_i K_i)},
+\Lambda(\cvec{\theta}, \cvec{\beta}) = e^{i(\theta_i J_i + \beta_i K_i)},
 \end{equation}
-where $\vec{\theta}$ and $\vec{\beta}$ are the rotation and boost parameters, respectively,
+where $\cvec{\theta}$ and $\cvec{\beta}$ are the rotation and boost parameters, respectively,
 % Note that these only represent the transformations of the Lorentz group continuously connected to the identity (by definition of the Lie algebra, Definition~\ref{def:01_lie_algebra}).
 
 An important property of the Lorentz group is that it is not compact.

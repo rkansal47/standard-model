@@ -9,6 +9,7 @@
     \nicefrac{#1}{#2}
   \fi
 }
+\newcommand{\cvec}[1]{\mathbf{#1}}
 
 \NewDocumentCommand{\SO}{ o }{%
   \ensuremath{\mathrm{SO}\IfValueT{#1}{(#1)}}\xspace
@@ -34,9 +35,9 @@
 
 \newcommand{\suu}{\ensuremath{\mathrm{SU}(2)\times\mathrm{U}(1)}\xspace}
 
-\newcommand{\svecp}[1]{\ensuremath{#1_{\vec{p}}\,}}
-\newcommand{\ophat}[1]{\ensuremath{\hat #1_{\vec{p}}\,}}
-\newcommand{\ophatd}[1]{\ensuremath{\hat #1^\dagger_{\vec{p}}\,}}
+\newcommand{\svecp}[1]{\ensuremath{#1_{\cvec{p}}\,}}
+\newcommand{\ophat}[1]{\ensuremath{\hat #1_{\cvec{p}}\,}}
+\newcommand{\ophatd}[1]{\ensuremath{\hat #1^\dagger_{\cvec{p}}\,}}
 
 \newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
 \newcommand{\mus}{\ensuremath{\mu\text{s}}\xspace}
