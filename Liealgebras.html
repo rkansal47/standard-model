@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+
+<html lang="en-US" xml:lang="en-US">
+<head><title>Lie algebras</title>
+<meta charset="utf-8"/>
+<meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="main.css" rel="stylesheet" type="text/css"/>
+<meta content="main.tex" name="src"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="icon.png" rel="icon" type="image/x-icon"/>
+</head><body>
+<nav class="TOC"><span class="mainToc"><a href="index.html"><img alt="Symmetries, QFT, &amp; The Standard Model" src="logo.png" width="100%"/></a></span>
+<span class="likechapterToc"><a href="contentsname.html#contents">Contents</a></span>
+<span class="chapterToc">1 <a href="Introduction.html#introduction">Introduction</a></span>
+<span class="chapterToc">2 <a href="Symmetriesinphysics.html#symmetries-in-physics">Symmetries in physics</a></span>
+<span class="sectionToc">2.1 <a href="Grouptheory.html#group-theory">Group theory</a></span>
+<span class="sectionToc">2.2 <a href="#lie-algebras">Lie algebras</a></span>
+<span class="sectionToc">2.3 <a href="ParticlesareirrepsofthePoincarégroup.html#particles-are-irreps-of-the-poincare-group">Particles are irreps of the Poincaré group</a></span>
+<span class="chapterToc">3 <a href="Quantumfieldtheory.html#quantum-field-theory">Quantum field theory</a></span>
+<span class="chapterToc">4 <a href="TheStandardModel.html#the-standard-model">The Standard Model</a></span>
+<span class="likechapterToc"><a href="bibnamemkbothMakeUppercasebibnameMakeUppercasebibname.html#bibliography">Bibliography</a></span>
+</nav>
+<main class="main-content">
+<nav class="crosslinks-top"> <a href="Grouptheory.html">Previous</a> <a href="ParticlesareirrepsofthePoincarégroup.html">Next</a> </nav>
+<h3 class="sectionHead" id="lie-algebras"><span class="titlemark">2.2   </span> <a id="x6-70002.2"></a>Lie algebras</h3>
+<!--  l. 191  --><p class="noindent">We next introduce the concepts of Lie groups and Lie algebras, which are highly
+useful in understanding the structure and representations of continuous
+groups.
+</p>
+<div class="newtheorem">
+<!--  l. 193  --><p class="noindent"><span class="head">
+<a id="x6-7001r9"></a>
+<span class="ec-lmbx-12">Definition 2.9.</span>
+</span> A <span class="ec-lmri-12">Lie group </span>is a group that is also a differentiable
+manifold, or “smooth”. Virtually all continuous groups we consider
+in physics are Lie groups. What this means is that we can think
+                                                                          
+
+                                                                          
+of the operation of any arbitrary group element as equivalent to
+<!--  l. 197  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math>
+successive infinitesimal operations of the form </p><table class="equation"><tr><td>
+<!--  l. 198  --><p class="indent">
+</p><!--  l. 198  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x6-7002r7"></mstyle><!--  endlabel  -->
+<mi>g</mi><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>𝜀</mi></mrow><mrow><mi>A</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>𝟙</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>i</mi><msub><mrow><mi>𝜀</mi></mrow><mrow><mi>A</mi></mrow></msub><msub><mrow><mi>T</mi></mrow><mrow><mi>A</mi></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo>
+</mrow></math></td><td class="eq-no">(2.7)</td></tr></table>
+<!--  l. 201  --><p class="noindent">where <!--  l. 202  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>𝜀</mi></mrow><mrow><mi>A</mi></mrow></msub></math>
+are infinitesimal and indexing the continuous group parameters, e.g. rotation angles
+for <!--  l. 202  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="normal"><mi>SO</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mi>n</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>,
+<!--  l. 202  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>T</mi></mrow><mrow><mi>A</mi></mrow></msub></math> are called the
+<span class="ec-lmri-12">generators </span>of the group, and we are using Einstein notation, implicitly summing over the index
+<!--  l. 204  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi></math>. Thus, for a
+general element <!--  l. 205  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>g</mi><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>𝜃</mi></mrow><mrow><mi>A</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>,
+where <!--  l. 205  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mrow><mi>𝜃</mi></mrow><mrow><mi>A</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>N</mi><msub><mrow><mi>𝜀</mi></mrow><mrow><mi>A</mi></mrow></msub></mrow></math> as
+defined above, we have </p><table class="equation"><tr><td>
+<!--  l. 206  --><p class="indent">
+</p><!--  l. 206  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x6-7003r8"></mstyle><!--  endlabel  -->
+<mi>g</mi><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>𝜃</mi></mrow><mrow><mi>A</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi>𝟙</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>i</mi><mfrac><mrow><msub><mrow><mi>𝜃</mi></mrow><mrow><mi>A</mi></mrow></msub></mrow>
+<mrow>
+<mi>N</mi></mrow></mfrac><msub><mrow><mi>T</mi></mrow><mrow><mi>A</mi></mrow></msub></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow><mi>N</mi></mrow></msup><munderover> <mo class="MathClass-rel" stretchy="false">→</mo><mrow></mrow><mrow><mi>N</mi> <mo class="MathClass-rel" stretchy="false">→</mo><mi>∞</mi></mrow></munderover><msup><mrow><mi>e</mi></mrow><mrow><mi>i</mi><msub><mrow><mi>𝜃</mi></mrow><mrow><mi>A</mi></mrow></msub><msub><mrow><mi>T</mi></mrow><mrow><mi>A</mi></mrow></msub>
+</mrow></msup><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(2.8)</td></tr></table>
+<!--  l. 209  --><p class="noindent">This is somewhat analogous to Taylor expansion in calculus, except for Lie groups
+only the first order / derivative term is necessary to capture the group
+behavior.<span class="footnote-mark"><a href="#fn2x3" id="fn2x3-bk"><sup class="textsuperscript">2</sup></a></span><a id="x6-7004f2"></a>
+</p>
+</div>
+<!--  l. 212  --><p class="indent">
+</p>
+<div class="newtheorem">
+<!--  l. 214  --><p class="noindent"><span class="head">
+<a id="x6-7006r10"></a>
+<span class="ec-lmbx-12">Definition 2.10.</span>
+</span> The <span class="ec-lmri-12">Lie algebra</span>, <!--  l. 216  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>𝔤</mi></math>,
+of a group is defined by the set of commutation relations between its
+generators:<span class="footnote-mark"><a href="#fn3x3" id="fn3x3-bk"><sup class="textsuperscript">3</sup></a></span><a id="x6-7007f3"></a>
+</p><table class="equation"><tr><td>
+<!--  l. 219  --><p class="indent">
+</p><!--  l. 219  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x6-7009r9"></mstyle><!--  endlabel  -->
+<mo class="MathClass-open" stretchy="false">[</mo><msub><mrow><mi>T</mi></mrow><mrow><mi>A</mi></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>T</mi></mrow><mrow><mi>B</mi></mrow></msub><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>i</mi><msub><mrow><mi>f</mi></mrow><mrow><mi mathvariant="italic">ABC</mi></mrow></msub><msub><mrow><mi>T</mi></mrow><mrow><mi>C</mi></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo>
+</mrow></math></td><td class="eq-no">(2.9)</td></tr></table>
+<!--  l. 222  --><p class="noindent">where <!--  l. 223  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open" stretchy="false">[</mo><msub><mrow><mi>T</mi></mrow><mrow><mi>A</mi></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>T</mi></mrow><mrow><mi>B</mi></mrow></msub><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>T</mi></mrow><mrow><mi>A</mi></mrow></msub><msub><mrow><mi>T</mi></mrow><mrow><mi>B</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>T</mi></mrow><mrow><mi>B</mi></mrow></msub><msub><mrow><mi>T</mi></mrow><mrow><mi>A</mi></mrow></msub></mrow></math> is the
+commutator of <!--  l. 223  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>T</mi></mrow><mrow><mi>A</mi></mrow></msub></math>
+and <!--  l. 223  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>T</mi></mrow><mrow><mi>B</mi></mrow></msub></math>, and
+<!--  l. 223  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>f</mi></mrow><mrow><mi mathvariant="italic">ABC</mi></mrow></msub></math> are called the
+<span class="ec-lmri-12">structure constants </span>of <!--  l. 223  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>𝔤</mi></math>.
+As <!--  l. 224  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open" stretchy="false">[</mo><msub><mrow><mi>T</mi></mrow><mrow><mi>A</mi></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>T</mi></mrow><mrow><mi>B</mi></mrow></msub><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mo class="MathClass-open" stretchy="false">[</mo><msub><mrow><mi>T</mi></mrow><mrow><mi>B</mi></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>T</mi></mrow><mrow><mi>A</mi></mrow></msub><mo class="MathClass-close" stretchy="false">]</mo></mrow></math>,
+the structure constants must be totally antisymmetric in the swapping of their
+indices.
+                                                                          
+
+                                                                          
+</p>
+</div>
+<!--  l. 230  --><p class="indent">
+</p>
+<div class="newtheorem">
+<!--  l. 232  --><p class="noindent"><span class="head">
+<a id="x6-7010r5"></a>
+<span class="ec-lmbx-12">Example 2.5.</span>
+</span> For the <!--  l. 234  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="normal"><mi>U</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>
+group, we can see directly from Eq. <a href="Grouptheory.html#x5-6005r5">2.5<!--  tex4ht:ref: eq:01_u1   --></a> that the sole generator of the group is
+<!--  l. 234  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>T</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn></mrow></math>.
+This        has        the        rather        uninteresting        Lie        algebra
+<!--  l. 235  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>𝔲</mi><mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>
+of <!--  l. 235  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open" stretchy="false">[</mo><mn>1</mn><mo class="MathClass-punc" stretchy="false">,</mo> <mn>1</mn><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></mrow></math>,
+stemming        from        the        fact        that        the        group        is
+abelian.       Next,       we       look       at       the       more       interesting
+<!--  l. 236  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="normal"><mi>SO</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mn>3</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>
+and <!--  l. 236  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="normal"><mi>SU</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>
+groups, where the power of Lie algebras shines.
+                                                                          
+
+                                                                          
+</p>
+</div>
+<!--  l. 237  --><p class="indent">
+</p><!--  l. 243  --><p class="noindent">
+</p>
+<h5 class="subsubsectionHead" id="fundamental-and-adjoint-representations-of-the-and-algebras"><a id="x6-8000"></a>Fundamental and adjoint representations of the
+<!--  l. 243  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="italic">𝔰𝔬</mi><mo class="MathClass-open" stretchy="false">(</mo><mn>3</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math> and
+<!--  l. 243  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="italic">𝔰𝔲</mi><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>
+algebras</h5>
+<!--  l. 245  --><p class="noindent">We now turn to the derivation of the Lie algebras and representations of the
+<!--  l. 245  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="normal"><mi>SO</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mn>3</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math> and
+<!--  l. 245  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="normal"><mi>SU</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>
+groups, both because of their importance in physics, and because the derivation
+introduces a number of useful concepts and definitions for the following sections.
+<!--  l. 246  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="normal"><mi>SO</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mn>3</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math> and
+<!--  l. 246  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="normal"><mi>SU</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math> are very closely related:
+<!--  l. 246  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="normal"><mi>SU</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math> is a <span class="ec-lmri-12">double cover </span>of
+<!--  l. 246  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="normal"><mi>SO</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mn>3</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>, which means that every
+                                                                          
+
+                                                                          
+rotation in <!--  l. 246  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="normal"><mi>SO</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mn>3</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math> can be mapped
+to two elements of <!--  l. 246  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="normal"><mi>SU</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>.
+Importantly, however, they are locally isomorphic near the identity, meaning they
+have the same Lie algebra.
+</p><!--  l. 249  --><p class="indent">   We can derive the generators of <!--  l. 249  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="normal"><mi>SO</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mn>3</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>
+by using the properties of the special orthogonal group
+(<!--  l. 249  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msup><mrow><mi>R</mi></mrow><mrow><mi>T</mi> </mrow></msup><mi>R</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>𝟙</mi> </mrow></math> ).
+From Eq. <a href="#x6-7002r7">2.7<!--  tex4ht:ref: eq:01_lie_group_infinitesimal   --></a>, we have </p><table class="equation"><tr><td>
+<!--  l. 251  --><p class="indent">
+</p><!--  l. 251  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x6-8001r10"></mstyle><!--  endlabel  -->
+<mtable class="equation"><mtr><mtd>
+<mtable class="split" columnalign="right left">
+<mtr class="split-mtr"><mtd class="split-mtd"> <mi>R</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>𝜀</mi><mo class="MathClass-close" stretchy="false">)</mo></mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">≊</mo> <mi>𝟙</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mi mathvariant="italic">i𝜀T</mi></mtd>
+</mtr><mtr class="split-mtr"><mtd class="split-mtd"> <msup><mrow><mi>R</mi></mrow><mrow><mi>T</mi> </mrow></msup><mi>R</mi></mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>𝟙</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mi mathvariant="italic">i𝜀</mi><mo class="MathClass-open" stretchy="false">(</mo><msup><mrow><mi>T</mi></mrow><mrow><mi>T</mi> </mrow></msup> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>T</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="script"><mi>O</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><msup><mrow><mi>𝜀</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo><mover class="overset"><mrow> <mo class="MathClass-rel" stretchy="false">=</mo> </mrow><mrow><mo class="MathClass-punc" stretchy="false">!</mo></mrow></mover><mi>𝟙</mi> </mtd> </mtr><mtr class="split-mtr"><mtd class="split-mtd">
+<mo class="MathClass-rel" stretchy="false">⇒</mo> <msup><mrow><mi>T</mi></mrow><mrow><mi>T</mi> </mrow></msup></mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mi>T</mi><mo class="MathClass-punc" stretchy="false">.</mo></mtd>
+</mtr></mtable>
+</mtd><mtd>
+</mtd></mtr></mtable>
+</mrow></math></td><td class="eq-no">(2.10)</td></tr></table>
+<!--  l. 258  --><p class="noindent">Thus <!--  l. 259  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>T</mi></math> are antisymmetric
+matrices, of which for <!--  l. 259  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>N</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>3</mn></mrow></math>
+dimensions there are three linearly independent ones: </p><table class="equation"><tr><td>
+<!--  l. 260  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x6-8002r11"></mstyle><!--  endlabel  --><msub><mrow><mi>J</mi></mrow><mrow><mi>x</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>i</mi> <mrow><mo fence="true" form="prefix">(</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mn>0</mn> </mtd>
+<mtd class="array-td" columnalign="center"> <mn>0</mn> </mtd>
+<mtd class="array-td" columnalign="center"> <mn>0</mn> </mtd>
+</mtr> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mn>0</mn> </mtd><mtd class="array-td" columnalign="center"> <mn>0</mn> </mtd><mtd class="array-td" columnalign="center"> <mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn> </mtd></mtr> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mn>0</mn> </mtd> <mtd class="array-td" columnalign="center"> <mn>1</mn> </mtd> <mtd class="array-td" columnalign="center"> <mn>0</mn></mtd></mtr>
+<!--  *\c@MaxMatrixCols c  --></mtable> </mrow><mo fence="true" form="postfix">)</mo></mrow> <mo class="MathClass-punc" stretchy="false">,</mo><mspace class="quad" width="1em"></mspace><msub><mrow><mi>J</mi></mrow><mrow><mi>y</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>i</mi> <mrow><mo fence="true" form="prefix">(</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mn>0</mn> </mtd>
+<mtd class="array-td" columnalign="center"> <mn>0</mn> </mtd>
+<mtd class="array-td" columnalign="center"> <mn>1</mn> </mtd>
+</mtr> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mn>0</mn> </mtd><mtd class="array-td" columnalign="center"> <mn>0</mn> </mtd><mtd class="array-td" columnalign="center"> <mn>0</mn> </mtd></mtr> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn> </mtd> <mtd class="array-td" columnalign="center"> <mn>0</mn> </mtd> <mtd class="array-td" columnalign="center"> <mn>0</mn></mtd></mtr>
+<!--  *\c@MaxMatrixCols c  --></mtable> </mrow><mo fence="true" form="postfix">)</mo></mrow> <mo class="MathClass-punc" stretchy="false">,</mo><mspace class="quad" width="1em"></mspace><msub><mrow><mi>J</mi></mrow><mrow><mi>z</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>i</mi> <mrow><mo fence="true" form="prefix">(</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mn>0</mn> </mtd>
+<mtd class="array-td" columnalign="center"> <mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn> </mtd>
+<mtd class="array-td" columnalign="center"> <mn>0</mn> </mtd>
+</mtr> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mn>1</mn> </mtd><mtd class="array-td" columnalign="center"> <mn>0</mn> </mtd><mtd class="array-td" columnalign="center"> <mn>0</mn> </mtd></mtr> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mn>0</mn> </mtd> <mtd class="array-td" columnalign="center"> <mn>0</mn> </mtd> <mtd class="array-td" columnalign="center"> <mn>0</mn></mtd></mtr>
+<!--  *\c@MaxMatrixCols c  --></mtable> </mrow><mo fence="true" form="postfix">)</mo></mrow> <mo class="MathClass-punc" stretchy="false">,</mo>
+</mrow></math></td><td class="eq-no">(2.11)</td></tr></table>
+<!--  l. 277  --><p class="noindent">labeled as <!--  l. 278  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math>,
+<!--  l. 278  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi></math>,
+<!--  l. 278  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>z</mi></math> as
+they represent rotations around the respective axes. The factor of
+<!--  l. 279  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>i</mi></math> ensures
+the reality of the infinitesimal rotations in Eq. <a href="#x6-8001r10">2.10<!--  tex4ht:ref: eq:01_so3_generators_derivation   --></a> and also that the generators are
+Hermitian.<span class="footnote-mark"><a href="#fn4x3" id="fn4x3-bk"><sup class="textsuperscript">4</sup></a></span><a id="x6-8003f4"></a>
+These provide us with the fundamental representation of
+<!--  l. 280  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="italic">𝔰𝔬</mi><mo class="MathClass-open" stretchy="false">(</mo><mn>3</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>, and
+should be familiar as the angular momentum operators in quantum mechanics (QM).
+                                                                          
+
+                                                                          
+By exponentiating these, as in Eq. <a href="#x6-7003r8">2.8<!--  tex4ht:ref: eq:01_lie_group_finite   --></a>, we obtain the fundamental representation
+of the <!--  l. 281  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="normal"><mi>SO</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mn>3</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>
+group: <!--  l. 281  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>R</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>𝜃</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mi>e</mi></mrow><mrow><mi>i</mi><msub><mrow><mi>𝜃</mi></mrow><mrow><mi>i</mi></mrow></msub><msub><mrow><mi>J</mi></mrow><mrow><mi>i</mi></mrow></msub></mrow></msup></mrow></math>.
+</p><!--  l. 284  --><p class="indent">   To find the fundamental representation of
+<!--  l. 284  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="italic">𝔰𝔲</mi><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>, we
+can follow the same procedure as above, using the unitarity constraint
+<!--  l. 284  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msup><mrow><mi>R</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msup><mi>R</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>𝟙</mi> </mrow></math>  for
+<!--  l. 284  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>N</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>2</mn></mrow></math>
+dimensional complex matrices, which yields: </p><table class="equation"><tr><td>
+<!--  l. 285  --><p class="indent">
+</p><!--  l. 285  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x6-8005r12"></mstyle><!--  endlabel  -->
+<mtable class="equation"><mtr><mtd>
+<mtable class="split" columnalign="right left">
+<mtr class="split-mtr"><mtd class="split-mtd"> <msub><mrow><mi>T</mi></mrow><mrow><mn>1</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msub><mrow><mi>σ</mi></mrow><mrow><mi>x</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> <mrow><mo fence="true" form="prefix">(</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mn>0</mn> </mtd>
+<mtd class="array-td" columnalign="center"> <mn>1</mn> </mtd>
+</mtr> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mn>1</mn> </mtd><mtd class="array-td" columnalign="center"> <mn>0</mn> </mtd></mtr>
+<!--  *\c@MaxMatrixCols c  --></mtable> </mrow><mo fence="true" form="postfix">)</mo></mrow> <mo class="MathClass-punc" stretchy="false">,</mo><mspace class="quad" width="1em"></mspace></mtd>
+<mtd class="split-mtd"><msub><mrow><mi>T</mi></mrow><mrow><mn>2</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msub><mrow><mi>σ</mi></mrow><mrow><mi>y</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> <mrow><mo fence="true" form="prefix">(</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mn>0</mn> </mtd>
+<mtd class="array-td" columnalign="center"> <mo class="MathClass-bin" stretchy="false">−</mo><mi>i</mi> </mtd>
+</mtr> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mi>i</mi> </mtd><mtd class="array-td" columnalign="center"> <mn>0</mn> </mtd></mtr>
+<!--  *\c@MaxMatrixCols c  --></mtable> </mrow><mo fence="true" form="postfix">)</mo></mrow> <mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+</mtr><mtr class="split-mtr"><mtd class="split-mtd"> <msub><mrow><mi>T</mi></mrow><mrow><mn>3</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msub><mrow><mi>σ</mi></mrow><mrow><mi>z</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo></mtd>
+<mtd class="split-mtd"><mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> <mrow><mo fence="true" form="prefix">(</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mn>1</mn> </mtd>
+<mtd class="array-td" columnalign="center"> <mn>0</mn> </mtd>
+</mtr> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mn>0</mn> </mtd><mtd class="array-td" columnalign="center"> <mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn> </mtd></mtr>
+<!--  *\c@MaxMatrixCols c  --></mtable> </mrow><mo fence="true" form="postfix">)</mo></mrow> <mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+</mtr></mtable>
+</mtd><mtd>
+</mtd></mtr></mtable>
+</mrow></math></td><td class="eq-no">(2.12)</td></tr></table>
+<!--  l. 302  --><p class="noindent">where <!--  l. 303  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>σ</mi></mrow><mrow><mi>i</mi></mrow></msub></math>
+are the Pauli matrices — the angular momentum operators for the spin of
+spin-<!--  l. 303  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>1</mn><mo class="MathClass-bin" stretchy="false">∕</mo><mn>2</mn></mrow></math>
+particles in QM. Either set of generators yield the following Lie algebra of both
+groups: </p><table class="equation"><tr><td>
+<!--  l. 305  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x6-8006r13"></mstyle><!--  endlabel  -->
+<mo class="MathClass-open" stretchy="false">[</mo><msub><mrow><mi>T</mi></mrow><mrow><mi>A</mi></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>T</mi></mrow><mrow><mi>B</mi></mrow></msub><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>i</mi><msub><mrow><mi>𝜖</mi></mrow><mrow><mi mathvariant="italic">ABC</mi></mrow></msub><msub><mrow><mi>T</mi></mrow><mrow><mi>C</mi></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo>
+</mrow></math></td><td class="eq-no">(2.13)</td></tr></table>
+<!--  l. 308  --><p class="noindent">where the structure constants <!--  l. 309  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>f</mi></mrow><mrow><mi mathvariant="italic">ABC</mi></mrow></msub></math>
+of the algebra are simply <!--  l. 309  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>𝜖</mi></mrow><mrow><mi mathvariant="italic">ABC</mi></mrow></msub></math>,
+the totally antisymmetric Levi-Civita tensor.
+Structure constants themselves furnish the following representation of the
+corresponding Lie algebra: </p><table class="equation"><tr><td>
+<!--  l. 312  --><p class="indent">
+</p><!--  l. 312  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x6-8007r14"></mstyle><!--  endlabel  -->
+<msub><mrow><mo class="MathClass-open" stretchy="false">[</mo><msub><mrow><mi>T</mi></mrow><mrow><mi>A</mi></mrow></msub><mo class="MathClass-close" stretchy="false">]</mo></mrow><mrow><mi mathvariant="italic">BC</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mi>i</mi><msub><mrow><mi>f</mi></mrow><mrow><mi mathvariant="italic">ABC</mi></mrow></msub><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(2.14)</td></tr></table>
+<!--  l. 315  --><p class="noindent">This can be confirmed by plugging this representation into the
+commutator in Eq. <a href="#x6-7009r9">2.9<!--  tex4ht:ref: eq:01_lie_algebra   --></a> and using the Jacobi identity [<a href="bibnamemkbothMakeUppercasebibnameMakeUppercasebibname.html#XJacobi1862">15</a>]. As
+                                                                          
+
+                                                                          
+<!--  l. 317  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>B</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>C</mi></mrow></math> index
+the number of generators, we see that this representation has a dimension equal to
+the number of generators of the Lie algebra, and it is called its <span class="ec-lmri-12">adjoint</span>
+representation. It is analogous to the regular representation (Definition <a href="Grouptheory.html#x5-5007r5">2.5<!--  tex4ht:ref: def:01_symmetry_regular_representation   --></a>) for a
+Lie algebra, with the underlying vector space spanned by the generators
+<!--  l. 318  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>V</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="normal"><mi>span</mi></mstyle><mo class="MathClass-open" stretchy="false">{</mo><mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><msub><mrow><mi>T</mi></mrow><mrow><mi>A</mi></mrow></msub></mrow><mo fence="true" form="postfix">⟩</mo></mrow><mo class="MathClass-close" stretchy="false">}</mo></mrow></math> and the
+requirement that <!--  l. 318  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>D</mi><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>T</mi></mrow><mrow><mi>A</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><msub><mrow><mi>T</mi></mrow><mrow><mi>B</mi></mrow></msub></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>i</mi><msub><mrow><mi>f</mi></mrow><mrow><mi mathvariant="italic">ABC</mi></mrow></msub> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><msub><mrow><mi>T</mi></mrow><mrow><mi>C</mi></mrow></msub></mrow><mo fence="true" form="postfix">⟩</mo></mrow></mrow></math>.
+</p>
+<div class="newtheorem">
+<!--  l. 320  --><p class="noindent"><span class="head">
+<a id="x6-8008r11"></a>
+<span class="ec-lmbx-12">Definition 2.11.</span>
+</span> The dimension of a Lie group is defined as the number of
+generators of the group. Thus, it is the same as the dimension of the adjoint
+representation.
+</p>
+</div>
+<!--  l. 324  --><p class="indent">
+</p><!--  l. 326  --><p class="indent">   As it turns out, for <!--  l. 326  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="italic">𝔰𝔬</mi><mo class="MathClass-open" stretchy="false">(</mo><mn>3</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>
+                                                                          
+
+                                                                          
+and <!--  l. 326  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="italic">𝔰𝔲</mi><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>, the adjoint
+representation <!--  l. 326  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mrow><mo class="MathClass-open" stretchy="false">[</mo><msub><mrow><mi>T</mi></mrow><mrow><mi>A</mi></mrow></msub><mo class="MathClass-close" stretchy="false">]</mo></mrow><mrow><mi mathvariant="italic">BC</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mi>i</mi><msub><mrow><mi>𝜀</mi></mrow><mrow><mi mathvariant="italic">ABC</mi></mrow></msub></mrow></math>
+is simply the fundamental representation of
+<!--  l. 326  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="italic">𝔰𝔬</mi><mo class="MathClass-open" stretchy="false">(</mo><mn>3</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>. More
+generally, the dimensions of the fundamental and adjoint representations of
+<!--  l. 327  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="normal"><mi>SO</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mi>n</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math> and
+<!--  l. 327  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="normal"><mi>SU</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mi>n</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math> are
+given in Table <a href="#dimensions-of-the-fundamental-and-adjoint-representations-of-the-n-and-n-groups">2.1<!--  tex4ht:ref: tab:01_so_su_dimensions   --></a>. The significance of these representations, as we will see, is that
+the force carriers (i.e., gauge bosons) of the SM live in the adjoint representation
+of their associated gauge group, while the matter particles live in either their
+fundamental or trivial representations.
+</p>
+<div class="table">
+<!--  l. 330  --><p class="indent"> </p><figure class="float" id="x6-8009r1"><span id="dimensions-of-the-fundamental-and-adjoint-representations-of-the-n-and-n-groups"></span>
+<div class="tabular"> <table class="tabular" id="TBL-14" rules="groups"><colgroup id="TBL-14-1g"><col id="TBL-14-1"/></colgroup><colgroup id="TBL-14-2g"><col id="TBL-14-2"/></colgroup><colgroup id="TBL-14-3g"><col id="TBL-14-3"/></colgroup><tr id="TBL-14-1-"><td class="td11" id="TBL-14-1-1" style="text-align:center; white-space:nowrap;"> <span class="ec-lmbx-12">Group                                         </span></td>
+<td class="td11" id="TBL-14-1-2" style="text-align:center; white-space:nowrap;"> <span class="ec-lmbx-12">dim(Fundamental)                                 </span></td>
+<td class="td11" id="TBL-14-1-3" style="text-align:center; white-space:nowrap;"> <span class="ec-lmbx-12">dim(Adjoint)                                     </span></td>
+</tr><tr class="hline"><td></td><td></td><td></td></tr><tr id="TBL-14-2-"><td class="td11" id="TBL-14-2-1" style="text-align:center; white-space:nowrap;"> <!--  l. 339  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="normal"><mi>SO</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mi>n</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math> </td><td class="td11" id="TBL-14-2-2" style="text-align:center; white-space:nowrap;"> <!--  l. 339  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math> </td><td class="td11" id="TBL-14-2-3" style="text-align:center; white-space:nowrap;"> <!--  l. 339  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>n</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>n</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <mn>1</mn><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-bin" stretchy="false">∕</mo><mn>2</mn></mrow></math> </td>
+</tr><tr id="TBL-14-3-"><td class="td11" id="TBL-14-3-1" style="text-align:center; white-space:nowrap;"> <!--  l. 342  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="normal"><mi>SU</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mi>n</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math> </td><td class="td11" id="TBL-14-3-2" style="text-align:center; white-space:nowrap;"> <!--  l. 342  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math> </td><td class="td11" id="TBL-14-3-3" style="text-align:center; white-space:nowrap;"> <!--  l. 342  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msup><mrow><mi>n</mi></mrow><mrow><mn>2</mn>
+</mrow></msup> <mo class="MathClass-bin" stretchy="false">−</mo> <mn>1</mn></mrow></math> </td>
+</tr></table> </div>
+<figcaption class="caption"><span class="id">Table 2.1: </span><span class="content">Dimensions of the fundamental and adjoint representations of the
+<!--  l. 345  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="normal"><mi>SO</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mi>n</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>
+and
+<!--  l. 345  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="normal"><mi>SU</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mi>n</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>
+groups.
+</span></figcaption><!--  tex4ht:label?: x6-8009r1   -->
+</figure>
+</div>
+<h5 class="subsubsectionHead" id="general-representations"><a id="x6-9000"></a>General representations</h5>
+<!--  l. 351  --><p class="noindent">So far we have discussed two representations of the
+<!--  l. 351  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="italic">𝔰𝔬</mi><mo class="MathClass-open" stretchy="false">(</mo><mn>3</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math> and
+<!--  l. 351  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="italic">𝔰𝔲</mi><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>
+algebras. The general representations can be derived in much the same way
+as finding the eigenstates of the angular momentum operator in QM.
+We first choose a basis in which one of the generators, conventionally
+<!--  l. 353  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>J</mi></mrow><mrow><mi>z</mi></mrow></msub></math>, is diagonal, and
+label eigenvectors of <!--  l. 353  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>J</mi></mrow><mrow><mi>z</mi></mrow></msub></math>
+as <!--  l. 353  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>m</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow></math> with
+eigenvalue <!--  l. 353  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>m</mi></math>:
+</p><table class="equation"><tr><td>
+<!--  l. 354  --><p class="indent">
+</p><!--  l. 354  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x6-9001r15"></mstyle><!--  endlabel  -->
+<msub><mrow><mi>J</mi></mrow><mrow><mi>z</mi></mrow></msub> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>m</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>m</mi> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>m</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(2.15)</td></tr></table>
+<!--  l. 357  --><p class="noindent">These eigenvectors, by definition, form a basis for the representations
+of the generators, so counting them tells us the dimensions of allowed
+representation. To do so, we define the “raising” and “lowering” operators
+<!--  l. 359  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mrow><mi>J</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">±</mo></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>J</mi></mrow><mrow><mi>x</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">±</mo> <mi>i</mi><msub><mrow><mi>J</mi></mrow><mrow><mi>y</mi></mrow></msub></mrow></math>, with
+commutation relations </p><table class="equation"><tr><td>
+<!--  l. 360  --><p class="indent">
+</p><!--  l. 360  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x6-9002r16"></mstyle><!--  endlabel  -->
+<mo class="MathClass-open" stretchy="false">[</mo><msub><mrow><mi>J</mi></mrow><mrow><mi>z</mi></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>J</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">±</mo></mrow></msub><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">±</mo><msub><mrow><mi>J</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">±</mo></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="quad" width="1em"></mspace><mo class="MathClass-open" stretchy="false">[</mo><msub><mrow><mi>J</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">+</mo></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>J</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo></mrow></msub><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>2</mn><msub><mrow><mi>J</mi></mrow><mrow><mi>z</mi></mrow></msub><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(2.16)</td></tr></table>
+<!--  l. 363  --><p class="noindent">These are named so because </p><table class="equation"><tr><td>
+<!--  l. 365  --><p class="indent">
+</p><!--  l. 365  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x6-9003r17"></mstyle><!--  endlabel  -->
+<msub><mrow><mi>J</mi></mrow><mrow><mi>z</mi></mrow></msub><msub><mrow><mi>J</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">±</mo></mrow></msub><mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>m</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">[</mo><msub><mrow><mi>J</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">±</mo></mrow></msub><mi mathvariant="italic">Jz</mi> <mo class="MathClass-bin" stretchy="false">±</mo> <msub><mrow><mi>J</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">±</mo></mrow></msub><mo class="MathClass-close" stretchy="false">]</mo> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>m</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">(</mo><mi>m</mi> <mo class="MathClass-bin" stretchy="false">±</mo> <mn>1</mn><mo class="MathClass-close" stretchy="false">)</mo><msub><mrow><mi>J</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">±</mo></mrow></msub><mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>m</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow><mo class="MathClass-punc" stretchy="false">,</mo>
+</mrow></math></td><td class="eq-no">(2.17)</td></tr></table>
+<!--  l. 368  --><p class="noindent">i.e., <!--  l. 369  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>J</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">±</mo></mrow></msub><mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>m</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow></math> are
+eigenvectors of <!--  l. 369  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>J</mi></mrow><mrow><mi>z</mi></mrow></msub></math>
+with eigenvalues <!--  l. 369  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>m</mi> <mo class="MathClass-bin" stretchy="false">±</mo> <mn>1</mn></mrow></math>,
+implying </p><table class="equation"><tr><td>
+<!--  l. 370  --><p class="indent">
+</p><!--  l. 370  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x6-9004r18"></mstyle><!--  endlabel  -->
+<msub><mrow><mi>J</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">±</mo></mrow></msub><mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>m</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <msubsup><mrow><mi>c</mi></mrow><mrow><mi>m</mi><mo class="MathClass-bin" stretchy="false">±</mo><mn>1</mn></mrow><mrow><mo class="MathClass-bin" stretchy="false">±</mo></mrow></msubsup><mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>m</mi> <mo class="MathClass-bin" stretchy="false">±</mo> <mn>1</mn></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-punc" stretchy="false">,</mo>
+</mrow></math></td><td class="eq-no">(2.18)</td></tr></table>
+<!--  l. 373  --><p class="noindent">where <!--  l. 374  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>c</mi></mrow><mrow><mi>m</mi><mo class="MathClass-bin" stretchy="false">±</mo><mn>1</mn></mrow></msub></math>
+are normalization constants. Now if we assume that the
+                                                                          
+
+                                                                          
+representation is finite-dimensional and label the highest-weight state
+<!--  l. 375  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>j</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow></math> — such
+that <!--  l. 375  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mrow><mi>J</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">+</mo></mrow></msub> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>j</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn> <mo class="MathClass-rel" stretchy="false">⇔</mo> <msubsup><mrow><mi>c</mi></mrow><mrow><mi>j</mi><mo class="MathClass-bin" stretchy="false">+</mo><mn>1</mn></mrow><mrow><mo class="MathClass-bin" stretchy="false">+</mo></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></mrow></math>
+— we can iteratively lower the state and solve for the normalization
+constants until we reach the lowest-weight state. By doing so we find that
+<!--  l. 376  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow><mi>c</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mi>j</mi><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn> <mo class="MathClass-rel" stretchy="false">⇒</mo></mrow></math> the lowest weight state is in fact
+<!--  l. 376  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mo class="MathClass-bin" stretchy="false">−</mo><mi>j</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow></math>.<span class="footnote-mark"><a href="#fn5x3" id="fn5x3-bk"><sup class="textsuperscript">5</sup></a></span><a id="x6-9005f5"></a>
+</p><!--  l. 378  --><p class="indent">   Thus, we conclude the algebra allows
+<!--  l. 378  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>2</mn><mi>j</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mn>1</mn></mrow></math>-dimensional
+representations spanned by <!--  l. 378  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open" stretchy="false">{</mo><mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mo class="MathClass-bin" stretchy="false">−</mo><mi>j</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow><mo class="MathClass-punc" stretchy="false">,</mo> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mo class="MathClass-bin" stretchy="false">−</mo><mi>j</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mn>1</mn></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>j</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <mn>1</mn></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-punc" stretchy="false">,</mo> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>j</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow><mo class="MathClass-close" stretchy="false">}</mo></mrow></math>,
+with <!--  l. 378  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>j</mi> <mo class="MathClass-rel" stretchy="false">∈</mo> <msup><mrow><mi>ℤ</mi></mrow><mrow><mo class="MathClass-rel" stretchy="false">≥</mo><mn>0</mn></mrow></msup><mo class="MathClass-bin" stretchy="false">∕</mo><mn>2</mn></mrow></math>
+(non-negative integers and half-integers only). Each possible
+<!--  l. 379  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>j</mi></math> indexes
+a different representation of the group, and any eigenstate can thus be labeled by
+<!--  l. 379  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>j</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>m</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow></math>. We have
+already seen the <!--  l. 380  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>j</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn><mo class="MathClass-bin" stretchy="false">∕</mo><mn>2</mn></mrow></math>
+and <!--  l. 380  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>j</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn></mrow></math>
+representations explicitly in Eqs. <a href="#x6-8005r12">2.12<!--  tex4ht:ref: eq:01_su2_generators   --></a> and <a href="#x6-8002r11">2.11<!--  tex4ht:ref: eq:01_so3_generators   --></a>, respectively, while the
+<!--  l. 380  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>j</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></mrow></math>
+is simply the trivial representation of the group
+(<!--  l. 380  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>D</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>g</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn><mspace class="thinspace" width="0.17em"></mspace><mspace class="nbsp" width="0.33em"></mspace><mi class="MathClass-op">∀</mi><mo> ⁡<!--  FUNCTION APPLICATION  --></mo><mi>g</mi> <mo class="MathClass-rel" stretchy="false">∈</mo> <mi>G</mi></mrow></math>).
+</p>
+<div class="newtheorem">
+<!--  l. 382  --><p class="noindent"><span class="head">
+<a id="x6-9007r12"></a>
+<span class="ec-lmbx-12">Definition 2.12.</span>
+</span> More generally, irreducible representations of a group are
+labeled by eigenvalues of the <span class="ec-lmri-12">Casimir invariants</span>, or Casimirs, of the group.
+Casimirs are operators that commute with all generators of the group. For
+<!--  l. 386  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="italic">𝔰𝔬</mi><mo class="MathClass-open" stretchy="false">(</mo><mn>3</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math> and
+<!--  l. 386  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="italic">𝔰𝔲</mi><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>, there
+is only one Casimir, </p><table class="equation"><tr><td>
+<!--  l. 387  --><p class="indent">
+</p><!--  l. 387  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x6-9008r19"></mstyle><!--  endlabel  -->
+<msup><mrow><mi>J</mi></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <msubsup><mrow><mi>J</mi></mrow><mrow>
+<mi>x</mi></mrow><mrow><mn>2</mn></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">+</mo> <msubsup><mrow><mi>J</mi></mrow><mrow>
+<mi>y</mi></mrow><mrow><mn>2</mn></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">+</mo> <msubsup><mrow><mi>J</mi></mrow><mrow>
+<mi>z</mi></mrow><mrow><mn>2</mn></mrow></msubsup><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(2.19)</td></tr></table>
+<!--  l. 390  --><p class="noindent">This is the total angular momentum operator, which we know from QM commutes with all
+                                                                          
+
+                                                                          
+the <!--  l. 391  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>J</mi></mrow><mrow><mi>i</mi></mrow></msub></math>s and for
+any eigenstate <!--  l. 391  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>j</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>m</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow></math>
+has eigenvalue <!--  l. 391  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>j</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>j</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mn>1</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>:
+</p><table class="equation"><tr><td>
+<!--  l. 392  --><p class="indent">
+</p><!--  l. 392  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x6-9009r20"></mstyle><!--  endlabel  -->
+<msup><mrow><mi>J</mi></mrow><mrow><mn>2</mn></mrow></msup> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>j</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>m</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>j</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>j</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mn>1</mn><mo class="MathClass-close" stretchy="false">)</mo> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>j</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>m</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(2.20)</td></tr></table>
+<!--  l. 395  --><p class="noindent">As expected, since the Casimir commutes with all the generators, its eigenvalues depend only
+on the irrep <!--  l. 396  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>j</mi></math>.
+We have also seen that individual states can be further labeled using
+the eigenvalues of a set of maximally commuting operators, in this case
+<!--  l. 397  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open" stretchy="false">{</mo><msup><mrow><mi>J</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>J</mi></mrow><mrow>
+<mi>z</mi></mrow></msub><mo class="MathClass-close" stretchy="false">}</mo></mrow></math>.
+</p>
+</div>
+<!--  l. 398  --><p class="indent">
+</p><!--  l. 400  --><p class="indent">   These representations can directly be used to derive those corresponding to the
+<!--  l. 400  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="normal"><mi>SU</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math> and
+<!--  l. 400  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="normal"><mi>SO</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mn>3</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math> group
+except that, surprisingly, the latter does not admit the half-integer irreps; essentially,
+<!--  l. 400  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="normal"><mi>SU</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>
+has double the irreps because it is the double cover of
+<!--  l. 400  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="normal"><mi>SO</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mn>3</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>. Overall, the
+irreps of <!--  l. 401  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="italic">𝔰𝔲</mi><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>
+and <!--  l. 401  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="italic">𝔰𝔲</mi><mo class="MathClass-open" stretchy="false">(</mo><mn>3</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>
+are quite significant in physics, with direct applications to classical and
+quantum mechanics, and, moreover, they will also serve as the building blocks
+for the representations of the Lorentz and Poincaré groups in the next
+section.
+                                                                          
+
+                                                                          
+</p>
+<nav class="crosslinks-bottom"> <a href="Grouptheory.html">Previous</a> <a href="ParticlesareirrepsofthePoincarégroup.html">Next</a> </nav> <div class="footnotes"><a id="x6-7005x2"></a>
+<!--  l. 210  --><p class="indent"> <span class="footnote-mark"><a href="#fn2x3-bk" id="fn2x3"><sup class="textsuperscript">2</sup></a></span><span class="ec-lmr-10">This is because, based on the Campbell-Baker-Hausdorff [</span><a href="bibnamemkbothMakeUppercasebibnameMakeUppercasebibname.html#Xenwiki_1183926638"><span class="ec-lmr-10">14</span></a><span class="ec-lmr-10">]
+formula, higher order terms in the expansion of exponential form of</span>
+<!--  l. 210  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>g</mi></math> <span class="ec-lmr-10">in
+Eq. </span><a href="#x6-7003r8"><span class="ec-lmr-10">2.8</span><!--  tex4ht:ref: eq:01_lie_group_finite   --></a> <span class="ec-lmr-10">involve only commutators of the generators.</span></p><a id="x6-7008x3"></a>
+<!--  l. 218  --><p class="indent"> <span class="footnote-mark"><a href="#fn3x3-bk" id="fn3x3"><sup class="textsuperscript">3</sup></a></span><span class="ec-lmr-10">An </span><span class="ec-lmri-10">algebra </span><!--  l. 218  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open" stretchy="false">(</mo><mi>V</mi><mo class="MathClass-punc" stretchy="false">,</mo><mo class="MathClass-bin" stretchy="false">∙</mo><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>
+<span class="ec-lmr-10">is a vector space </span><!--  l. 218  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>V</mi> </mrow></math>
+<span class="ec-lmr-10">with a bilinear operation </span><!--  l. 218  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-bin" stretchy="false">∙</mo> <mo class="MathClass-punc" stretchy="false">:</mo> <mi>V</mi> <mo class="MathClass-bin" stretchy="false">×</mo> <mi>V</mi> <mo class="MathClass-rel" stretchy="false">→</mo> <mi>V</mi> </mrow></math><span class="ec-lmr-10">.
+Examples   include   the   cross   product   of   vectors   and   matrix   multiplication
+of     square     matrices.     The     Lie     algebra     is     the     special     case     where</span>
+<!--  l. 218  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mo class="MathClass-bin" stretchy="false">∙</mo></math>
+<span class="ec-lmr-10">is the commutator.</span></p><a id="x6-8004x"></a>
+<!--  l. 279  --><p class="indent"> <span class="footnote-mark"><a href="#fn4x3-bk" id="fn4x3"><sup class="textsuperscript">4</sup></a></span><span class="ec-lmr-10">Note that the conventions around this factor are inconsistent in the literature and
+likely, despite our best efforts, will be inconsistent in this chapter as well.</span></p><a id="x6-9006x"></a>
+<!--  l. 376  --><p class="indent"> <span class="footnote-mark"><a href="#fn5x3-bk" id="fn5x3"><sup class="textsuperscript">5</sup></a></span><span class="ec-lmr-10">See, for example, Chapter IV.2 in Zee [</span><a href="bibnamemkbothMakeUppercasebibnameMakeUppercasebibname.html#XZee_2016fuk"><span class="ec-lmr-10">8</span></a><span class="ec-lmr-10">] for a more detailed derivation.</span></p> </div><div class="footer"><p>Copyright © 2024 Raghav Kansal. All rights reserved.</p></div></main>
+</body>
+</html>

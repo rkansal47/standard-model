@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+
+<html lang="en-US" xml:lang="en-US">
+<head><title>Interactions</title>
+<meta charset="utf-8"/>
+<meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="main.css" rel="stylesheet" type="text/css"/>
+<meta content="main.tex" name="src"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="icon.png" rel="icon" type="image/x-icon"/>
+</head><body>
+<nav class="TOC"><span class="mainToc"><a href="index.html"><img alt="Symmetries, QFT, &amp; The Standard Model" src="logo.png" width="100%"/></a></span>
+<span class="likechapterToc"><a href="contentsname.html#contents">Contents</a></span>
+<span class="chapterToc">1 <a href="Introduction.html#introduction">Introduction</a></span>
+<span class="chapterToc">2 <a href="Symmetriesinphysics.html#symmetries-in-physics">Symmetries in physics</a></span>
+<span class="chapterToc">3 <a href="Quantumfieldtheory.html#quantum-field-theory">Quantum field theory</a></span>
+<span class="sectionToc">3.1 <a href="Classicalfieldtheory.html#classical-field-theory">Classical field theory</a></span>
+<span class="sectionToc">3.2 <a href="Quantization.html#quantization">Quantization</a></span>
+<span class="sectionToc">3.3 <a href="#interactions">Interactions</a></span>
+<span class="subsectionToc">3.3.1 <a href="#interactions-in-the-lagrangian">Interactions in the Lagrangian</a></span>
+<span class="subsectionToc">3.3.2 <a href="#smatrix-elements">S-matrix elements</a></span>
+<span class="subsectionToc">3.3.3 <a href="#feynman-diagrams">Feynman diagrams</a></span>
+<span class="subsectionToc">3.3.4 <a href="#decay-rates-and-cross-sections">Decay rates and cross sections</a></span>
+<span class="sectionToc">3.4 <a href="Spinorfieldtheory.html#spinor-field-theory">Spinor field theory</a></span>
+<span class="sectionToc">3.5 <a href="Gaugetheories.html#gauge-theories">Gauge theories</a></span>
+<span class="sectionToc">3.6 <a href="TheABEGHHKHiggsmechanism.html#the-abeghhk-higgs-mechanism">The ABEGHHK (Higgs) mechanism</a></span>
+<span class="chapterToc">4 <a href="TheStandardModel.html#the-standard-model">The Standard Model</a></span>
+<span class="likechapterToc"><a href="bibnamemkbothMakeUppercasebibnameMakeUppercasebibname.html#bibliography">Bibliography</a></span>
+</nav>
+<main class="main-content">
+<nav class="crosslinks-top"> <a href="Quantization.html">Previous</a> <a href="Spinorfieldtheory.html">Next</a> </nav>
+<h3 class="sectionHead" id="interactions"><span class="titlemark">3.3   </span> <a id="x11-440003.3"></a>Interactions</h3>
+<div class="center">
+<!--  l. 724  --><p class="noindent">
+</p><!--  l. 726  --><p class="noindent"><span class="ec-lmri-12">Like the silicon chips of more recent years, the Feynman diagram was
+bringing computation to the masses. </span>— Julian Schwinger</p></div>
+<!--  l. 730  --><p class="noindent">We next make the field theory more interesting by adding in interactions. We will
+continue with our scalar fields, first discussing the types of interactions that we
+will consider in Section <a href="#interactions-in-the-lagrangian">3.3.1<!--  tex4ht:ref: sec:01_qft_interactions_lagrangian   --></a>. We then focus on <span class="ec-lmri-12">weakly coupled </span>theories, where we
+can treat the interactions as small perturbations, as described in Section <a href="#smatrix-elements">3.3.2<!--  tex4ht:ref: sec:01_qft_interactions_smatrix   --></a>,
+and then discuss how to calculate the probability of interactions occurring using
+Feynman diagrams in Section <a href="#feynman-diagrams">3.3.3<!--  tex4ht:ref: sec:01_qft_interactions_feynman   --></a>. Finally, we outline how to translate these
+probabilities into the physical quantities we measure, namely decay rates and
+cross sections, in Section <a href="#decay-rates-and-cross-sections">3.3.4<!--  tex4ht:ref: sec:01_qft_interactions_decay   --></a>.
+</p><!--  l. 735  --><p class="noindent">
+</p>
+<h4 class="subsectionHead" id="interactions-in-the-lagrangian"><span class="titlemark">3.3.1   </span> <a id="x11-450003.3.1"></a>Interactions in the Lagrangian</h4>
+<!--  l. 738  --><p class="noindent">Before diving into the calculations, it is useful to get an idea of the types of
+interactions that are “relevant” in a QFT using dimensional analysis.
+                                                                          
+
+                                                                          
+Consider the following generic Lagrangian for a single real scalar field:
+</p><table class="equation"><tr><td>
+<!--  l. 740  --><p class="indent">
+</p><!--  l. 740  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-45001r67"></mstyle><!--  endlabel  -->
+<mstyle mathvariant="script"><mi>L</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msub><mrow><mi>∂</mi></mrow><mrow><mi>μ</mi></mrow></msub><mi>ϕ</mi><msup><mrow><mi>∂</mi></mrow><mrow><mi>μ</mi></mrow></msup><mi>ϕ</mi> <mo class="MathClass-bin" stretchy="false">−</mo><mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn></mrow></msup><msup><mrow><mi>ϕ</mi></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">+</mo><munderover accent="false" accentunder="false"><mrow><mo> ∑</mo>
+</mrow><mrow><mi>n</mi><mo class="MathClass-rel" stretchy="false">=</mo><mn>3</mn></mrow><mrow><mi>∞</mi></mrow></munderover><mfrac><mrow><msub><mrow><mi>λ</mi></mrow><mrow><mi>n</mi></mrow></msub></mrow>
+<mrow>
+<mi>n</mi><mo class="MathClass-punc" stretchy="false">!</mo></mrow></mfrac> <msup><mrow><mi>ϕ</mi></mrow><mrow><mi>n</mi></mrow></msup><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(3.67)</td></tr></table>
+<!--  l. 743  --><p class="noindent">The <!--  l. 744  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mi>ϕ</mi></mrow><mrow><mi>n</mi></mrow></msup></math>
+terms are what are new, representing interactions, and
+<!--  l. 744  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>λ</mi></mrow><mrow><mi>n</mi></mrow></msub></math> are
+called their <span class="ec-lmri-12">coupling constants</span>, determining their respective strengths. Broadly
+speaking, we only know how to make meaningful analytic calculations for
+interactions which we can treat as small perturbations to the free Lagrangian;
+indeed, there is much we do not understand about <span class="ec-lmri-12">strongly-coupled </span>theories such
+as QCD.
+</p><!--  l. 747  --><p class="indent">   How do we decide whether an interaction is “small”? It certainly depends on the coupling
+constant, but <!--  l. 748  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>λ</mi></math>
+                                                                          
+
+                                                                          
+is not necessarily dimensionless. The Lagrangian has energy (or mass) dimension 1
+(using natural units, see Section <a href="Classicalfieldtheory.html#free-scalar-field-theory">3.1.2<!--  tex4ht:ref: sec:01_qft_classical_fsft   --></a>), so </p><table class="equation"><tr><td>
+<!--  l. 751  --><p class="indent">
+</p><!--  l. 751  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-45002r68"></mstyle><!--  endlabel  -->
+<mo class="MathClass-open" stretchy="false">[</mo><mstyle mathvariant="script"><mi>L</mi></mstyle><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>4</mn><mo class="MathClass-punc" stretchy="false">,</mo> <mo class="MathClass-open" stretchy="false">[</mo><mi>m</mi><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn> <mo class="MathClass-rel" stretchy="false">⇒</mo> <mo class="MathClass-open" stretchy="false">[</mo><mi>ϕ</mi><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn> <mo class="MathClass-rel" stretchy="false">⇒</mo> <mo class="MathClass-open" stretchy="false">[</mo><msub><mrow><mi>∂</mi></mrow><mrow><mi>μ</mi></mrow></msub><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn><mo class="MathClass-punc" stretchy="false">,</mo> <mo class="MathClass-open" stretchy="false">[</mo><msub><mrow><mi>λ</mi></mrow><mrow><mi>n</mi></mrow></msub><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>4</mn> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>n</mi><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(3.68)</td></tr></table>
+<!--  l. 754  --><p class="noindent">We need <!--  l. 755  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>λ</mi></math>
+to be small <span class="ec-lmri-12">relative </span>to different things, depending on its dimension. In fact, we use
+its dimension (or, equivalently, that of the interaction term) to categorize different
+interactions.
+</p><!--  l. 758  --><p class="noindent">
+</p>
+<h5 class="subsubsectionHead" id="relevant-marginal-and-irrelevant-interactions"><a id="x11-46000"></a>Relevant, marginal, and irrelevant interactions</h5>
+<!--  l. 760  --><p class="indent"> <span class="subparagraphHead" id="_"><a id="x11-47000"></a><!--  l. 760  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open" stretchy="false">[</mo><msub><mrow><mi>λ</mi></mrow><mrow><mn>3</mn></mrow></msub><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn></mrow></math><span class="ec-lmbx-12">:</span></span> This means
+<!--  l. 760  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>λ</mi></mrow><mrow><mn>3</mn></mrow></msub></math> must be small compared
+to some energy <!--  l. 760  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>E</mi></math>,
+which is typically the energy scale of our experiment or process of interest. Such
+an interaction therefore becomes a larger perturbation at lower energies, and
+smaller at high energies. These terms are called <span class="ec-lmri-12">relevant </span>because they affect the
+physics that we usually deal with.
+</p>
+<!--  l. 764  --><p class="indent"> <span class="subparagraphHead" id="_1"><a id="x11-48000"></a><!--  l. 764  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open" stretchy="false">[</mo><msub><mrow><mi>λ</mi></mrow><mrow><mn>4</mn></mrow></msub><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></mrow></math><span class="ec-lmbx-12">:</span></span>
+These are called <span class="ec-lmri-12">marginal </span>interactions, which are small if
+<!--  l. 764  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mrow><mi>λ</mi></mrow><mrow><mn>4</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">≪</mo> <mn>1</mn></mrow></math>.
+</p>
+<!--  l. 766  --><p class="indent"> <span class="subparagraphHead" id="n-n-"><a id="x11-49000"></a><!--  l. 766  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open" stretchy="false">[</mo><msub><mrow><mi>λ</mi></mrow><mrow><mi>n</mi></mrow></msub><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">&lt;</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">,</mo><mi>n</mi> <mo class="MathClass-rel" stretchy="false">&gt;</mo> <mn>4</mn></mrow></math><span class="ec-lmbx-12">:</span></span>
+These interactions are small at low energies and large at high energies. Because of
+this, we typically do not need to consider them in a QFT; hence, they are called
+                                                                          
+
+                                                                          
+<span class="ec-lmri-12">irrelevant</span>.
+Thus, in a sense, QFT is quite simple — we need only
+consider relevant and marginal interactions! In this case,
+<!--  l. 769  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mrow><mi>λ</mi></mrow><mrow><mn>3</mn></mrow></msub><msup><mrow><mi>ϕ</mi></mrow><mrow><mn>3</mn></mrow></msup></mrow></math> and
+<!--  l. 769  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mrow><mi>λ</mi></mrow><mrow><mn>4</mn></mrow></msub><msup><mrow><mi>ϕ</mi></mrow><mrow><mn>4</mn></mrow></msup></mrow></math>. The
+same dimensional analysis also shows why we do not consider terms with more
+than two derivatives.
+</p><!--  l. 772  --><p class="indent">   When we do want to explore the effects of irrelevant interactions, we can
+parametrize them as generic operators in the Lagrangian which are suppressed by
+powers of <!--  l. 772  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mi>E</mi><mo class="MathClass-bin" stretchy="false">∕</mo><mi mathvariant="normal">Λ</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo class="MathClass-bin" stretchy="false">−</mo><mn>4</mn></mrow></msup></math>,
+where <!--  l. 772  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="normal">Λ</mi></math> is
+the energy scale at which we expect these interactions to become relevant. This is
+(one of) the ideas behind <span class="ec-lmri-12">effective field theory </span>(EFT) [<a href="bibnamemkbothMakeUppercasebibnameMakeUppercasebibname.html#XManohar_2018aog">28</a>, <a href="bibnamemkbothMakeUppercasebibnameMakeUppercasebibname.html#XIsidori_2023pyp">29</a>].
+</p><!--  l. 775  --><p class="noindent">
+</p>
+<h5 class="subsubsectionHead" id="renormalizability"><a id="x11-50000"></a>Renormalizability</h5>
+<!--  l. 777  --><p class="noindent">The types of interactions present in a theory also determine its <span class="ec-lmri-12">renormalizability</span>.
+Calculations in QFT are inherently plagued by infinities, one of which
+                                                                          
+
+                                                                          
+we encountered as the zero-point energy of the quantized free scalar
+field (Section <a href="Quantization.html#the-hamiltonian-and-the-vacuum-catastrophe">3.2.2<!--  tex4ht:ref: sec:01_qft_quantization_hamiltonian   --></a>). A general method for handling <span class="ec-lmri-12">ultraviolet </span>(UV)
+infinities — those which arise from integrating over momenta up to
+<!--  l. 779  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow> <mrow><mo fence="true" form="prefix">|</mo><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mo fence="true" form="postfix">|</mo></mrow> <mo class="MathClass-rel" stretchy="false">→</mo><mi>∞</mi></mrow></math> — is to impose a
+cut-off energy scale <!--  l. 779  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="normal">Λ</mi></math>
+on these integrals.
+</p><!--  l. 781  --><p class="indent">   By doing so, we are essentially admitting, rightfully so, that we do not know what
+is going on arbitrarily high energies; hence, we do not expect our theory to be valid
+beyond <!--  l. 781  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="normal">Λ</mi></math>.
+We then, after performing the integrals, can take the limit
+<!--  l. 782  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="normal">Λ</mi> <mo class="MathClass-rel" stretchy="false">→</mo><mi>∞</mi></mrow></math>
+and hope and pray our result is independent of
+<!--  l. 782  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="normal">Λ</mi></math>. This
+is a simplified picture of <span class="ec-lmri-12">renormalization</span>.
+</p><!--  l. 785  --><p class="indent">   However, the strength of irrelevant interactions only grows with energy, so
+<!--  l. 785  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="normal">Λ</mi> <mo class="MathClass-rel" stretchy="false">→</mo><mi>∞</mi></mrow></math> will
+lead to a divergence. Hence, we call theories with irrelevant interactions
+<span class="ec-lmri-12">non-renormalizable</span>. The SM is a renormalizable QFT and thus, as for our simple
+scalar field theory, its possible interactions are helpfully constrained. Most likely,
+it is simply an EFT of a higher energy theory, with the nonrenormalizable terms
+heavily suppressed by the scale of new physics!
+                                                                          
+
+                                                                          
+</p><!--  l. 790  --><p class="noindent">
+</p>
+<h4 class="subsectionHead" id="smatrix-elements"><span class="titlemark">3.3.2   </span> <a id="x11-510003.3.2"></a>S-matrix elements</h4>
+<!--  l. 793  --><p class="noindent">As discussed above, we will focus on interactions in weakly-coupled theories,
+where they can be treated as small perturbations to the free Lagrangian. The
+quantized interaction terms comprise different combinations of creation and
+annihilation operators, corresponding to existing particles interacting, getting
+destroyed, and/or creating new ones. Broadly, we call these <span class="ec-lmri-12">scattering</span>
+processes, and the amplitude of these occurring is called the <span class="ec-lmri-12">S-matrix </span>element
+<!--  l. 795  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mrow><mo fence="true" form="prefix">⟨</mo><mrow><mi>f</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>S</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>i</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow></math> between the initial and
+final particles states <!--  l. 795  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>i</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow></math>
+and <!--  l. 795  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>f</mi> </mrow><mo fence="true" form="postfix">⟩</mo></mrow></math>. The
+operator <!--  l. 796  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>S</mi></math>,
+for scattering, is called the S-matrix.
+</p><!--  l. 798  --><p class="indent">   Note that so far we have only been discussing the abstract notion of fields in
+the Lagrangian. We have highlighted many connections and interpretations
+relating fields to physical particles, but they are not the same; <span class="ec-lmri-12">fields are not
+particles</span>.<span class="footnote-mark"><a href="#fn16x4" id="fn16x4-bk"><sup class="textsuperscript">7</sup></a></span><a id="x11-51001f7"></a>
+The S-matrix elements between particles are the physical quantities we measure:
+                                                                          
+
+                                                                          
+they are the basic <span class="ec-lmri-12">observables </span>of QFT.
+</p><!--  l. 802  --><p class="indent">   Formally, fields and particles are related through the LSZ reduction
+formula [<a href="bibnamemkbothMakeUppercasebibnameMakeUppercasebibname.html#XLehmann_1954rq">30</a>], which expresses S-matrix elements in terms of the Green functions
+of the field (Section <a href="Quantization.html#propagators-and-green-functions">3.2.5<!--  tex4ht:ref: sec:01_qft_quantization_propagators   --></a>). The formula states that the S-matrix element between
+<!--  l. 803  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math> incoming
+and <!--  l. 803  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>m</mi></math>
+outgoing asymptotically free, on-shell particles is the residue of the
+<!--  l. 803  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>n</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>m</mi></mrow></math> particle pole of the associated
+fields’ Green functions.<span class="footnote-mark"><a href="#fn17x4" id="fn17x4-bk"><sup class="textsuperscript">8</sup></a></span><a id="x11-51003f8"></a>
+</p><!--  l. 805  --><p class="indent">   This is a very powerful result in QFT but, stated this way, not particularly
+useful for calculations... Instead, in this section, we heuristically explain the more
+practical consequence of the LSZ formula, which is that the S-matrix element can
+be calculated using the time-ordered product of the interacting fields, up to
+different orders in the interaction coupling constant. In the following section, we
+then present the even more practical method of calculating such time ordered
+products using Feynman diagrams.
+</p><!--  l. 812  --><p class="noindent">
+</p>
+<h5 class="subsubsectionHead" id="scalar-yukawa-lagrangian"><a id="x11-52000"></a>Scalar Yukawa Lagrangian</h5>
+<!--  l. 814  --><p class="noindent">We will use <span class="ec-lmri-12">scalar Yukawa theory </span>as an example, which couples together our real and complex
+scalar fields, <!--  l. 814  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ϕ</mi></math>
+and <!--  l. 814  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ψ</mi></math>:
+</p><table class="equation"><tr><td>
+<!--  l. 815  --><p class="indent">
+</p><!--  l. 815  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-52001r69"></mstyle><!--  endlabel  -->
+<mstyle mathvariant="script"><mi>L</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msub><mrow><mi>∂</mi></mrow><mrow><mi>μ</mi></mrow></msub><mi>ϕ</mi><msup><mrow><mi>∂</mi></mrow><mrow><mi>μ</mi></mrow></msup><mi>ϕ</mi> <mo class="MathClass-bin" stretchy="false">−</mo><mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn></mrow></msup><msup><mrow><mi>ϕ</mi></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>∂</mi></mrow><mrow>
+<mi>μ</mi></mrow></msub><msup><mrow><mi>ψ</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msup><msup><mrow><mi>∂</mi></mrow><mrow><mi>μ</mi></mrow></msup><mi>ψ</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <msup><mrow><mi>M</mi></mrow><mrow><mn>2</mn></mrow></msup><msup><mrow><mi>ψ</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msup><mi>ψ</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <mi mathvariant="italic">gϕ</mi><msup><mrow><mi>ψ</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msup><mi>ψ</mi><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(3.69)</td></tr></table>
+<!--  l. 818  --><p class="noindent">The interaction term <!--  l. 819  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="italic">gϕ</mi><msup><mrow><mi>ψ</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msup><mi>ψ</mi></mrow></math>
+is called a <span class="ec-lmri-12">Yukawa interaction</span>, and the weak coupling condition is
+<!--  l. 819  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>g</mi> <mo class="MathClass-rel" stretchy="false">≪</mo> <mi>m</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>M</mi></mrow></math>.
+</p><!--  l. 821  --><p class="indent">   A similar theory was originally developed by Hideki
+Yukawa to model the strong nuclear force between nucleons
+(<!--  l. 821  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ψ</mi></math>) via a hypothesized
+meson (<!--  l. 821  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ϕ</mi></math>) [<a href="bibnamemkbothMakeUppercasebibnameMakeUppercasebibname.html#XYukawa_1935xg">31</a>].
+                                                                          
+
+                                                                          
+Amazingly, such a meson was discovered a decade later via cosmic rays, and is
+called the pion [<a href="bibnamemkbothMakeUppercasebibnameMakeUppercasebibname.html#XLattes_1947mw">32</a>]. Nobel Prizes were awarded for both the prediction and
+discovery. The difference in our theory is the scalar rather than fermionic nucleon,
+for simplicity; we will still, however, be able to reproduce the iconic physical
+feature of the theory: the Yukawa potential.
+</p><!--  l. 827  --><p class="noindent">
+</p>
+<h5 class="subsubsectionHead" id="the-interaction-picture-and-dysons-formula"><a id="x11-53000"></a>The interaction picture and Dyson’s formula</h5>
+<!--  l. 829  --><p class="noindent">For treating interactions that are small perturbations to the free theory, it is most
+useful to employ the interaction picture of QM, a hybrid of the Schrödinger and
+Heisenberg pictures. Recall that in the Schrödinger picture, operators
+are fixed while states evolve with time, and vice versa in the Heisenberg
+picture. In the interaction picture, we split the Hamiltonian into the free
+(<!--  l. 831  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>H</mi></mrow><mrow><mn>0</mn></mrow></msub></math>) and interaction
+terms (<!--  l. 831  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>H</mi></mrow><mrow><mstyle mathvariant="normal"><mi>int</mi></mstyle></mrow></msub></math>),
+defining operators to evolve with the former and states with the latter.
+</p><!--  l. 833  --><p class="indent">   The upshot of this in QFT is that the S-matrix element can be written
+according to <span class="ec-lmri-12">Dyson’s formula</span>: </p><table class="equation"><tr><td>
+<!--  l. 834  --><p class="indent">
+</p><!--  l. 834  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-53001r70"></mstyle><!--  endlabel  -->
+<mrow><mo fence="true" form="prefix">⟨</mo><mrow><mi>f</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>S</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>i</mi>
+</mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mrow><mo fence="true" form="prefix">⟨</mo><mrow><mi>f</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>T</mi><mi class="qopname"> exp</mi><mo> ⁡<!--  FUNCTION APPLICATION  --> </mo><!--  nolimits  --> <mrow><mo fence="true" form="prefix">(</mo><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mi>i</mi><msubsup><mrow><mo>∫
+ <!--  nolimits  --></mo><!--  nolimits  --></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mi>∞</mi></mrow><mrow><mi>∞</mi></mrow></msubsup><msub><mrow><mi>H</mi></mrow><mrow>
+<mi>I</mi></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo><mi mathvariant="italic">dt</mi></mrow><mo fence="true" form="postfix">)</mo></mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>i</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow><mo class="MathClass-punc" stretchy="false">,</mo>
+</mrow></math></td><td class="eq-no">(3.70)</td></tr></table>
+<!--  l. 837  --><p class="noindent">where <!--  l. 838  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>T</mi></math>
+is the same time-ordering operator from Section <a href="Quantization.html#propagators-and-green-functions">3.2.5<!--  tex4ht:ref: sec:01_qft_quantization_propagators   --></a> and
+<!--  l. 838  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>H</mi></mrow><mrow><mi>I</mi></mrow></msub></math>
+is the time-evolved interaction Hamiltonian in the interaction picture:
+</p><table class="equation"><tr><td>
+<!--  l. 839  --><p class="indent">
+</p><!--  l. 839  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-53002r71"></mstyle><!--  endlabel  -->
+<msub><mrow><mi>H</mi></mrow><mrow><mi>I</mi></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mi>e</mi></mrow><mrow><mi>i</mi><msub><mrow><mi>H</mi></mrow><mrow><mn>0</mn></mrow></msub><mi>t</mi></mrow></msup><msub><mrow><mi>H</mi></mrow><mrow><mstyle mathvariant="normal">
+<mi>int</mi></mstyle></mrow></msub><msup><mrow><mi>e</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mi>i</mi><msub><mrow><mi>H</mi></mrow><mrow><mn>0</mn></mrow></msub><mi>t</mi></mrow></msup><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(3.71)</td></tr></table>
+<!--  l. 842  --><p class="noindent">
+</p><!--  l. 844  --><p class="indent">   Assuming a small <!--  l. 844  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>H</mi></mrow><mrow><mstyle mathvariant="normal"><mi>int</mi></mstyle></mrow></msub></math>,
+Dyson’s formula can be Taylor expanded as:
+<!--  tex4ht:inline  --></p><!--  l. 845  --><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mtable class="multline" displaystyle="true">
+<mtr><mtd class="multline"></mtd><mtd><mstyle class="label" id="x11-53003r72"></mstyle><!--  endlabel  --> <mrow><mo fence="true" form="prefix">⟨</mo><mrow><mi>f</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>S</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>i</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mrow><mo fence="true" form="prefix">⟨</mo><mrow><mi>f</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>𝟙</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>i</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-bin" stretchy="false">+</mo> <mo class="MathClass-open" stretchy="false">(</mo><mo class="MathClass-bin" stretchy="false">−</mo><mi>i</mi><mo class="MathClass-close" stretchy="false">)</mo><msubsup><mrow><mo> ∫
+ <!--  nolimits  --></mo><!--  nolimits  --></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mi>∞</mi></mrow><mrow><mi>∞</mi></mrow></msubsup><mrow><mo fence="true" form="prefix">⟨</mo><mrow><mi>f</mi><mo class="MathClass-rel" stretchy="false">|</mo><msub><mrow><mi>H</mi></mrow><mrow>
+<mi>I</mi></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-rel" stretchy="false">|</mo><mi>i</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow><mi mathvariant="italic">dt</mi>
+</mtd></mtr><mtr><mtd class="multline"></mtd><mtd> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mo class="MathClass-bin" stretchy="false">−</mo><mi>i</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> <mo> ∫
+ <!--  nolimits  --></mo><!--  nolimits  --><msubsup><mrow><mo>∫
+ <!--  nolimits  --></mo><!--  nolimits  --></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mi>∞</mi></mrow><mrow><mi>∞</mi></mrow></msubsup><mrow><mo fence="true" form="prefix">⟨</mo><mrow><mi>f</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>T</mi><msub><mrow><mi>H</mi></mrow><mrow>
+<mi>I</mi></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>t</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo><msub><mrow><mi>H</mi></mrow><mrow><mi>I</mi></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-rel" stretchy="false">|</mo><mi>i</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow><mi>d</mi><msub><mrow><mi>t</mi></mrow><mrow><mn>1</mn></mrow></msub><mi>d</mi><msub><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mo>…</mo><mo class="MathClass-punc" stretchy="false">.</mo></mtd><mtd><mstyle class="maketag"><mtext>(3.72)</mtext></mstyle><mspace class="nbsp" width="0.33em"></mspace> </mtd></mtr></mtable>
+</mrow></math>
+<!--  l. 849  --><p class="nopar">The first term in the expansion is the free field term, which we
+                                                                          
+
+                                                                          
+ignore.<span class="footnote-mark"><a href="#fn18x4" id="fn18x4-bk"><sup class="textsuperscript">9</sup></a></span><a id="x11-53004f9"></a> The
+<!--  l. 851  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math>th term after
+that is of order <!--  l. 851  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mi>g</mi></mrow><mrow><mi>n</mi></mrow></msup></math>,
+where <!--  l. 851  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>g</mi></math> is
+the coupling constant of the interaction term. Thus, this offers a prescription for
+calculating the S-matrix element up to any fixed order in the interaction
+strength.
+</p><!--  l. 854  --><p class="indent">   Note that <!--  l. 854  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>i</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow></math>
+and <!--  l. 854  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>f</mi> </mrow><mo fence="true" form="postfix">⟩</mo></mrow></math>
+are particle momentum eigenstates of the free theory. We can justify this
+intuitively by thinking of them as the states long before and after the interaction,
+when the interaction term is negligible. Formally, there is in fact a complicated
+formula relating the free and interacting eigenstates; however, the proportionality
+factors cancel rather beautifully in the S-matrix element, allowing us to focus on
+only “connected” and “amputated” Feynman diagrams between the free
+eigenstates, which we define in the next section. This is illustrated (literally) for
+the vacuum states in Peskin and Schroeder [<a href="bibnamemkbothMakeUppercasebibnameMakeUppercasebibname.html#XPeskin_1995ev">10</a>] Chapter 4, and justified more
+generally by the LSZ reduction formula.
+</p><!--  l. 860  --><p class="noindent">
+</p>
+<h5 class="subsubsectionHead" id="firstorder-examples-and-the-matrix-element-m"><a id="x11-54000"></a>First-order examples and the matrix element
+<!--  l. 860  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="script"><mi>M</mi></mstyle></math></h5>
+<!--  l. 862  --><p class="noindent">Let us look at the <!--  l. 862  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>n</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn></mrow></math>
+and <!--  l. 862  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>n</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>2</mn><mspace class="thinspace" width="0.17em"></mspace></mrow></math>
+S-matrix element terms from Eq. <a href="#x11-53003r72">72<!--  tex4ht:ref: eq:01_qft_interactions_dysons_expansion   --></a> for our scalar Yukawa theory (Eq. <a href="#x11-52001r69">3.69<!--  tex4ht:ref: eq:01_qft_interactions_yukawa   --></a>):
+</p><table class="equation"><tr><td>
+<!--  l. 863  --><p class="indent">
+</p><!--  l. 863  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-54001r73"></mstyle><!--  endlabel  -->
+<mtable class="equation"><mtr><mtd>
+<mtable class="split" columnalign="right left">
+<mtr class="split-mtr"><mtd class="split-mtd"> <msup><mrow> <mrow><mo fence="true" form="prefix">⟨</mo><mrow><mi>f</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>S</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>i</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow></mrow><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></msup></mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mi>i</mi><msubsup><mrow><mo>∫
+ <!--  nolimits  --></mo><!--  nolimits  --></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mi>∞</mi></mrow><mrow><mi>∞</mi></mrow></msubsup><mrow><mo fence="true" form="prefix">⟨</mo><mrow><mi>f</mi><mo class="MathClass-rel" stretchy="false">|</mo><msub><mrow><mi>H</mi></mrow><mrow>
+<mi>I</mi></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-rel" stretchy="false">|</mo><mi>i</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow><mi mathvariant="italic">dt</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mi mathvariant="italic">ig</mi><mo>∫
+ <!--  nolimits  --></mo><!--  nolimits  --><msup><mrow><mi>d</mi></mrow><mrow><mn>4</mn></mrow></msup><mi>x</mi> <mrow><mo fence="true" form="prefix">⟨</mo><mrow><mi>f</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>ϕ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo><msup><mrow><mi>ψ</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo><mi>ψ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-rel" stretchy="false">|</mo><mi>i</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow><mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+</mtr><mtr class="split-mtr"><mtd class="split-mtd"> <msup><mrow> <mrow><mo fence="true" form="prefix">⟨</mo><mrow><mi>f</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>S</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>i</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow></mrow><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></msup></mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mo class="MathClass-bin" stretchy="false">−</mo><mi mathvariant="italic">ig</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> <mo> ∫
+ <!--  nolimits  --></mo><!--  nolimits  --><msup><mrow><mi>d</mi></mrow><mrow><mn>4</mn></mrow></msup><mi>x</mi><mo>∫
+ <!--  nolimits  --></mo><!--  nolimits  --><msup><mrow><mi>d</mi></mrow><mrow><mn>4</mn></mrow></msup><mi>y</mi> <mrow><mo fence="true" form="prefix">⟨</mo><mrow><mi>f</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi mathvariant="italic">Tϕ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo><msup><mrow><mi>ψ</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo><mi>ψ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo><mi>ϕ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>y</mi><mo class="MathClass-close" stretchy="false">)</mo><msup><mrow><mi>ψ</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><mi>y</mi><mo class="MathClass-close" stretchy="false">)</mo><mi>ψ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>y</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-rel" stretchy="false">|</mo><mi>i</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow><mo class="MathClass-punc" stretchy="false">.</mo></mtd>
+</mtr></mtable>
+</mtd><mtd>
+</mtd></mtr></mtable>
+</mrow></math></td><td class="eq-no">(3.73)</td></tr></table>
+<!--  l. 870  --><p class="noindent">For given initial and final <!--  l. 871  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math>-particle
+momentum states, these can be calculated manually by plugging in the field
+expansions (Eq. <a href="Quantization.html#x10-33002r42">3.42<!--  tex4ht:ref: eq:01_qft_quantization_fsf_fields   --></a> and <a href="Quantization.html#x10-37003r56">3.56<!--  tex4ht:ref: eq:01_qft_quantization_complex_fields   --></a>).
+For example, the first-order term <!--  l. 873  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow> <mrow><mo fence="true" form="prefix">⟨</mo><mrow><mi>f</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>S</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>i</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow></mrow><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></msup></math>
+is non-zero only for processes like: </p>
+<ul class="itemize1">
+<li class="itemize">Meson decay <!--  l. 875  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>ϕ</mi> <mo class="MathClass-rel" stretchy="false">→</mo> <msup><mrow><mi>ψ</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msup><mi>ψ</mi></mrow></math>:
+<!--  l. 875  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>i</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <msqrt><mrow>
+<mn>2</mn><msub><mrow><mi>E</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace></mrow></msqrt><msubsup><mrow><mi>a</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mn>0</mn></mrow><mo fence="true" form="postfix">⟩</mo></mrow></mrow></math>,
+<!--  l. 875  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>f</mi> </mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <msqrt><mrow>
+<mn>4</mn><msub><mrow><mi>E</mi></mrow><mrow><msub><mrow><mstyle mathvariant="bold"><mi>q</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub></mrow></msub><msub><mrow><mi>E</mi></mrow><mrow><msub><mrow><mstyle mathvariant="bold"><mi>q</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub></mrow></msub></mrow></msqrt><msubsup><mrow><mi>b</mi></mrow><mrow><msub><mrow><mstyle mathvariant="bold"><mi>q</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><msubsup><mrow><mi>c</mi></mrow><mrow><msub><mrow><mstyle mathvariant="bold">
+<mi>q</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mn>0</mn></mrow><mo fence="true" form="postfix">⟩</mo></mrow></mrow></math>;
+and
+</li>
+<li class="itemize">Nucleon-antinucleon annihilation <!--  l. 876  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msup><mrow><mi>ψ</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msup><mi>ψ</mi> <mo class="MathClass-rel" stretchy="false">→</mo> <mi>ϕ</mi></mrow></math>:
+<!--  l. 876  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>i</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <msqrt><mrow>
+<mn>4</mn><msub><mrow><mi>E</mi></mrow><mrow><msub><mrow><mstyle mathvariant="bold"><mi>q</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub></mrow></msub><msub><mrow><mi>E</mi></mrow><mrow><msub><mrow><mstyle mathvariant="bold"><mi>q</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub></mrow></msub></mrow></msqrt><msubsup><mrow><mi>b</mi></mrow><mrow><msub><mrow><mstyle mathvariant="bold"><mi>q</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><msubsup><mrow><mi>c</mi></mrow><mrow><msub><mrow><mstyle mathvariant="bold">
+<mi>q</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mn>0</mn></mrow><mo fence="true" form="postfix">⟩</mo></mrow></mrow></math>,
+<!--  l. 876  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>f</mi> </mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <msqrt><mrow>
+<mn>2</mn><msub><mrow><mi>E</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace></mrow></msqrt><msubsup><mrow><mi>a</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mn>0</mn></mrow><mo fence="true" form="postfix">⟩</mo></mrow></mrow></math>.</li></ul>
+<!--  l. 879  --><p class="noindent">The amplitude for these can be calculated to be: </p><table class="equation"><tr><td>
+<!--  l. 880  --><p class="indent">
+</p><!--  l. 880  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-54002r74"></mstyle><!--  endlabel  --><msup><mrow>
+<mrow><mo fence="true" form="prefix">⟨</mo><mrow><mi>f</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>S</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>i</mi>
+</mrow><mo fence="true" form="postfix">⟩</mo></mrow></mrow><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mi mathvariant="italic">ig</mi><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>π</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>4</mn></mrow></msup><msup><mrow><mi>δ</mi></mrow><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>4</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><mi>p</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>q</mi></mrow><mrow>
+<mn>1</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>q</mi></mrow><mrow><mn>2</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(3.74)</td></tr></table>
+<!--  l. 883  --><p class="noindent">The delta function ensures momentum conservation, and is in fact a general
+feature of all S-matrix elements. It also tells us that this process can only occur
+for <!--  l. 885  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>m</mi> <mo class="MathClass-rel" stretchy="false">≥</mo> <mn>2</mn><mi>M</mi></mrow></math>.
+We typically define </p><table class="equation"><tr><td>
+<!--  l. 887  --><p class="indent">
+</p><!--  l. 887  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-54003r75"></mstyle><!--  endlabel  -->
+<mrow><mo fence="true" form="prefix">⟨</mo><mrow><mi>f</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>S</mi> <mo class="MathClass-bin" stretchy="false">−</mo><mi>𝟙</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>i</mi>
+</mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">≡</mo> <mi>i</mi><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>π</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>4</mn></mrow></msup><msup><mrow><mi>δ</mi></mrow><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>4</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><mi mathvariant="normal">Σ</mi><mspace class="thinspace" width="0.17em"></mspace><mi>p</mi><mo class="MathClass-close" stretchy="false">)</mo><mstyle mathvariant="script"><mi>M</mi></mstyle><mo class="MathClass-punc" stretchy="false">,</mo>
+</mrow></math></td><td class="eq-no">(3.75)</td></tr></table>
+<!--  l. 890  --><p class="noindent">where <!--  l. 891  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="script"><mi>M</mi></mstyle></math> is
+called the <span class="ec-lmri-12">matrix element </span>of the process, and is the nontrivial component we must
+                                                                          
+
+                                                                          
+compute.
+</p><!--  l. 893  --><p class="indent">   For our first-order processes, we obtain the simple matrix element
+<!--  l. 893  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="script"><mi>M</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mi>g</mi></mrow></math>. Generally,
+however, calculating <!--  l. 894  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="script"><mi>M</mi></mstyle></math>
+each time using the field expansions can be quite cumbersome. This is especially
+true at higher orders, which require <span class="ec-lmri-12">Wick’s theorem</span> [<a href="bibnamemkbothMakeUppercasebibnameMakeUppercasebibname.html#XWick_1950ee">33</a>] to treat time-ordered
+fields. We can avoid this by using <span class="ec-lmri-12">Feynman diagrams</span>, and their associated rules,
+which allow us to simply read off a matrix element from a drawing of the
+process.
+</p><!--  l. 901  --><p class="noindent">
+</p>
+<h4 class="subsectionHead" id="feynman-diagrams"><span class="titlemark">3.3.3   </span> <a id="x11-550003.3.3"></a>Feynman diagrams</h4>
+<!--  l. 904  --><p class="noindent">Feynman diagrams are intuitive and powerful tools for calculating S-matrix
+elements. Examples for our first-order meson decay and nucleon-antinucleon
+annihilation processes are shown in Figure <a href="#feynman-diagrams-for-meson-decay-left-and-nucleonantinucleon-annihilation-right">3.1<!--  tex4ht:ref: fig:01_qft_interactions_feynman_first_order   --></a>. They encode a lot of information
+(some of which is redundant, shown only for these first diagrams for clarity). Let
+us walk through some conventions we are using:
+                                                                          
+
+                                                                          
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+1. 
+</dt><dd class="enumerate-enumitem">Time and momentum always flow from left to right. Thus, the left-most
+particles  represent  the  initial,  and  the  right-most  the  final  states.
+Momentum arrows are shown here explicitly but henceforth need not
+be.
+</dd>
+<dt class="enumerate-enumitem">
+2. 
+</dt><dd class="enumerate-enumitem">Mesons are plotted as dotted and nucleons as solid lines.
+</dd>
+<dt class="enumerate-enumitem">
+3. 
+</dt><dd class="enumerate-enumitem">Nucleon  lines  have  arrows  representing  <span class="ec-lmri-12">particle-flow</span>.  For  external
+(i.e.,  initial  or  final  state)  nucleons  they  point  in  the  direction  of
+momentum for particles and opposite for antiparticles. Again, for future
+diagrams, particles need not be explicitly labeled as the linestyles and
+particle-flow arrows suffice.</dd></dl>
+<figure class="figure">
+<!--  l. 3  --><p class="noindent" id="feynman-diagrams-for-meson-decay-left-and-nucleonantinucleon-annihilation-right"><img alt="  †
+ϕψψpqq12   " src="main-32e6e5f5ec735887df3f67a2a86548c6.svg"/>
+                    <img alt="ψϕψq1q2p†  " src="main-842160df299a535ee3277eb0bdc55f36.svg"/>
+<a id="x11-55004r1"></a>
+</p>
+<figcaption class="caption"><span class="id">Figure 3.1:    </span><span class="content">Feynman    diagrams    for    meson    decay    (left)    and
+nucleon-antinucleon annihilation (right).
+</span></figcaption><!--  tex4ht:label?: x11-55004r1   -->
+</figure>
+<!--  l. 920  --><p class="indent">   We can build up Feynman diagrams for higher-order processes by adding more
+vertices and <span class="ec-lmri-12">internal lines </span>connecting the vertices. As discussed above, only
+<span class="ec-lmri-12">connected </span>and <span class="ec-lmri-12">amputated </span>diagrams contribute to the S-matrix element, and we
+will focus on these. Connected means that every part of the diagrams is connected
+to at least one external line, and amputated means that there are no loops on
+external lines. Examples of disconnected and un-amputated diagrams are shown
+in Figure <a href="#examples-of-a-disconnected-left-and-an-unamputated-right-feynman-diagram">3.2<!--  tex4ht:ref: fig:01_qft_interactions_feynman_disconnected   --></a>. Interestingly, disconnected and un-amputated diagrams contribute
+to the vacuum and one-particle states, respectively, differing in the interacting
+versus free theory.
+</p>
+<figure class="figure">
+<!--  l. 3  --><p class="noindent" id="examples-of-a-disconnected-left-and-an-unamputated-right-feynman-diagram"><img alt="  " src="main-6d436a9e92d7c7fe2bffaf55b8810cbd.svg"/>
+                            <img alt="  " src="main-719d26eede3c60de98972dd8ca61281d.svg"/>
+<a id="x11-55005r2"></a>
+</p>
+<figcaption class="caption"><span class="id">Figure 3.2: </span><span class="content">Examples of a disconnected (left) and an un-amputated (right)
+Feynman diagram.
+</span></figcaption><!--  tex4ht:label?: x11-55005r2   -->
+</figure>
+<h5 class="subsubsectionHead" id="feynman-rules-for-scalar-yukawa-theory"><a id="x11-56000"></a>Feynman rules for scalar Yukawa theory</h5>
+<!--  l. 931  --><p class="noindent">To read off the matrix element from a Feynman diagram, we take the product of
+factors associated to each element of the diagram, according to the <span class="ec-lmri-12">Feynman rules</span>
+of the theory. These rules are ultimately derived from and encode all our
+information about the underlying Lagrangian. They can be written in either
+position or momentum space; since we are working with momentum eigenstates,
+we will use the latter.
+</p>
+<div class="newtheorem">
+<!--  l. 935  --><p class="noindent"><span class="head">
+<a id="x11-56001r1"></a>
+<span class="ec-lmbx-12">Definition 3.1.</span>
+</span>For our scalar Yukawa theory, the Feynman rules for calculating
+<!--  l. 936  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>i</mi><mstyle mathvariant="script"><mi>M</mi></mstyle></mrow></math>
+are:<span class="footnote-mark"><a href="#fn19x4" id="fn19x4-bk"><sup class="textsuperscript">10</sup></a></span><a id="x11-56002f10"></a>
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+                                                                          
+
+                                                                          
+1. 
+</dt><dd class="enumerate-enumitem">Vertices:       <img alt="  " src="main-48aef2812c2ab7755d9a86d72b38612d.svg"/>
+<!--  l. 952  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mi mathvariant="italic">ig</mi></mrow></math><br class="newline"/>
+</dd>
+<dt class="enumerate-enumitem">   
+2. 
+</dt><dd class="enumerate-enumitem">Internal lines (propagators)<br class="newline"/>          Mesons:    <img alt="p  " src="main-0f0a0f5b7146ec2aabde528f11dd74cc.svg"/>
+<!--  l. 964  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mspace class="thinspace" width="0.17em"></mspace> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac>
+<mrow>
+<mi>i</mi></mrow>
+<mrow><msup><mrow><mi>p</mi></mrow><mrow><mn>2</mn>
+</mrow></msup> <mo class="MathClass-bin" stretchy="false">−</mo> <msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">+</mo> <mi mathvariant="italic">i𝜀</mi></mrow></mfrac></mrow></math>
+Nucleons:    <img alt="q  " src="main-36135df23e7647ef27ddb0e7afe9a1f7.svg"/>
+<!--  l. 975  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mspace class="thinspace" width="0.17em"></mspace> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac>
+<mrow>
+<mi>i</mi></mrow>
+<mrow><msup><mrow><mi>q</mi></mrow><mrow><mn>2</mn>
+</mrow></msup> <mo class="MathClass-bin" stretchy="false">−</mo> <msup><mrow><mi>M</mi></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">+</mo> <mi mathvariant="italic">i𝜀</mi></mrow></mfrac></mrow></math><br class="newline"/>
+</dd>
+<dt class="enumerate-enumitem">   
+3. 
+</dt><dd class="enumerate-enumitem">Impose momentum conservation at each vertex.
+</dd>
+<dt class="enumerate-enumitem">
+4. 
+</dt><dd class="enumerate-enumitem">Integrate over the momentum <!--  l. 977  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math>
+flowing through each loop <!--  l. 977  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow> <mo>∫</mo>
+<!--  nolimits  --><!--  nolimits  --> <mfrac><mrow><msup><mrow><mi>d</mi></mrow><mrow><mn>4</mn></mrow></msup><mi>k</mi></mrow>
+<mrow><msup><mrow>
+<mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>π</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>4</mn></mrow></msup></mrow></mfrac></mrow></math>.</dd></dl>
+</div>
+<!--  l. 979  --><p class="indent">    Note that the factors associated with internal lines are exactly the Feynman
+propagators from Section <a href="Quantization.html#propagators-and-green-functions">3.2.5<!--  tex4ht:ref: sec:01_qft_quantization_propagators   --></a>, which is in line with their interpretation as the
+amplitude for a particle to propagate from one point to another. For internal lines,
+the convention is for momentum to flow in the same direction as the particle flow,
+even for antiparticles. We discuss loops briefly at the end of this section;
+however, we focus primarily in this part on <span class="ec-lmri-12">tree-level diagrams</span>, those without
+loops.
+</p><!--  l. 984  --><p class="indent">   We see immediately that these rules reproduce the matrix element
+<!--  l. 984  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="script"><mi>M</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mi>g</mi></mrow></math> for
+our first-order processes, as expected. We next look at some more complicated,
+higher order diagrams.
+</p><!--  l. 988  --><p class="noindent">
+</p>
+<h5 class="subsubsectionHead" id="nucleon-scattering"><a id="x11-57000"></a>Nucleon scattering</h5>
+<!--  l. 990  --><p class="noindent">We start with nucleon-nucleon scattering
+<!--  l. 990  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="italic">ψψ</mi> <mo class="MathClass-rel" stretchy="false">→</mo> <mi mathvariant="italic">ψψ</mi></mrow></math>. The lowest order at
+which this can occur is of <!--  l. 991  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="script"><mi>O</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><msup><mrow><mi>g</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>,
+as it requires at least two interaction vertices. The possible second-order diagrams
+                                                                          
+
+                                                                          
+are shown in Figure <a href="#the-two-lowest-order-nucleon-scattering-diagrams">3.3<!--  tex4ht:ref: fig:01_qft_interactions_feynman_nn_scattering   --></a>. We interpret them as nucleons interacting via the
+exchange of a meson. As the nucleons are identical, we require two diagrams, for
+the two permutations of the two final states.
+</p>
+<figure class="figure">
+<!--  l. 4  --><p class="noindent" id="the-two-lowest-order-nucleon-scattering-diagrams"><img alt="kqiqiqfqf1212   " src="main-e75a4b3961e88ddd63483c9e88f7caba.svg"/>
+                            <img alt="kqiqiqfqf1221   " src="main-3faebf58ae66dbec4c6084d76d599179.svg"/>
+<a id="x11-57001r3"></a>
+</p>
+<figcaption class="caption"><span class="id">Figure 3.3: </span><span class="content">The two lowest order nucleon scattering diagrams.
+</span></figcaption><!--  tex4ht:label?: x11-57001r3   -->
+</figure>
+<!--  l. 998  --><p class="indent">   Using the first two Feynman rules, we find </p><table class="equation"><tr><td>
+<!--  l. 999  --><p class="indent">
+</p><!--  l. 999  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-57002r76"></mstyle><!--  endlabel  -->
+<mi>i</mi><mstyle mathvariant="script"><mi>M</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mo class="MathClass-bin" stretchy="false">−</mo><mi mathvariant="italic">ig</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">⋅</mo> <mfrac>
+<mrow>
+<mn>1</mn></mrow>
+<mrow><msup><mrow><mi>k</mi></mrow><mrow><mn>2</mn>
+</mrow></msup> <mo class="MathClass-bin" stretchy="false">−</mo> <msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">+</mo> <mi mathvariant="italic">i𝜀</mi></mrow></mfrac>
+</mrow></math></td><td class="eq-no">(3.76)</td></tr></table>
+<!--  l. 1002  --><p class="noindent">for both diagrams. What remains is to enforce momentum
+conservation at each vertex. For the left-most diagram, we see
+<!--  l. 1005  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>k</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>q</mi></mrow><mrow><mi>f</mi><mn>1</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>q</mi></mrow><mrow><mi>i</mi><mn>1</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>q</mi></mrow><mrow><mi>f</mi><mn>2</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>q</mi></mrow><mrow><mi>i</mi><mn>2</mn></mrow></msub></mrow></math>, while for the
+right-most <!--  l. 1005  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>k</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>q</mi></mrow><mrow><mi>f</mi><mn>2</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>q</mi></mrow><mrow><mi>i</mi><mn>1</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>q</mi></mrow><mrow><mi>f</mi><mn>1</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>q</mi></mrow><mrow><mi>i</mi><mn>2</mn></mrow></msub></mrow></math>.
+Thus, the total matrix element is </p><table class="equation"><tr><td>
+<!--  l. 1007  --><p class="indent">
+</p><!--  l. 1007  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-57003r77"></mstyle><!--  endlabel  -->
+<mi>i</mi><mstyle mathvariant="script"><mi>M</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>i</mi><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mstyle mathvariant="script"><mi>M</mi></mstyle></mrow><mrow><mstyle mathvariant="normal"><mi>left</mi></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo><msub><mrow> <mstyle mathvariant="script"><mi>M</mi></mstyle></mrow><mrow><mstyle mathvariant="normal"><mi>right</mi></mstyle></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mo class="MathClass-bin" stretchy="false">−</mo><mi mathvariant="italic">ig</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup><mstyle mathsize="2.03em"><mrow><mo fence="true" form="prefix">[</mo><mrow></mrow><mo fence="true" form="postfix"></mo></mrow></mstyle> <mfrac>
+<mrow>
+<mn>1</mn></mrow>
+<mrow><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>q</mi></mrow><mrow>
+<mi>f</mi><mn>1</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>q</mi></mrow><mrow><mi>i</mi><mn>1</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">−</mo> <msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac>
+<mrow>
+<mn>1</mn></mrow>
+<mrow><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>q</mi></mrow><mrow>
+<mi>f</mi><mn>2</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>q</mi></mrow><mrow><mi>i</mi><mn>1</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">−</mo> <msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac><mstyle mathsize="2.03em"><mrow><mo fence="true" form="prefix">]</mo><mrow></mrow><mo fence="true" form="postfix"></mo></mrow></mstyle><mo class="MathClass-punc" stretchy="false">,</mo>
+</mrow></math></td><td class="eq-no">(3.77)</td></tr></table>
+<!--  l. 1014  --><p class="noindent">where we have left out the <!--  l. 1015  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="italic">i𝜀</mi></mrow></math>
+term as there is no integral to perform.
+</p><!--  l. 1017  --><p class="indent">   Generally, we have to be careful with the relative signs of the matrix elements
+of different diagrams, corresponding to either constructive or destructive
+interference. (In fact, Peskin and Schroeder list “Figure out the overall sign of
+the diagram” as a Feynman rule.) In this case, we can reason physically
+that since nucleons are bosons, the amplitude will be symmetric under
+interchange of the two final states, and hence the two diagrams should be
+summed.
+</p>
+<!--  l. 1021  --><p class="noindent"><span class="paragraphHead" id="virtual-particles"><a id="x11-58000"></a><span class="ec-lmbx-12">Virtual particles</span></span>
+Note that by momentum conservation, the exchange meson does not have
+mass <!--  l. 1023  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>m</mi></math>,
+as <!--  l. 1023  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msup><mrow><mi>k</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-rel" stretchy="false">≠</mo><msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></math>.
+We say that this meson is a <span class="ec-lmri-12">virtual particle </span>and is <span class="ec-lmri-12">off-shell </span>(referring to the “mass
+                                                                          
+
+                                                                          
+shell” in <!--  l. 1024  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math>
+at <!--  l. 1024  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msup><mrow><mi>k</mi></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></math>).
+This may appear dangerously unphysical; however, we are saved by the fact that
+such off-shell particles always appear internally in the diagram and thus can never
+be observed. In a sense, they can be viewed simply as a mathematical convenience
+in QFT. No one knows their correct physical interpretation; to quote Hong Liu,
+“In physics, when we don’t understand something, we give it a name and then
+claim we understand it.” [<a href="bibnamemkbothMakeUppercasebibnameMakeUppercasebibname.html#XLiuRQFT">12</a>].
+</p><!--  l. 1031  --><p class="noindent">
+</p>
+<h5 class="subsubsectionHead" id="mandelstam-variables"><a id="x11-59000"></a>Mandelstam variables</h5>
+<!--  l. 1033  --><p class="noindent">Because these types of 2-by-2 scattering processes are so common in particle
+physics, they have standard names, based on the momenta in the denominator of
+the matrix element.
+</p>
+<div class="newtheorem">
+<!--  l. 1035  --><p class="noindent"><span class="head">
+<a id="x11-59001r2"></a>
+<span class="ec-lmbx-12">Definition 3.2.</span>
+</span>For incoming particle momenta
+<!--  l. 1036  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>p</mi></mrow><mrow><mi>i</mi><mn>1</mn></mrow></msub></math> and
+<!--  l. 1036  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>p</mi></mrow><mrow><mi>i</mi><mn>2</mn></mrow></msub></math> and outgoing
+momenta <!--  l. 1036  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>p</mi></mrow><mrow><mi>f</mi><mn>1</mn></mrow></msub></math>
+and <!--  l. 1036  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>p</mi></mrow><mrow><mi>f</mi><mn>2</mn></mrow></msub></math>,
+the <span class="ec-lmri-12">Mandelstam variables </span>are defined as: </p><table class="equation"><tr><td>
+<!--  l. 1037  --><p class="indent">
+</p><!--  l. 1037  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-59002r78"></mstyle><!--  endlabel  -->
+<mtable class="equation"><mtr><mtd>
+<mtable class="split" columnalign="right left">
+<mtr class="split-mtr"><mtd class="split-mtd"> <mi>s</mi></mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>p</mi></mrow><mrow><mi>i</mi><mn>1</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>p</mi></mrow><mrow><mi>i</mi><mn>2</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>p</mi></mrow><mrow>
+<mi>f</mi><mn>1</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>p</mi></mrow><mrow><mi>f</mi><mn>2</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+</mtr><mtr class="split-mtr"><mtd class="split-mtd"> <mi>t</mi></mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>p</mi></mrow><mrow><mi>i</mi><mn>1</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>p</mi></mrow><mrow><mi>f</mi><mn>1</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>p</mi></mrow><mrow>
+<mi>i</mi><mn>2</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>p</mi></mrow><mrow><mi>f</mi><mn>2</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+</mtr><mtr class="split-mtr"><mtd class="split-mtd"> <mi>u</mi></mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>p</mi></mrow><mrow><mi>i</mi><mn>1</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>p</mi></mrow><mrow><mi>f</mi><mn>2</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>p</mi></mrow><mrow>
+<mi>i</mi><mn>2</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>p</mi></mrow><mrow><mi>f</mi><mn>1</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-punc" stretchy="false">.</mo></mtd>
+</mtr></mtable>
+</mtd><mtd>
+</mtd></mtr></mtable>
+</mrow></math></td><td class="eq-no">(3.78)</td></tr></table>
+<!--  l. 1044  --><p class="noindent">
+</p>
+</div>
+<!--  l. 1045  --><p class="indent">
+</p><!--  l. 1047  --><p class="indent">   We can see that the matrix elements for nucleon scattering (Eq. <a href="#x11-57003r77">3.77<!--  tex4ht:ref: eq:01_qft_interactions_nn_scattering_2   --></a>) can be rewritten
+in terms of <!--  l. 1047  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi></math>
+and <!--  l. 1047  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>u</mi></math>
+as: </p><table class="equation"><tr><td>
+<!--  l. 1048  --><p class="indent">
+</p><!--  l. 1048  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-59003r79"></mstyle><!--  endlabel  -->
+<mtable class="equation"><mtr><mtd>
+<mtable class="split" columnalign="right left">
+<mtr class="split-mtr"><mtd class="split-mtd"> <mi>i</mi><msub><mrow><mstyle mathvariant="script"><mi>M</mi></mstyle></mrow><mrow><mstyle mathvariant="normal"><mi>left</mi></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mo class="MathClass-bin" stretchy="false">−</mo><mi mathvariant="italic">ig</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">⋅</mo> <mfrac>
+<mrow>
+<mn>1</mn></mrow>
+<mrow><mi>t</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn>
+</mrow></msup></mrow></mfrac><mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+</mtr><mtr class="split-mtr"><mtd class="split-mtd"> <mi>i</mi><msub><mrow><mstyle mathvariant="script"><mi>M</mi></mstyle></mrow><mrow><mstyle mathvariant="normal"><mi>right</mi></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mo class="MathClass-bin" stretchy="false">−</mo><mi mathvariant="italic">ig</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">⋅</mo> <mfrac>
+<mrow>
+<mn>1</mn></mrow>
+<mrow><mi>u</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn>
+</mrow></msup></mrow></mfrac><mo class="MathClass-punc" stretchy="false">.</mo></mtd>
+</mtr></mtable>
+</mtd><mtd>
+</mtd></mtr></mtable>
+</mrow></math></td><td class="eq-no">(3.79)</td></tr></table>
+<!--  l. 1054  --><p class="noindent">Hence, they are referred to as <!--  l. 1055  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi></math>-channel
+and <!--  l. 1055  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>u</mi></math>-channel
+diagrams, respectively. We will see an example of an
+<!--  l. 1056  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi></math>-channel
+diagram in the next example.
+To build some intuition for these variables, let us sit in the center of mass (COM)
+frame, and define our coordinate frame such that incoming particles collide along the
+<!--  l. 1058  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>z</mi></math>-axis and scatter in the
+<!--  l. 1058  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi></math>-<!--  l. 1058  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>z</mi></math>
+plane: </p><table class="equation"><tr><td>
+<!--  l. 1059  --><p class="indent">
+</p><!--  l. 1059  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-59004r80"></mstyle><!--  endlabel  -->
+<mtable class="equation"><mtr><mtd>
+<mtable class="split" columnalign="right left">
+<mtr class="split-mtr"><mtd class="split-mtd"> <msub><mrow><mi>p</mi></mrow><mrow><mi>i</mi><mn>1</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">(</mo><mi>E</mi><mo class="MathClass-punc" stretchy="false">,</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">,</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">,</mo><mi>p</mi><mo class="MathClass-close" stretchy="false">)</mo></mtd>
+<mtd class="split-mtd"><mspace class="qquad" width="2em"></mspace><msub><mrow><mi>p</mi></mrow><mrow><mi>i</mi><mn>2</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">(</mo><mi>E</mi><mo class="MathClass-punc" stretchy="false">,</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">,</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">,</mo><mo class="MathClass-bin" stretchy="false">−</mo><mi>p</mi><mo class="MathClass-close" stretchy="false">)</mo></mtd>
+</mtr><mtr class="split-mtr"><mtd class="split-mtd"> <msub><mrow><mi>p</mi></mrow><mrow><mi>f</mi><mn>1</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">(</mo><mi>E</mi><mo class="MathClass-punc" stretchy="false">,</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">,</mo><mi>p</mi><mi class="qopname"> sin</mi><mo> ⁡<!--  FUNCTION APPLICATION  --> </mo><!--  nolimits  --> <mi>𝜃</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>p</mi><mi class="qopname"> cos</mi><mo> ⁡<!--  FUNCTION APPLICATION  --> </mo><!--  nolimits  --> <mi>𝜃</mi><mo class="MathClass-close" stretchy="false">)</mo></mtd>
+<mtd class="split-mtd"><mspace class="qquad" width="2em"></mspace><msub><mrow><mi>p</mi></mrow><mrow><mi>f</mi><mn>2</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">(</mo><mi>E</mi><mo class="MathClass-punc" stretchy="false">,</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">,</mo><mo class="MathClass-bin" stretchy="false">−</mo><mi>p</mi><mi class="qopname"> sin</mi><mo> ⁡<!--  FUNCTION APPLICATION  --> </mo><!--  nolimits  --> <mi>𝜃</mi><mo class="MathClass-punc" stretchy="false">,</mo><mo class="MathClass-bin" stretchy="false">−</mo><mi>p</mi><mi class="qopname"> cos</mi><mo> ⁡<!--  FUNCTION APPLICATION  --> </mo><!--  nolimits  --> <mi>𝜃</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">.</mo></mtd>
+</mtr></mtable>
+</mtd><mtd>
+</mtd></mtr></mtable>
+</mrow></math></td><td class="eq-no">(3.80)</td></tr></table>
+<!--  l. 1065  --><p class="noindent">Then, </p><table class="equation"><tr><td>
+<!--  l. 1067  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-59005r81"></mstyle><!--  endlabel  -->
+<mi>s</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>4</mn><msup><mrow><mi>E</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="quad" width="1em"></mspace><mi>t</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn><msup><mrow><mi>p</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn> <mo class="MathClass-bin" stretchy="false">−</mo><mi class="qopname"> cos</mi><mo> ⁡<!--  FUNCTION APPLICATION  --> </mo><!--  nolimits  --> <mi>𝜃</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="quad" width="1em"></mspace><mi>u</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn><msup><mrow><mi>p</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn> <mo class="MathClass-bin" stretchy="false">+</mo><mi class="qopname"> cos</mi><mo> ⁡<!--  FUNCTION APPLICATION  --> </mo><!--  nolimits  --> <mi>𝜃</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(3.81)</td></tr></table>
+<!--  l. 1070  --><p class="noindent">Thus, <!--  l. 1071  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi></math>
+is the total energy in the COM frame squared — hence, we usually refer to the COM
+                                                                          
+
+                                                                          
+energy as <!--  l. 1071  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msqrt><mrow><mi>s</mi></mrow></msqrt></math>
+— while <!--  l. 1071  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi></math>
+and <!--  l. 1071  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>u</mi></math> are
+a measure of how much momentum is exchanged between the scattered particles. For
+example, if <!--  l. 1072  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>𝜃</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></mrow></math>,
+both particles continue in the same direction and
+<!--  l. 1072  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>t</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></mrow></math>, while if
+<!--  l. 1072  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>𝜃</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>π</mi></mrow></math>, they
+completely reverse direction and the momentum transfer along the collision axis is
+maximized at <!--  l. 1073  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msqrt><mrow>
+<mrow><mo fence="true" form="prefix">|</mo><mrow><mi>t</mi></mrow><mo fence="true" form="postfix">|</mo></mrow></mrow></msqrt> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>2</mn><mi>p</mi></mrow></math>.
+</p><!--  l. 1075  --><p class="noindent">
+</p>
+<h5 class="subsubsectionHead" id="nucleonantinucleon-scattering-and-resonances"><a id="x11-60000"></a>Nucleon-antinucleon scattering and resonances</h5>
+<!--  l. 1077  --><p class="noindent">Another interesting example is nucleon-antinucleon scattering
+<!--  l. 1077  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>ψ</mi><msup><mrow><mi>ψ</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msup> <mo class="MathClass-rel" stretchy="false">→</mo> <mi>ψ</mi><msup><mrow><mi>ψ</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msup></mrow></math>.
+At lowest order, we have the diagrams shown in Figure <a href="#the-two-lowest-order-nucleonantinucleon-scattering-diagrams">3.4<!--  tex4ht:ref: fig:01_qft_interactions_feynman_na_scattering   --></a>.
+Now, these are two distinct particles, so we do not have the
+<!--  l. 1079  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>u</mi></math>-channel
+diagram with the final states interchanged as above. However, we do have a new
+                                                                          
+
+                                                                          
+<!--  l. 1081  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi></math>-channel
+diagram on the right.
+</p>
+<figure class="figure">
+<!--  l. 4  --><p class="noindent" id="the-two-lowest-order-nucleonantinucleon-scattering-diagrams"><img alt="kqiqiqfqf1212   " src="main-598ab2afbe7f08113a12e6046b3b8514.svg"/>      
+<img alt="kqqqqiiff1212   " src="main-9d886e604991da4e3b2aff2e574dbe14.svg"/>
+<a id="x11-60001r4"></a>
+</p>
+<figcaption class="caption"><span class="id">Figure 3.4: </span><span class="content">The two lowest order nucleon-antinucleon scattering diagrams.
+</span></figcaption><!--  tex4ht:label?: x11-60001r4   -->
+</figure>
+<!--  l. 1085  --><p class="indent">   Again, the first two Feynman rules result in the same matrix element
+(Eq. <a href="#x11-57002r76">3.76<!--  tex4ht:ref: eq:01_qft_interactions_nn_scattering_1   --></a>) for both. Imposing momentum conservation we find: </p><table class="equation"><tr><td>
+<!--  l. 1087  --><p class="indent">
+</p><!--  l. 1087  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-60002r82"></mstyle><!--  endlabel  -->
+<mtable class="equation"><mtr><mtd>
+<mtable class="split" columnalign="right left">
+<mtr class="split-mtr"><mtd class="split-mtd"> <mi>i</mi><mstyle mathvariant="script"><mi>M</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>i</mi><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mstyle mathvariant="script"><mi>M</mi></mstyle></mrow><mrow><mstyle mathvariant="normal"><mi>left</mi></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo><msub><mrow> <mstyle mathvariant="script"><mi>M</mi></mstyle></mrow><mrow><mstyle mathvariant="normal"><mi>right</mi></mstyle></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mo class="MathClass-bin" stretchy="false">−</mo><mi mathvariant="italic">ig</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup><mstyle mathsize="2.03em"><mrow><mo fence="true" form="prefix">[</mo><mrow></mrow><mo fence="true" form="postfix"></mo></mrow></mstyle> <mfrac>
+<mrow>
+<mn>1</mn></mrow>
+<mrow><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>q</mi></mrow><mrow>
+<mi>f</mi><mn>1</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>q</mi></mrow><mrow><mi>i</mi><mn>1</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">−</mo> <msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac>
+<mrow>
+<mn>1</mn></mrow>
+<mrow><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>q</mi></mrow><mrow>
+<mi>i</mi><mn>1</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>q</mi></mrow><mrow><mi>i</mi><mn>2</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">−</mo> <msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac><mstyle mathsize="2.03em"><mrow><mo fence="true" form="prefix">]</mo><mrow></mrow><mo fence="true" form="postfix"></mo></mrow></mstyle><mo class="MathClass-punc" stretchy="false">.</mo></mtd>
+</mtr><mtr class="split-mtr"><mtd class="split-mtd"> </mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mo class="MathClass-bin" stretchy="false">−</mo><mi mathvariant="italic">ig</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup><mstyle mathsize="2.03em"><mrow><mo fence="true" form="prefix">(</mo><mrow></mrow><mo fence="true" form="postfix"></mo></mrow></mstyle> <mfrac>
+<mrow>
+<mn>1</mn></mrow>
+<mrow><mi>t</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn>
+</mrow></msup></mrow></mfrac> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac>
+<mrow>
+<mn>1</mn></mrow>
+<mrow><mi>s</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn>
+</mrow></msup></mrow></mfrac><mstyle mathsize="2.03em"><mrow><mo fence="true" form="prefix">)</mo><mrow></mrow><mo fence="true" form="postfix"></mo></mrow></mstyle></mtd>
+</mtr></mtable>
+</mtd><mtd>
+</mtd></mtr></mtable>
+</mrow></math></td><td class="eq-no">(3.82)</td></tr></table>
+<!--  l. 1093  --><p class="noindent">Note an important point about the right matrix element, and
+<!--  l. 1094  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>s</mi><mo class="MathClass-bin" stretchy="false">−</mo></mrow></math>channel
+diagrams in general: the amplitude diverges as
+<!--  l. 1094  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>s</mi> <mo class="MathClass-rel" stretchy="false">→</mo> <msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></math>.<span class="footnote-mark"><a href="#fn20x4" id="fn20x4-bk"><sup class="textsuperscript">11</sup></a></span><a id="x11-60003f11"></a>
+                                                                          
+
+                                                                          
+Or, in other words, as the COM energy approaches the mass of the exchanged particle (as
+long as <!--  l. 1095  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>m</mi> <mo class="MathClass-rel" stretchy="false">&gt;</mo> <mn>2</mn><mi>M</mi></mrow></math>).
+</p><!--  l. 1097  --><p class="indent">   This divergence is interpreted as a <span class="ec-lmri-12">resonance </span>in the cross
+section (see below) of the scattering process as a function of
+<!--  l. 1097  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msqrt><mrow><mi>s</mi></mrow></msqrt></math>, and
+allows us to discover new particles. Figure <a href="#cross-section-for-ee-hadron-scattering-as-a-function-of-s-with-a-clear-resonance-at-the-z-boson-mass-reproduced-from-ref-alephab">3.5<!--  tex4ht:ref: fig:01_qft_interactions_eezpeak   --></a> shows a great example for
+<!--  l. 1098  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msup><mrow><mi>e</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">+</mo></mrow></msup><msup><mrow><mi>e</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo></mrow></msup> <mo class="MathClass-rel" stretchy="false">→</mo></mrow></math>
+hadron scattering by a series of HEP experiments with a magnificent peak at
+96<!--  l. 1098  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>GeV</mtext></mstyle></mrow></math>,
+the <!--  l. 1098  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>Z</mi></math>
+boson mass.
+</p>
+<figure class="figure">
+<!--  l. 1102  --><p class="noindent" id="cross-section-for-ee-hadron-scattering-as-a-function-of-s-with-a-clear-resonance-at-the-z-boson-mass-reproduced-from-ref-alephab"><img alt="PIC" src="figures/01-SM-02-QFT/eezpeak.png" style="max-width:80%"/> <a id="x11-60005r5"></a>
+</p>
+<figcaption class="caption"><span class="id">Figure 3.5:                      </span><span class="content">Cross                      section                      for
+<!--  l. 1103  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msup><mrow><mi>e</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">+</mo></mrow></msup><msup><mrow><mi>e</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo></mrow></msup> <mo class="MathClass-rel" stretchy="false">→</mo></mrow></math>
+hadron            scattering            as            a            function            of
+<!--  l. 1103  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msqrt><mrow><mi>s</mi></mrow></msqrt></math>
+with             a             clear             resonance             at             the
+<!--  l. 1103  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>Z</mi></math>
+boson mass, reproduced from Ref. [<a href="bibnamemkbothMakeUppercasebibnameMakeUppercasebibname.html#XALEPH_2005ab">34</a>].                                    </span></figcaption><!--  tex4ht:label?: x11-60005r5   -->
+</figure>
+<h5 class="subsubsectionHead" id="the-classical-limit-and-the-yukawa-potential"><a id="x11-61000"></a>The classical limit and the Yukawa potential</h5>
+<!--  l. 1110  --><p class="noindent">It is important to check our QFT recovers classical physics in the appropriate limit. It
+will also be useful to translate the somewhat abstract idea of amplitudes to the familiar
+concepts of forces and potentials. We will do so by considering the nonrelativistic
+limit (<!--  l. 1112  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow> <mrow><mo fence="true" form="prefix">|</mo><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mo fence="true" form="postfix">|</mo></mrow> <mo class="MathClass-rel" stretchy="false">≪</mo> <mi>M</mi></mrow></math>)
+of our above amplitudes and using the Born approximation relating the
+scattering amplitude between two particles to the potential between them
+<!--  l. 1112  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>U</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>r</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>:
+</p><table class="equation"><tr><td>
+<!--  l. 1113  --><p class="indent">
+</p><!--  l. 1113  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-61001r83"></mstyle><!--  endlabel  -->
+<mstyle mathvariant="script"><mi>M</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mrow><mo fence="true" form="prefix">⟨</mo><mrow><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mi>f</mi></mrow></msub><mo class="MathClass-rel" stretchy="false">|</mo><mi>U</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>r</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-rel" stretchy="false">|</mo><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mi>i</mi><mo>∫
+ <!--  nolimits  --></mo><!--  nolimits  --><mi>U</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>r</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo><msup><mrow><mi>e</mi></mrow><mrow><mi>i</mi><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mi>f</mi></mrow></msub><mo class="MathClass-bin" stretchy="false">−</mo><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-bin" stretchy="false">⋅</mo><mstyle mathvariant="bold"><mi>r</mi></mstyle></mrow></msup><msup><mrow><mi>d</mi></mrow><mrow><mn>3</mn></mrow></msup><mi>r</mi><mo class="MathClass-punc" stretchy="false">,</mo>
+</mrow></math></td><td class="eq-no">(3.83)</td></tr></table>
+<!--  l. 1116  --><p class="noindent">where <!--  l. 1117  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="bold"><mi>r</mi></mstyle></math> is
+the displacement between the particles.
+</p><!--  l. 1119  --><p class="indent">   First, let us consider what this potential would be classically. The static
+Klein-Gordon equation for a delta-function source: </p><table class="equation"><tr><td>
+<!--  l. 1121  --><p class="indent">
+</p><!--  l. 1121  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-61002r84"></mstyle><!--  endlabel  -->
+<mo class="MathClass-open" stretchy="false">(</mo><msup><mrow><mi class="MathClass-op">∇</mi><mo> ⁡<!--  FUNCTION APPLICATION  --></mo></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">−</mo> <msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo><mi>ϕ</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>r</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mi>δ</mi></mrow><mrow><mn>3</mn></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>r</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">,</mo>
+</mrow></math></td><td class="eq-no">(3.84)</td></tr></table>
+<!--  l. 1124  --><p class="noindent">can be found via the Fourier transform to be: </p><table class="equation"><tr><td>
+<!--  l. 1126  --><p class="indent">
+</p><!--  l. 1126  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-61003r85"></mstyle><!--  endlabel  -->
+<mi>ϕ</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>r</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac>
+<mrow>
+<msup><mrow><mi>e</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mi mathvariant="italic">mr</mi></mrow></msup></mrow>
+<mrow>
+<mn>4</mn><mi mathvariant="italic">πr</mi></mrow></mfrac> <mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(3.85)</td></tr></table>
+<!--  l. 1129  --><p class="noindent">We can interpret this to be the profile of
+<!--  l. 1130  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>ϕ</mi></math> around
+a nucleon (the delta function source), and thus conversely the potential felt by
+another nucleon via the meson and the Yukawa interaction, under the assumption
+<!--  l. 1130  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>M</mi> <mo class="MathClass-rel" stretchy="false">≫</mo> <mi>m</mi></mrow></math>.
+This is entirely analogous to gauge potential
+<!--  l. 1131  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>A</mi></mrow><mrow><mn>0</mn></mrow></msub></math> in electrostatics
+generated by a <!--  l. 1131  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>δ</mi></math>-function
+source acting as the electric potential for a test charge.
+</p><!--  l. 1133  --><p class="indent">   Going back to our amplitude for nucleon-antinucleon scattering, the
+<!--  l. 1133  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi></math>-channel
+diagram vanishes in the nonrelativistic limit (which essentially
+means it does not have a simple classical interpretation), while the
+<!--  l. 1133  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi></math>-channel
+diagram actually stays the same: </p><table class="equation"><tr><td>
+<!--  l. 1134  --><p class="indent">
+</p><!--  l. 1134  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-61004r86"></mstyle><!--  endlabel  -->
+<mi>i</mi><mstyle mathvariant="script"><mi>M</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mo class="MathClass-bin" stretchy="false">−</mo><mi mathvariant="italic">ig</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">⋅</mo> <mfrac>
+<mrow>
+<mn>1</mn></mrow>
+<mrow><msup><mrow><mrow><mo fence="true" form="prefix">|</mo><mrow><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle> </mrow><mrow>
+<mi>f</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub>
+</mrow><mo fence="true" form="postfix">|</mo></mrow> </mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">−</mo> <msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(3.86)</td></tr></table>
+<!--  l. 1137  --><p class="noindent">Plugging this into the LHS of Eq. <a href="#x11-61001r83">3.83<!--  tex4ht:ref: eq:01_qft_interactions_born   --></a> and inverting the RHS integral gives us:
+</p><table class="equation"><tr><td>
+<!--  l. 1139  --><p class="indent">
+</p><!--  l. 1139  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-61005r87"></mstyle><!--  endlabel  -->
+<mi>U</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>r</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo> <mfrac>
+<mrow>
+<msup><mrow><mi>g</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow>
+<mrow>
+<mn>4</mn><msup><mrow><mi>M</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac> <mo class="MathClass-bin" stretchy="false">⋅</mo><mfrac>
+<mrow>
+<msup><mrow><mi>e</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mi mathvariant="italic">mr</mi></mrow></msup></mrow>
+<mrow>
+<mn>4</mn><mi mathvariant="italic">πr</mi></mrow></mfrac> <mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(3.87)</td></tr></table>
+<!--  l. 1142  --><p class="noindent">This is exactly the classical potential we found in Eq. <a href="#x11-61003r85">3.85<!--  tex4ht:ref: eq:01_qft_interactions_static_kg_solution   --></a>! It is weighted by the coupling
+constant <!--  l. 1144  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>g</mi></math>
+and <!--  l. 1144  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>M</mi></math>
+                                                                          
+
+                                                                          
+to get the correct dimensions, and with a minus sign telling us potential is
+attractive.
+</p><!--  l. 1146  --><p class="indent">   Thus, we are able to reproduce Newtonian forces from the nonrelativisict limit
+of QFT. We also have the new interpretation of forces as simply manifestations of
+interactions in the Lagrangian, occurring through the exchange of virtual
+particles.
+</p><!--  l. 1149  --><p class="indent">   This potential is called the <span class="ec-lmri-12">Yukawa potential</span>, describing a
+force mediated by a massive boson. As expected, in the limit
+<!--  l. 1150  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>m</mi> <mo class="MathClass-rel" stretchy="false">→</mo> <mn>0</mn></mrow></math>, we recover
+the familiar <!--  l. 1150  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>1</mn><mo class="MathClass-bin" stretchy="false">∕</mo><mi>r</mi></mrow></math>
+Coulomb potential, which is mediated by the massless photon. We can check that
+we obtain the same potential for nucleon-nucleon scattering and, more generally,
+that all forces mediated by scalars are attractive. In fact, this is true for spin-2
+particles as well, which is why gravity is universally attractive! On the
+other hand, forces mediated by spin-1 particles, such as EM, can be either
+attractive or repulsive, with the charges of the particles involved determining
+the sign of each diagram. See e.g. Zee QFT [<a href="bibnamemkbothMakeUppercasebibnameMakeUppercasebibname.html#XZee_2003mt">9</a>] Chapter I.5 for a useful
+discussion.
+</p><!--  l. 1156  --><p class="noindent">
+</p>
+<h5 class="subsubsectionHead" id="fourthorder-diagrams-and-loops"><a id="x11-62000"></a>Fourth-order diagrams and loops</h5>
+<!--  l. 1158  --><p class="noindent">So far, we have only considered <span class="ec-lmri-12">tree-level </span>diagrams, the simplest to calculate. This
+is in contrast to diagrams with <span class="ec-lmri-12">loops</span>, which can occur at higher order in
+perturbation theory. For example, at fourth-order we can have diagrams like those
+in Figure <a href="#an-example-of-a-higherorder-scattering-diagram-with-a-loop">3.6<!--  tex4ht:ref: fig:01_qft_interactions_feynman_loops   --></a> for nucleon scattering.
+</p><!--  l. 1162  --><p class="indent">   Such diagrams contribute integrals over the loop momentum
+<!--  l. 1162  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math> to
+the matrix element, which can notoriously diverge. To deal with this requires a
+process called <span class="ec-lmri-12">renormalization</span>, which, briefly, involves defining a cut-off energy
+scale <!--  l. 1163  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="normal">Λ</mi></math>
+for these integrals, beyond which we claim the theory is invalid. Experimentally,
+the main consequence is that physical parameters like the mass of particles and
+coupling constants in fact depend on the energy scale at which they are
+measured!
+</p>
+<figure class="figure">
+<!--  l. 1169  --><p class="noindent" id="an-example-of-a-higherorder-scattering-diagram-with-a-loop"><img alt="kkqiqiqfqfk1312122   " src="main-397e211e50b8d9206bd57e375cced491.svg"/>
+<a id="x11-62001r6"></a>
+</p>
+<figcaption class="caption"><span class="id">Figure 3.6: </span><span class="content">An example of a higher-order scattering diagram with a “loop”.
+</span></figcaption><!--  tex4ht:label?: x11-62001r6   -->
+</figure>
+<h4 class="subsectionHead" id="decay-rates-and-cross-sections"><span class="titlemark">3.3.4   </span> <a id="x11-630003.3.4"></a>Decay rates and cross sections</h4>
+<!--  l. 1198  --><p class="noindent">In this section, we translate our S-matrix elements to physical observables: cross
+sections and decay rates.
+</p><!--  l. 1201  --><p class="noindent">
+</p>
+<h5 class="subsubsectionHead" id="cross-section"><a id="x11-64000"></a>Cross section</h5>
+<!--  l. 1203  --><p class="noindent">Classically for a scattering experiment, the number of particles scattered
+<!--  l. 1203  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math> is related to the
+cross sectional area <!--  l. 1203  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>σ</mi></math>
+as: </p><table class="equation"><tr><td>
+<!--  l. 1204  --><p class="indent">
+</p><!--  l. 1204  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-64001r88"></mstyle><!--  endlabel  -->
+<mi>N</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi mathvariant="italic">σT</mi><mi mathvariant="normal">Φ</mi><mo class="MathClass-punc" stretchy="false">,</mo>
+</mrow></math></td><td class="eq-no">(3.88)</td></tr></table>
+<!--  l. 1207  --><p class="noindent">where <!--  l. 1208  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>T</mi></math> is the
+total time and <!--  l. 1208  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="normal">Φ</mi></math>
+is the flux of incoming particles (number of incoming particles
+per unit area and unit time). In QM, we define the cross section
+<!--  l. 1209  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>σ</mi></math>
+similarly, but in terms of the probability of scattering
+<!--  l. 1209  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>P</mi></math> instead
+of <!--  l. 1209  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math>:
+</p><table class="equation"><tr><td>
+<!--  l. 1210  --><p class="indent">
+</p><!--  l. 1210  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-64002r89"></mstyle><!--  endlabel  -->
+<mi>σ</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mi>P</mi></mrow>
+<mrow>
+<mi mathvariant="normal">Φ</mi><mi>T</mi></mrow></mfrac><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(3.89)</td></tr></table>
+<!--  l. 1213  --><p class="noindent">This is a more abstract quantity in QM, but it still has units of area. The number of scattering
+events <!--  l. 1215  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math> is related
+to <!--  l. 1215  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>σ</mi></math> by a factor we
+call the <span class="ec-lmri-12">luminosity </span><!--  l. 1215  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>L</mi></math>:
+</p><table class="equation"><tr><td>
+<!--  l. 1216  --><p class="indent">
+</p><!--  l. 1216  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-64003r90"></mstyle><!--  endlabel  -->
+<mi>N</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi mathvariant="italic">σL</mi><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(3.90)</td></tr></table>
+<!--  l. 1219  --><p class="noindent">Here, we simply consider this the definition of luminosity, but for a collider, for
+example, it can be derived from the properties of the input particle beams (as will
+be discussed in Part <span class="ec-lmbx-12">??</span>). Often, we are interested in the <span class="ec-lmri-12">differential cross section</span>
+<!--  l. 1221  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="italic">dσ</mi></mrow></math>
+with respect to kinematic variables like the solid angle
+<!--  l. 1221  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="normal">Ω</mi></math> or
+energy, so we write: </p><table class="equation"><tr><td>
+<!--  l. 1222  --><p class="indent">
+</p><!--  l. 1222  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-64004r91"></mstyle><!--  endlabel  -->
+<mi mathvariant="italic">dσ</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mi mathvariant="italic">dP</mi></mrow>
+<mrow>
+<mi mathvariant="normal">Φ</mi><mi>T</mi></mrow></mfrac><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(3.91)</td></tr></table>
+<!--  l. 1225  --><p class="noindent">
+</p><!--  l. 1227  --><p class="indent">   As in QM, this probability <!--  l. 1227  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>P</mi></math>
+is proportional to the square of the amplitude
+<!--  l. 1227  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mrow><mo fence="true" form="prefix">⟨</mo><mrow><mi>f</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>S</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>i</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow><msup><mrow><mo class="MathClass-rel" stretchy="false">|</mo></mrow><mrow><mn>2</mn></mrow></msup></mrow></math>:
+</p><table class="equation"><tr><td>
+<!--  l. 1228  --><p class="indent">
+</p><!--  l. 1228  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-64005r92"></mstyle><!--  endlabel  -->
+<mi mathvariant="italic">dP</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msup><mrow> <mrow><mo fence="true" form="prefix">|</mo><mrow><mrow><mo fence="true" form="prefix">⟨</mo><mrow><mi>f</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>S</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>i</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow></mrow><mo fence="true" form="postfix">|</mo></mrow></mrow><mrow><mn>2</mn></mrow></msup></mrow>
+<mrow>
+<mrow><mo fence="true" form="prefix">⟨</mo><mrow><mi>f</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>f</mi>
+</mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mrow><mo fence="true" form="prefix">⟨</mo><mrow><mi>i</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>i</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow></mrow></mfrac><mspace class="thinspace" width="0.17em"></mspace><mi>d</mi><mi mathvariant="normal">Π</mi><mo class="MathClass-punc" stretchy="false">,</mo>
+</mrow></math></td><td class="eq-no">(3.92)</td></tr></table>
+<!--  l. 1231  --><p class="noindent">where <!--  l. 1232  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mrow><mo fence="true" form="prefix">⟨</mo><mrow><mi>f</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>f</mi> </mrow><mo fence="true" form="postfix">⟩</mo></mrow></math>
+and <!--  l. 1232  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mrow><mo fence="true" form="prefix">⟨</mo><mrow><mi>i</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>i</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow></math>
+are the normalization factors for the final and initial states (they are not equal to
+<!--  l. 1232  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math> as discussed in
+Section <a href="Quantization.html#propagators-and-green-functions">3.2.5<!--  tex4ht:ref: sec:01_qft_quantization_propagators   --></a>), and <!--  l. 1232  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>d</mi><mi mathvariant="normal">Π</mi></mrow></math>
+is the differential region of final state momenta.
+</p><!--  l. 1234  --><p class="indent">   For the case of two incoming particles (which is what is most
+relevant for this dissertation), we can put all of this together to obtain
+the relation between differential cross section and the matrix element
+<!--  l. 1234  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="script"><mi>M</mi></mstyle></math>:
+</p><table class="equation"><tr><td>
+<!--  l. 1235  --><p class="indent">
+</p><!--  l. 1235  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-64006r93"></mstyle><!--  endlabel  -->
+<mi mathvariant="italic">dσ</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><msub><mrow><mi>E</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><msub><mrow><mi>E</mi></mrow><mrow><mn>2</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo> <mrow><mo fence="true" form="prefix">|</mo><mrow><msub><mrow><mstyle mathvariant="bold"><mi>v</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo><msub><mrow><mstyle mathvariant="bold"><mi>v</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub></mrow><mo fence="true" form="postfix">|</mo></mrow> </mrow></mfrac><msup><mrow> <mrow><mo fence="true" form="prefix">|</mo><mrow><mstyle mathvariant="script"><mi>M</mi></mstyle></mrow><mo fence="true" form="postfix">|</mo></mrow></mrow><mrow><mn>2</mn></mrow></msup><mi>d</mi><msub><mrow><mi mathvariant="normal">Π</mi></mrow><mrow><mstyle mathvariant="normal">
+<mi>LIPS</mi></mstyle></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo>
+</mrow></math></td><td class="eq-no">(3.93)</td></tr></table>
+<!--  l. 1238  --><p class="noindent">where <!--  l. 1239  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>E</mi></mrow><mrow><mn>1</mn></mrow></msub></math> and
+<!--  l. 1239  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>E</mi></mrow><mrow><mn>2</mn></mrow></msub></math> are the energies of the
+incoming particles, <!--  l. 1239  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="bold"><mi>v</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub></math>
+and <!--  l. 1239  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="bold"><mi>v</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub></math> are their
+velocities, and <!--  l. 1239  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>d</mi><msub><mrow><mi mathvariant="normal">Π</mi></mrow><mrow><mstyle mathvariant="normal"><mi>LIPS</mi></mstyle></mrow></msub></mrow></math>
+is called the Lorentz-invariant phase space of the final state momenta:
+</p><table class="equation"><tr><td>
+<!--  l. 1240  --><p class="indent">
+</p><!--  l. 1240  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-64007r94"></mstyle><!--  endlabel  -->
+<mi>d</mi><msub><mrow><mi mathvariant="normal">Π</mi></mrow><mrow><mstyle mathvariant="normal"><mi>LIPS</mi></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>π</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>4</mn></mrow></msup><msup><mrow><mi>δ</mi></mrow><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>4</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><mi mathvariant="normal">Σ</mi><mi>p</mi><mo class="MathClass-close" stretchy="false">)</mo><munder class="msub"><mrow><mo> ∏</mo>
+</mrow><mrow><mstyle mathvariant="normal"><mi>final</mi><mspace class="nbsp" width="0.33em"></mspace><mi>states</mi></mstyle><mspace class="nbsp" width="0.33em"></mspace><mi>j</mi></mrow></munder> <mfrac>
+<mrow>
+<msup><mrow><mi>d</mi></mrow><mrow><mn>3</mn></mrow></msup><msub><mrow><mi>p</mi></mrow><mrow>
+<mi>j</mi></mrow></msub></mrow>
+<mrow><msup><mrow>
+<mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>π</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>3</mn></mrow></msup></mrow></mfrac> <mfrac>
+<mrow>
+<mn>1</mn></mrow>
+<mrow>
+<mn>2</mn><msub><mrow><mi>E</mi></mrow><mrow><mi>j</mi></mrow></msub></mrow></mfrac>
+</mrow></math></td><td class="eq-no">(3.94)</td></tr></table>
+<!--  l. 1243  --><p class="noindent">
+</p><!--  l. 1245  --><p class="indent">   For the case of <!--  l. 1245  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>2</mn> <mo class="MathClass-rel" stretchy="false">→</mo> <mn>2</mn></mrow></math>
+scattering, in the COM frame, this simplifies considerably: </p><table class="equation"><tr><td>
+<!--  l. 1246  --><p class="indent">
+</p><!--  l. 1246  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-64008r95"></mstyle><!--  endlabel  -->
+<mstyle mathsize="2.03em"><mrow><mo fence="true" form="prefix">(</mo><mrow></mrow><mo fence="true" form="postfix"></mo></mrow></mstyle>
+<mfrac>
+<mrow>
+<mi mathvariant="italic">dσ</mi></mrow>
+<mrow>
+<mi>d</mi><mi mathvariant="normal">Ω</mi></mrow></mfrac><msub><mrow>
+<mstyle mathsize="2.03em"><mrow><mo fence="true" form="prefix">)</mo><mrow></mrow><mo fence="true" form="postfix"></mo></mrow></mstyle>
+</mrow><mrow><mstyle mathvariant="normal"><mi>CM</mi></mstyle></mrow></msub>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>64</mn><msup><mrow><mi>π</mi></mrow><mrow><mn>2</mn></mrow></msup><msubsup><mrow><mi>E</mi></mrow><mrow><mstyle mathvariant="normal"><mi>CM</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msubsup></mrow></mfrac><mspace class="thinspace" width="0.17em"></mspace><mfrac>
+<mrow>
+<mrow><mo fence="true" form="prefix">|</mo><mrow><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mi>f</mi></mrow></msub>
+</mrow><mo fence="true" form="postfix">|</mo></mrow> </mrow>
+<mrow>
+<mrow><mo fence="true" form="prefix">|</mo><mrow><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub>
+</mrow><mo fence="true" form="postfix">|</mo></mrow> </mrow></mfrac><msup><mrow> <mrow><mo fence="true" form="prefix">|</mo><mrow><mstyle mathvariant="script"><mi>M</mi></mstyle></mrow><mo fence="true" form="postfix">|</mo></mrow></mrow><mrow><mn>2</mn></mrow></msup><mi>𝜃</mi><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>E</mi></mrow><mrow><mstyle mathvariant="normal">
+<mi>CM</mi></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>m</mi></mrow><mrow><mn>3</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>m</mi></mrow><mrow><mn>4</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">,</mo>
+</mrow></math></td><td class="eq-no">(3.95)</td></tr></table>
+<!--  l. 1249  --><p class="noindent">and even more so when the all four masses are equal: </p><table class="equation"><tr><td>
+<!--  l. 1251  --><p class="indent">
+</p><!--  l. 1251  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-64009r96"></mstyle><!--  endlabel  -->
+<mstyle mathsize="2.03em"><mrow><mo fence="true" form="prefix">(</mo><mrow></mrow><mo fence="true" form="postfix"></mo></mrow></mstyle>
+<mfrac>
+<mrow>
+<mi mathvariant="italic">dσ</mi></mrow>
+<mrow>
+<mi>d</mi><mi mathvariant="normal">Ω</mi></mrow></mfrac><msub><mrow>
+<mstyle mathsize="2.03em"><mrow><mo fence="true" form="prefix">)</mo><mrow></mrow><mo fence="true" form="postfix"></mo></mrow></mstyle>
+</mrow><mrow><mstyle mathvariant="normal"><mi>CM</mi></mstyle></mrow></msub>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>64</mn><msup><mrow><mi>π</mi></mrow><mrow><mn>2</mn></mrow></msup><msubsup><mrow><mi>E</mi></mrow><mrow><mstyle mathvariant="normal"><mi>CM</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msubsup></mrow></mfrac><mspace class="thinspace" width="0.17em"></mspace><msup><mrow> <mrow><mo fence="true" form="prefix">|</mo><mrow><mstyle mathvariant="script"><mi>M</mi></mstyle></mrow><mo fence="true" form="postfix">|</mo></mrow></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(3.96)</td></tr></table>
+<!--  l. 1254  --><p class="noindent">
+</p><!--  l. 1256  --><p class="indent">   For nucleon-nucleon scattering in the COM frame, for example, we have (at
+tree level): </p><table class="equation"><tr><td>
+<!--  l. 1257  --><p class="indent">
+</p><!--  l. 1257  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-64010r97"></mstyle><!--  endlabel  -->
+<mtable class="equation"><mtr><mtd>
+<mtable class="split" columnalign="right left">
+<mtr class="split-mtr"><mtd class="split-mtd"> <mstyle mathsize="2.03em"><mrow><mo fence="true" form="prefix">(</mo><mrow></mrow><mo fence="true" form="postfix"></mo></mrow></mstyle><mfrac><mrow><mi mathvariant="italic">dσ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>𝜃</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow>
+<mrow>
+<mi>d</mi><mi mathvariant="normal">Ω</mi></mrow></mfrac><msub><mrow> <mstyle mathsize="2.03em"><mrow><mo fence="true" form="prefix">)</mo><mrow></mrow><mo fence="true" form="postfix"></mo></mrow></mstyle></mrow><mrow><mstyle mathvariant="normal"><mi>CM</mi></mstyle></mrow></msub></mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msup><mrow><mi>g</mi></mrow><mrow><mn>4</mn></mrow></msup></mrow>
+<mrow>
+<mn>64</mn><mi>π</mi><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>E</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow> <mfrac>
+<mrow>
+<mn>1</mn></mrow>
+<mrow>
+<mi>t</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mi>u</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow><mn>2</mn></mrow></msup></mtd>
+</mtr><mtr class="split-mtr"><mtd class="split-mtd"> </mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msup><mrow><mi>g</mi></mrow><mrow><mn>4</mn></mrow></msup></mrow>
+<mrow>
+<mn>64</mn><mi>π</mi><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>E</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac><msup><mrow> <mrow><mo fence="true" form="prefix">[</mo><mrow> <mfrac>
+<mrow>
+<mn>1</mn></mrow>
+<mrow>
+<mn>2</mn><msup><mrow><mi>p</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn> <mo class="MathClass-bin" stretchy="false">−</mo><mi class="qopname"> cos</mi><mo> ⁡<!--  FUNCTION APPLICATION  --> </mo><!--  nolimits  --> <mi>𝜃</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">−</mo> <msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn><msup><mrow><mi>p</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn> <mo class="MathClass-bin" stretchy="false">+</mo><mi class="qopname"> cos</mi><mo> ⁡<!--  FUNCTION APPLICATION  --> </mo><!--  nolimits  --> <mi>𝜃</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">−</mo> <msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac> </mrow><mo fence="true" form="postfix">]</mo></mrow> </mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+</mtr></mtable>
+</mtd><mtd>
+</mtd></mtr></mtable>
+</mrow></math></td><td class="eq-no">(3.97)</td></tr></table>
+<!--  l. 1263  --><p class="noindent">where we used the expressions for <!--  l. 1264  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi></math>
+and <!--  l. 1264  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>u</mi></math>
+for a collision along the z-axis from Eq. <a href="#x11-59005r81">3.81<!--  tex4ht:ref: eq:01_qft_interactions_mandelstam_com   --></a>.
+                                                                          
+
+                                                                          
+</p><!--  l. 1266  --><p class="noindent">
+</p>
+<h5 class="subsubsectionHead" id="decay-rate"><a id="x11-65000"></a>Decay rate</h5>
+<!--  l. 1268  --><p class="noindent">The other type of process we are interested in are decays. The decay rate
+<!--  l. 1269  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="normal">Γ</mi></math> is
+simply the probability of decay per unit time: </p><table class="equation"><tr><td>
+<!--  l. 1270  --><p class="indent">
+</p><!--  l. 1270  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-65001r98"></mstyle><!--  endlabel  -->
+<mi mathvariant="normal">Γ</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mi>P</mi></mrow>
+<mrow>
+<mi>T</mi></mrow></mfrac><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(3.98)</td></tr></table>
+<!--  l. 1273  --><p class="noindent">Using our expression for <!--  l. 1274  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>P</mi></math>
+from above and simplifying, we find: </p><table class="equation"><tr><td>
+<!--  l. 1275  --><p class="indent">
+</p><!--  l. 1275  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-65002r99"></mstyle><!--  endlabel  -->
+<mi>d</mi><mi mathvariant="normal">Γ</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn><mi>m</mi></mrow></mfrac><msup><mrow> <mrow><mo fence="true" form="prefix">|</mo><mrow><mstyle mathvariant="script"><mi>M</mi></mstyle></mrow><mo fence="true" form="postfix">|</mo></mrow></mrow><mrow><mn>2</mn></mrow></msup><mi>d</mi><msub><mrow><mi mathvariant="normal">Π</mi></mrow><mrow><mstyle mathvariant="normal">
+<mi>LIPS</mi></mstyle></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo>
+</mrow></math></td><td class="eq-no">(3.99)</td></tr></table>
+<!--  l. 1278  --><p class="noindent">in the rest frame of the decaying particle, where
+<!--  l. 1279  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>m</mi></math>
+is its mass. If multiple decays of the same particle are possible, we
+sum over the final states in the phase space integral. The total
+<!--  l. 1281  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="normal">Γ</mi></math> is then called the <span class="ec-lmri-12">width</span>
+of the particle, and <!--  l. 1281  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>1</mn><mo class="MathClass-bin" stretchy="false">∕</mo><mi mathvariant="normal">Γ</mi> <mo class="MathClass-rel" stretchy="false">≡</mo> <mi>τ</mi></mrow></math>
+is its half-life.
+</p><!--  l. 1283  --><p class="indent">   For our simple meson decay <!--  l. 1283  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>ϕ</mi> <mo class="MathClass-rel" stretchy="false">→</mo> <msup><mrow><mi>ψ</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msup><mi>ψ</mi></mrow></math>,
+we have at tree level: </p><table class="equation"><tr><td>
+<!--  l. 1284  --><p class="indent">
+</p><!--  l. 1284  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x11-65003r100"></mstyle><!--  endlabel  -->
+<mi>d</mi><mi mathvariant="normal">Γ</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msup><mrow><mi>g</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow>
+<mrow>
+<mn>2</mn><mi>m</mi></mrow></mfrac><mi>d</mi><msub><mrow><mi mathvariant="normal">Π</mi></mrow><mrow><mstyle mathvariant="normal"><mi>LIPS</mi></mstyle></mrow></msub><mspace class="quad" width="1em"></mspace> <mo class="MathClass-rel" stretchy="false">⇒</mo><mspace class="quad" width="1em"></mspace><mi mathvariant="normal">Γ</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msup><mrow><mi>g</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow>
+<mrow>
+<mn>32</mn><mi mathvariant="italic">πm</mi></mrow></mfrac><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mn>1</mn> <mo class="MathClass-bin" stretchy="false">−</mo><mfrac><mrow><mn>4</mn><msup><mrow><mi>M</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow>
+<mrow><msup><mrow>
+<mi>m</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow><mn>1</mn><mo class="MathClass-bin" stretchy="false">∕</mo><mn>2</mn></mrow></msup><mo class="MathClass-punc" stretchy="false">,</mo>
+</mrow></math></td><td class="eq-no">(3.100)</td></tr></table>
+<!--  l. 1287  --><p class="noindent">where we performed the integral over <!--  l. 1288  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>d</mi><msub><mrow><mi mathvariant="normal">Π</mi></mrow><mrow><mstyle mathvariant="normal"><mi>LIPS</mi></mstyle></mrow></msub></mrow></math>
+(see Ref. [<a href="bibnamemkbothMakeUppercasebibnameMakeUppercasebibname.html#XXianyuPSSolutions">35</a>] 4.2). This is in fact not too far off the expression for the decay width of
+the Higgs boson to fermions. What we are missing of course is that fermions are
+spin-<!--  l. 1290  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac></math>
+particles, and we need to sum over their spin states. We will derive the correct
+expression (at tree level) in the next section.
+                                                                          
+
+                                                                          
+</p>
+<nav class="crosslinks-bottom"> <a href="Quantization.html">Previous</a> <a href="Spinorfieldtheory.html">Next</a> </nav> <div class="footnotes"><a id="x11-51002x3.3.2"></a>
+<!--  l. 799  --><p class="indent"> <span class="footnote-mark"><a href="#fn16x4-bk" id="fn16x4"><sup class="textsuperscript">7</sup></a></span><span class="ec-lmr-10">This point is well emphasized in Aneesh Manohar’s notes on EFT [</span><a href="bibnamemkbothMakeUppercasebibnameMakeUppercasebibname.html#XManohar_2018aog"><span class="ec-lmr-10">28</span></a><span class="ec-lmr-10">].</span></p><a id="x11-51004x3.3.2"></a>
+<!--  l. 803  --><p class="indent"> <span class="footnote-mark"><a href="#fn17x4-bk" id="fn17x4"><sup class="textsuperscript">8</sup></a></span><span class="ec-lmr-10">Useful discussions of this can be found in Peskin and Schroeder [</span><a href="bibnamemkbothMakeUppercasebibnameMakeUppercasebibname.html#XPeskin_1995ev"><span class="ec-lmr-10">10</span></a><span class="ec-lmr-10">] Chapter 7 and
+Schwartz [</span><a href="bibnamemkbothMakeUppercasebibnameMakeUppercasebibname.html#XSchwartz_2014sze"><span class="ec-lmr-10">16</span></a><span class="ec-lmr-10">] Chapter 6.</span></p><a id="x11-53005x"></a>
+<!--  l. 850  --><p class="indent"> <span class="footnote-mark"><a href="#fn18x4-bk" id="fn18x4"><sup class="textsuperscript">9</sup></a></span><span class="ec-lmr-10">Often we simply define the “interesting” part as</span>
+<!--  l. 850  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow> <mrow><mo fence="true" form="prefix">⟨</mo><mrow><mi>f</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>S</mi> <mo class="MathClass-bin" stretchy="false">−</mo><mi>𝟙</mi><mo class="MathClass-rel" stretchy="false">|</mo><mi>i</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">≡</mo> <mi mathvariant="italic">iT</mi></mrow></math> <span class="ec-lmr-10">and focus on
+calculating </span><!--  l. 850  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>T</mi></math><span class="ec-lmr-10">.</span></p><a id="x11-56003x10"></a>
+<!--  l. 936  --><p class="indent"> <span class="footnote-mark"><a href="#fn19x4-bk" id="fn19x4"><sup class="textsuperscript">10</sup></a></span><span class="ec-lmr-10">These are derived nicely in Peskin and Schroeder [</span><a href="bibnamemkbothMakeUppercasebibnameMakeUppercasebibname.html#XPeskin_1995ev"><span class="ec-lmr-10">10</span></a><span class="ec-lmr-10">] Chapter 4.7, albeit with
+fermionic electrons instead of our scalar “nucleons”.</span></p><a id="x11-60004x"></a>
+<!--  l. 1094  --><p class="indent"> <span class="footnote-mark"><a href="#fn20x4-bk" id="fn20x4"><sup class="textsuperscript">11</sup></a></span><span class="ec-lmr-10">We are saved from this potential infinity by a factor to be added to the denominator
+due to meson decay (Tong SM [</span><a href="bibnamemkbothMakeUppercasebibnameMakeUppercasebibname.html#XTongSM"><span class="ec-lmr-10">5</span></a><span class="ec-lmr-10">] Chapter 3.5).</span></p> </div><div class="footer"><p>Copyright © 2024 Raghav Kansal. All rights reserved.</p></div></main>
+</body>
+</html>

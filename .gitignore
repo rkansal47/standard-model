@@ -1,7 +1,0 @@
-main*
-!main.tex
-MWE*
-.DS_Store
-website
-build
-*.html

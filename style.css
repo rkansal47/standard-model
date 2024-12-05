@@ -4,7 +4,7 @@
 /* *** Fonts  *** */
 /* ************** */
 
-/* Font size tricks from https://www.madebymike.com.au/writing/precise-control-responsive-typography/ 
+/* Font size tricks from https://www.madebymike.com.au/writing/precise-control-responsive-typography/
  * The font size will be adjusted to the screen size.
  * */
 :root{
@@ -100,8 +100,8 @@ p.indent, p.noindent{text-indent:0}
 /* code{font-size:1.4rem;} */
 /* figure pre.listings{font-size: 1.4rem;} */
 figure.texsource, figure.shellcommand, figure.htmlsource, figure.luasource, figure.textsource{
-  margin:0.5rem 0; 
-  padding-left:0.5rem; 
+  margin:0.5rem 0;
+  padding-left:0.5rem;
   overflow:auto;
 }
 figure pre.listings{font-size: 1em;}
@@ -131,7 +131,7 @@ nav.TOC a, nav.TOC a:visited{
 /* ************** */
 
 
-body{background-color:#001d3d;} 
+body{background-color:#001d3d;}
 
 main.main-content, div.maketitle{
   background-color:white;
@@ -140,6 +140,7 @@ main.main-content, div.maketitle{
 nav.TOC,nav.TOC a, nav.TOC a:visited{
   background-color:#f8f9fa;
   color:#03071e;
+  transition: 0.3s;
 }
 
 nav.toc span{
@@ -154,6 +155,7 @@ nav.TOC span:hover, nav.TOC span:hover *{
 
 nav.TOC.mainToc a:hover{
   background-color:#f8f9fa;
+  transition: 0.3s;
 }
 
 /* ***************** */
@@ -193,4 +195,3 @@ nav.TOC.mainToc a:hover{
     color: #666;
   }
 }
-

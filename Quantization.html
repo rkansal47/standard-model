@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+
+<html lang="en-US" xml:lang="en-US">
+<head><title>Quantization</title>
+<meta charset="utf-8"/>
+<meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="main.css" rel="stylesheet" type="text/css"/>
+<meta content="main.tex" name="src"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="icon.png" rel="icon" type="image/x-icon"/>
+</head><body>
+<nav class="TOC"><span class="mainToc"><a href="index.html"><img alt="Symmetries, QFT, &amp; The Standard Model" src="logo.png" width="100%"/></a></span>
+<span class="likechapterToc"><a href="contentsname.html#contents">Contents</a></span>
+<span class="chapterToc">1 <a href="Introduction.html#introduction">Introduction</a></span>
+<span class="chapterToc">2 <a href="Symmetriesinphysics.html#symmetries-in-physics">Symmetries in physics</a></span>
+<span class="chapterToc">3 <a href="Quantumfieldtheory.html#quantum-field-theory">Quantum field theory</a></span>
+<span class="sectionToc">3.1 <a href="Classicalfieldtheory.html#classical-field-theory">Classical field theory</a></span>
+<span class="sectionToc">3.2 <a href="#quantization">Quantization</a></span>
+<span class="subsectionToc">3.2.1 <a href="#canonical-quantization">Canonical quantization</a></span>
+<span class="subsectionToc">3.2.2 <a href="#the-hamiltonian-and-the-vacuum-catastrophe">The Hamiltonian and the vacuum catastrophe</a></span>
+<span class="subsectionToc">3.2.3 <a href="#particles">Particles</a></span>
+<span class="subsectionToc">3.2.4 <a href="#the-complex-scalar-field-and-antiparticles">The complex scalar field and antiparticles</a></span>
+<span class="subsectionToc">3.2.5 <a href="#propagators-and-green-functions">Propagators and Green functions</a></span>
+<span class="sectionToc">3.3 <a href="Interactions.html#interactions">Interactions</a></span>
+<span class="sectionToc">3.4 <a href="Spinorfieldtheory.html#spinor-field-theory">Spinor field theory</a></span>
+<span class="sectionToc">3.5 <a href="Gaugetheories.html#gauge-theories">Gauge theories</a></span>
+<span class="sectionToc">3.6 <a href="TheABEGHHKHiggsmechanism.html#the-abeghhk-higgs-mechanism">The ABEGHHK (Higgs) mechanism</a></span>
+<span class="chapterToc">4 <a href="TheStandardModel.html#the-standard-model">The Standard Model</a></span>
+<span class="likechapterToc"><a href="bibnamemkbothMakeUppercasebibnameMakeUppercasebibname.html#bibliography">Bibliography</a></span>
+</nav>
+<main class="main-content">
+<nav class="crosslinks-top"> <a href="Classicalfieldtheory.html">Previous</a> <a href="Interactions.html">Next</a> </nav>
+<h3 class="sectionHead" id="quantization"><span class="titlemark">3.2   </span> <a id="x10-320003.2"></a>Quantization</h3>
+<!--  l. 417  --><p class="noindent">In this section, we briefly sketch <span class="ec-lmri-12">canonical quantization</span>, a process of turning
+a classical field theory into a QFT. It is based on the Hamiltonian
+formalism, in close analogy to the quantization of classical mechanics
+<!--  l. 418  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow> <mo class="MathClass-rel" stretchy="false">→</mo></mrow></math> QM.
+The result makes manifest the connection between quantum fields and their
+associated particles.
+</p><!--  l. 421  --><p class="indent">   An alternative quantization approach not discussed here is based on the path
+integral formulation (see Section <a href="Classicalfieldtheory.html#x9-21000doc">3.1.1.0<!--  tex4ht:ref: sec:01_qft_classical_path_integral   --></a>). As with most alternative mathematical
+                                                                          
+
+                                                                          
+prescriptions of the same physics, it provides useful insight into the theory and
+can simplify certain calculations. Further detail can be found, for example, in
+Peskin and Schroeder [<a href="bibnamemkbothMakeUppercasebibnameMakeUppercasebibname.html#XPeskin_1995ev">10</a>] Chapter 9.
+</p><!--  l. 425  --><p class="noindent">
+</p>
+<h4 class="subsectionHead" id="canonical-quantization"><span class="titlemark">3.2.1   </span> <a id="x10-330003.2.1"></a>Canonical quantization</h4>
+<!--  l. 427  --><p class="noindent">The process of quantizing a classical system in QM can be summarized as (1)
+promoting the canonical coordinates to quantum operators, and (2) imposing the
+canonical Poisson bracket relations as quantum commutator relations:
+</p><table class="equation"><tr><td>
+<!--  l. 428  --><p class="indent">
+</p><!--  l. 428  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x10-33001r41"></mstyle><!--  endlabel  -->
+<mtable class="equation"><mtr><mtd>
+<mtable class="split" columnalign="right left">
+<mtr class="split-mtr"><mtd class="split-mtd"> <mi>x</mi> <mo class="MathClass-rel" stretchy="false">→</mo><mover accent="true"><mrow><mi>x</mi></mrow><mo accent="true">^</mo></mover><mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+<mtd class="split-mtd"><mspace class="quad" width="1em"></mspace><mi>p</mi> <mo class="MathClass-rel" stretchy="false">→</mo><mover accent="true"><mrow><mi>p</mi></mrow><mo accent="true">^</mo></mover><mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+</mtr><mtr class="split-mtr"><mtd class="split-mtd"> <mo class="MathClass-open" stretchy="false">{</mo><mi>x</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>p</mi><mo class="MathClass-close" stretchy="false">}</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn></mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">→</mo> <mo class="MathClass-open" stretchy="false">[</mo><mover accent="true"><mrow><mi>x</mi></mrow><mo accent="true">^</mo></mover><mo class="MathClass-punc" stretchy="false">,</mo><mover accent="true"><mrow><mi>p</mi></mrow><mo accent="true">^</mo></mover><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>i</mi><mo class="MathClass-ord">ℏ</mo><mo class="MathClass-punc" stretchy="false">.</mo></mtd>
+</mtr></mtable>
+</mtd><mtd>
+</mtd></mtr></mtable>
+</mrow></math></td><td class="eq-no">(3.41)</td></tr></table>
+<!--  l. 434  --><p class="noindent">Canonical quantization of a field theory is done analogously, with fields becoming
+operator-valued and obeying their own canonical commutation relations based on
+Eq. <a href="Classicalfieldtheory.html#x9-30003r34">3.34<!--  tex4ht:ref: eq:01_qft_hamiltonian_canonical_poisson   --></a>.
+For our free scalar field theory (Eq. <a href="Classicalfieldtheory.html#x9-23001r10">3.10<!--  tex4ht:ref: eq:01_qft_field_kg_lagrangian   --></a>), this means promoting the
+integration constants in the classical solution (Eq. <a href="Classicalfieldtheory.html#x9-25003r17">3.17<!--  tex4ht:ref: eq:01_qft_field_kg_solutions_final   --></a> and <a href="Classicalfieldtheory.html#x9-31001r39">3.39<!--  tex4ht:ref: eq:01_qft_hamiltonian_kg_momenta   --></a>) to operators:
+</p><table class="equation"><tr><td>
+<!--  l. 438  --><p class="indent">
+</p><!--  l. 438  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x10-33002r42"></mstyle><!--  endlabel  -->
+<mtable class="equation"><mtr><mtd>
+<mtable class="split" columnalign="right left">
+<mtr class="split-mtr"><mtd class="split-mtd"> <mi>ϕ</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo class="MathClass-punc" stretchy="false">,</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo></mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">=</mo><mo> ∫
+ <!--  nolimits  --></mo><!--  nolimits  --> <mfrac><mrow><msup><mrow><mi>d</mi></mrow><mrow><mn>3</mn></mrow></msup><mi>p</mi></mrow>
+<mrow><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>π</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>3</mn>
+</mrow></msup></mrow></mfrac> <mfrac>
+<mrow>
+<mn>1</mn></mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>2</mn><msub><mrow><mi>ω</mi></mrow><mrow><mi>p</mi></mrow></msub></mrow></msqrt></mrow></mfrac><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mi>e</mi></mrow><mrow><mi mathvariant="italic">ip</mi><mo class="MathClass-bin" stretchy="false">⋅</mo><mi>x</mi></mrow></msup> <mo class="MathClass-bin" stretchy="false">+</mo><msubsup><mrow> <mi>â</mi></mrow><mrow><mstyle mathvariant="bold">
+<mi>p</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mi>e</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mi mathvariant="italic">ip</mi><mo class="MathClass-bin" stretchy="false">⋅</mo><mi>x</mi></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+</mtr><mtr class="split-mtr"><mtd class="split-mtd"> <mi>π</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo class="MathClass-punc" stretchy="false">,</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo></mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mi>i</mi><mo>∫
+ <!--  nolimits  --></mo><!--  nolimits  --> <mfrac><mrow><msup><mrow><mi>d</mi></mrow><mrow><mn>3</mn></mrow></msup><mi>p</mi></mrow>
+<mrow><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>π</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>3</mn>
+</mrow></msup></mrow></mfrac><msqrt><mrow>
+<mfrac>
+<mrow><msub><mrow>
+<mi>ω</mi></mrow><mrow><mi>p</mi></mrow></msub></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac></mrow></msqrt> <mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mi>e</mi></mrow><mrow><mi mathvariant="italic">ip</mi><mo class="MathClass-bin" stretchy="false">⋅</mo><mi>x</mi></mrow></msup> <mo class="MathClass-bin" stretchy="false">−</mo><msubsup><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold">
+<mi>p</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mi>e</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mi mathvariant="italic">ip</mi><mo class="MathClass-bin" stretchy="false">⋅</mo><mi>x</mi></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+</mtr></mtable>
+</mtd><mtd>
+</mtd></mtr></mtable>
+</mrow></math></td><td class="eq-no">(3.42)</td></tr></table>
+<!--  l. 444  --><p class="noindent">where again <!--  l. 445  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>p</mi> <mo class="MathClass-bin" stretchy="false">⋅</mo> <mi>x</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>p</mi></mrow><mrow><mi>μ</mi></mrow></msub><msup><mrow><mi>x</mi></mrow><mrow><mi>μ</mi></mrow></msup></mrow></math>
+is the 4D spacetime inner product and
+<!--  l. 445  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mrow><mi>p</mi></mrow><mrow><mi>μ</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>ω</mi></mrow><mrow><mi>p</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msqrt><mrow><msup><mrow>
+<mrow><mo fence="true" form="prefix">|</mo><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle>
+</mrow><mo fence="true" form="postfix">|</mo></mrow></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">+</mo> <msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></msqrt><mo class="MathClass-punc" stretchy="false">,</mo><mstyle mathvariant="bold"><mi>p</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>. Recall that the
+integration constants <!--  l. 446  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>a</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>p</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>
+and <!--  l. 446  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msup><mrow><mi>a</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>p</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>
+arose from a SHO equation for each momentum
+<!--  l. 446  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace></mrow></math>
+(Eq. <a href="Classicalfieldtheory.html#x9-25002r16">3.16<!--  tex4ht:ref: eq:01_qft_field_kg_sho   --></a>); thus, quantized, we expect them to correspond to the raising
+(<!--  l. 446  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mi>â</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msup></math>) and
+lowering (<!--  l. 446  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>â</mi></math>)
+operators of a quantum harmonic oscillator (QHO), again one for each momentum
+mode <!--  l. 446  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="bold"><mi>p</mi></mstyle></math>.
+                                                                          
+
+                                                                          
+We can check this by deriving their commutation relations. Indeed, imposing
+the canonical commutation relationships: </p><table class="equation"><tr><td>
+<!--  l. 451  --><p class="indent">
+</p><!--  l. 451  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x10-33003r43"></mstyle><!--  endlabel  -->
+<mo class="MathClass-open" stretchy="false">[</mo><mi>ϕ</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo class="MathClass-punc" stretchy="false">,</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">,</mo><mi>ϕ</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>y</mi></mstyle><mo class="MathClass-punc" stretchy="false">,</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">[</mo><mi>π</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo class="MathClass-punc" stretchy="false">,</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">,</mo><mi>π</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>y</mi></mstyle><mo class="MathClass-punc" stretchy="false">,</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="quad" width="1em"></mspace><mo class="MathClass-open" stretchy="false">[</mo><mi>ϕ</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo class="MathClass-punc" stretchy="false">,</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">,</mo><mi>π</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>y</mi></mstyle><mo class="MathClass-punc" stretchy="false">,</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>i</mi><msup><mrow><mi>δ</mi></mrow><mrow><mn>3</mn></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle> <mo class="MathClass-bin" stretchy="false">−</mo><mstyle mathvariant="bold"><mi>y</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">,</mo>
+</mrow></math></td><td class="eq-no">(3.43)</td></tr></table>
+<!--  l. 454  --><p class="noindent">reproduces (continuous versions of) the raising and lowering operator
+commutation relationships for a QHO: </p><table class="equation"><tr><td>
+<!--  l. 456  --><p class="indent">
+</p><!--  l. 456  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x10-33004r44"></mstyle><!--  endlabel  -->
+<mo class="MathClass-open" stretchy="false">[</mo><msub><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold"><mi>q</mi></mstyle></mrow></msub><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">[</mo><msubsup><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mo class="MathClass-punc" stretchy="false">,</mo><msubsup><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold">
+<mi>q</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="quad" width="1em"></mspace><mo class="MathClass-open" stretchy="false">[</mo><msub><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold">
+<mi>p</mi></mstyle></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msubsup><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold"><mi>q</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>π</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>3</mn></mrow></msup><msup><mrow><mi>δ</mi></mrow><mrow><mn>3</mn></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>p</mi></mstyle> <mo class="MathClass-bin" stretchy="false">−</mo><mstyle mathvariant="bold"><mi>q</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(3.44)</td></tr></table>
+<!--  l. 459  --><p class="noindent">Next, we look at the commutators with the Hamiltonian and the resulting Hilbert
+space.
+</p><!--  l. 462  --><p class="noindent">
+</p>
+<h4 class="subsectionHead" id="the-hamiltonian-and-the-vacuum-catastrophe"><span class="titlemark">3.2.2   </span> <a id="x10-340003.2.2"></a>The Hamiltonian and the vacuum catastrophe</h4>
+<!--  l. 465  --><p class="noindent">The quantized Hamiltonian, from Eq. <a href="Classicalfieldtheory.html#x9-31002r40">3.40<!--  tex4ht:ref: eq:01_qft_hamiltonian_kg   --></a>, can be found to be: </p><table class="equation"><tr><td>
+<!--  l. 466  --><p class="indent">
+</p><!--  l. 466  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x10-34001r45"></mstyle><!--  endlabel  -->
+<mtable class="equation"><mtr><mtd>
+<mtable class="split" columnalign="right left">
+<mtr class="split-mtr"><mtd class="split-mtd"> <mi>H</mi></mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">=</mo><mo> ∫
+ <!--  nolimits  --></mo><!--  nolimits  --><msup><mrow><mi>d</mi></mrow><mrow><mn>3</mn></mrow></msup><mi>x</mi><mspace class="nbsp" width="0.33em"></mspace> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msup><mrow><mi>π</mi></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡<!--  FUNCTION APPLICATION  --></mo><mi>ϕ</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn></mrow></msup><msup><mrow><mi>ϕ</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow><mo fence="true" form="postfix">)</mo></mrow></mtd>
+</mtr><mtr class="split-mtr"><mtd class="split-mtd"> </mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">=</mo><mo> ∫
+ <!--  nolimits  --></mo><!--  nolimits  --> <mfrac><mrow><msup><mrow><mi>d</mi></mrow><mrow><mn>3</mn></mrow></msup><mi>p</mi></mrow>
+<mrow><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>π</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>3</mn>
+</mrow></msup></mrow></mfrac><msub><mrow><mi>ω</mi></mrow><mrow><mi>p</mi></mrow></msub><mo class="MathClass-open" stretchy="false">[</mo><msubsup><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mspace class="thinspace" width="0.17em"></mspace><msub><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold">
+<mi>p</mi></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>π</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>3</mn></mrow></msup><msup><mrow><mi>δ</mi></mrow><mrow><mn>3</mn></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><mn>0</mn><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-close" stretchy="false">]</mo><mo class="MathClass-punc" stretchy="false">.</mo></mtd>
+</mtr></mtable>
+</mtd><mtd>
+</mtd></mtr></mtable>
+</mrow></math></td><td class="eq-no">(3.45)</td></tr></table>
+<!--  l. 473  --><p class="noindent">This looks a lot like the Hamiltonian for a QHO,
+<!--  l. 474  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>H</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>ω</mi><mo class="MathClass-open" stretchy="false">(</mo><msup><mrow><mi>a</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msup><mi>a</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>, for
+each momenta, but with an unwieldy delta function. This latter term is called the
+<span class="ec-lmri-12">zero-point energy </span>and represents the energy of the vacuum state. It is infinite,
+and, indeed, is one of the many infinities that have to be dealt with in
+QFT.
+In this case, since it is a constant energy term, it does not affect the
+dynamics of the system and can simply be ignored / subtracted for our
+purposes.<span class="footnote-mark"><a href="#fn12x4" id="fn12x4-bk"><sup class="textsuperscript">3</sup></a></span><a id="x10-34002f3"></a>
+However, the vacuum energy density <span class="ec-lmri-12">does </span>affect Einstein’s equations of general
+relativity, and the disagreement between the large zero-point energy we expect
+from QFT and the small observed value is known as the <span class="ec-lmri-12">cosmological constant
+                                                                          
+
+                                                                          
+problem </span>(or, more dramatically, the <span class="ec-lmri-12">vacuum catastrophe</span>) [<a href="bibnamemkbothMakeUppercasebibnameMakeUppercasebibname.html#XAdler_1995vd">26</a>, <a href="bibnamemkbothMakeUppercasebibnameMakeUppercasebibname.html#XBengochea_2019daa">27</a>].
+</p><!--  l. 482  --><p class="noindent">
+</p>
+<h5 class="subsubsectionHead" id="an-infinity-of-harmonic-oscillators"><a id="x10-35000"></a>An infinity of harmonic oscillators</h5>
+<!--  l. 484  --><p class="noindent">Subtracting away the zero-point energy gives us </p><table class="equation"><tr><td>
+<!--  l. 485  --><p class="indent">
+</p><!--  l. 485  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x10-35001r46"></mstyle><!--  endlabel  -->
+<mi>H</mi> <mo class="MathClass-rel" stretchy="false">=</mo><mo> ∫
+ <!--  nolimits  --></mo><!--  nolimits  --> <mfrac><mrow><msup><mrow><mi>d</mi></mrow><mrow><mn>3</mn></mrow></msup><mi>p</mi></mrow>
+<mrow><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>π</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>3</mn>
+</mrow></msup></mrow></mfrac><msub><mrow><mi>ω</mi></mrow><mrow><mi>p</mi></mrow></msub><msubsup><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mspace class="thinspace" width="0.17em"></mspace><msub><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold">
+<mi>p</mi></mstyle></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo>
+</mrow></math></td><td class="eq-no">(3.46)</td></tr></table>
+<!--  l. 488  --><p class="noindent">whose commutators with the raising and lowering operators are: </p><table class="equation"><tr><td>
+<!--  l. 490  --><p class="indent">
+</p><!--  l. 490  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x10-35002r47"></mstyle><!--  endlabel  -->
+<mo class="MathClass-open" stretchy="false">[</mo><mi>H</mi><mo class="MathClass-punc" stretchy="false">,</mo><msubsup><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mspace class="thinspace" width="0.17em"></mspace><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>ω</mi></mrow><mrow><mstyle mathvariant="bold">
+<mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace><msubsup><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mspace class="thinspace" width="0.17em"></mspace><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="quad" width="1em"></mspace><mo class="MathClass-open" stretchy="false">[</mo><mi>H</mi><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold">
+<mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><msub><mrow><mi>ω</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace><msub><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace><mo class="MathClass-punc" stretchy="false">,</mo>
+</mrow></math></td><td class="eq-no">(3.47)</td></tr></table>
+<!--  l. 493  --><p class="noindent">just as for a QHO. This tells us that given an eigenstate of
+<!--  l. 495  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>H</mi></math>,
+<!--  l. 495  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>E</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow></math>, with
+eigenvalue <!--  l. 495  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>E</mi></math>,
+<!--  l. 495  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mspace class="thinspace" width="0.17em"></mspace> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>E</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow></mrow></math> and
+<!--  l. 495  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>E</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow></mrow></math> are also eigenstates
+with eigenvalues <!--  l. 495  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>E</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>ω</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace></mrow></math>
+and <!--  l. 495  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>E</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>ω</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace></mrow></math>,
+respectively: </p><table class="equation"><tr><td>
+<!--  l. 496  --><p class="indent">
+</p><!--  l. 496  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x10-35003r48"></mstyle><!--  endlabel  -->
+<mtable class="equation"><mtr><mtd>
+<mtable class="split" columnalign="right left">
+<mtr class="split-mtr"><mtd class="split-mtd"> <mi>H</mi><msubsup><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mspace class="thinspace" width="0.17em"></mspace><mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>E</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow></mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">(</mo><msubsup><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mspace class="thinspace" width="0.17em"></mspace><mi>H</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>ω</mi></mrow><mrow><mstyle mathvariant="bold">
+<mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace><msubsup><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mspace class="thinspace" width="0.17em"></mspace><mo class="MathClass-close" stretchy="false">)</mo> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>E</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">(</mo><mi>E</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>ω</mi></mrow><mrow><mstyle mathvariant="bold">
+<mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace><mo class="MathClass-close" stretchy="false">)</mo><msubsup><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mspace class="thinspace" width="0.17em"></mspace><mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>E</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow><mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+</mtr><mtr class="split-mtr"><mtd class="split-mtd"> <mi>H</mi><msub><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>E</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow></mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace><mi>H</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>ω</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace><msub><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace><mo class="MathClass-close" stretchy="false">)</mo> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>E</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">(</mo><mi>E</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>ω</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace><mo class="MathClass-close" stretchy="false">)</mo><msub><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>E</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow><mo class="MathClass-punc" stretchy="false">.</mo></mtd>
+</mtr></mtable>
+</mtd><mtd>
+</mtd></mtr></mtable>
+</mrow></math></td><td class="eq-no">(3.48)</td></tr></table>
+<!--  l. 502  --><p class="noindent">   
+To derive the Hilbert space of this theory, we first define the vacuum
+<!--  l. 504  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mn>0</mn></mrow><mo fence="true" form="postfix">⟩</mo></mrow></math> as
+the state for which </p><table class="equation"><tr><td>
+<!--  l. 505  --><p class="indent">
+</p><!--  l. 505  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x10-35004r49"></mstyle><!--  endlabel  --><msub><mrow>
+<mi>â</mi>
+</mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow></msub>
+<mspace class="thinspace" width="0.17em"></mspace>
+<mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mn>0</mn>
+</mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mspace class="thickpace" width="0.28em"></mspace><mi class="MathClass-op">∀</mi><mo> ⁡<!--  FUNCTION APPLICATION  --></mo><mstyle mathvariant="bold"><mi>p</mi></mstyle><mspace class="quad" width="1em"></mspace> <mo class="MathClass-rel" stretchy="false">⇒</mo><mspace class="quad" width="1em"></mspace><mi>H</mi> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mn>0</mn></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(3.49)</td></tr></table>
+<!--  l. 508  --><p class="noindent">The remaining eigenstates are then obtained by (repeatedly) acting with
+<!--  l. 509  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mspace class="thinspace" width="0.17em"></mspace></mrow></math> on
+the vacuum: </p><table class="equation"><tr><td>
+<!--  l. 510  --><p class="indent">
+</p><!--  l. 510  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x10-35005r50"></mstyle><!--  endlabel  -->
+<mtable class="equation"><mtr><mtd>
+<mtable class="split" columnalign="right left">
+<mtr class="split-mtr"><mtd class="split-mtd"> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">∝</mo><msubsup><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mspace class="thinspace" width="0.17em"></mspace><mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mn>0</mn></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mspace class="quad" width="1em"></mspace></mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">⇒</mo><mspace class="quad" width="1em"></mspace><mi>H</mi> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>p</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>ω</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>p</mi></mrow><mo fence="true" form="postfix">⟩</mo></mrow><mo class="MathClass-punc" stretchy="false">.</mo></mtd>
+</mtr><mtr class="split-mtr"><mtd class="split-mtd"> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">∝</mo><msubsup><mrow><mi>â</mi></mrow><mrow><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><msubsup><mrow><mi>â</mi></mrow><mrow><msub><mrow><mstyle mathvariant="bold">
+<mi>p</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mn>0</mn></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mspace class="quad" width="1em"></mspace></mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">⇒</mo><mspace class="quad" width="1em"></mspace><mi>H</mi> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>ω</mi></mrow><mrow><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>ω</mi></mrow><mrow><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub></mrow><mo fence="true" form="postfix">⟩</mo></mrow></mtd>
+</mtr><mtr class="split-mtr"><mtd class="split-mtd"> </mtd>
+<mtd class="split-mtd"><mi>⋮</mi></mtd>
+</mtr><mtr class="split-mtr"><mtd class="split-mtd"> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mi>n</mi></mrow></msub></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">∝</mo><msubsup><mrow><mi>â</mi></mrow><mrow><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mo>…</mo><msubsup><mrow><mi>â</mi></mrow><mrow><msub><mrow><mstyle mathvariant="bold">
+<mi>p</mi></mstyle></mrow><mrow><mi>n</mi></mrow></msub></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mn>0</mn></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mspace class="quad" width="1em"></mspace></mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">⇒</mo><mspace class="quad" width="1em"></mspace><mi>H</mi> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mi>n</mi></mrow></msub></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathsize="2.03em"><mrow><mo fence="true" form="prefix">(</mo><mrow></mrow><mo fence="true" form="postfix"></mo></mrow></mstyle><munderover accent="false" accentunder="false"><mrow><mo> ∑</mo>
+</mrow><mrow><mi>i</mi><mo class="MathClass-rel" stretchy="false">=</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></munderover><msub><mrow><mi>ω</mi></mrow><mrow><msub><mrow><mstyle mathvariant="bold">
+<mi>p</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></mrow></msub><mstyle mathsize="2.03em"><mrow><mo fence="true" form="prefix">)</mo><mrow></mrow><mo fence="true" form="postfix"></mo></mrow></mstyle> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mi>n</mi></mrow></msub></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-punc" stretchy="false">.</mo></mtd>
+</mtr></mtable>
+</mtd><mtd>
+</mtd></mtr></mtable>
+</mrow></math></td><td class="eq-no">(3.50)</td></tr></table>
+<!--  l. 518  --><p class="noindent">This is essentially the sum of the Hilbert spaces of an infinite number of QHOs,
+across all momenta. It is called the <span class="ec-lmri-12">Fock space</span>.
+</p><!--  l. 522  --><p class="noindent">
+</p>
+<h4 class="subsectionHead" id="particles"><span class="titlemark">3.2.3   </span> <a id="x10-360003.2.3"></a>Particles</h4>
+<!--  l. 524  --><p class="noindent">To understand these states further, we can also quantize the total
+momentum of the field density we found from Noether’s theorem
+                                                                          
+
+                                                                          
+(Eq. <a href="Classicalfieldtheory.html#x9-27003r24">3.24<!--  tex4ht:ref: eq:01_qft_symmetries_charge_translation_kg   --></a>):<span class="footnote-mark"><a href="#fn13x4" id="fn13x4-bk"><sup class="textsuperscript">4</sup></a></span><a id="x10-36001f4"></a>
+</p><table class="equation"><tr><td>
+<!--  l. 525  --><p class="indent">
+</p><!--  l. 525  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x10-36003r51"></mstyle><!--  endlabel  -->
+<mstyle mathvariant="bold">
+<mi>P</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo><mo> ∫
+ <!--  nolimits  --></mo><!--  nolimits  --><msup><mrow><mi>d</mi></mrow><mrow><mn>3</mn></mrow></msup><mi>x</mi><mspace class="nbsp" width="0.33em"></mspace><mi>π</mi><mstyle mathvariant="bold"><mi class="MathClass-op">∇</mi><mo> ⁡<!--  FUNCTION APPLICATION  --></mo></mstyle><mi>ϕ</mi> <mo class="MathClass-rel" stretchy="false">=</mo><mo> ∫
+ <!--  nolimits  --></mo><!--  nolimits  --> <mfrac><mrow><msup><mrow><mi>d</mi></mrow><mrow><mn>3</mn></mrow></msup><mi>p</mi></mrow>
+<mrow><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>π</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>3</mn>
+</mrow></msup></mrow></mfrac><mstyle mathvariant="bold"><mi>p</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msubsup><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mspace class="thinspace" width="0.17em"></mspace><msub><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold">
+<mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(3.51)</td></tr></table>
+<!--  l. 528  --><p class="noindent">Acting with <!--  l. 529  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="bold"><mi>P</mi></mstyle></math>
+on <!--  l. 529  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mo fence="true" form="postfix">⟩</mo></mrow></math>
+gives us: </p><table class="equation"><tr><td>
+<!--  l. 530  --><p class="indent">
+</p><!--  l. 530  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x10-36004r52"></mstyle><!--  endlabel  -->
+<mtable class="equation"><mtr><mtd>
+<mtable class="split" columnalign="right left">
+<mtr class="split-mtr"><mtd class="split-mtd"> <mspace class="thinspace" width="0.17em"></mspace><mstyle mathvariant="bold"><mi>P</mi></mstyle> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mo fence="true" form="postfix">⟩</mo></mrow></mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">=</mo><mo> ∫
+ <!--  nolimits  --></mo><!--  nolimits  --> <mfrac><mrow><msup><mrow><mi>d</mi></mrow><mrow><mn>3</mn></mrow></msup><mi>k</mi></mrow>
+<mrow><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>π</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>3</mn>
+</mrow></msup></mrow></mfrac><mstyle mathvariant="bold"><mi>k</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msubsup><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold"><mi>k</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mspace class="thinspace" width="0.17em"></mspace><msub><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold">
+<mi>k</mi></mstyle></mrow></msub><msubsup><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mn>0</mn></mrow><mo fence="true" form="postfix">⟩</mo></mrow></mtd>
+</mtr><mtr class="split-mtr"><mtd class="split-mtd"> </mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">=</mo><mo> ∫
+ <!--  nolimits  --></mo><!--  nolimits  --> <mfrac><mrow><msup><mrow><mi>d</mi></mrow><mrow><mn>3</mn></mrow></msup><mi>k</mi></mrow>
+<mrow><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>π</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>3</mn>
+</mrow></msup></mrow></mfrac><mstyle mathvariant="bold"><mi>k</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msubsup><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold"><mi>k</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mspace class="thinspace" width="0.17em"></mspace><mstyle mathsize="1.19em"><mrow><mo fence="true" form="prefix">(</mo><mrow></mrow><mo fence="true" form="postfix"></mo></mrow></mstyle><msubsup><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold">
+<mi>p</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mspace class="thinspace" width="0.17em"></mspace><msub><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold">
+<mi>k</mi></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>π</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>3</mn></mrow></msup><msup><mrow><mi>δ</mi></mrow><mrow><mn>3</mn></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>k</mi></mstyle> <mo class="MathClass-bin" stretchy="false">−</mo><mstyle mathvariant="bold"><mi>p</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo><mstyle mathsize="1.19em"><mrow><mo fence="true" form="prefix">)</mo><mrow></mrow><mo fence="true" form="postfix"></mo></mrow></mstyle> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mn>0</mn></mrow><mo fence="true" form="postfix">⟩</mo></mrow></mtd>
+</mtr><mtr class="split-mtr"><mtd class="split-mtd"> </mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mi>p</mi></mstyle> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mo fence="true" form="postfix">⟩</mo></mrow><mo class="MathClass-punc" stretchy="false">.</mo></mtd>
+</mtr></mtable>
+</mtd><mtd>
+</mtd></mtr></mtable>
+</mrow></math></td><td class="eq-no">(3.52)</td></tr></table>
+<!--  l. 537  --><p class="noindent">Thus the states <!--  l. 538  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mo fence="true" form="postfix">⟩</mo></mrow></math> are
+eigenstates of <!--  l. 538  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="bold"><mi>P</mi></mstyle></math> as well,
+with eigenvalues <!--  l. 538  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="bold"><mi>p</mi></mstyle></math>.
+Putting this together, we have a Hilbert space spanned by the states
+<!--  l. 539  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mo fence="true" form="postfix">⟩</mo></mrow></math>, which each have
+momentum <!--  l. 539  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="bold"><mi>p</mi></mstyle></math>
+and energy <!--  l. 539  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mrow><mi>ω</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mrow><mo fence="true" form="prefix">|</mo><mrow><msqrt><mrow><msup><mrow>
+<mstyle mathvariant="bold">
+<mi>p</mi></mstyle>
+</mrow><mrow><mn>2</mn></mrow></msup>
+<mo class="MathClass-bin" stretchy="false">+</mo> <msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></msqrt></mrow><mo fence="true" form="postfix">|</mo></mrow></mrow></math>,
+i.e. the relativistic energy-momentum relation for a free particle.
+Thus, we see <!--  l. 541  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mo fence="true" form="postfix">⟩</mo></mrow></math>
+exactly corresponds to the momentum eigenstate for a single particle of mass
+<!--  l. 541  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>m</mi></math> and
+                                                                          
+
+                                                                          
+momentum <!--  l. 541  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="bold"><mi>p</mi></mstyle></math>!
+One can similarly quantize the total angular momentum of the field
+<!--  l. 542  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="bold"><mi>J</mi></mstyle></math> and show
+that <!--  l. 542  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="bold"><mi>J</mi></mstyle> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mstyle mathvariant="bold"><mi>p</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></mrow></math>,
+i.e. the particle has spin 0.
+</p><!--  l. 544  --><p class="indent">   This is one of the miracles of QFT: what from quantizing a free, relativistic
+field looked bizarrely like an infinite series of QHOs, actually gives the intuitive
+physical result of discrete particle states. The Fock space hence is the space spanned
+by different numbers of discrete particles per each continuous momentum mode
+<!--  l. 545  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="bold"><mi>p</mi></mstyle></math>. The number
+of particles <!--  l. 546  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math>
+in a particular state of the Fock space is given by the number operator
+<!--  l. 546  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math>,
+essentially the Hamiltonian density divided by
+<!--  l. 546  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mrow><mi>ω</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace></mrow></math>:
+</p><table class="equation"><tr><td>
+<!--  l. 547  --><p class="indent">
+</p><!--  l. 547  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x10-36005r53"></mstyle><!--  endlabel  -->
+<mi>N</mi> <mo class="MathClass-rel" stretchy="false">=</mo><mo> ∫
+ <!--  nolimits  --></mo><!--  nolimits  --> <mfrac><mrow><msup><mrow><mi>d</mi></mrow><mrow><mn>3</mn></mrow></msup><mi>p</mi></mrow>
+<mrow><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>π</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>3</mn>
+</mrow></msup></mrow></mfrac><msubsup><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mspace class="thinspace" width="0.17em"></mspace><msub><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold">
+<mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace><mspace class="quad" width="1em"></mspace> <mo class="MathClass-rel" stretchy="false">⇒</mo><mspace class="quad" width="1em"></mspace><mi>N</mi> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mi>n</mi></mrow></msub></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>n</mi> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mi>n</mi></mrow></msub></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(3.53)</td></tr></table>
+<!--  l. 550  --><p class="noindent">Note that the number operator <!--  l. 551  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math>
+commutes with the Hamiltonian <!--  l. 551  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>H</mi></math>,
+<!--  l. 551  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open" stretchy="false">[</mo><mi>N</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>H</mi><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></mrow></math>,
+which means particle number is conserved; however, this will not be the case for
+interacting theories in the next section.
+</p><!--  l. 553  --><p class="indent">   Finally, observe that for our scalar field, the creation
+operators commute amongst themselves. This means the states
+<!--  l. 554  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mi>n</mi></mrow></msub></mrow><mo fence="true" form="postfix">⟩</mo></mrow></math> are
+symmetric under exchange of particles, and thus describe <span class="ec-lmri-12">bosons</span>.
+</p><!--  l. 556  --><p class="noindent">
+</p>
+<h4 class="subsectionHead" id="the-complex-scalar-field-and-antiparticles"><span class="titlemark">3.2.4   </span> <a id="x10-370003.2.4"></a>The complex scalar field and antiparticles</h4>
+<!--  l. 559  --><p class="noindent">The complex scalar field Lagrangian from Eq. <a href="Classicalfieldtheory.html#x9-28002r26">3.26<!--  tex4ht:ref: eq:01_qft_symmetries_complex_lagrangian   --></a> has the EOMs: </p><table class="equation"><tr><td>
+<!--  l. 560  --><p class="indent">
+</p><!--  l. 560  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x10-37001r54"></mstyle><!--  endlabel  -->
+<mtable class="equation"><mtr><mtd>
+<mtable class="split" columnalign="right left">
+<mtr class="split-mtr"><mtd class="split-mtd"> <mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>∂</mi></mrow><mrow><mi>μ</mi></mrow></msub><msup><mrow><mi>∂</mi></mrow><mrow><mi>μ</mi></mrow></msup> <mo class="MathClass-bin" stretchy="false">+</mo> <msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo><mi>ψ</mi></mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+</mtr><mtr class="split-mtr"><mtd class="split-mtd"> <mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>∂</mi></mrow><mrow><mi>μ</mi></mrow></msub><msup><mrow><mi>∂</mi></mrow><mrow><mi>μ</mi></mrow></msup> <mo class="MathClass-bin" stretchy="false">+</mo> <msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo><msup><mrow><mi>ψ</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msup></mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+</mtr></mtable>
+</mtd><mtd>
+</mtd></mtr></mtable>
+</mrow></math></td><td class="eq-no">(3.54)</td></tr></table>
+<!--  l. 566  --><p class="noindent">with solutions: </p><table class="equation"><tr><td>
+<!--  l. 568  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x10-37002r55"></mstyle><!--  endlabel  -->
+<mtable class="equation"><mtr><mtd>
+<mtable class="split" columnalign="right left">
+<mtr class="split-mtr"><mtd class="split-mtd"> <mi>ψ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo></mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">=</mo><mo> ∫
+ <!--  nolimits  --></mo><!--  nolimits  --> <mfrac><mrow><msup><mrow><mi>d</mi></mrow><mrow><mn>3</mn></mrow></msup><mi>p</mi></mrow>
+<mrow><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>π</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>3</mn>
+</mrow></msup></mrow></mfrac> <mfrac>
+<mrow>
+<mn>1</mn></mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>2</mn><msub><mrow><mi>ω</mi></mrow><mrow><mi>p</mi></mrow></msub></mrow></msqrt></mrow></mfrac><mo class="MathClass-open" stretchy="false">(</mo><mi>b</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>p</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo><msup><mrow><mi>e</mi></mrow><mrow><mi mathvariant="italic">ip</mi><mo class="MathClass-bin" stretchy="false">⋅</mo><mi>x</mi></mrow></msup> <mo class="MathClass-bin" stretchy="false">+</mo> <msup><mrow><mi>c</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>p</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo><msup><mrow><mi>e</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mi mathvariant="italic">ip</mi><mo class="MathClass-bin" stretchy="false">⋅</mo><mi>x</mi></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">.</mo></mtd>
+</mtr></mtable>
+</mtd><mtd>
+</mtd></mtr></mtable>
+</mrow></math></td><td class="eq-no">(3.55)</td></tr></table>
+<!--  l. 574  --><p class="noindent">Note that because the field is complex, the coefficients
+<!--  l. 575  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>b</mi></math> and
+<!--  l. 575  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mi>c</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msup></math> need
+not be complex conjugates of each other as for a real field. This field can be
+quantized analogously to above: </p><table class="equation"><tr><td>
+<!--  l. 577  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x10-37003r56"></mstyle><!--  endlabel  -->
+<mtable class="equation"><mtr><mtd>
+<mtable class="split" columnalign="right left">
+<mtr class="split-mtr"><mtd class="split-mtd"> <mi>ψ</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo class="MathClass-punc" stretchy="false">,</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo></mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">=</mo><mo> ∫
+ <!--  nolimits  --></mo><!--  nolimits  --> <mfrac><mrow><msup><mrow><mi>d</mi></mrow><mrow><mn>3</mn></mrow></msup><mi>p</mi></mrow>
+<mrow><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>π</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>3</mn>
+</mrow></msup></mrow></mfrac> <mfrac>
+<mrow>
+<mn>1</mn></mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>2</mn><msub><mrow><mi>ω</mi></mrow><mrow><mi>p</mi></mrow></msub></mrow></msqrt></mrow></mfrac><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mover accent="true"><mrow><mi>b</mi></mrow><mo accent="true">^</mo></mover></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mi>e</mi></mrow><mrow><mi mathvariant="italic">ip</mi><mo class="MathClass-bin" stretchy="false">⋅</mo><mi>x</mi></mrow></msup> <mo class="MathClass-bin" stretchy="false">+</mo><msubsup><mrow> <mi>ĉ</mi></mrow><mrow><mstyle mathvariant="bold">
+<mi>p</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mi>e</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mi mathvariant="italic">ip</mi><mo class="MathClass-bin" stretchy="false">⋅</mo><mi>x</mi></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+</mtr><mtr class="split-mtr"><mtd class="split-mtd"> <msup><mrow><mi>ψ</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo class="MathClass-punc" stretchy="false">,</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo></mtd>
+<mtd class="split-mtd"> <mo class="MathClass-rel" stretchy="false">=</mo><mo> ∫
+ <!--  nolimits  --></mo><!--  nolimits  --> <mfrac><mrow><msup><mrow><mi>d</mi></mrow><mrow><mn>3</mn></mrow></msup><mi>p</mi></mrow>
+<mrow><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>π</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>3</mn>
+</mrow></msup></mrow></mfrac> <mfrac>
+<mrow>
+<mn>1</mn></mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>2</mn><msub><mrow><mi>ω</mi></mrow><mrow><mi>p</mi></mrow></msub></mrow></msqrt></mrow></mfrac><mo class="MathClass-open" stretchy="false">(</mo><msubsup><mrow><mover accent="true"><mrow><mi>b</mi></mrow><mo accent="true">^</mo></mover></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mi>e</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mi mathvariant="italic">ip</mi><mo class="MathClass-bin" stretchy="false">⋅</mo><mi>x</mi></mrow></msup> <mo class="MathClass-bin" stretchy="false">+</mo><msub><mrow> <mi>ĉ</mi></mrow><mrow><mstyle mathvariant="bold">
+<mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mi>e</mi></mrow><mrow><mi mathvariant="italic">ip</mi><mo class="MathClass-bin" stretchy="false">⋅</mo><mi>x</mi></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+</mtr></mtable>
+</mtd><mtd>
+</mtd></mtr></mtable>
+</mrow></math></td><td class="eq-no">(3.56)</td></tr></table>
+<!--  l. 583  --><p class="noindent">where we now have two sets of creation and annihilation operators,
+<!--  l. 584  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open" stretchy="false">{</mo><msup><mrow><mover accent="true"><mrow><mi>b</mi></mrow><mo accent="true">^</mo></mover></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msup><mo class="MathClass-punc" stretchy="false">,</mo><mover accent="true"><mrow><mi>b</mi></mrow><mo accent="true">^</mo></mover><mo class="MathClass-close" stretchy="false">}</mo></mrow></math> and
+<!--  l. 584  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open" stretchy="false">{</mo><msup><mrow><mi>ĉ</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msup><mo class="MathClass-punc" stretchy="false">,</mo><mi>ĉ</mi><mo class="MathClass-close" stretchy="false">}</mo></mrow></math>. One
+can check each pair individually satisfies the canonical commutation relations
+from Eq. <a href="#x10-33004r44">3.44<!--  tex4ht:ref: eq:01_qft_quantization_fsf_commutators_qho   --></a>, and mutually commutes with each other.
+Thus, they are interpreted as corresponding to two different particles, with the same
+mass <!--  l. 587  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>m</mi></math>
+and spin 0, <span class="ec-lmri-12">but</span>, as we saw, with opposite charges under the
+<!--  l. 587  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="normal"><mi>U</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>
+internal symmetry. Such pairs are considered particles and antiparticles.
+</p><!--  l. 590  --><p class="indent">   Finally, let us revisit and quantize the conserved charge associated with the
+<!--  l. 590  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="normal"><mi>U</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>
+                                                                          
+
+                                                                          
+symmetry (Eq. <a href="Classicalfieldtheory.html#x9-28003r27">3.27<!--  tex4ht:ref: eq:01_qft_symmetries_u1_current_charge   --></a>): </p><table class="equation"><tr><td>
+<!--  l. 591  --><p class="indent">
+</p><!--  l. 591  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x10-37004r57"></mstyle><!--  endlabel  -->
+<mi>Q</mi> <mo class="MathClass-rel" stretchy="false">=</mo><mo> ∫
+ <!--  nolimits  --></mo><!--  nolimits  --><msup><mrow><mi>d</mi></mrow><mrow><mn>3</mn></mrow></msup><mi>x</mi><mspace class="nbsp" width="0.33em"></mspace><mi>i</mi><mo class="MathClass-open" stretchy="false">(</mo><msup><mrow><mi>ψ</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msup><msup><mrow><mi>∂</mi></mrow><mrow><mn>0</mn></mrow></msup><mi>ψ</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>ψ</mi><msup><mrow><mi>∂</mi></mrow><mrow><mn>0</mn></mrow></msup><msup><mrow><mi>ψ</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">→</mo><mo>∫
+ <!--  nolimits  --></mo><!--  nolimits  --> <mfrac><mrow><msup><mrow><mi>d</mi></mrow><mrow><mn>3</mn></mrow></msup><mi>p</mi></mrow>
+<mrow><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>π</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>3</mn>
+</mrow></msup></mrow></mfrac> <mrow><mo fence="true" form="prefix">(</mo><mrow><msubsup><mrow><mover accent="true"><mrow><mi>b</mi></mrow><mo accent="true">^</mo></mover></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mspace class="thinspace" width="0.17em"></mspace><msub><mrow><mover accent="true"><mrow><mi>b</mi></mrow><mo accent="true">^</mo></mover></mrow><mrow><mstyle mathvariant="bold">
+<mi>p</mi></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo><msubsup><mrow><mi>ĉ</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mspace class="thinspace" width="0.17em"></mspace><msub><mrow><mi>ĉ</mi></mrow><mrow><mstyle mathvariant="bold">
+<mi>p</mi></mstyle></mrow></msub></mrow><mo fence="true" form="postfix">)</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>N</mi></mrow><mrow><mi>b</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>N</mi></mrow><mrow><mi>c</mi></mrow></msub><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(3.57)</td></tr></table>
+<!--  l. 594  --><p class="noindent">This is saying the difference in the number of particles and antiparticles is
+conserved, which for a single charged particle-antiparticle pair, is equivalent to
+charge conservation. This will be more significant for interacting theories, in which
+<!--  l. 596  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>N</mi></mrow><mrow><mi>b</mi></mrow></msub></math> and
+<!--  l. 596  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>N</mi></mrow><mrow><mi>c</mi></mrow></msub></math>
+are not individually conserved but as long as the interactions retain the
+<!--  l. 596  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle mathvariant="normal"><mi>U</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math> symmetry,
+<!--  l. 596  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>Q</mi></math>
+is.
+                                                                          
+
+                                                                          
+</p><!--  l. 598  --><p class="noindent">
+</p>
+<h5 class="subsubsectionHead" id="negative-energy-states"><a id="x10-38000"></a>Negative energy states?</h5>
+<!--  l. 600  --><p class="noindent">Note that the full, time-dependent formula for the field
+<!--  l. 600  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>ψ</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo class="MathClass-punc" stretchy="false">,</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math> contains
+both the <!--  l. 600  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msup><mrow><mi>e</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mi mathvariant="italic">ip</mi><mo class="MathClass-bin" stretchy="false">⋅</mo><mi>x</mi></mrow></msup> <mo class="MathClass-rel" stretchy="false">∝</mo> <msup><mrow><mi>e</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mi mathvariant="italic">iEt</mi></mrow></msup></mrow></math>
+and <!--  l. 600  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msup><mrow><mi>e</mi></mrow><mrow><mi mathvariant="italic">ip</mi><mo class="MathClass-bin" stretchy="false">⋅</mo><mi>x</mi></mrow></msup> <mo class="MathClass-rel" stretchy="false">∝</mo> <msup><mrow><mi>e</mi></mrow><mrow><mi mathvariant="italic">iEt</mi></mrow></msup></mrow></math>
+terms. As single-particle plane-wave solutions to the nonrelativistic
+Schrödinger equation, these would correspond to positive and
+negative energy states, the latter of which does not make physical
+sense.<span class="footnote-mark"><a href="#fn14x4" id="fn14x4-bk"><sup class="textsuperscript">5</sup></a></span><a id="x10-38001f5"></a>
+Our solution is to refer to these states instead as <span class="ec-lmri-12">positive- </span>and <span class="ec-lmri-12">negative-frequency</span>
+modes, which, as we saw, are always associated to operators that create and
+destroy positive-energy (anti)particles, respectively.
+</p><!--  l. 606  --><p class="noindent">
+</p>
+<h4 class="subsectionHead" id="propagators-and-green-functions"><span class="titlemark">3.2.5   </span> <a id="x10-390003.2.5"></a>Propagators and Green functions</h4>
+<!--  l. 609  --><p class="noindent">We now discuss briefly the concept of <span class="ec-lmri-12">propagators </span>in QFT, primarily because of
+their importance in relating quantum fields to physical observables of
+the theory, like scattering amplitudes (Section <a href="Interactions.html#smatrix-elements">3.3.2<!--  tex4ht:ref: sec:01_qft_interactions_smatrix   --></a>), but also because
+of some interesting insights they offer regarding our quantized particle
+states.
+</p><!--  l. 611  --><p class="noindent">
+</p>
+<h5 class="subsubsectionHead" id="normalization-of-states-and-wavepackets"><a id="x10-40000"></a>Normalization of states and wavepackets</h5>
+<!--  l. 613  --><p class="noindent">First, note that we have not chosen a normalized the
+momentum eigenstates in Eq. <a href="#x10-35003r48">3.48<!--  tex4ht:ref: eq:01_qft_quantization_hamiltonian_eigenstates   --></a>. We cannot do this simply as
+<!--  l. 614  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow> <mrow><mo fence="true" form="prefix">⟨</mo><mrow><mstyle mathvariant="bold"><mi>q</mi></mstyle><mo class="MathClass-rel" stretchy="false">|</mo><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mi>δ</mi></mrow><mrow><mn>3</mn></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>q</mi></mstyle> <mo class="MathClass-bin" stretchy="false">−</mo><mstyle mathvariant="bold"><mi>p</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>, as in
+nonrelativistic QM, because the delta function alone is not Lorentz-invariant.
+Instead, we choose </p><table class="equation"><tr><td>
+<!--  l. 616  --><p class="indent">
+</p><!--  l. 616  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x10-40001r58"></mstyle><!--  endlabel  -->
+<mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mstyle mathvariant="bold"><mi>p</mi></mstyle>
+</mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <msqrt><mrow>
+<mn>2</mn><msub><mrow><mi>E</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace></mrow></msqrt><mspace class="thinspace" width="0.17em"></mspace><msubsup><mrow><mi>â</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">†</mo></mrow></msubsup><mspace class="thinspace" width="0.17em"></mspace><mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mn>0</mn></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mspace class="quad" width="1em"></mspace> <mo class="MathClass-rel" stretchy="false">⇒</mo><mspace class="quad" width="1em"></mspace><mrow><mo fence="true" form="prefix">⟨</mo><mrow><mstyle mathvariant="bold"><mi>q</mi></mstyle><mo class="MathClass-rel" stretchy="false">|</mo><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>2</mn><msub><mrow><mi>E</mi></mrow><mrow><mstyle mathvariant="bold">
+<mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mi>δ</mi></mrow><mrow><mn>3</mn></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>q</mi></mstyle> <mo class="MathClass-bin" stretchy="false">−</mo><mstyle mathvariant="bold"><mi>p</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">,</mo>
+</mrow></math></td><td class="eq-no">(3.58)</td></tr></table>
+<!--  l. 619  --><p class="noindent">which is a Lorentz scalar.
+</p><!--  l. 624  --><p class="indent">   Like in QM, however, these momentum eigenstates are not normalized to 1:
+<!--  l. 624  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow> <mrow><mo fence="true" form="prefix">⟨</mo><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle><mo class="MathClass-rel" stretchy="false">|</mo><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>2</mn><msub><mrow><mi>E</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mi>δ</mi></mrow><mrow><mn>3</mn></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><mn>0</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>, so
+they are not exactly physical one-particle states. Physical particles must exist in
+the form of a wavepacket: </p><table class="equation"><tr><td>
+<!--  l. 626  --><p class="indent">
+</p><!--  l. 626  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x10-40002r59"></mstyle><!--  endlabel  -->
+<mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mi>φ</mi>
+</mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo><mo> ∫
+ <!--  nolimits  --></mo><!--  nolimits  --><msup><mrow><mi>d</mi></mrow><mrow><mn>3</mn></mrow></msup><mi>p</mi><mspace class="thinspace" width="0.17em"></mspace><mi>φ</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>p</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mo fence="true" form="postfix">⟩</mo></mrow><mo class="MathClass-punc" stretchy="false">,</mo>
+</mrow></math></td><td class="eq-no">(3.59)</td></tr></table>
+<!--  l. 629  --><p class="noindent">with some spread in momenta <!--  l. 630  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>φ</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>p</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>.
+However, as long as this variation is smaller than the resolution of our detector (as
+                                                                          
+
+                                                                          
+we will assume), for all practical purposes and calculations we can continue to
+treat particles as momentum eigenstates. This assumption is further motivated in
+Peskin and Schroeder [<a href="bibnamemkbothMakeUppercasebibnameMakeUppercasebibname.html#XPeskin_1995ev">10</a>] Chapter 4.5.
+</p><!--  l. 634  --><p class="noindent">
+</p>
+<h5 class="subsubsectionHead" id="interpretation-of-x"><a id="x10-41000"></a>Interpretation of <!--  l. 634  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover accent="true"><mrow><mi>ϕ</mi></mrow><mo accent="true">^</mo></mover><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math></h5>
+<!--  l. 636  --><p class="noindent">Let us consider the field <!--  l. 636  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>ϕ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>
+itself for a moment. We have understood the meaning of the creation,
+annihilation, momentum, and other operators, but what does the field
+<!--  l. 637  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>ϕ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math> do?
+If we look at its action on the vacuum, plugging in its quantized form
+(Eq. <a href="#x10-33002r42">3.42<!--  tex4ht:ref: eq:01_qft_quantization_fsf_fields   --></a>) and our new normalization of the momentum eigenstates:
+</p><table class="equation"><tr><td>
+<!--  l. 639  --><p class="indent">
+</p><!--  l. 639  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x10-41001r60"></mstyle><!--  endlabel  -->
+<mi>ϕ</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mn>0</mn></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo><mo> ∫
+ <!--  nolimits  --></mo><!--  nolimits  --> <mfrac><mrow><msup><mrow><mi>d</mi></mrow><mrow><mn>3</mn></mrow></msup><mi>p</mi></mrow>
+<mrow><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>π</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>3</mn>
+</mrow></msup></mrow></mfrac> <mfrac>
+<mrow>
+<mn>1</mn></mrow>
+<mrow>
+<mn>2</mn><msub><mrow><mi>E</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace></mrow></mfrac><msup><mrow><mi>e</mi></mrow><mrow><mi mathvariant="italic">ip</mi><mo class="MathClass-bin" stretchy="false">⋅</mo><mi>x</mi></mrow></msup> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mo fence="true" form="postfix">⟩</mo></mrow><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(3.60)</td></tr></table>
+<!--  l. 642  --><p class="noindent">
+</p><!--  l. 644  --><p class="indent">   This is very similar to the Fourier transform of the position eigenstate
+<!--  l. 644  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><mo fence="true" form="postfix">⟩</mo></mrow></math>
+in nonrelativistic QM, except with an integral measure that is now
+Lorentz-invariant due to our normalizations above. Thus, we can roughly interpret
+<!--  l. 645  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>ϕ</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>
+as an operator which creates a particle at position
+<!--  l. 645  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="bold"><mi>x</mi></mstyle></math>. However, we will
+see next that <!--  l. 646  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>ϕ</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mn>0</mn></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">≡</mo><mrow><mo fence="true" form="prefix"></mo><mrow><mo class="MathClass-rel" stretchy="false">|</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><mo fence="true" form="postfix">⟩</mo></mrow></mrow></math>,
+unlike in QM, is not <span class="ec-lmri-12">exactly </span>localized in position (although it’s pretty
+close).
+</p><!--  l. 649  --><p class="noindent">
+</p>
+<h5 class="subsubsectionHead" id="propagators"><a id="x10-42000"></a>Propagators</h5>
+<!--  l. 651  --><p class="noindent">We can now discuss the <span class="ec-lmri-12">propagator </span>of a field, which is the
+amplitude for the associated particle at a spacetime point
+<!--  l. 651  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi></math> to be
+found at <!--  l. 651  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math>:
+</p><table class="equation"><tr><td>
+<!--  l. 652  --><p class="indent">
+</p><!--  l. 652  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x10-42001r61"></mstyle><!--  endlabel  -->
+<mi>D</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>y</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">≡</mo><mrow><mo fence="true" form="prefix">⟨</mo><mrow><mn>0</mn><mo class="MathClass-rel" stretchy="false">|</mo><mi>ϕ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo><mi>ϕ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>y</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-rel" stretchy="false">|</mo><mn>0</mn></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo><mo> ∫
+ <!--  nolimits  --></mo><!--  nolimits  --> <mfrac><mrow><msup><mrow><mi>d</mi></mrow><mrow><mn>3</mn></mrow></msup><mi>p</mi></mrow>
+<mrow><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>π</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>3</mn>
+</mrow></msup></mrow></mfrac> <mfrac>
+<mrow>
+<mn>1</mn></mrow>
+<mrow>
+<mn>2</mn><msub><mrow><mi>E</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace></mrow></mfrac><msup><mrow><mi>e</mi></mrow><mrow><mi mathvariant="italic">ip</mi><mo class="MathClass-bin" stretchy="false">⋅</mo><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-bin" stretchy="false">−</mo><mi>y</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></msup><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(3.61)</td></tr></table>
+<!--  l. 655  --><p class="noindent">This is also called the <span class="ec-lmri-12">two-point correlation function </span>between
+<!--  l. 656  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math> and
+<!--  l. 656  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi></math>.
+</p><!--  l. 658  --><p class="indent">   Interestingly, it can be shown that, for a particle with mass
+<!--  l. 658  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>m</mi> <mo class="MathClass-rel" stretchy="false">&gt;</mo> <mn>0</mn></mrow></math>, for space-like
+separated points, e.g. <!--  l. 658  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mrow><mi>x</mi></mrow><mrow><mn>0</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>y</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo> <mrow><mo fence="true" form="prefix">|</mo><mrow><mstyle mathvariant="bold"><mi>x</mi></mstyle> <mo class="MathClass-bin" stretchy="false">−</mo><mstyle mathvariant="bold"><mi>y</mi></mstyle></mrow><mo fence="true" form="postfix">|</mo></mrow> <mo class="MathClass-rel" stretchy="false">≡</mo> <mi>r</mi></mrow></math>,
+                                                                          
+
+                                                                          
+</p><table class="equation"><tr><td>
+<!--  l. 659  --><p class="indent">
+</p><!--  l. 659  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x10-42002r62"></mstyle><!--  endlabel  -->
+<mi>D</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>r</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">∼</mo> <msup><mrow><mi>e</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mi mathvariant="italic">mr</mi></mrow></msup><mo class="MathClass-punc" stretchy="false">,</mo>
+</mrow></math></td><td class="eq-no">(3.62)</td></tr></table>
+<!--  l. 662  --><p class="noindent">i.e., it is not 0!<span class="footnote-mark"><a href="#fn15x4" id="fn15x4-bk"><sup class="textsuperscript">6</sup></a></span><a id="x10-42003f6"></a>
+However, it exponentially decays at rate of
+<!--  l. 664  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mi>m</mi></mrow></mfrac></mrow></math>, or
+the Compton wavelength. Thus, this is telling us there is a fundamental physical
+limit in relativistic QM to which a particle can be localized in space (or, at
+least, to which we can measure its position, related to the uncertainty
+principle).
+</p><!--  l. 667  --><p class="indent">   Note, however, that this does not violate causality, since the commutator
+<!--  l. 667  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open" stretchy="false">[</mo><mi>ϕ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">,</mo><mi>ϕ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>y</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>D</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>y</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>D</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>y</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></mrow></math> for spacelike
+separated points, meaning physically they cannot affect each other. For a complex
+field, <!--  l. 668  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo class="MathClass-open" stretchy="false">[</mo><mi>ψ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">,</mo><msup><mrow><mi>ψ</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><mi>y</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></mrow></math>
+                                                                          
+
+                                                                          
+has the fun interpretation of a particle’s amplitude for
+<!--  l. 668  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>x</mi> <mo class="MathClass-rel" stretchy="false">→</mo> <mi>y</mi></mrow></math>
+being canceled by its antiparticle’s amplitude for
+<!--  l. 668  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>y</mi> <mo class="MathClass-rel" stretchy="false">→</mo> <mi>x</mi></mrow></math>. Or,
+inversely, this tells us that causality necessitates the existence of antiparticles
+(Peskin and Schroeder [<a href="bibnamemkbothMakeUppercasebibnameMakeUppercasebibname.html#XPeskin_1995ev">10</a>] Chapter 2.4).
+</p><!--  l. 672  --><p class="noindent">
+</p>
+<h5 class="subsubsectionHead" id="green-functions"><a id="x10-43000"></a>Green functions</h5>
+<!--  l. 674  --><p class="noindent">The propagator is closely related to the Green function
+<!--  l. 674  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="normal">Δ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math> of the
+Klein-Gordon equation, which is the solution (or response) to a delta function
+source: </p><table class="equation"><tr><td>
+<!--  l. 675  --><p class="indent">
+</p><!--  l. 675  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x10-43001r63"></mstyle><!--  endlabel  -->
+<mo class="MathClass-open" stretchy="false">(</mo><mo class="MathClass-ord">□</mo> <mo class="MathClass-bin" stretchy="false">+</mo> <msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo><mi mathvariant="normal">Δ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mi>δ</mi></mrow><mrow><mn>4</mn></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">.</mo>
+</mrow></math></td><td class="eq-no">(3.63)</td></tr></table>
+<!--  l. 678  --><p class="noindent">The Green function <!--  l. 679  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="normal">Δ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>y</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>
+effectively describes the effect on the field at
+<!--  l. 679  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math> due to a localized
+source at <!--  l. 679  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi></math>;
+hence, the connection to the two-point correlation function, or propagator,
+above.
+</p><!--  l. 681  --><p class="indent">   The form of <!--  l. 681  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="normal">Δ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>
+can be found by Fourier transforming this equation to be: </p><table class="equation"><tr><td>
+<!--  l. 682  --><p class="indent">
+</p><!--  l. 682  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x10-43002r64"></mstyle><!--  endlabel  -->
+<mi mathvariant="normal">Δ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo><mo> ∫
+ <!--  nolimits  --></mo><!--  nolimits  --> <mfrac><mrow><msup><mrow><mi>d</mi></mrow><mrow><mn>4</mn></mrow></msup><mi>p</mi></mrow>
+<mrow><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>π</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>4</mn>
+</mrow></msup></mrow></mfrac> <mfrac>
+<mrow>
+<mi>i</mi></mrow>
+<mrow><msup><mrow>
+<mi>p</mi></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">−</mo> <msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac><msup><mrow><mi>e</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mi mathvariant="italic">ip</mi><mo class="MathClass-bin" stretchy="false">⋅</mo><mi>x</mi></mrow></msup><mo class="MathClass-punc" stretchy="false">,</mo>
+</mrow></math></td><td class="eq-no">(3.64)</td></tr></table>
+<!--  l. 685  --><p class="noindent">This has a pole on the real line at <!--  l. 686  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msup><mrow><mi>p</mi></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-rel" stretchy="false">⇔</mo> <mi>E</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">±</mo><msqrt><mrow><msup><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow><mrow><mn>2</mn> </mrow> </msup>
+<mo class="MathClass-bin" stretchy="false">+</mo> <msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></msqrt></mrow></math>,
+which means there is an ambiguity in defining the contour integral. What’s cool is
+that the choice of contour leads to four different Green functions, each with a
+different physical interpretation.
+</p><!--  l. 689  --><p class="indent">   The choice we care most about in QFT is the <span class="ec-lmri-12">Feynman prescription</span>, which is
+often defined as </p><table class="equation"><tr><td>
+<!--  l. 690  --><p class="indent">
+</p><!--  l. 690  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x10-43003r65"></mstyle><!--  endlabel  -->
+<msub><mrow><mi mathvariant="normal">Δ</mi></mrow><mrow><mi>F</mi> </mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo><mo> ∫
+ <!--  nolimits  --></mo><!--  nolimits  --> <mfrac><mrow><msup><mrow><mi>d</mi></mrow><mrow><mn>4</mn></mrow></msup><mi>p</mi></mrow>
+<mrow><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>π</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>4</mn>
+</mrow></msup></mrow></mfrac> <mfrac>
+<mrow>
+<mi>i</mi></mrow>
+<mrow><msup><mrow>
+<mi>p</mi></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">−</mo> <msup><mrow><mi>m</mi></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">+</mo> <mi mathvariant="italic">i𝜀</mi></mrow></mfrac><msup><mrow><mi>e</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mi mathvariant="italic">ip</mi><mo class="MathClass-bin" stretchy="false">⋅</mo><mi>x</mi></mrow></msup><mo class="MathClass-punc" stretchy="false">,</mo>
+</mrow></math></td><td class="eq-no">(3.65)</td></tr></table>
+<!--  l. 693  --><p class="noindent">where the <!--  l. 694  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="italic">i𝜀</mi></mrow></math>
+term resolves the ambiguity by shifting the poles infinitesimally above and below the real
+line, and <!--  l. 694  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mrow><mi mathvariant="normal">Δ</mi></mrow><mrow><mi>F</mi> </mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></math>
+is called the <span class="ec-lmri-12">Feynman propagator</span>. It is related to our normal propagator above by
+</p><table class="equation"><tr><td>
+<!--  l. 697  --><p class="indent">
+</p><!--  l. 697  --><math class="equation" display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+<mstyle class="label" id="x10-43004r66"></mstyle><!--  endlabel  --><msub><mrow><mi mathvariant="normal">Δ</mi></mrow><mrow><mi>F</mi> </mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-bin" stretchy="false">−</mo><mi>y</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mrow><mo fence="true" form="prefix">{</mo><mrow> <mtable align="axis" class="array" columnlines="none" displaystyle="true" equalcolumns="false" equalrows="false" style=""> <mtr class="array-row"><mtd class="array-td" columnalign="left"> <mrow><mo fence="true" form="prefix">⟨</mo><mrow><mn>0</mn><mo class="MathClass-rel" stretchy="false">|</mo><mi>ϕ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo><mi>ϕ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>y</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-rel" stretchy="false">|</mo><mn>0</mn></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>D</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>y</mi><mo class="MathClass-close" stretchy="false">)</mo> </mtd>
+<mtd class="array-td" columnalign="left"> <mstyle mathvariant="normal"><mi>if</mi><mspace class="nbsp" width="0.33em"></mspace></mstyle><msup><mrow><mi>x</mi></mrow><mrow><mn>0</mn></mrow></msup> <mo class="MathClass-rel" stretchy="false">&gt;</mo> <msup><mrow><mi>y</mi></mrow><mrow><mn>0</mn></mrow></msup> </mtd>
+</mtr> <mtr class="array-row"><mtd class="array-td" columnalign="left"> <mrow><mo fence="true" form="prefix">⟨</mo><mrow><mn>0</mn><mo class="MathClass-rel" stretchy="false">|</mo><mi>ϕ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>y</mi><mo class="MathClass-close" stretchy="false">)</mo><mi>ϕ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-rel" stretchy="false">|</mo><mn>0</mn></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>D</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>y</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo> </mtd><mtd class="array-td" columnalign="left"> <mstyle mathvariant="normal"><mi>if</mi><mspace class="nbsp" width="0.33em"></mspace></mstyle><msup><mrow><mi>x</mi></mrow><mrow><mn>0</mn></mrow></msup> <mo class="MathClass-rel" stretchy="false">&lt;</mo> <msup><mrow><mi>y</mi></mrow><mrow><mn>0</mn></mrow></msup> </mtd>
+</mtr>
+<!--  ll  --></mtable> </mrow><mo fence="true" form="postfix"></mo></mrow> <mo class="MathClass-rel" stretchy="false">≡</mo><mrow><mo fence="true" form="prefix">⟨</mo><mrow><mn>0</mn><mo class="MathClass-rel" stretchy="false">|</mo><mi mathvariant="italic">Tϕ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo><mi>ϕ</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>y</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-rel" stretchy="false">|</mo><mn>0</mn></mrow><mo fence="true" form="postfix">⟩</mo></mrow> <mo class="MathClass-punc" stretchy="false">,</mo>
+</mrow></math></td><td class="eq-no">(3.66)</td></tr></table>
+<!--  l. 705  --><p class="noindent">where we call <!--  l. 706  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi>T</mi></math>
+the time-ordering operator.
+                                                                          
+
+                                                                          
+</p>
+<nav class="crosslinks-bottom"> <a href="Classicalfieldtheory.html">Previous</a> <a href="Interactions.html">Next</a> </nav> <div class="footnotes"><a id="x10-34003x3.2.2"></a>
+<!--  l. 479  --><p class="indent"> <span class="footnote-mark"><a href="#fn12x4-bk" id="fn12x4"><sup class="textsuperscript">3</sup></a></span><span class="ec-lmr-10">Equivalently, we can consider the </span><span class="ec-lmri-10">normal-ordered </span><span class="ec-lmr-10">Hamiltonian (see, e.g., Tong QFT [</span><a href="bibnamemkbothMakeUppercasebibnameMakeUppercasebibname.html#XTongQFT"><span class="ec-lmr-10">3</span></a><span class="ec-lmr-10">]
+Chapter 2.3). An alternative way of resolving the infinity is to introduce an ultra-violet cut-off
+scale </span><!--  l. 479  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="normal">Λ</mi></math>
+<span class="ec-lmr-10">in the integral over momenta.</span></p><a id="x10-36002x3.2.3"></a>
+<!--  l. 524  --><p class="indent"> <span class="footnote-mark"><a href="#fn13x4-bk" id="fn13x4"><sup class="textsuperscript">4</sup></a></span><span class="ec-lmr-10">Technically, we show here the </span><span class="ec-lmri-10">normal-ordered </span><span class="ec-lmr-10">momentum.</span></p><a id="x10-38002x"></a>
+<!--  l. 601  --><p class="indent"> <span class="footnote-mark"><a href="#fn14x4-bk" id="fn14x4"><sup class="textsuperscript">5</sup></a></span><span class="ec-lmr-10">This is related to the problem Dirac faced in developing his relativistic quantum theory
+of the electron, except we are dealing with bosons instead of fermions, so we cannot rely on the
+fermionic Dirac sea “solution”.</span></p><a id="x10-42004x"></a>
+<!--  l. 663  --><p class="indent"> <span class="footnote-mark"><a href="#fn15x4-bk" id="fn15x4"><sup class="textsuperscript">6</sup></a></span><span class="ec-lmr-10">Mathematically, this stems from the</span>
+<!--  l. 663  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn><msub><mrow><mi>E</mi></mrow><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace></mrow></mfrac></mrow></math> <span class="ec-lmr-10">factor
+in the integral required for Lorentz invariance.</span></p> </div><div class="footer"><p>Copyright © 2024 Raghav Kansal. All rights reserved.</p></div></main>
+</body>
+</html>
