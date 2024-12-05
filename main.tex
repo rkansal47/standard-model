@@ -3,10 +3,6 @@
 % \usepackage[OT1]{fontenc}
 % \renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
 
-\ifdefined\HCode%
-   \def\pgfsysdriver{pgfsys-dvisvgm4ht.def}%
-\fi%
-
 \usepackage{setspace}
 
 \ifdefined\HCode%
@@ -132,10 +128,10 @@
 
 \begin{doublespace}
 
-\input{01-SM.tex}
-\input{01-SM-01-Symmetries.tex}
+% \input{01-SM.tex}
+% \input{01-SM-01-Symmetries.tex}
 \input{01-SM-02-QFT.tex}
-\input{01-SM-03-SM.tex}
+% \input{01-SM-03-SM.tex}
 \end{doublespace}
 
 \nocite{apsrev42Control}

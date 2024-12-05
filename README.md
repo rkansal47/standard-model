@@ -6,6 +6,7 @@ Converted from latex to html using tex4ht.
   - [Notes for compiling](#notes-for-compiling)
     - [Command](#command)
     - [Math](#math)
+    - [TikZ / Feynman diagrams](#tikz--feynman-diagrams)
     - [Config](#config)
 
 
@@ -40,6 +41,10 @@ Some notes:
 
 Mathjax-alone was briefly attempted. Was able to achieve chapter-wise number by followed this answer https://tex.stackexchange.com/a/714216 but changing section $\rightarrow$ chapter.
 
+### TikZ / Feynman diagrams
+
+ - On Mac, had to install Ghostscript and Ghostscript-extras from [MacTeX](https://www.tug.org/mactex/morepackages.html) (thanks to [this](https://tex.stackexchange.com/a/716651/361983) answer).
+ - Had to replace all \( \)
 
 ### Config
 
