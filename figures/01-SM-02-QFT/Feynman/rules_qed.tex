@@ -3,10 +3,10 @@
 	\item Vertices: \qquad
 	\begin{tikzpicture}[baseline={(current bounding box.center)}]
 		\begin{feynman}[small]
-			\vertex (a) {\(\mu\)};
+			\vertex (a) {$\mu$};
 			\vertex [right=of a] (b);
-			\vertex [above right=of b] (f1) {\(\alpha\)};
-			\vertex [below right=of b] (f2) {\(\beta\)};
+			\vertex [above right=of b] (f1) {$\alpha$};
+			\vertex [below right=of b] (f2) {$\beta$};
 			\diagram* {
 				(a) -- [boson] (b),
 				(b) -- [fermion] (f1),
@@ -19,10 +19,10 @@
 	\qquad\qquad Fermions: \qquad
 	\begin{tikzpicture}[baseline={([yshift=-0.7ex]current bounding box.center)}]
 		\begin{feynman}
-			\vertex (a) {\(\alpha\)};
-			\vertex [right=of a] (b) {\(\beta\)};
+			\vertex (a) {$\alpha$};
+			\vertex [right=of a] (b) {$\beta$};
 			\diagram* {
-				(a) -- [fermion, edge label={\footnotesize\(q\)}] (b),
+				(a) -- [fermion, edge label={\footnotesize$q$}] (b),
 			};
 		\end{feynman}
 	\end{tikzpicture}
@@ -31,10 +31,10 @@
     Photons: \qquad \;
 	\begin{tikzpicture}[baseline={([yshift=-0.7ex]current bounding box.center)}]
 		\begin{feynman}
-			\vertex (a) {\(\mu\)};
-			\vertex [right=of a] (b) {\(\nu\)};
+			\vertex (a) {$\mu$};
+			\vertex [right=of a] (b) {$\nu$};
 			\diagram* {
-				(a) -- [boson, edge label={\footnotesize\(p\)}] (b),
+				(a) -- [boson, edge label={\footnotesize$p$}] (b),
 			};
 		\end{feynman}
 	\end{tikzpicture}
@@ -50,12 +50,12 @@
     \=
     \begin{tikzpicture}[baseline={([yshift=-0.8ex]current bounding box.center)}]
         \begin{feynman}
-            \vertex (a) {\(\alpha\)};
+            \vertex (a) {$\alpha$};
             \vertex [right=of a] (b);
             \vertex [above right=of b] (f1);
             \vertex [below right=of b] (f2);
             \diagram* {
-                (a) -- [fermion, momentum={\footnotesize\(q, s\)}] (b),
+                (a) -- [fermion, momentum={\footnotesize$q, s$}] (b),
                 (b) -- [fermion] (f1),
                 (b) -- [boson] (f2),
             };
@@ -69,12 +69,12 @@
     \>
     \begin{tikzpicture}[baseline={([yshift=-0.8ex]current bounding box.center)}]
         \begin{feynman}
-            \vertex (a) {\(\alpha\)};
+            \vertex (a) {$\alpha$};
             \vertex [right=of a] (b);
             \vertex [above right=of b] (f1);
             \vertex [below right=of b] (f2);
             \diagram* {
-                (a) -- [anti fermion, momentum={\footnotesize\(q, s\)}] (b),
+                (a) -- [anti fermion, momentum={\footnotesize$q, s$}] (b),
                 (b) -- [anti fermion] (f1),
                 (b) -- [boson] (f2),
             };
@@ -89,13 +89,13 @@
     \begin{tikzpicture}[baseline={([yshift=-0.8ex]current bounding box.center)}]
         \begin{feynman}
             \vertex (a);
-            \vertex [right=of a] (b) {\(\alpha\)};
+            \vertex [right=of a] (b) {$\alpha$};
             \vertex [above left=of a] (f1);
             \vertex [below left=of a] (f2);
             \diagram* {
                 (f1) -- [fermion] (a),
                 (f2) -- [boson] (a),
-                (a) -- [fermion, momentum={\footnotesize\(q, s\)}] (b),
+                (a) -- [fermion, momentum={\footnotesize$q, s$}] (b),
             };
         \end{feynman}
     \end{tikzpicture}
@@ -108,13 +108,13 @@
     \begin{tikzpicture}[baseline={([yshift=-0.8ex]current bounding box.center)}]
         \begin{feynman}
             \vertex (a);
-            \vertex [right=of a] (b) {\(\alpha\)};
+            \vertex [right=of a] (b) {$\alpha$};
             \vertex [above left=of a] (f1);
             \vertex [below left=of a] (f2);
             \diagram* {
                 (f1) -- [anti fermion] (a),
                 (f2) -- [boson] (a),
-                (a) -- [anti fermion, momentum={\footnotesize\(q, s\)}] (b),
+                (a) -- [anti fermion, momentum={\footnotesize$q, s$}] (b),
             };
         \end{feynman}
     \end{tikzpicture}
@@ -125,12 +125,12 @@
     \>
     \begin{tikzpicture}[baseline={([yshift=-0.8ex]current bounding box.center)}]
         \begin{feynman}
-            \vertex (a) {\(\mu\)};
+            \vertex (a) {$\mu$};
             \vertex [right=of a] (b);
             \vertex [above right=of b] (f1);
             \vertex [below right=of b] (f2);
             \diagram* {
-                (a) -- [boson, momentum={\footnotesize\(p, s\)}] (b),
+                (a) -- [boson, momentum={\footnotesize$p, s$}] (b),
                 (b) -- [fermion] (f1),
                 (b) -- [anti fermion] (f2),
             };
@@ -144,13 +144,13 @@
     \begin{tikzpicture}[baseline={([yshift=-0.8ex]current bounding box.center)}]
         \begin{feynman}
             \vertex (a);
-            \vertex [right=of a] (b) {\(\mu\)};
+            \vertex [right=of a] (b) {$\mu$};
             \vertex [above left=of a] (f1);
             \vertex [below left=of a] (f2);
             \diagram* {
                 (f1) -- [fermion] (a),
                 (f2) -- [anti fermion] (a),
-                (a) -- [boson, momentum={\footnotesize\(p, s\)}] (b),
+                (a) -- [boson, momentum={\footnotesize$p, s$}] (b),
             };
         \end{feynman}
     \end{tikzpicture}

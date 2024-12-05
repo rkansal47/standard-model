@@ -3,10 +3,10 @@
     % \captionsetup{justification=centering}
 	\begin{tikzpicture}
 		\begin{feynman}
-			\vertex (a) {\(\phi\)};
+			\vertex (a) {$\phi$};
 			\vertex [right=of a] (b);
-			\vertex [above right=of b] (f1) {\(\bar u_{s_1}(q_1)\)};
-			\vertex [below right=of b] (f2) {\(v_{s_2}(q_2)\)};
+			\vertex [above right=of b] (f1) {$\bar u_{s_1}(q_1)$};
+			\vertex [below right=of b] (f2) {$v_{s_2}(q_2)$};
 			\diagram* {
 				(a) -- [scalar] (b),
 				(b) -- [fermion] (f1),
