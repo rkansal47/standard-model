@@ -8,8 +8,13 @@
 \fi%
 
 \usepackage{setspace}
-\usepackage{fontspec}
-\setmainfont{Palatino}
+
+\ifdefined\HCode%
+\else
+    \usepackage{fontspec}
+    \setmainfont{Palatino}
+\fi
+
 
 % \Configure{FontFamily}{rmfamily}{Palatino}
 % \newfontfamily\smallcapsfont{Palatino SC}
@@ -125,23 +130,15 @@
 
 \setlength{\parskip}{0.6\baselineskip}
 
-% Test $weff$.
-
-% \begin{equation}
-%     \label{eq:1}
-%     asdfa
-% \end{equation}
-
-% Reference Eq.~\ref{eq:1}.
 \begin{doublespace}
 
 \input{01-SM.tex}
 \input{01-SM-01-Symmetries.tex}
 \input{01-SM-02-QFT.tex}
 \input{01-SM-03-SM.tex}
+\end{doublespace}
 
 \nocite{apsrev42Control}
 \bibliography{bibliography}
-\end{doublespace}
  
 \end{document}
