@@ -21,7 +21,7 @@
 			\vertex (a);
 			\vertex [right=of a] (b);
 			\diagram* {
-				(a) -- [scalar, edge label={\footnotesize\(p\)}] (b) ,
+				(a) -- [scalar, edge label={\footnotesize$p$}] (b) ,
 			};
 		\end{feynman}
 	\end{tikzpicture}
@@ -32,7 +32,7 @@
 			\vertex (a);
 			\vertex [right=of a] (b);
 			\diagram* {
-				(a) -- [fermion, edge label={\footnotesize\(q\)}] (b),
+				(a) -- [fermion, edge label={\footnotesize$q$}] (b),
 			};
 		\end{feynman}
 	\end{tikzpicture}
@@ -91,7 +91,7 @@
             \vertex [above right=of b] (f1);
             \vertex [below right=of b] (f2);
             \diagram* {
-                (a) -- [fermion, momentum={\footnotesize\(q, s\)}] (b),
+                (a) -- [fermion, momentum={\footnotesize$q, s$}] (b),
                 (b) -- [fermion] (f1),
                 (b) -- [scalar] (f2),
             };
@@ -113,7 +113,7 @@
             \diagram* {
                 (f1) -- [fermion] (a),
                 (f2) -- [scalar] (a),
-                (a) -- [fermion, momentum={\footnotesize\(q, s\)}] (b),
+                (a) -- [fermion, momentum={\footnotesize$q, s$}] (b),
             };
         \end{feynman}
     \end{tikzpicture}
@@ -129,7 +129,7 @@
             \vertex [above right=of b] (f1);
             \vertex [below right=of b] (f2);
             \diagram* {
-                (a) -- [anti fermion, momentum={\footnotesize\(q, s\)}] (b),
+                (a) -- [anti fermion, momentum={\footnotesize$q, s$}] (b),
                 (b) -- [anti fermion] (f1),
                 (b) -- [scalar] (f2),
             };
@@ -149,7 +149,7 @@
             \diagram* {
                 (f1) -- [anti fermion] (a),
                 (f2) -- [scalar] (a),
-                (a) -- [anti fermion, momentum={\footnotesize\(q, s\)}] (b),
+                (a) -- [anti fermion, momentum={\footnotesize$q, s$}] (b),
             };
         \end{feynman}
     \end{tikzpicture}

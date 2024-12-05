@@ -2,14 +2,14 @@
 	\centering
 	\begin{tikzpicture}
 		\begin{feynman}
-			\vertex (a) {\(\phi\)};
+			\vertex (a) {$\phi$};
 			\vertex [right=of a] (b);
-			\vertex [above right=of b] (f1) {\(\psi\)};
-			\vertex [below right=of b] (f2) {\(\psi^\dagger\)};
+			\vertex [above right=of b] (f1) {$\psi$};
+			\vertex [below right=of b] (f2) {$\psi^\dagger$};
 			\diagram* {
-				(a) -- [scalar, momentum'={\footnotesize\(p\)}] (b),
-				(b) -- [fermion, momentum={[arrow shorten=0.25]\footnotesize\(q_1\)}] (f1),
-				(b) -- [anti fermion, momentum={[arrow shorten=0.25]\footnotesize\(q_2\)}] (f2),
+				(a) -- [scalar, momentum'={\footnotesize$p$}] (b),
+				(b) -- [fermion, momentum={[arrow shorten=0.25]\footnotesize$q_1$}] (f1),
+				(b) -- [anti fermion, momentum={[arrow shorten=0.25]\footnotesize$q_2$}] (f2),
 			};
 		\end{feynman}
 	\end{tikzpicture}
@@ -18,13 +18,13 @@
 	\begin{tikzpicture}
 		\begin{feynman}
 			\vertex (a);
-			\vertex [above left=of a] (i1) {\(\psi\)};
-			\vertex [right=of a] (b) {\(\phi\)};
-			\vertex [below left=of a] (i2) {\(\psi^\dagger\)};
+			\vertex [above left=of a] (i1) {$\psi$};
+			\vertex [right=of a] (b) {$\phi$};
+			\vertex [below left=of a] (i2) {$\psi^\dagger$};
 			\diagram* {
-				(i1) -- [fermion, momentum'={[arrow shorten=0.25]\footnotesize\(q_1\)}] (a),
-				(i2) -- [anti fermion, momentum'={[arrow shorten=0.25]\footnotesize\(q_2\)}] (a),
-				(a) -- [scalar, momentum={\footnotesize\(p\)}] (b),
+				(i1) -- [fermion, momentum'={[arrow shorten=0.25]\footnotesize$q_1$}] (a),
+				(i2) -- [anti fermion, momentum'={[arrow shorten=0.25]\footnotesize$q_2$}] (a),
+				(a) -- [scalar, momentum={\footnotesize$p$}] (b),
 			};
 		\end{feynman}
 	\end{tikzpicture}
