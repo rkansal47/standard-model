@@ -39,10 +39,10 @@ def edit_footnotes(soup: BeautifulSoup):
     main_content_main = soup.find('main', {'class': 'main-content'})
     if not main_content_main:
         return
-    
+
     footnotes_div = soup.find('div', {'class': 'footnotes'})
     if footnotes_div:
-        main_content_main.insert(-1, footnotes_div)
+        main_content_main.append(footnotes_div)
         
     footer_div = soup.new_tag('div', **{'class': 'footer'})
     footer_p = soup.new_tag('p')
@@ -72,3 +72,5 @@ if __name__ == "__main__":
     for html_file in html_files:
         edit_file(html_file, edit_footnotes)
         edit_file(html_file, edit_toc)
+    
+    # edit_file(Path("Electroweakinteractions.html"), edit_footnotes)
