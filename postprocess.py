@@ -57,7 +57,7 @@ def edit_toc(soup: BeautifulSoup):
     toc_nav = soup.find('nav', {'class': 'TOC'})
     if toc_nav:
         main_toc_span = soup.new_tag('span', **{'class': 'mainToc'})
-        main_toc_link = soup.new_tag('a', href='main.html')
+        main_toc_link = soup.new_tag('a', href='index.html')
         main_toc_img = soup.new_tag('img', src='logo.png', alt='Symmetries, QFT, & The Standard Model', width='100%')
         main_toc_link.append(main_toc_img)
         main_toc_span.append(main_toc_link)
@@ -77,19 +77,27 @@ def slashedsubscript_fix(file: Path):
         
 
 if __name__ == "__main__":
-    html_files = Path('.').glob('*.html')
+    html_files = list(Path('.').glob('*.html'))
+    main_file = Path('main.html')
     
     # This has to be done first, otherwise the html parsing will be messed up
     for html_file in html_files:
         slashedsubscript_fix(html_file)
     
     # Edit the main content
-    edit_file(Path('main.html'), edit_main)
+    edit_file(main_file, edit_main)
     
     # Edit footnotes for all HTML files in the directory
     for html_file in html_files:
         edit_file(html_file, edit_footnotes)
         edit_file(html_file, edit_toc)
-        # slashedsubscript_fix(html_file)
+    
+    # Rename main.html to index.html
+    main_file.rename('index.html')
+
+    # Copy main.pdf to standard-model.pdf
+    main_pdf = Path('main.pdf')
+    notes_pdf = Path('standard-model.pdf')
+    notes_pdf.write_bytes(main_pdf.read_bytes())
     
     # edit_file(Path("Electroweakinteractions.html"), edit_footnotes)
