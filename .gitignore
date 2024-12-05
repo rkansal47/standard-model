@@ -5,3 +5,5 @@ MWE*
 website
 build
 *.html
+out
+*.pdf

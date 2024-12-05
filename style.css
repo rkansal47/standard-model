@@ -140,6 +140,7 @@ main.main-content, div.maketitle{
 nav.TOC,nav.TOC a, nav.TOC a:visited{
   background-color:#f8f9fa;
   color:#03071e;
+  transition: 0.3s;
 }
 
 nav.toc span{
@@ -154,6 +155,7 @@ nav.TOC span:hover, nav.TOC span:hover *{
 
 nav.TOC.mainToc a:hover{
   background-color:#f8f9fa;
+  transition: 0.3s;
 }
 
 /* ***************** */
