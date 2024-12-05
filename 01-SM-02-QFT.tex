@@ -1344,10 +1344,10 @@ Dirac found this is possible with $4\times 4$ matrices such as
 	\gamma^i = \begin{pmatrix} 0 & \sigma^i \\ -\sigma^i & 0 \end{pmatrix},
 \end{equation}
 where $\sigma^i$ are the Pauli matrices (Chapter~\ref{sec:01_symmetries_so3}).
-These are called the \textit{gamma}, or \textit{Dirac}, matrices, and plugging them into Eq.~\ref{eq:01_qft_spinors_dirac} yields the \textit{Dirac equation}, which can be written even more compactly by defining $\slashed{\partial} \equiv \gamma^\mu \partial_\mu$:
+These are called the \textit{gamma}, or \textit{Dirac}, matrices, and plugging them into Eq.~\ref{eq:01_qft_spinors_dirac} yields the \textit{Dirac equation}, which can be written even more compactly by defining $\cslashed{\partial} \equiv \gamma^\mu \partial_\mu$:
 \begin{equation}
 	\label{eq:01_qft_spinors_dirac_slash}
-	(i\slashed{\partial} - m)\psi = 0.
+	(i\cslashed{\partial} - m)\psi = 0.
 \end{equation}
 
 This equation is considered one of the most significant breakthroughs in theoretical physics, ``on par with the works of Newton, Maxwell, and Einstein before him''~\cite{hey2003new}.
@@ -1503,7 +1503,7 @@ Similarly, one can show that $\bar\psi\gamma^\mu\psi$ transforms as a Lorentz $4
 These two terms, which are analogous to the mass and derivative terms a free complex scalar field (Eq.~\ref{eq:01_qft_symmetries_complex_lagrangian}), are enough to build the Dirac lagrangian:
 \begin{equation}
 	\label{eq:01_qft_spinors_lagrangian}
-	\mathcal{L} = i\bar\psi\gamma^\mu\partial_\mu\psi - m\bar\psi\psi = \bar\psi(i\slashed{\partial} - m)\psi.
+	\mathcal{L} = i\bar\psi\gamma^\mu\partial_\mu\psi - m\bar\psi\psi = \bar\psi(i\cslashed{\partial} - m)\psi.
 \end{equation}
 One can check that the EL equations reproduce the Dirac equation for $\psi$ and $\bar\psi$.
 
@@ -1637,12 +1637,12 @@ Again, we have an extra sum over the spin states.
 With some more matrix algebra one can show that these kinds of sums simplify nicely to
 \begin{equation}
 	\label{eq:01_qft_spinors_uvsum}
-	\sum_s u^s_\alpha(p) \bar u^s_\beta(p) = (\slashed{p} + m)_{\alpha\beta}, \quad \sum_s v^s_\alpha(p) \bar v^s_\beta(p) = (\slashed{p} - m)_{\alpha\beta},
+	\sum_s u^s_\alpha(p) \bar u^s_\beta(p) = (\cslashed{p} + m)_{\alpha\beta}, \quad \sum_s v^s_\alpha(p) \bar v^s_\beta(p) = (\cslashed{p} - m)_{\alpha\beta},
 \end{equation}
 so that we end up with, in momentum space, the Feynman propagator:
 \begin{equation}
 	\label{eq:01_qft_spinors_propagator_momentum}
-	\Delta_F(p) \equiv \bra{0}T\psi(x)\bar\psi(y)\ket{0} =  \frac{i(\slashed{p} + m)}{p^2 - m^2 + i\epsilon}.
+	\Delta_F(p) \equiv \bra{0}T\psi(x)\bar\psi(y)\ket{0} =  \frac{i(\cslashed{p} + m)}{p^2 - m^2 + i\epsilon}.
 \end{equation}
 Note that we have now suppressed the spinor indices; $\Delta_F$ is still a $4\times4$ matrix in spinor space.
 Note as well the relative minus sign in the time-ordering operator for fermions, due to exchanging the fields:
@@ -1673,11 +1673,11 @@ We now revisit Yukawa theory, the simplest possible theory of interactions for s
 The Lagrangian is the same as in Eq.~\ref{eq:01_qft_interactions_yukawa}, but now with $\psi$ a spinor:
 \begin{equation}
 	\label{eq:01_qft_spinors_yukawa_lagrangian}
-	\mathcal{L} = \frac{1}{2}\partial^\mu\phi\partial_\mu\phi + i\bar\psi\slashed{\partial}\psi - \frac{1}{2}m^2\phi^2 - M\bar\psi\psi - g\phi\bar\psi\psi.
+	\mathcal{L} = \frac{1}{2}\partial^\mu\phi\partial_\mu\phi + i\bar\psi\cslashed{\partial}\psi - \frac{1}{2}m^2\phi^2 - M\bar\psi\psi - g\phi\bar\psi\psi.
 \end{equation}
-Note that through dimensional analysis, since $[M\bar\psi\psi] = [\bar\psi\slashed{\partial}\psi] \mustequal 4$ we can deduce that $[\psi] = \frac{3}{2}$.
+Note that through dimensional analysis, since $[M\bar\psi\psi] = [\bar\psi\cslashed{\partial}\psi] \mustequal 4$ we can deduce that $[\psi] = \frac{3}{2}$.
 This means that (1) the Yukawa interaction is marginal, with $[\phi\bar\psi\psi] = 4$ and $[g] = 0$, and (2) importantly, there are no other renormalizable, Lorentz-invariant interactions we can write down for spinors with the fields at our disposal (modulo some $\gamma^5$'s thrown in, as we'll discuss in Section~\ref{sec:01_qft_spinors_cpt}).
-Terms like $\psi\phi^2$, $\slashed{\partial}\psi\phi$, or $\bar\psi\psi\phi^2$ are all either not Lorentz-scalars or of dimension $\geq 5$.
+Terms like $\psi\phi^2$, $\cslashed{\partial}\psi\phi$, or $\bar\psi\psi\phi^2$ are all either not Lorentz-scalars or of dimension $\geq 5$.
 In this sense, because their possible interactions are so heavily constrained by their $\frac{3}{2}$-dimensionality, spinors in QFT are quite simple!
 There is only one other spinor interaction in the SM, which we will see in Section~\ref{sec:01_qft_gt}, with gauge bosons.
 
@@ -2064,7 +2064,7 @@ The case for spinors is not so different.
 The definition of the covariant derivative remains the same, so combining the ``covariant'' Dirac Lagrangian with the free photonic yields the QED Lagrangian:
 \begin{equation}
 	\label{eq:01_qft_gt_maxwell_qed_lagrangian}
-	\mathcal L = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} + \bar\psi(i\slashed D - m)\psi.
+	\mathcal L = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} + \bar\psi(i\cslashed D - m)\psi.
 \end{equation}
 This is in fact the most general possible Lorentz-invariant, renormalizable, $P$-symmetric Lagrangian for a spinor field with a \UU[1] gauge symmetry, and can thus be derived from the requirement of gauge invariance alone (as done in e.g. Peskin and Shroeder~\cite{Peskin:1995ev} Chapter 15.1).
 This is a general feature of the SM: every possible term permitted by gauge invariance and the usual physical requirements of Lorentz invariance etc. is included in the Lagrangian (with one possible exception that forms the basis for the strong CP problem~\cite{Wu:1991rw,Mannel:2007zz}).
@@ -2232,12 +2232,12 @@ Expanding out $(F_{\mu\nu}^a)^2$ gives us cubic and quartic self-interaction ter
 Combining all of the above, we have the gauge-invariant Yang-Mills Lagrangian:
 \begin{equation}
 	\label{eq:01_qft_gt_yangmills_lagrangian}
-	\mathcal L = -\frac{1}{2}\tr{F_{\mu\nu}F^{\mu\nu}} + \bar\psi(i\slashed D - m)\psi,
+	\mathcal L = -\frac{1}{2}\tr{F_{\mu\nu}F^{\mu\nu}} + \bar\psi(i\cslashed D - m)\psi,
 \end{equation}
 or, in explicit, component form:
 \begin{equation}
 	\label{eq:01_qft_gt_yangmills_lagrangian_explicit}
-	\mathcal L = -\frac{1}{4}F_{\mu\nu}^aF^{a\mu\nu} + \bar\psi_i[\delta_{ij}(i\slashed \partial_\mu - m) + g\slashed A^aT_{ij}^a]\psi_j,
+	\mathcal L = -\frac{1}{4}F_{\mu\nu}^aF^{a\mu\nu} + \bar\psi_i[\delta_{ij}(i\cslashed \partial_\mu - m) + g\cslashed A^aT_{ij}^a]\psi_j,
 \end{equation}
 where the indices $i$ and $j$ are running over the fermion fields in the representation $R$.
 Note again that a mass term $m^2A_\mu^aA^{a\mu}$ would violate gauge invariance.

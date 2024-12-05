@@ -9,6 +9,13 @@
     \nicefrac{#1}{#2}
   \fi
 }
+\newcommand{\cslashed}[1]{%
+  \ifdefined\HCode  % slashed not supported by tex4ht
+    \cancel{#1}
+  \else
+    \slashed{#1}
+  \fi
+}
 \newcommand{\cvec}[1]{\mathbf{#1}}
 
 \NewDocumentCommand{\SO}{ o }{%
