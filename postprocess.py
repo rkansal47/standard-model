@@ -77,11 +77,16 @@ def slashedsubscript_fix(file: Path):
         
 
 if __name__ == "__main__":
+    html_files = Path('.').glob('*.html')
+    
+    # This has to be done first, otherwise the html parsing will be messed up
+    for html_file in html_files:
+        slashedsubscript_fix(html_file)
+    
     # Edit the main content
     edit_file(Path('main.html'), edit_main)
     
-    # # Edit footnotes for all HTML files in the directory
-    html_files = Path('.').glob('*.html')
+    # Edit footnotes for all HTML files in the directory
     for html_file in html_files:
         edit_file(html_file, edit_footnotes)
         edit_file(html_file, edit_toc)
