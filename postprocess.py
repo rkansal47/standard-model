@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 from pathlib import Path
+import re
 
 
 def edit_file(file_path: Path, edit_function: callable):
@@ -61,6 +62,18 @@ def edit_toc(soup: BeautifulSoup):
         main_toc_link.append(main_toc_img)
         main_toc_span.append(main_toc_link)
         toc_nav.insert(0, main_toc_span)
+
+
+def slashedsubscript_fix(file: Path):
+    """Workaround for bug with MathML code for subscripts / superscripts with \cancel{}"""
+    with file.open('r') as f:
+        content = f.read()
+    
+    # Apply regex to move <msub|...> tag outside of <menclose> tag
+    content = re.sub(r'<menclose notation="updiagonalstrike"><(msub|msup|msubsup)>', r'<\1><menclose notation="updiagonalstrike">', content)
+    
+    with file.open('w') as f:
+        f.write(content)
         
 
 if __name__ == "__main__":
@@ -72,5 +85,6 @@ if __name__ == "__main__":
     for html_file in html_files:
         edit_file(html_file, edit_footnotes)
         edit_file(html_file, edit_toc)
+        # slashedsubscript_fix(html_file)
     
     # edit_file(Path("Electroweakinteractions.html"), edit_footnotes)
