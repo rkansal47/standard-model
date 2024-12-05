@@ -12,7 +12,7 @@ Written in LaTeX and compiled as both a PDF and HTML website.
 
 ## Notes for LaTeX to HTML conversion
 
-Conversion was done using [tex4ht](https://tug.org/tex4ht/) and the [make4ht](https://github.com/michal-h21/make4ht) build system. 
+Conversion was done using [tex4ht](https://tug.org/tex4ht/) and the [make4ht](https://github.com/michal-h21/make4ht) build system.
 h/t especially to Michal for his work on these tools and responsiveness to issues!
 I tried `latexml` as well but got stuck because of [this](https://github.com/brucemiller/LaTeXML/issues/2268) issue, and `pandoc`, which does not seem as well supported for LaTeX to html.
 Some notes below for others' (and my own) future reference.

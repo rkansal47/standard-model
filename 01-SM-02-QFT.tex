@@ -50,7 +50,7 @@ Finally, we conclude with the famous Higgs mechanism in Section~\ref{sec:01_qft_
 
 % The notion of fields in physics was introduced in the 18th century by physicists in an attempt to develop a \textit{local} theory of Newtonian gravity, instead of the original which implied \textit{action-at-a-distance}.
 % The idea is to associate each point in space and time with a value; in the case of the gravitational field, this value is the gravitational force acting on a particle at that point.
-% Field theory became more relevant in physics after Maxwell based his theory of electromagnetism (EM) on the electric and magnetic fields; importantly, he derived the finite speed of electromagnetic waves, cementing 
+% Field theory became more relevant in physics after Maxwell based his theory of electromagnetism (EM) on the electric and magnetic fields; importantly, he derived the finite speed of electromagnetic waves, cementing
 
 
 
@@ -154,7 +154,7 @@ The E-L equation for this Lagrangian is called the \textit{Klein-Gordon equation
 	\label{eq:01_qft_field_kg_equation}
 	\partial_\mu\partial^\mu\phi + m^2\phi \equiv (\Box + m^2)\phi = 0,
 \end{equation}
-where we've defined the \textit{d'Alembertian} operator $\Box = \partial_\mu\partial^\mu = \partial_t^2 - \nabla^2$.	
+where we've defined the \textit{d'Alembertian} operator $\Box = \partial_\mu\partial^\mu = \partial_t^2 - \nabla^2$.
 
 The Klein-Gordon equation is essentially the relativistic generalization of the Schrödinger equation.
 Just as the Schrödinger equation quantizes the non-relativistic EOM $E = \cnicefrac{p^2}{2m}$, the Klein-Gordon equation converts the relativistic EOM for a free particle
@@ -203,7 +203,7 @@ with $\tilde \phi(\cvec{p}, t)$ satisfying the simple-harmonic oscillator (SHO) 
 	(\partial_t^2 - |\cvec{p}|^2 - m^2)\tilde \phi(\cvec{p}, t) = 0 \quad \Rightarrow \quad \tilde \phi(\cvec{p}, t) \propto e^{-i\omega_p t},
 \end{equation}
 with frequency $\omega_p = \abs{\sqrt{|\cvec{p}|^2 + m^2}}$.
-Thus, 
+Thus,
 \begin{equation}
 	\label{eq:01_qft_field_kg_solutions_final}
 	\phi(\cvec x, t) = \int \frac{d^3p}{(2\pi)^3} \frac{1}{\sqrt{2\omega_p}} (a(\cvec{p})e^{ip\cdot x} + a^*(\cvec{p})e^{-ip\cdot x}),
@@ -216,7 +216,7 @@ As we will see, in \textit{quantum} field theory, the form of the fields is quit
 \label{sec:01_qft_classical_symmetries}
 
 \textit{Noether's theorem} states an important consequence of continuous symmetries of a system: they are associated with a physical conserved currents.
-%  $j_\mu$, 
+%  $j_\mu$,
 % \begin{equation}
 % 	\label{eq:01_qft_symmetries_current}
 % 	\partial_\mu j^\mu = 0.
@@ -277,7 +277,7 @@ Perhaps surprisingly, the interpretation of these as energy and momenta will be 
 
 So far the symmetries we have discussed, such as translational and rotational invariance, are spacetime symmetries.
 An \textit{internal symmetry} is a transformation that acts only on the fields, at each point of spacetime.
-A simple example is for the complex scalar field $\psi(x)$, composed of two real scalar fields $\phi_1(x)$ and $\phi_2(x)$:  
+A simple example is for the complex scalar field $\psi(x)$, composed of two real scalar fields $\phi_1(x)$ and $\phi_2(x)$:
 \begin{equation}
 	\label{eq:01_qft_symmetries_complex_scalar}
 	\begin{split}
@@ -307,7 +307,7 @@ In fact, we say that a field that transforms as so under a global \UU[1] rotatio
 	\end{split}
 \end{equation}
 is \textit{charged} under the \UU[1] symmetry, with charge $q$ (and its complex conjugate with charge $-q$).
-Of course, for a single field, the two constants $\alpha$ and $q$ are redundant so the magnitude of the charge can be defined arbitrarily; however, generally, as in QED, we have multiple fields transforming under the same \UU[1] symmetry with different constants $q$, representing different charges. 
+Of course, for a single field, the two constants $\alpha$ and $q$ are redundant so the magnitude of the charge can be defined arbitrarily; however, generally, as in QED, we have multiple fields transforming under the same \UU[1] symmetry with different constants $q$, representing different charges.
 
 \subsection{Hamiltonian mechanics}
 
@@ -418,7 +418,7 @@ In this section, we briefly sketch \textit{canonical quantization}, a process of
 It is based on the Hamiltonian formalism, in close analogy to the quantization of classical mechanics $\rightarrow$ QM.
 The result makes manifest the connection between quantum fields and their associated particles.
 
-An alternative quantization approach not discussed here is based on the path integral formulation (see Section~\ref{sec:01_qft_classical_path_integral}). 
+An alternative quantization approach not discussed here is based on the path integral formulation (see Section~\ref{sec:01_qft_classical_path_integral}).
 As with most alternative mathematical prescriptions of the same physics, it provides useful insight into the theory and can simplify certain calculations.
 Further detail can be found, for example, in Peskin and Schroeder~\cite{Peskin:1995ev} Chapter 9.
 
@@ -489,7 +489,7 @@ Subtracting away the zero-point energy gives us
 whose commutators with the raising and lowering operators are:
 \begin{equation}
     \label{eq:01_qft_quantization_hamiltonian_commutators}
-    [H, \ophatd a] = \svecp \omega \ophatd a, \quad [H, \ophat a] = -\svecp \omega \ophat a, 
+    [H, \ophatd a] = \svecp \omega \ophatd a, \quad [H, \ophat a] = -\svecp \omega \ophat a,
 \end{equation}
 just as for a QHO.
 This tells us that given an eigenstate of $H$, $\ket{E}$, with eigenvalue $E$, $\ophatd a \ket{E}$ and $\ophat a \ket{E}$ are also eigenstates with eigenvalues $E + \svecp \omega$ and $E - \svecp \omega$, respectively:
@@ -501,7 +501,7 @@ This tells us that given an eigenstate of $H$, $\ket{E}$, with eigenvalue $E$, $
     \end{split}
 \end{equation}
 
-To derive the Hilbert space of this theory, we first define the vacuum $\ket{0}$ as the state for which 
+To derive the Hilbert space of this theory, we first define the vacuum $\ket{0}$ as the state for which
 \begin{equation}
     \label{eq:01_qft_quantization_hamiltonian_vacuum}
     \ophat a \ket{0} = 0\; \forall \cvec{p} \quad \Rightarrow \quad H\ket{0} = 0.
@@ -550,7 +550,7 @@ The number of particles $n$ in a particular state of the Fock space is given by 
 \end{equation}
 Note that the number operator $N$ commutes with the Hamiltonian $H$, $[N, H] = 0$, which means particle number is conserved; however, this will not be the case for interacting theories in the next section.
 
-Finally, observe that for our scalar field, the creation operators commute amongst themselves. 
+Finally, observe that for our scalar field, the creation operators commute amongst themselves.
 This means the states $\ket{\cvec{p}_1, \ldots, \cvec{p}_n}$ are symmetric under exchange of particles, and thus describe \textit{bosons}.
 
 \subsection{The complex scalar field and antiparticles}
@@ -595,7 +595,7 @@ Finally, let us revisit and quantize the conserved charge associated with the \U
 This is saying the difference in the number of particles and antiparticles is conserved, which for a single charged particle-antiparticle pair, is equivalent to charge conservation.
 This will be more significant for interacting theories, in which $N_b$ and $N_c$ are not individually conserved but as long as the interactions retain the \UU[1] symmetry, $Q$ is.
 
-\subsubsection{Negative energy states?} 
+\subsubsection{Negative energy states?}
 
 Note that the full, time-dependent formula for the field $\psi(\cvec{x}, t)$ contains both the $e^{-ip\cdot x}\propto e^{-iEt}$ and $e^{ip\cdot x}\propto e^{iEt}$ terms.
 As single-particle plane-wave solutions to the nonrelativistic Schr\"odinger equation, these would correspond to positive and negative energy states, the latter of which does not make physical sense.\footnote{This is related to the problem Dirac faced in developing his relativistic quantum theory of the electron, except we are dealing with bosons instead of fermions, so we cannot rely on the fermionic Dirac sea ``solution''.}
@@ -631,7 +631,7 @@ with some spread in momenta $\varphi(\cvec{p})$.
 However, as long as this variation is smaller than the resolution of our detector (as we will assume), for all practical purposes and calculations we can continue to treat particles as momentum eigenstates.
 This assumption is further motivated in Peskin and Schroeder~\cite{Peskin:1995ev} Chapter 4.5.
 
-\subsubsection{Interpretation of $\hat \phi(x)$} 
+\subsubsection{Interpretation of $\hat \phi(x)$}
 
 Let us consider the field $\phi(x)$ itself for a moment.
 We have understood the meaning of the creation, annihilation, momentum, and other operators, but what does the field $\phi(x)$ do?
@@ -646,7 +646,7 @@ Thus, we can roughly interpret $\phi(\cvec{x})$ as an operator which creates a p
 However, we will see next that $\phi(\cvec{x})\ket{0} \equiv \ket{\cvec{x}}$, unlike in QM, is not \textit{exactly} localized in position (although it's pretty close).
 
 
-\subsubsection{Propagators} 
+\subsubsection{Propagators}
 
 We can now discuss the \textit{propagator} of a field, which is the amplitude for the associated particle at a spacetime point $y$ to be found at $x$:
 \begin{equation}
@@ -655,7 +655,7 @@ We can now discuss the \textit{propagator} of a field, which is the amplitude fo
 \end{equation}
 This is also called the \textit{two-point correlation function} between $x$ and $y$.
 
-Interestingly, it can be shown that, for a particle with mass $m > 0$, for space-like separated points, e.g. $x_0 = y_0, \abs{\cvec{x} - \cvec{y}} \equiv r$, 
+Interestingly, it can be shown that, for a particle with mass $m > 0$, for space-like separated points, e.g. $x_0 = y_0, \abs{\cvec{x} - \cvec{y}} \equiv r$,
 \begin{equation}
 	\label{eq:01_qft_quantization_propagator_spacelike}
 	D(r) \sim e^{-mr},
@@ -763,7 +763,7 @@ These terms are called \textit{relevant} because they affect the physics that we
 
 \subparagraph{$[\lambda_4] = 0$:} These are called \textit{marginal} interactions, which are small if $\lambda_4 \ll 1$.
 
-\subparagraph{$[\lambda_n] < 0, n > 4$:} These interactions are small at low energies and large at high energies. 
+\subparagraph{$[\lambda_n] < 0, n > 4$:} These interactions are small at low energies and large at high energies.
 Because of this, we typically do not need to consider them in a QFT; hence, they are called \textit{irrelevant}.
 
 Thus, in a sense, QFT is quite simple --- we need only consider relevant and marginal interactions! In this case, $\lambda_3 \phi^3$ and $\lambda_4 \phi^4$.
@@ -772,7 +772,7 @@ The same dimensional analysis also shows why we do not consider terms with more 
 When we do want to explore the effects of irrelevant interactions, we can parametrize them as generic operators in the Lagrangian which are suppressed by powers of $(E/\Lambda)^{n-4}$, where $\Lambda$ is the energy scale at which we expect these interactions to become relevant.
 This is (one of) the ideas behind \textit{effective field theory} (EFT)~\cite{Manohar:2018aog, Isidori:2023pyp}.
 
-\subsubsection{Renormalizability} 
+\subsubsection{Renormalizability}
 
 The types of interactions present in a theory also determine its \textit{renormalizability}.
 Calculations in QFT are inherently plagued by infinities, one of which we encountered as the zero-point energy of the quantized free scalar field (Section~\ref{sec:01_qft_quantization_hamiltonian}).
@@ -802,11 +802,11 @@ The S-matrix elements between particles are the physical quantities we measure: 
 Formally, fields and particles are related through the LSZ reduction formula~\cite{Lehmann:1954rq}, which expresses S-matrix elements in terms of the Green functions of the field (Section~\ref{sec:01_qft_quantization_propagators}).
 The formula states that the S-matrix element between $n$ incoming and $m$ outgoing asymptotically free, on-shell particles is the residue of the $n+m$ particle pole of the associated fields' Green functions.\footnote{Useful discussions of this can be found in Peskin and Schroeder~\cite{Peskin:1995ev} Chapter 7 and Schwartz~\cite{Schwartz:2014sze} Chapter 6.}
 
-This is a very powerful result in QFT but, stated this way, not particularly useful for calculations... 
+This is a very powerful result in QFT but, stated this way, not particularly useful for calculations...
 Instead, in this section, we heuristically explain the more practical consequence of the LSZ formula, which is that the S-matrix element can be calculated using the time-ordered product of the interacting fields, up to different orders in the interaction coupling constant.
 In the following section, we then present the even more practical method of calculating such time ordered products using Feynman diagrams.
 
-% We will not derive it here, or even present its full form (for this see, for example, Peskin and Schroeder~\cite{Peskin:1995ev} Chapter 7). 
+% We will not derive it here, or even present its full form (for this see, for example, Peskin and Schroeder~\cite{Peskin:1995ev} Chapter 7).
 % We will simply demonstrate its practical use in calculating S-matrix elements using perturbation theory and Feynman diagrams.
 
 \subsubsection{Scalar Yukawa Lagrangian}
@@ -818,7 +818,7 @@ We will use \textit{scalar Yukawa theory} as an example, which couples together 
 \end{equation}
 The interaction term $g\phi\psi^\dagger\psi$ is called a \textit{Yukawa interaction}, and the weak coupling condition is $g \ll m, M$.
 
-A similar theory was originally developed by Hideki Yukawa to model the strong nuclear force between nucleons ($\psi$) via a hypothesized meson ($\phi$)~\cite{Yukawa:1935xg}. 
+A similar theory was originally developed by Hideki Yukawa to model the strong nuclear force between nucleons ($\psi$) via a hypothesized meson ($\phi$)~\cite{Yukawa:1935xg}.
 Amazingly, such a meson was discovered a decade later via cosmic rays, and is called the pion~\cite{Lattes:1947mw}.
 Nobel Prizes were awarded for both the prediction and discovery.
 The difference in our theory is the scalar rather than fermionic nucleon, for simplicity; we will still, however, be able to reproduce the iconic physical feature of the theory: the Yukawa potential.
@@ -851,7 +851,7 @@ The first term in the expansion is the free field term, which we ignore.\footnot
 The $n$th term after that is of order $g^n$, where $g$ is the coupling constant of the interaction term.
 Thus, this offers a prescription for calculating the S-matrix element up to any fixed order in the interaction strength.
 
-Note that $\ket{i}$ and $\ket{f}$ are particle momentum eigenstates of the free theory. 
+Note that $\ket{i}$ and $\ket{f}$ are particle momentum eigenstates of the free theory.
 We can justify this intuitively by thinking of them as the states long before and after the interaction, when the interaction term is negligible.
 Formally, there is in fact a complicated formula relating the free and interacting eigenstates; however, the proportionality factors cancel rather beautifully in the S-matrix element, allowing us to focus on only ``connected'' and ``amputated'' Feynman diagrams between the free eigenstates, which we define in the next section.
 This is illustrated (literally) for the vacuum states in Peskin and Schroeder~\cite{Peskin:1995ev} Chapter 4, and justified more generally by the LSZ reduction formula.
@@ -901,17 +901,17 @@ We can avoid this by using \textit{Feynman diagrams}, and their associated rules
 \subsection{Feynman diagrams}
 \label{sec:01_qft_interactions_feynman}
 
-Feynman diagrams are intuitive and powerful tools for calculating S-matrix elements. 
+Feynman diagrams are intuitive and powerful tools for calculating S-matrix elements.
 Examples for our first-order meson decay and nucleon-antinucleon annihilation processes are shown in Figure~\ref{fig:01_qft_interactions_feynman_first_order}.
 They encode a lot of information (some of which is redundant, shown only for these first diagrams for clarity).
 Let us walk through some conventions we are using:
 \begin{enumerate}
-	\item Time and momentum always flow from left to right. 
+	\item Time and momentum always flow from left to right.
 	Thus, the left-most particles represent the initial, and the right-most the final states.
 	Momentum arrows are shown here explicitly but henceforth need not be.
 	\item Mesons are plotted as dotted and nucleons as solid lines.
 	\item Nucleon lines have arrows representing \textit{particle-flow}.
-	For external (i.e., initial or final state) nucleons they point in the direction of momentum for particles and opposite for antiparticles. 
+	For external (i.e., initial or final state) nucleons they point in the direction of momentum for particles and opposite for antiparticles.
 	Again, for future diagrams, particles need not be explicitly labeled as the linestyles and particle-flow arrows suffice.
 \end{enumerate}
 
@@ -1023,7 +1023,7 @@ In this case, we can reason physically that since nucleons are bosons, the ampli
 Note that by momentum conservation, the exchange meson does not have mass $m$, as $k^2 \neq m^2$.
 We say that this meson is a \textit{virtual particle} and is \textit{off-shell} (referring to the ``mass shell'' in $k$ at $k^2 = m^2$).
 This may appear dangerously unphysical; however, we are saved by the fact that such off-shell particles always appear internally in the diagram and thus can never be observed.
-% Their physical interpretation is quite unclear; 
+% Their physical interpretation is quite unclear;
 In a sense, they can be viewed simply as a mathematical convenience in QFT.
 No one knows their correct physical interpretation; to quote Hong Liu, ``In physics, when we don't understand something, we give it a name and then claim we understand it.''~\cite{LiuRQFT}.
 
@@ -1069,7 +1069,7 @@ Then,
 	s = 4E^2, \quad t = -2p^2(1-\cos\theta), \quad u = -2p^2(1+\cos\theta).
 \end{equation}
 Thus, $s$ is the total energy in the COM frame squared --- hence, we usually refer to the COM energy as $\sqrt{s}$ --- while $t$ and $u$ are a measure of how much momentum is exchanged between the scattered particles.
-For example, if $\theta = 0$, both particles continue in the same direction and $t = 0$, while if $\theta = \pi$, they completely 
+For example, if $\theta = 0$, both particles continue in the same direction and $t = 0$, while if $\theta = \pi$, they completely
 reverse direction and the momentum transfer along the collision axis is maximized at $\sqrt{\abs{t}} = 2p$.
 
 \subsubsection{Nucleon-antinucleon scattering and resonances}
@@ -1157,7 +1157,7 @@ See e.g. Zee QFT~\cite{Zee:2003mt} Chapter I.5 for a useful discussion.
 
 So far, we have only considered \textit{tree-level} diagrams, the simplest to calculate.
 This is in contrast to diagrams with \textit{loops}, which can occur at higher order in perturbation theory.
-For example, at fourth-order we can have diagrams like those in Figure~\ref{fig:01_qft_interactions_feynman_loops} for nucleon scattering. 
+For example, at fourth-order we can have diagrams like those in Figure~\ref{fig:01_qft_interactions_feynman_loops} for nucleon scattering.
 
 Such diagrams contribute integrals over the loop momentum $k$ to the matrix element, which can notoriously diverge.
 To deal with this requires a process called \textit{renormalization}, which, briefly, involves defining a cut-off energy scale $\Lambda$ for these integrals, beyond which we claim the theory is invalid.
@@ -1340,7 +1340,7 @@ Dirac found this is possible with $4\times 4$ matrices such as
 \begin{equation}
 	\label{eq:01_qft_spinors_gamma_matrices_weyl_basis}
 	% \setlength{\arraycolsep}{8pt}
-	\gamma^0 = \begin{pmatrix} 0 & \identity \\ \identity & 0 \end{pmatrix}, \quad 
+	\gamma^0 = \begin{pmatrix} 0 & \identity \\ \identity & 0 \end{pmatrix}, \quad
 	\gamma^i = \begin{pmatrix} 0 & \sigma^i \\ -\sigma^i & 0 \end{pmatrix},
 \end{equation}
 where $\sigma^i$ are the Pauli matrices (Chapter~\ref{sec:01_symmetries_so3}).
@@ -1366,7 +1366,7 @@ satisfies the Lorentz algebra (Eq.~\ref{eq:01_poincare_algebra_mmunu}).
 This means $\Sigma_{\mu\nu}$ are generators of Lorentz transformations
 \begin{equation}
 	\label{eq:01_qft_spinors_spinor_lorentz_transformation}
-	S[\Lambda] = e^{\frac{1}{2}\omega^{\mu\nu}\Sigma_{\mu\nu}}, 
+	S[\Lambda] = e^{\frac{1}{2}\omega^{\mu\nu}\Sigma_{\mu\nu}},
 \end{equation}
 where $\Lambda$ is a Lorentz transformation with parameters $\omega^{\mu\nu}$, and $S[\Lambda]$ is a particular 4D representation.
 
@@ -1430,15 +1430,15 @@ The Dirac equation can be rewritten in the Weyl basis as two coupled equations o
 Let us define $\sigma^\mu = (\identity, \cvec{\sigma})$ and $\bar{\sigma}^\mu = (\identity, -\cvec{\sigma})$, so that
 \begin{equation}
 	\label{eq:01_qft_spinors_dirac_weyl}
-	(i\gamma^\mu\partial_\mu - m)\psi = 
-	\begin{pmatrix} 
-		-m & i\sigma^\mu\partial_\mu \\ i\bar{\sigma}^\mu\partial_\mu & -m 
+	(i\gamma^\mu\partial_\mu - m)\psi =
+	\begin{pmatrix}
+		-m & i\sigma^\mu\partial_\mu \\ i\bar{\sigma}^\mu\partial_\mu & -m
 	\end{pmatrix}
 	\begin{pmatrix} \psi_L \\ \psi_R \end{pmatrix} = 0.
 \end{equation}
-Hence, we see the mass term couples the left- and right-handed components. 
+Hence, we see the mass term couples the left- and right-handed components.
 This is why all massive fermions must exist in pairs of particles and antiparticles.
-An important special case, however, is for a neutral \textit{Majorana} fermion, where $\psi$ equals its charge conjugate $\psi^c$ (to be defined below). 
+An important special case, however, is for a neutral \textit{Majorana} fermion, where $\psi$ equals its charge conjugate $\psi^c$ (to be defined below).
 Such a particle is its own antiparticle and can have a left-handed- or right-handed-only mass term.
 As discussed in Chapter~\ref{sec:01_symmetries_poincare}, the only Majorana candidate in the SM is the right-handed neutrino.
 
@@ -1621,7 +1621,7 @@ They are all related to the deep connection between spin and statistics: the req
 \label{sec:01_qft_spinors_feynman}
 
 Having quantized the free Dirac field, we now discuss interactions, again focusing on small (and renormalizable) perturbations to the free theory.
-% \TODO{fix this...} As one may expect, the primary difference with respect to the complex scalar ``nucleon'' fields from Section~\ref{sec:01_qft_quantization_interactions} is 
+% \TODO{fix this...} As one may expect, the primary difference with respect to the complex scalar ``nucleon'' fields from Section~\ref{sec:01_qft_quantization_interactions} is
 We start by presenting the propagators for the Dirac field and then extending our scalar Yukawa theory from Section~\ref{sec:01_qft_interactions} to spinor ``nucleons''.
 
 \subsubsection{Propagators}
@@ -1771,7 +1771,7 @@ These mysterious ``coincidences'' --- Why did nature ``choose'' exactly the mini
 
 % Note that there is an ambiguity in our terminology related to whether these $C$, $P$, and $T$ operators are acting on particles or fields.
 % For example, the $\hat C$ particle operator acting on a left-handed electron $\ket{p, s}_{e^-_L}$ is defined to transform it to a left-handed positron $\ket{p, s}_{e^-_L}$.
-% However, the $C$ \textit{field} operator loosely transforms $\psi \rightarrow \bar\psi$, which is 
+% However, the $C$ \textit{field} operator loosely transforms $\psi \rightarrow \bar\psi$, which is
 % gives a negative charged antiparticle state $\ket{p, s}$, but acting on the field $\psi$ it gives $\bar\psi$.
 
 
@@ -1921,7 +1921,7 @@ All experimental tests to this date have confirmed $CPT$-invariance~\cite{Partic
 % 	\centering
 {
 	\noindent
-	\textit{Nature seems to take advantage of the simple mathematical representations of the symmetry laws. 
+	\textit{Nature seems to take advantage of the simple mathematical representations of the symmetry laws.
 	When one pauses to consider the elegance and the beautiful perfection of the mathematical reasoning involved and contrast it with the complex and far-reaching physical consequences, a deep sense of respect for the power of the symmetry laws never fails to develop.} --- C. N. Yang
 }
 % \end{center}
@@ -1962,7 +1962,7 @@ On the other hand, despite its abstruseness, in the end with QFT we simply draw 
 
 A more poetic view is that, on top of their practicality, gauge symmetries offer a beautiful and elegant description of the fundamental forces of nature.
 It is rather amazing that we need only to require a quantum \UU[1] gauge theory, with the usual physical properties of Lorentz invariance, causality, renormalizability etc., and QED naturally falls out!
-To quote O'Raifeartaigh, ``gauge symmetry introduces all the physical radiation fields in a natural way and determines the form of their interactions, up to a few coupling constants. 
+To quote O'Raifeartaigh, ``gauge symmetry introduces all the physical radiation fields in a natural way and determines the form of their interactions, up to a few coupling constants.
 It is remarkable that this variety of physical fields, which play such different roles at the phenomenological level, are all manifestations of the same simple principle and even more remarkable that the way in which they interact with matter is prescribed in advance.''~\cite{ORaifeartaigh:1997dvq}.
 
 This universality can be extended further with the geometric view of gauge theories, which has a strong connection to general relativity (GR).
@@ -1973,7 +1973,7 @@ Finally, there is the possibility that gauge invariance is simply one of those m
 For example, in string theory, gauge invariance can arise naturally in an EFT of massless spin-$1$ particles~\cite{Green:1987sp}.
 Ultimately, these considerations are not particularly relevant to the experimental physics, but after all this is a dissertation for a doctorate of philosophy...
 %  - These views have next to no practical consequence (yet?) but after all, this is a dissertation for a doctorate of philosophy. \\
- 
+
 
 \subsection{Maxwell Theory}
 \label{sec:01_qft_gt_maxwell}
@@ -2054,13 +2054,13 @@ Note that the commutator of the covariant derivative is in fact not a derivative
 	[D_\mu, D_\nu]\phi = ([\partial_\mu, \partial_\nu] - ie[\partial_\mu, A_\nu] + ie[\partial_\nu, A_\mu])\phi = -ieF_{\mu\nu}\phi.
 \end{equation}
 Thus, we can define $F_{\mu\nu} \equiv \frac{i}{e}[D_\mu, D_\nu]$, which will prove useful for non-abelian gauge symmetries later in this section.
-% By definition, higher order covariant derivatives transform the same way as the first order, meaning $F_{\mu\nu}$ transforms as $F_{\mu\nu} \rightarrow 
+% By definition, higher order covariant derivatives transform the same way as the first order, meaning $F_{\mu\nu}$ transforms as $F_{\mu\nu} \rightarrow
 
 Generally, we choose the normalization $Q_e = -1$ for the electron field, so $e$ becomes our familiar elementary charge (in natural units) and $\alpha\equiv\cnicefrac{e^2}{4\pi} \approx \cnicefrac{1}{137}$ is the famous dimensionless fine structure constant.\footnote{Technically, this value varies with our energy scale, as we will discuss in Section~\ref{sec:01_qft_renormalization}, and $\cnicefrac{1}{137}$ is its asymptotic value at low energies.}
 
 \subsubsection{Interactions with spinors}
 
-The case for spinors is not so different. 
+The case for spinors is not so different.
 The definition of the covariant derivative remains the same, so combining the ``covariant'' Dirac Lagrangian with the free photonic yields the QED Lagrangian:
 \begin{equation}
 	\label{eq:01_qft_gt_maxwell_qed_lagrangian}
@@ -2137,7 +2137,7 @@ In QED, we typically take $\xi = 1$, called the Feynman-'t Hooft gauge, for simp
 
 These Feynman rules can be applied to simple tree-level processes similarly to Yukawa theory (see Sections~\ref{sec:01_qft_interactions_feynman} and~\ref{sec:01_qft_spinors_feynman}).
 These include several important processes such as electron-electron scattering $e^-e^- \rightarrow e^-e^-$ via a virtual photon, Compton scattering $\gamma e^- \rightarrow \gamma e^-$, electron-positron annihilation $e^+e^- \rightarrow \gamma\gamma$, and electron-positron (or Bhabha) scattering $e^+e^- \rightarrow e^+e^-$.
-% We will discuss just one example, of electron-electron scattering $e^-e^- \rightarrow e^-e^-$, 
+% We will discuss just one example, of electron-electron scattering $e^-e^- \rightarrow e^-e^-$,
 The former (and its variations with other charged particles) is what we generally experience as electromagnetism, and can recover the Coloumb potential in the non-relativistic limit.
 
 
@@ -2246,7 +2246,7 @@ Interestingly, despite the extra self-interaction terms, there remains only one 
 This is why the SM, despite its apparent complexity, has so few free parameters, particularly in the ``gauge sector'' (the majority of free parameters are related to couplings in the \textit{Higgs} sector).
 It is also worth emphasizing that the primary difference \textit{physically} between abelian and non-abelian gauge theories is that the gauge bosons are charged under the gauge group in the latter (and, hence, self-interact).
 
-% On the other hand, there is a new term which \textit{is} possible, 
+% On the other hand, there is a new term which \textit{is} possible,
 
 
 \subsection{Quantized Yang-Mills Theory}

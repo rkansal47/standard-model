@@ -4,7 +4,7 @@
         {
           "name": "latexmk",
           "tools": [
-            "xelatexmk"
+            "lualatexmk"
           ]
         },
     ],

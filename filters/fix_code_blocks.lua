@@ -25,17 +25,17 @@ local function fix_code_blocks(dom)
     for i = #children, 1, -1 do
       local current = children[i]
       local status = obj_process(current)
-      if status == true then 
+      if status == true then
         -- remove also the line break before the <br>
-        local nextobj = children[i-1] 
+        local nextobj = children[i-1]
         obj_process(nextobj)
-        break 
+        break
       end
     end
-    -- remove the first pre 
+    -- remove the first pre
     for i, obj in ipairs(children) do
       local status = obj_process(obj)
-      if status == true then 
+      if status == true then
         break
       end
     end

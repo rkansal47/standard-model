@@ -8,7 +8,7 @@
 	\textit{Perfectly balanced, as all things should be.} --- Thanos
 \end{center}
 
-Symmetry is a powerful and beautiful way to understand nature. 
+Symmetry is a powerful and beautiful way to understand nature.
 Intuitively, a symmetry is a transformation that leaves an object unchanged.
 For example, a plain square has a four-fold rotational symmetry: it looks identical rotated once, twice, thrice, or four times by $90^{\circ}$.
 
@@ -139,7 +139,7 @@ This corresponds to the \textit{special orthogonal} group in 2-dimensions $\SO[2
 
 \begin{definition}
 \label{def:01_son}
-More generally, the orthogonal group in $n$ dimensions, $\OO[n]$, is defined as	the group of orthogonal, or ``distance-preserving'', $n \times n$ matrices $M$, s.t. $MM^T = \identity$. 
+More generally, the orthogonal group in $n$ dimensions, $\OO[n]$, is defined as	the group of orthogonal, or ``distance-preserving'', $n \times n$ matrices $M$, s.t. $MM^T = \identity$.
 The \textit{special orthogonal} group $\SO[n]$ is the subgroup of $n \times n$ orthogonal matrices with determinant 1, essentially retaining only rotations while removing reflections.
 \end{definition}
 
@@ -179,7 +179,7 @@ An infinite group is \textit{compact} if a group-invariant sum or integral over 
 	\label{eq:01_u1_integral}
 	\int_0^{2\pi} d\theta = 2\pi
 \end{equation}
-is finite. 
+is finite.
 Indeed, all \SO[n] and \SU[n] groups are compact.
 \end{definition}
 
@@ -194,13 +194,13 @@ We next introduce the concepts of Lie groups and Lie algebras, which are highly 
 \label{def:01_lie_group}
 A \textit{Lie group} is a group that is also a differentiable manifold, or ``smooth''.
 Virtually all continuous groups we consider in physics are Lie groups.
-What this means is that we can think of the operation of any arbitrary group element as equivalent to $N$ successive infinitesimal operations of the form 
+What this means is that we can think of the operation of any arbitrary group element as equivalent to $N$ successive infinitesimal operations of the form
 \begin{equation}
 	\label{eq:01_lie_group_infinitesimal}
 	g(\varepsilon_A) = \identity + i \varepsilon_A T_A,
 \end{equation}
 where $\varepsilon_A$ are infinitesimal and indexing the continuous group parameters, e.g. rotation angles for \SO[n], $T_A$ are called the \textit{generators} of the group,
-% \footnote{They are named so because they \textit{generate} the transformations of the group; for example, we will see that the generators for rotations correspond to angular momentum, which is what is required for a body to rotate.} 
+% \footnote{They are named so because they \textit{generate} the transformations of the group; for example, we will see that the generators for rotations correspond to angular momentum, which is what is required for a body to rotate.}
 and we are using Einstein notation, implicitly summing over the index $A$.
 Thus, for a general element $g(\theta_A)$, where $\theta_A = N \varepsilon_A$ as defined above, we have
 \begin{equation}
@@ -248,13 +248,13 @@ Importantly, however, they are locally isomorphic near the identity, meaning the
 
 We can derive the generators of \SO[3] by using the properties of the special orthogonal group ($R^TR=\identity$).
 From Eq.~\ref{eq:01_lie_group_infinitesimal}, we have
-\begin{equation} 
+\begin{equation}
 	\begin{split}
 	\label{eq:01_so3_generators_derivation}
 	R(\varepsilon) &\approxeq \identity + i \varepsilon T \\
 	R^TR &= \identity + i \varepsilon (T^T + T) + \mathcal O(\varepsilon^2) \mustequal \identity \\
 	\Rightarrow T^T &= -T.
-\end{split} 
+\end{split}
 \end{equation}
 Thus $T$ are antisymmetric matrices, of which for $N = 3$ dimensions there are three linearly independent ones:
 \begin{equation}
@@ -282,7 +282,7 @@ By exponentiating these, as in Eq.~\ref{eq:01_lie_group_finite}, we obtain the f
 % Note that conventions around the factor of $i$ in the representations and commutation relations are annoyingly inconsistent in the literature and likely, despite our best efforts, in this chapter as well.
 
 To find the fundamental representation of \su[2], we can follow the same procedure as above, using the unitarity constraint $R^\dagger R = \identity$ for $N = 2$ dimensional complex matrices, which yields:
-\begin{equation} 
+\begin{equation}
 	\label{eq:01_su2_generators}
 	\begin{split}
 	\setlength{\arraycolsep}{8pt}
@@ -298,7 +298,7 @@ To find the fundamental representation of \su[2], we can follow the same procedu
 		1 & 0 \\
 		0 & -1
 	\end{pmatrix},
-\end{split} 
+\end{split}
 \end{equation}
 where $\sigma_i$ are the Pauli matrices --- the angular momentum operators for the spin of spin-$1/2$ particles in QM.
 Either set of generators yield the following Lie algebra of both groups:
@@ -324,7 +324,7 @@ Thus, it is the same as the dimension of the adjoint representation.
 \end{definition}
 
 As it turns out, for \so[3] and \su[2], the adjoint representation $[T_A]_{BC} = -i \varepsilon_{ABC}$ is simply the fundamental representation of \so[3].
-More generally, the dimensions of the fundamental and adjoint representations of \SO[n] and \SU[n] are given in Table~\ref{tab:01_so_su_dimensions}.	
+More generally, the dimensions of the fundamental and adjoint representations of \SO[n] and \SU[n] are given in Table~\ref{tab:01_so_su_dimensions}.
 The significance of these representations, as we will see, is that the force carriers (i.e., gauge bosons) of the SM live in the adjoint representation of their associated gauge group, while the matter particles live in either their fundamental or trivial representations.
 
 \begin{table}[ht!]
@@ -365,7 +365,7 @@ These are named so because
 \begin{equation}
 	\label{eq:01_so3_su2_raise_lower_eigenstates}
 	J_zJ_\pm\ket{m} = [J_\pm Jz \pm J_\pm]\ket{m} = (m \pm 1)J_\pm\ket{m},
-\end{equation}										
+\end{equation}
 i.e., $J_\pm\ket{m}$ are eigenvectors of $J_z$ with eigenvalues $m \pm 1$, implying
 \begin{equation}
 	\label{eq:01_so3_su2_raise_lower_operation}
@@ -446,7 +446,7 @@ Generally, in this chapter, when we talk about the Lorentz group or Lorentz inva
 
 Lorentz transformations $\Lambda$ are generated by six antisymmetric matrices, three for boosts ($K_i$) and three for rotations ($J_i$).
 In the $4$-vector representation, these are:
-\begin{equation} 
+\begin{equation}
 	\begin{split}
 	\label{eq:01_lorentz_generators}
 	K_x &= -i\begin{pmatrix}
@@ -455,13 +455,13 @@ In the $4$-vector representation, these are:
 		1 & 0 & 0 & 0 \\
 		0 & 0 & 0 & 0 \\
 		0 & 0 & 0 & 0
-	\end{pmatrix}, \ 
+	\end{pmatrix}, \
 	K_y = -i\begin{pmatrix}
 		0 & 0 & 1 & 0 \\
 		0 & 0 & 0 & 0 \\
 		1 & 0 & 0 & 0 \\
 		0 & 0 & 0 & 0
-	\end{pmatrix}, \ 
+	\end{pmatrix}, \
 	K_z = -i\begin{pmatrix}
 		0 & 0 & 0 & 1 \\
 		0 & 0 & 0 & 0 \\
@@ -474,20 +474,20 @@ In the $4$-vector representation, these are:
 		0 & 0 & 0 & 0 \\
 		0 & 0 & 0 & -1 \\
 		0 & 0 & 1 & 0
-	\end{pmatrix}, \ 
+	\end{pmatrix}, \
 	J_y = i\begin{pmatrix}
 		0 & 0 & 0 & 0 \\
 		0 & 0 & 0 & 1 \\
 		0 & 0 & 0 & 0 \\
 		0 & -1 & 0 & 0
-	\end{pmatrix}, \ 
+	\end{pmatrix}, \
 	J_z = i\begin{pmatrix}
 		0 & 0 & 0 & 0 \\
 		0 & 0 & -1 & 0 \\
 		0 & 1 & 0 & 0 \\
 		0 & 0 & 0 & 0
 	\end{pmatrix}.
-\end{split} 
+\end{split}
 \end{equation}
 Lorentz transformations can thus be represented as
 \begin{equation}
@@ -541,7 +541,7 @@ With this, we can easily obtain the generators $J_i$, $K_i$ for the smallest few
 	(\cnicefrac{1}{2}, 0)\text{:}& \qquad J^+_i = \frac{1}{2} \sigma_i,\, J^-_i = 0 \! &\Rightarrow& \qquad J_i = \frac{1}{2} \sigma_i, K_i = -\frac{i}{2} \sigma_i. \\
 	\label{eq:01_lorentz_irreps_weyl_right}
 	(0, \cnicefrac{1}{2})\text{:}& \qquad J^+_i = 0,\, J^-_i = \frac{1}{2} \sigma_i \! &\Rightarrow& \qquad J_i = \frac{1}{2} \sigma_i, K_i = \frac{i}{2} \sigma_i. \\[2mm]
-	% (\cnicefrac{1}{2}, \cnicefrac{1}{2})\text{:}& 
+	% (\cnicefrac{1}{2}, \cnicefrac{1}{2})\text{:}&
 	& \qquad\qquad\qquad\qquad\qquad \vdots \notag
 	\vspace{-10mm}
 \end{align}
@@ -654,7 +654,7 @@ The Casimirs of the Poincaré algebra are the operators
 	\label{eq:01_poincare_casimirs}
 	P^2 = P_\mu P^\mu\ \mathrm{ and }\ W^2 = W_\mu W^\mu,
 \end{equation}
-where 
+where
 \begin{equation}
 	\label{eq:01_poincare_wmu}
 	W_\mu = \frac{1}{2}\epsilon_{\mu\nu\rho\sigma}M^{\nu\rho}P^\sigma
@@ -663,7 +663,7 @@ is the \textit{Pauli-Lubanski vector}, the relativistic analog of the angular mo
 Furthermore, $P_\mu$ commutes with both, and we can label its eigenstates as $\ket{p}$,
 \begin{equation}
 	\label{eq:01_poincare_pmu_eigenstates}
-	P_\mu\ket{p} = p_\mu\ket{p}, 
+	P_\mu\ket{p} = p_\mu\ket{p},
 \end{equation}
 which represent single-particle states with 4-momentum $p_\mu$.
 % Note that we have an infinite number of states and, therefore, necessarily infinite-dimensional representations of the Poincaré group because it is not compact.
@@ -724,8 +724,8 @@ We will discuss the mechanisms for these and all fundamental interactions in the
 % \section{Summary}
 
 % In this section, we introduced group theory, the mathematical framework for describing symmetries.
-% We described properties of continuous symmetry groups, their generators 
+% We described properties of continuous symmetry groups, their generators
 
-% and their Lie algebras, defining 
+% and their Lie algebras, defining
 
 % and its applications to physics, emphasizing continuous groups and their Lie algebras.

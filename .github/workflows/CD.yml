@@ -1,6 +1,6 @@
 name: CD
 
-on: 
+on:
     push:
         branches:
             - main
@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run make4ht
-      uses: docker://ghcr.io/michal-h21/make4ht-action:latest 
+      uses: docker://ghcr.io/michal-h21/make4ht-action:latest
       env:
         command: "make website"
     - name: Publish the web pages

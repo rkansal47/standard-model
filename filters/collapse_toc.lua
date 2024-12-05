@@ -9,7 +9,7 @@ local function get_id(el)
 end
 
 local function remove_sections(part_elements, currentpart)
-  -- we need to remove toc entries from the previous part if the 
+  -- we need to remove toc entries from the previous part if the
   -- current document isn't part of it
   if currentpart == false then
     for _, part in ipairs(part_elements) do
@@ -69,6 +69,6 @@ local function toc_sections (dom)
   end
   return dom
   --% return dom:serialize()
-end 
+end
 
 return toc_sections
