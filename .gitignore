@@ -1,5 +1,6 @@
 main*
 !main.tex
+!main.bbl
 MWE*
 .DS_Store
 website
@@ -7,3 +8,4 @@ build
 *.html
 out
 *.pdf
+!main.pdf
