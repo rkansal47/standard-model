@@ -12,9 +12,9 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run make4ht
-      uses: docker://ghcr.io/michal-h21/make4ht-action:latest
+      uses: docker://ghcr.io/rkansal47/make4ht-action:latest
       env:
-        command: "apt-get update -y; apt-get install -y texlive-fonts-extra python3-bs4; make website"
+        command: "make website"
     - name: Publish the web pages
       uses: peaceiris/actions-gh-pages@v4
       with:
