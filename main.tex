@@ -1,13 +1,22 @@
-\documentclass[12pt]{book}
-% mathptmx is a Times Roman look-alike (don't use the times package)
-% It isn't clear if Times is required. The OGS manual lists several
-% "standard fonts" but never says they need to be used.
+\documentclass[12pt]{report}
 % \usepackage{mathptmx}
 % \usepackage[OT1]{fontenc}
 % \renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
 
-% \usepackage{fontspec}
-% \setmainfont{Palatino}
+\ifdefined\HCode%
+   \def\pgfsysdriver{pgfsys-dvisvgm4ht.def}%
+\fi%
+
+\usepackage{setspace}
+
+\ifdefined\HCode%
+\else
+    \usepackage{fontspec}
+    \setmainfont{Palatino}
+\fi
+
+
+% \Configure{FontFamily}{rmfamily}{Palatino}
 % \newfontfamily\smallcapsfont{Palatino SC}
 % % \newfontfamily\scfont{Georgia}
 % % Save the original \textsc command
@@ -22,7 +31,6 @@
 \usepackage[sort&compress,numbers]{natbib}
 % \setcitestyle{maxcitenames=6}
 
-\usepackage[NoDate]{currvita}
 \usepackage{array}
 \usepackage{tabularx}
 \usepackage{booktabs}
@@ -31,13 +39,12 @@
 \usepackage{microtype}
 \usepackage{graphicx}
 \usepackage{xcolor}
-\usepackage{hyphenat}       % To provide more control over hyphenation
 \usepackage{xparse}
 \usepackage{pifont}
 \usepackage{nicefrac}
 \usepackage{adjustbox}
 \usepackage{xspace}
-\usepackage{resizegather}
+% \usepackage{resizegather}
 
 \usepackage{enumerate}
 \usepackage[shortlabels]{enumitem}
@@ -49,13 +56,11 @@
 \usepackage{amsfonts}
 \usepackage{slashed}
 \usepackage{dsfont}
-\usepackage{bbm}
 \usepackage{braket}
 \usepackage{multirow}
 \usepackage{needspace}
 \usepackage[bottom]{footmisc}
 \usepackage{changepage}
-\usepackage{booktabs} 
 \usepackage{titlesec}
 \usepackage{rotating}
 \usepackage{tocloft}
@@ -75,15 +80,15 @@
 \colorlet{awesomelinks}{awesome-skyblue}
 
 \theoremstyle{definition}
-\newtheorem{definition}{Definition}[section]
+\newtheorem{definition}{Definition}[chapter]
 
 \theoremstyle{definition}
-\newtheorem{example}{Example}[section]
+\newtheorem{example}{Example}[chapter]
 
 \theoremstyle{definition}
-\newtheorem{theorem}{Theorem}[section]
+\newtheorem{theorem}{Theorem}[chapter]
 
-\numberwithin{equation}{section}
+\numberwithin{equation}{chapter}
 % \numberwithin{figure}{section}
 % \numberwithin{table}{section}
 
@@ -95,20 +100,15 @@
 
 \usepackage{doi}
 
-% for centered columns with fixed width
-\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
-\newcolumntype{C}[1]{>{\PreserveBackslash\centering}p{#1}}
-
+\sloppy
 \bibliographystyle{apsrev4-2}
 
 \overfullrule5pt
 % ---
 
 % Required information
-\title{Notes on Quantum Field Theory and the Standard Model}
+\title{Notes on Symmetries, Quantum Field Theory and the Standard Model}
 \author{Raghav Kansal}
-
-
 
 % Start the document
 \begin{document}
@@ -119,14 +119,24 @@
 {
 \hypersetup{linkcolor=black}
 \tableofcontents
+% \ifdefined\HCode 
+% \tableofcontents[chapter,section]
+% % \CutAt{chapter,section} 
+% % \TocAt{chapter,section}  % show section only in chapters TOC 
+% % \TocAt{section,subsection}  % show subsection only in sections TOC 
+% \else
+% \fi 
 }
 
 \setlength{\parskip}{0.6\baselineskip}
+
+\begin{doublespace}
 
 \input{01-SM.tex}
 \input{01-SM-01-Symmetries.tex}
 \input{01-SM-02-QFT.tex}
 \input{01-SM-03-SM.tex}
+\end{doublespace}
 
 \nocite{apsrev42Control}
 \bibliography{bibliography}

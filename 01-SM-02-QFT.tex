@@ -102,7 +102,7 @@ This can be expressed with Feynman's path integral formula, where the probabilit
 	\psi(q_f, T) = \int_{q_i}^{q_f} \mathcal{D}q(t) e^{iS[q(t)]/\hslash},
 \end{equation}
 where $\int_{q_i}^{q_f}\mathcal{D}q(t)$ is an integral over all possible paths $q(t)$ between $q_i$ and $q_f$, interfering through their complex phases $e^{iS[q(t)]/\hslash}$ that are based on the action $S[q(t)]$ of the path divided by the reduced Planck constant $\hslash$.
-In the classical limit $\nicefrac{\hslash}{S} \rightarrow 0$,\footnote{If we take $S \sim \mathrm{energy} \cdot T = \frac{\hslash c}{\lambda}\cdot T$, then the classical limit $\frac{\hslash}{S} = \frac{\lambda}{cT} \rightarrow 0$ physically is the case where the de Broglie wavelength of the particle $\lambda$ is negligible compared to the relevant length scales.} by the stationary phase approximation, only the path that extremizes the action contributes, as we expect.
+In the classical limit $\cnicefrac{\hslash}{S} \rightarrow 0$,\footnote{If we take $S \sim \mathrm{energy} \cdot T = \frac{\hslash c}{\lambda}\cdot T$, then the classical limit $\frac{\hslash}{S} = \frac{\lambda}{cT} \rightarrow 0$ physically is the case where the de Broglie wavelength of the particle $\lambda$ is negligible compared to the relevant length scales.} by the stationary phase approximation, only the path that extremizes the action contributes, as we expect.
 
 The path integral formulation was a critical development in QFT.
 The fact that the Lagrangian shows up naturally in this formulation is the reason why we ``consider it the most fundamental specification of a QFT'' (Peskin and Schroeder~\cite{Peskin:1995ev} Chapter 9).
@@ -142,7 +142,7 @@ The E-L equation for this Lagrangian is called the \textit{Klein-Gordon equation
 where we've defined the \textit{d'Alembertian} operator $\Box = \partial_\mu\partial^\mu = \partial_t^2 - \nabla^2$.	
 
 The Klein-Gordon equation is essentially the relativistic generalization of the Schrödinger equation.
-Just as the Schrödinger equation quantizes the non-relativistic EOM $E = \nicefrac{p^2}{2m}$, the Klein-Gordon equation converts the relativistic EOM for a free particle
+Just as the Schrödinger equation quantizes the non-relativistic EOM $E = \cnicefrac{p^2}{2m}$, the Klein-Gordon equation converts the relativistic EOM for a free particle
 \begin{equation}
 	\label{eq:01_qft_field_relativistic_eom}
 	E^2 = p^2c^2 + m^2c^4
@@ -168,8 +168,8 @@ Besides being notationally convenient, this means all dimensionful physical quan
 For example:
 \begin{itemize}
 	\item Mass: $E = mc^2 \rightarrow m = E$,
-	\item Compton wavelength: $\lambda = \nicefrac{\hslash}{mc} \rightarrow \lambda = \nicefrac{1}{E}$,
-	\item Momentum: $p = \nicefrac{\hbar}{\lambda} \rightarrow p = E$.
+	\item Compton wavelength: $\lambda = \cnicefrac{\hslash}{mc} \rightarrow \lambda = \cnicefrac{1}{E}$,
+	\item Momentum: $p = \cnicefrac{\hbar}{\lambda} \rightarrow p = E$.
 \end{itemize}
 We define each quantity to have a dimension in terms of energy, i.e. energy, mass, and momentum all have dimension $[E] = [m] = [p] = 1$, while length has dimension $[\lambda] = -1$.
 % The unit of energy we use is the electronvolt (eV).
@@ -193,7 +193,7 @@ Thus,
 	\label{eq:01_qft_field_kg_solutions_final}
 	\phi(\vec x, t) = \int \frac{d^3p}{(2\pi)^3} \frac{1}{\sqrt{2\omega_p}} (a(\vec{p})e^{ip\cdot x} + a^*(\vec{p})e^{-ip\cdot x}),
 \end{equation}
-where $p\cdot x$ is the 4D spacetime inner product with $p_\mu = (\omega_p, \vec{p})$, and the $\nicefrac{1}{\sqrt{2\omega_p}}$ factor is conventional.
+where $p\cdot x$ is the 4D spacetime inner product with $p_\mu = (\omega_p, \vec{p})$, and the $\cnicefrac{1}{\sqrt{2\omega_p}}$ factor is conventional.
 The coefficients $a$ and $a^*$ are complex conjugates to ensure a real sum.
 As we will see, in \textit{quantum} field theory, the form of the fields is quite similar but with $a$ and $a^*$ quantum operators.
 
@@ -228,7 +228,7 @@ This can then be shown to imply the existence of a conserved current $j^\mu$:
 which in turn implies the existence of a conserved charge $Q$
 \begin{equation}
 	\label{eq:01_qft_symmetries_charge}
-	Q = \int_\mathrm{all space} d^3x\ j^0.
+	Q = \int_{\mathrm{all space}} d^3x\ j^0.
 \end{equation}
 
 \subsubsection{Example: translation symmetry}
@@ -456,7 +456,7 @@ The quantized Hamiltonian, from Eq.~\ref{eq:01_qft_hamiltonian_kg}, can be found
 		&= \int \frac{d^3p}{(2\pi)^3} \omega_p [\hat a^\dagger_{\vec{p}}\,\hat a_{\vec{p}} + \frac{1}{2} (2\pi)^3\delta^3(0)].
 	\end{split}
 \end{equation}
-This looks a lot like the Hamiltonian for a QHO, $H = \omega(a^\dagger a + \nicefrac{1}{2})$, for each momenta, but with an unwieldy delta function.
+This looks a lot like the Hamiltonian for a QHO, $H = \omega(a^\dagger a + \cnicefrac{1}{2})$, for each momenta, but with an unwieldy delta function.
 This latter term is called the \textit{zero-point energy} and represents the energy of the vacuum state.
 It is infinite, and, indeed, is one of the many infinities that have to be dealt with in QFT.
 
@@ -645,8 +645,8 @@ Interestingly, it can be shown that, for a particle with mass $m > 0$, for space
 	\label{eq:01_qft_quantization_propagator_spacelike}
 	D(r) \sim e^{-mr},
 \end{equation}
-i.e., it is not 0!\footnote{Mathematically, this stems from the $\nicefrac{1}{2\svecp E}$ factor in the integral required for Lorentz invariance.}
-However, it exponentially decays at rate of $\nicefrac{1}{m}$, or the Compton wavelength.
+i.e., it is not 0!\footnote{Mathematically, this stems from the $\cnicefrac{1}{2\svecp E}$ factor in the integral required for Lorentz invariance.}
+However, it exponentially decays at rate of $\cnicefrac{1}{m}$, or the Compton wavelength.
 Thus, this is telling us there is a fundamental physical limit in relativistic QM to which a particle can be localized in space (or, at least, to which we can measure its position, related to the uncertainty principle).
 
 Note, however, that this does not violate causality, since the commutator $[\phi(x), \phi(y)] = D(x- y) - D(y-x) = 0$ for spacelike separated points, meaning physically they cannot affect each other.
@@ -813,7 +813,7 @@ The difference in our theory is the scalar rather than fermionic nucleon, for si
 
 For treating interactions that are small perturbations to the free theory, it is most useful to employ the interaction picture of QM, a hybrid of the Schr\"odinger and Heisenberg pictures.
 Recall that in the Schr\"odinger picture, operators are fixed while states evolve with time, and vice versa in the Heisenberg picture.
-In the interaction picture, we split the Hamiltonian into the free ($H_0$) and interaction terms ($H_\mathrm{int}$), defining operators to evolve with the former and states with the latter.
+In the interaction picture, we split the Hamiltonian into the free ($H_0$) and interaction terms ($H_{\mathrm{int}}$), defining operators to evolve with the former and states with the latter.
 
 The upshot of this in QFT is that the S-matrix element can be written according to \textit{Dyson's formula}:
 \begin{equation}
@@ -823,10 +823,10 @@ The upshot of this in QFT is that the S-matrix element can be written according 
 where $T$ is the same time-ordering operator from Section~\ref{sec:01_qft_quantization_propagators} and $H_I$ is the time-evolved interaction Hamiltonian in the interaction picture:
 \begin{equation}
 	\label{eq:01_qft_interactions_interaction_hamiltonian}
-	H_I(t) = e^{iH_0t}H_\mathrm{int}e^{-iH_0t}.
+	H_I(t) = e^{iH_0t}H_{\mathrm{int}}e^{-iH_0t}.
 \end{equation}
 
-Assuming a small $H_\mathrm{int}$, Dyson's formula can be Taylor expanded as:
+Assuming a small $H_{\mathrm{int}}$, Dyson's formula can be Taylor expanded as:
 \begin{multline}
 	\label{eq:01_qft_interactions_dysons_expansion}
 	\braket{f|S|i} = \braket{f|\identity|i} + (-i) \int_{-\infty}^\infty \braket{f|H_I(t)|i}dt \\
@@ -959,7 +959,7 @@ For our scalar Yukawa theory, the Feynman rules for calculating $i\mathcal M$ ar
 	\end{tikzpicture}
 	$\, = \cfrac{i}{q^2 - M^2 + i\varepsilon}$ \\[1em]
 	\item Impose momentum conservation at each vertex.
-	\item Integrate over the momentum $k$ flowing through each loop $\int \nicefrac{d^4k}{(2\pi)^4}$.
+	\item Integrate over the momentum $k$ flowing through each loop $\int \cnicefrac{d^4k}{(2\pi)^4}$.
 \end{enumerate}
 \end{definition}
 Note that the factors associated with internal lines are exactly the Feynman propagators from Section~\ref{sec:01_qft_quantization_propagators}, which is in line with their interpretation as the amplitude for a particle to propagate from one point to another.
@@ -991,7 +991,7 @@ For the left-most diagram, we see $k = q_{f1} - q_{i1} = q_{f2} - q_{i2}$, while
 Thus, the total matrix element is
 \begin{equation}
 	\label{eq:01_qft_interactions_nn_scattering_2}
-	i \mathcal M = i(\mathcal M_\mathrm{left} + \mathcal M_\mathrm{right}) = (-ig)^2 \bigg[ \cfrac{1}{(q_{f1} - q_{i1})^2 - m^2} + \cfrac{1}{(q_{f2} - q_{i1})^2 - m^2} \bigg],
+	i \mathcal M = i(\mathcal M_{\mathrm{left}} + \mathcal M_{\mathrm{right}}) = (-ig)^2 \bigg[ \cfrac{1}{(q_{f1} - q_{i1})^2 - m^2} + \cfrac{1}{(q_{f2} - q_{i1})^2 - m^2} \bigg],
 	% \begin{split}
 	% 	i \mathcal M_1 = (-ig)^2 \cdot  \cfrac{1}{(q_{f1} - q_{i1})^2 - m^2 + i\varepsilon}, \\
 	% 	i \mathcal M_2 = (-ig)^2 \cdot  \cfrac{1}{(q_{f2} - q_{i1})^2 - m^2 + i\varepsilon},
@@ -1033,8 +1033,8 @@ We can see that the matrix elements for nucleon scattering (Eq.~\ref{eq:01_qft_i
 \begin{equation}
 	\label{eq:01_qft_interactions_nn_tchannel_uchannel}
 	\begin{split}
-		i \mathcal M_\mathrm{left} = (-ig)^2 \cdot \cfrac{1}{t - m^2}, \\
-		i \mathcal M_\mathrm{right} = (-ig)^2 \cdot \cfrac{1}{u - m^2}.
+		i \mathcal M_{\mathrm{left}} = (-ig)^2 \cdot \cfrac{1}{t - m^2}, \\
+		i \mathcal M_{\mathrm{right}} = (-ig)^2 \cdot \cfrac{1}{u - m^2}.
 	\end{split}
 \end{equation}
 Hence, they are referred to as $t$-channel and $u$-channel diagrams, respectively.
@@ -1072,7 +1072,7 @@ Imposing momentum conservation we find:
 \begin{equation}
 	\label{eq:01_qft_interactions_na_scattering}
 	\begin{split}
-		i \mathcal M = i(\mathcal M_\mathrm{left} + \mathcal M_\mathrm{right}) &= (-ig)^2 \bigg[ \cfrac{1}{(q_{f1} - q_{i1})^2 - m^2} + \cfrac{1}{(q_{i1} + q_{i2})^2 - m^2} \bigg]. \\
+		i \mathcal M = i(\mathcal M_{\mathrm{left}} + \mathcal M_{\mathrm{right}}) &= (-ig)^2 \bigg[ \cfrac{1}{(q_{f1} - q_{i1})^2 - m^2} + \cfrac{1}{(q_{i1} + q_{i2})^2 - m^2} \bigg]. \\
 		&= (-ig)^2 \bigg( \cfrac{1}{t - m^2} + \cfrac{1}{s - m^2} \bigg)
 	\end{split}
 \end{equation}
@@ -1219,30 +1219,30 @@ where $\braket{f|f}$ and $\braket{i|i}$ are the normalization factors for the fi
 For the case of two incoming particles (which is what is most relevant for this dissertation), we can put all of this together to obtain the relation between differential cross section and the matrix element $\mathcal M$:
 \begin{equation}
 	\label{eq:01_qft_interactions_cross_section_matrix_element}
-	d\sigma = \frac{1}{(2E_1)(2E_2)\abs{\vec{v}_1 - \vec{v}_2}} \abs{\mathcal M}^2 d\Pi_\mathrm{LIPS},
+	d\sigma = \frac{1}{(2E_1)(2E_2)\abs{\vec{v}_1 - \vec{v}_2}} \abs{\mathcal M}^2 d\Pi_{\mathrm{LIPS}},
 \end{equation}
-where $E_1$ and $E_2$ are the energies of the incoming particles, $\vec{v}_1$ and $\vec{v}_2$ are their velocities, and $d\Pi_\mathrm{LIPS}$ is called the Lorentz-invariant phase space of the final state momenta:
+where $E_1$ and $E_2$ are the energies of the incoming particles, $\vec{v}_1$ and $\vec{v}_2$ are their velocities, and $d\Pi_{\mathrm{LIPS}}$ is called the Lorentz-invariant phase space of the final state momenta:
 \begin{equation}
 	\label{eq:01_qft_interactions_cross_section_lips}
-	d\Pi_\mathrm{LIPS} = (2\pi)^4 \delta^{(4)}(\Sigma p) \prod_{\mathrm{final\ states}\ j} \frac{d^3p_j}{(2\pi)^3} \frac{1}{2E_j}
+	d\Pi_{\mathrm{LIPS}} = (2\pi)^4 \delta^{(4)}(\Sigma p) \prod_{\mathrm{final\ states}\ j} \frac{d^3p_j}{(2\pi)^3} \frac{1}{2E_j}
 \end{equation}
 
 For the case of $2 \rightarrow 2$ scattering, in the COM frame, this simplifies considerably:
 \begin{equation}
 	\label{eq:01_qft_interactions_cross_section_com}
-	\bigg(\frac{d\sigma}{d\Omega}\bigg)_\mathrm{CM} = \frac{1}{64\pi^2E_\mathrm{CM}^2}\, \frac{\abs{\vec{p}_f}}{\abs{\vec{p}_i}} \abs{\mathcal M}^2 \theta(E_\mathrm{CM} - m_3 - m_4),
+	\bigg(\frac{d\sigma}{d\Omega}\bigg)_{\mathrm{CM}} = \frac{1}{64\pi^2E_{\mathrm{CM}}^2}\, \frac{\abs{\vec{p}_f}}{\abs{\vec{p}_i}} \abs{\mathcal M}^2 \theta(E_{\mathrm{CM}} - m_3 - m_4),
 \end{equation}
 and even more so when the all four masses are equal:
 \begin{equation}
 	\label{eq:01_qft_interactions_cross_section_com_equal_mass}
-	\bigg(\frac{d\sigma}{d\Omega}\bigg)_\mathrm{CM} = \frac{1}{64\pi^2E_\mathrm{CM}^2}\, \abs{\mathcal M}^2.
+	\bigg(\frac{d\sigma}{d\Omega}\bigg)_{\mathrm{CM}} = \frac{1}{64\pi^2E_{\mathrm{CM}}^2}\, \abs{\mathcal M}^2.
 \end{equation}
 
 For nucleon-nucleon scattering in the COM frame, for example, we have (at tree level):
 \begin{equation}
 	\label{eq:01_qft_interactions_nn_scattering_cross_section}
 	\begin{split}
-		\bigg(\frac{d\sigma(\theta)}{d\Omega}\bigg)_\mathrm{CM} &= \frac{g^4}{64\pi (2E)^2} \left(\frac{1}{t - m^2} + \frac{1}{u - m^2}\right)^2 \\
+		\bigg(\frac{d\sigma(\theta)}{d\Omega}\bigg)_{\mathrm{CM}} &= \frac{g^4}{64\pi (2E)^2} \left(\frac{1}{t - m^2} + \frac{1}{u - m^2}\right)^2 \\
 		&= \frac{g^4}{64\pi (2E)^2} \left[\frac{1}{2p^2(1 - \cos\theta) - m^2} + \frac{1}{2p^2(1 + \cos\theta) - m^2}\right]^2,
 	\end{split}
 \end{equation}
@@ -1259,7 +1259,7 @@ The decay rate $\Gamma$ is simply the probability of decay per unit time:
 Using our expression for $P$ from above and simplifying, we find:
 \begin{equation}
 	\label{eq:01_qft_interactions_differential_decay_rate}
-	d\Gamma = \frac{1}{2m} \abs{\mathcal M}^2 d\Pi_\mathrm{LIPS},
+	d\Gamma = \frac{1}{2m} \abs{\mathcal M}^2 d\Pi_{\mathrm{LIPS}},
 \end{equation}
 in the rest frame of the decaying particle, where $m$ is its mass.
 If multiple decays of the same particle are possible, we sum over the final states in the phase space integral.
@@ -1268,11 +1268,11 @@ The total $\Gamma$ is then called the \textit{width} of the particle, and $1/\Ga
 For our simple meson decay $\phi \rightarrow \psi^\dagger\psi$, we have at tree level:
 \begin{equation}
 	\label{eq:01_qft_interactions_decay_rate_meson_decay}
-	d\Gamma = \frac{g^2}{2m} d\Pi_\mathrm{LIPS} \quad \Rightarrow \quad \Gamma = \frac{g^2}{32\pi m} \left(1 - \frac{4M^2}{m^2}\right)^{1/2},
+	d\Gamma = \frac{g^2}{2m} d\Pi_{\mathrm{LIPS}} \quad \Rightarrow \quad \Gamma = \frac{g^2}{32\pi m} \left(1 - \frac{4M^2}{m^2}\right)^{1/2},
 \end{equation}
-where we performed the integral over $d\Pi_\mathrm{LIPS}$ (see Ref.~\cite{XianyuPSSolutions} 4.2).
+where we performed the integral over $d\Pi_{\mathrm{LIPS}}$ (see Ref.~\cite{XianyuPSSolutions} 4.2).
 This is in fact not too far off the expression for the decay width of the Higgs boson to fermions.
-What we are missing of course is that fermions are spin-$\nicefrac{1}{2}$ particles, and we need to sum over their spin states.
+What we are missing of course is that fermions are spin-$\cnicefrac{1}{2}$ particles, and we need to sum over their spin states.
 We will derive the correct expression (at tree level) in the next section.
 
 \section{Spinor field theory}
@@ -1286,7 +1286,7 @@ We will derive the correct expression (at tree level) in the next section.
 
 So far, we have focused on scalar fields, which live in the trivial representation of the Lorentz group and correspond to spin-$0$ bosons.
 In this section, we discuss the field theory for spin-$\frac{1}{2}$ particles, or fermions, which constitute all matter in the universe.
-% As discussed in Chapter~\ref{sec:01_symmetries_poincare}, all known elementary fermions are associated with \textit{Dirac spinor} fields, which transform under the $(\nicefrac{1}{2},0) \oplus (0,\nicefrac{1}{2})$ representation of the Lorentz group.
+% As discussed in Chapter~\ref{sec:01_symmetries_poincare}, all known elementary fermions are associated with \textit{Dirac spinor} fields, which transform under the $(\cnicefrac{1}{2},0) \oplus (0,\cnicefrac{1}{2})$ representation of the Lorentz group.
 % We describe the EOM governing free spinor fields, known as the Dirac equation, in Section~\ref{sec:01_qft_spinors_dirac}.
 % \TODO{We then...}
 % We then quantize the free spinor field in Section~\ref{sec:01_qft_spinors_quantization} and finally discuss Feynman rules for an interacting spinor theory in Section~\ref{sec:01_qft_spinors_feynman}.
@@ -1379,7 +1379,7 @@ Let's look at the rotation and boost generators individually:
 \end{equation}
 Comparing this with Eqs.~\ref{eq:01_lorentz_irreps_weyl_left} and~\ref{eq:01_lorentz_irreps_weyl_right}, we see that the top left and bottom right blocks are exactly the left- and right-handed Weyl spinor irreps of the generators.
 The handedness of a spinor is called its \textit{chirality}, and its physical significance will be discussed in a moment.
-Thus, we identify $S[\Lambda]$ with the $(\nicefrac{1}{2},0) \oplus (0,\nicefrac{1}{2})$, or Dirac spinor, representation.
+Thus, we identify $S[\Lambda]$ with the $(\cnicefrac{1}{2},0) \oplus (0,\cnicefrac{1}{2})$, or Dirac spinor, representation.
 
 This also means that, in this basis of the gamma matrices (called the \textit{Weyl}, or \textit{chiral}, basis), the Dirac spinor $\psi$ can be decomposed into two Weyl spinors:
 \begin{equation}
@@ -1528,7 +1528,7 @@ One can check using Fourier space, as we did for the Weyl equations, that
 	u(p) = \begin{pmatrix} \sqrt{p \cdot \sigma}\, \xi \\ \sqrt{p \cdot \bar\sigma}\, \xi \end{pmatrix}, \quad
 	v(p) = \begin{pmatrix} \sqrt{p \cdot \sigma}\, \eta \\ -\sqrt{p \cdot \bar\sigma}\, \eta \end{pmatrix}
 \end{equation}
-are general solutions to the Dirac equation, where $\xi$ and $\eta$ are the familiar two-component spinors from QM for spin-$\nicefrac{1}{2}$ particles (although technically they do not have this interpretation before quantization).
+are general solutions to the Dirac equation, where $\xi$ and $\eta$ are the familiar two-component spinors from QM for spin-$\cnicefrac{1}{2}$ particles (although technically they do not have this interpretation before quantization).
 As is conventional, we will use a basis of $\sigma_z$ eigenstates $\xi_1 = \eta_1 = (1, 0)^T$ and $\xi_2 = \eta_2 = (0, 1)^T$, corresponding to spin-up and spin-down, respectively.
 % , with eigenvalues $+1$ and $-1$, respectively.
 
@@ -1689,7 +1689,7 @@ The matrix element for meson decay into a fermion-antifermion pair with spin and
 We can calculate the decay rate as in Section~\ref{sec:01_qft_interactions_decay}, except now we have to sum over the spins of the fermions:
 \begin{equation}
 	\label{eq:01_qft_spinors_meson_decay_rate}
-	d\Gamma = \sum_{s_1, s_2}^2 \frac{1}{2m} \abs{\mathcal M}^2 d\Pi_\mathrm{LIPS} = \frac{g^2}{2m} \sum_{s_1, s_2}^2 \abs{\bar u_{s_1}(q_1) v_{s_2}(q_2)}^2 d\Pi_\mathrm{LIPS}.
+	d\Gamma = \sum_{s_1, s_2}^2 \frac{1}{2m} \abs{\mathcal M}^2 d\Pi_{\mathrm{LIPS}} = \frac{g^2}{2m} \sum_{s_1, s_2}^2 \abs{\bar u_{s_1}(q_1) v_{s_2}(q_2)}^2 d\Pi_{\mathrm{LIPS}}.
 \end{equation}
 In the COM frame, we can choose $q_1 = (\frac{m}{2}, 0, 0, q)$ and $q_2 = (\frac{m}{2}, 0, 0, -q)$, with $q^2 = \frac{m^2}{4} - M^2$ by energy conservation.
 Using the forms of $\bar u_s$ and $v_s$ we found in Eq.~\ref{eq:01_qft_spinors_dirac_solution_momentum}, we see that the sum over spin states simplifies nicely:
@@ -1697,13 +1697,13 @@ Using the forms of $\bar u_s$ and $v_s$ we found in Eq.~\ref{eq:01_qft_spinors_d
 	\label{eq:01_qft_spinors_meson_decay_sum}
 	\sum_{s_1, s_2}^2 \abs{\bar u_{s_1}(q_1) v_{s_2}(q_2)}^2 = 8q^2 = 2(m^2 - 4M^2).
 \end{equation}
-Since this is independent of the final state kinematics, the integral of $d\Pi_\mathrm{LIPS}$ is the same as for the scalar meson decay, and we obtain an overall decay rate of:
+Since this is independent of the final state kinematics, the integral of $d\Pi_{\mathrm{LIPS}}$ is the same as for the scalar meson decay, and we obtain an overall decay rate of:
 \begin{equation}
 	\label{eq:01_qft_spinors_meson_decay_rate_final}
 	\Gamma = \frac{g^2m}{16\pi} \left(1 - \frac{4M^2}{m^2}\right)^{3/2}.
 \end{equation}
 
-As we hinted at in Section~\ref{sec:01_qft_interactions_decay}, this is in fact the decay width of the Higgs boson to fermions at tree level, if we plug in the Higgs Yukawa coupling constant $g_f = \nicefrac{\sqrt{2} m_f}{v}$.
+As we hinted at in Section~\ref{sec:01_qft_interactions_decay}, this is in fact the decay width of the Higgs boson to fermions at tree level, if we plug in the Higgs Yukawa coupling constant $g_f = \cnicefrac{\sqrt{2} m_f}{v}$.
 Here $m_f$ is the fermion mass and $v$ is the Higgs vacuum expectation value, $246\GeV$.
 For example, for the $H\to \mu^+\mu^-$ decay, with $M = m_\mu = 105.7\MeV$ and $m = m_H = 125\GeV$, we get $\Gamma \approx 900\eV$, exactly in line with the predicted value~\cite{Denner:2011mq}!
 
@@ -2041,7 +2041,7 @@ Note that the commutator of the covariant derivative is in fact not a derivative
 Thus, we can define $F_{\mu\nu} \equiv \frac{i}{e}[D_\mu, D_\nu]$, which will prove useful for non-abelian gauge symmetries later in this section.
 % By definition, higher order covariant derivatives transform the same way as the first order, meaning $F_{\mu\nu}$ transforms as $F_{\mu\nu} \rightarrow 
 
-Generally, we choose the normalization $Q_e = -1$ for the electron field, so $e$ becomes our familiar elementary charge (in natural units) and $\alpha\equiv\nicefrac{e^2}{4\pi} \approx \nicefrac{1}{137}$ is the famous dimensionless fine structure constant.\footnote{Technically, this value varies with our energy scale, as we will discuss in Section~\ref{sec:01_qft_renormalization}, and $\nicefrac{1}{137}$ is its asymptotic value at low energies.}
+Generally, we choose the normalization $Q_e = -1$ for the electron field, so $e$ becomes our familiar elementary charge (in natural units) and $\alpha\equiv\cnicefrac{e^2}{4\pi} \approx \cnicefrac{1}{137}$ is the famous dimensionless fine structure constant.\footnote{Technically, this value varies with our energy scale, as we will discuss in Section~\ref{sec:01_qft_renormalization}, and $\cnicefrac{1}{137}$ is its asymptotic value at low energies.}
 
 \subsubsection{Interactions with spinors}
 
