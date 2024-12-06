@@ -1,4 +1,4 @@
-# Notes on Symmetries, QFT, & The Standard Model
+# Notes on Symmetries, QFT, and the Standard Model
 
 [![Codestyle](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/rkansal47/standard-model/main.svg)](https://results.pre-commit.ci/latest/github/rkansal47/standard-model/main)
@@ -9,7 +9,7 @@
 
 Written in LaTeX and compiled as both a [PDF](https://github.com/rkansal47/standard-model/blob/gh-pages/standard-model.pdf?raw=true) and  [website](https://rkansal47.github.io/standard-model).
 
-- [Notes on Symmetries, QFT, \& The Standard Model](#notes-on-symmetries-qft--the-standard-model)
+- [Notes on Symmetries, QFT, and the Standard Model](#notes-on-symmetries-qft-and-the-standard-model)
   - [Notes for LaTeX to HTML conversion](#notes-for-latex-to-html-conversion)
     - [Command](#command)
     - [Math](#math)
