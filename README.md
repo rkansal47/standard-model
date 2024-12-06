@@ -4,7 +4,7 @@
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/rkansal47/standard-model/main.svg)](https://results.pre-commit.ci/latest/github/rkansal47/standard-model/main)
 
 <p align="center">
-  <img width="300" src="https://raw.githubusercontent.com/rkansal47/standard-model/assets/logo.png" />
+  <img width="300" src="https://raw.githubusercontent.com/rkansal47/standard-model/refs/heads/main/assets/logo.png" />
 </p>
 
 Written in LaTeX and compiled as both a [PDF](https://github.com/rkansal47/standard-model/blob/gh-pages/standard-model.pdf?raw=true) and  [website](https://rkansal47.github.io/standard-model).
