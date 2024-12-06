@@ -1,6 +1,13 @@
 # Notes on Symmetries, QFT, & The Standard Model
 
-Written in LaTeX and compiled as both a PDF and HTML website.
+[![Codestyle](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/rkansal47/standard-model/main.svg)](https://results.pre-commit.ci/latest/github/rkansal47/standard-model/main)
+
+<p align="center">
+  <img width="300" src="https://raw.githubusercontent.com/rkansal47/standard-model/assets/logo.png" />
+</p>
+
+Written in LaTeX and compiled as both a [PDF](https://github.com/rkansal47/standard-model/blob/gh-pages/standard-model.pdf?raw=true) and  [website](https://rkansal47.github.io/standard-model).
 
 - [Notes on Symmetries, QFT, \& The Standard Model](#notes-on-symmetries-qft--the-standard-model)
   - [Notes for LaTeX to HTML conversion](#notes-for-latex-to-html-conversion)
@@ -8,13 +15,14 @@ Written in LaTeX and compiled as both a PDF and HTML website.
     - [Math](#math)
     - [TikZ / Feynman diagrams](#tikz--feynman-diagrams)
     - [Config](#config)
+    - [Github Action](#github-action)
 
 
 ## Notes for LaTeX to HTML conversion
 
 Conversion was done using [tex4ht](https://tug.org/tex4ht/) and the [make4ht](https://github.com/michal-h21/make4ht) build system.
 h/t especially to Michal for his work on these tools and responsiveness to issues!
-I tried `latexml` as well but got stuck because of [this](https://github.com/brucemiller/LaTeXML/issues/2268) issue, and `pandoc`, which does not seem as well supported for LaTeX to html.
+I tried `latexml` as well but got stuck because of [this](https://github.com/brucemiller/LaTeXML/issues/2268) issue, and also `pandoc` but it does not seem as well supported for LaTeX.
 Some notes below for others' (and my own) future reference.
 
 ### Command
@@ -43,14 +51,15 @@ Using mathml + mathjax for the best equation rendering and referencing (mathml n
 
 Some notes:
 
- - The `resizegather` package caused rendering issues [#158](https://github.com/michal-h21/make4ht/issues/158).
+ - The `resizegather` package caused rendering issues [#158](https://github.com/michal-h21/make4ht/issues/158) so I removed it.
  - Equation splitting has issues by default, see [config](#config).
+ - The `newpx...` fonts mess up the math rendering so I import `amssymb` instead (only for the website) and change the font in CSS.
  - `mathbbm` is not supported $\rightarrow$ switched to `dsfont`.
  - `nicefrac` is not well-supported and `cfrac` gives an error $\rightarrow$ switched to `frac` for web.
  - `slashed` is not supported $\rightarrow$ switched to `cancel` for web.
  - `\vec` doesn't look great on web $\rightarrow$ switched to bold vectors.
 
-Mathjax-alone was briefly attempted. Was able to achieve chapter-wise number by following this answer https://tex.stackexchange.com/a/714216 but changing section $\rightarrow$ chapter.
+Mathjax-alone was briefly attempted. Was able to achieve chapter-wise numbering by following this answer https://tex.stackexchange.com/a/714216 but changing section $\rightarrow$ chapter.
 
 ### TikZ / Feynman diagrams
 
@@ -65,3 +74,8 @@ Mathjax-alone was briefly attempted. Was able to achieve chapter-wise number by 
 - Added favicon in the header.
 - Custom CSS stylesheet, again based on Michal's.
 - Tried doing fancier customization but in the end found it easier to "postprocess" with Python
+
+
+### Github Action
+
+Using the same workflows as the [tex4ht-doc website](https://github.com/michal-h21/tex4ht-doc) but with some additional libraries in the [docker image](https://github.com/rkansal47/make4ht-action) to compile the PDF and website.
