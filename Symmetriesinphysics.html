@@ -15,7 +15,7 @@
 <span class="likechapterToc"><a href="contentsname.html#contents">Contents</a></span>
 <span class="chapterToc">1 <a href="Introduction.html#introduction">Introduction</a></span>
 <span class="chapterToc">2 <a href="#symmetries-in-physics">Symmetries in physics</a></span>
-<span class="sectionToc">2.1 <a href="Grouptheory.html#group-theory">Group theory</a></span>
+<span class="sectionToc">2.1 <a href="Rapidreviewofgrouptheory.html#rapid-review-of-group-theory">Rapid review of group theory</a></span>
 <span class="sectionToc">2.2 <a href="Liealgebras.html#lie-algebras">Lie algebras</a></span>
 <span class="sectionToc">2.3 <a href="ParticlesareirrepsofthePoincarégroup.html#particles-are-irreps-of-the-poincare-group">Particles are irreps of the Poincaré group</a></span>
 <span class="chapterToc">3 <a href="Quantumfieldtheory.html#quantum-field-theory">Quantum field theory</a></span>
@@ -23,7 +23,7 @@
 <span class="likechapterToc"><a href="bibnamemkbothMakeUppercasebibnameMakeUppercasebibname.html#bibliography">Bibliography</a></span>
 </nav>
 <main class="main-content"><a class="header-link" href="https://github.com/rkansal47/standard-model" rel="noopener noreferrer" style="top: 10px; right: 12px;" target="_blank"><img alt="GitHub Repository" class="header-icon" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" style="width: 32px; height: 32px;"/></a><a class="header-link" href="https://github.com/rkansal47/standard-model/blob/gh-pages/standard-model.pdf?raw=true" rel="noopener noreferrer" style="top: 12px; right: 54px;" target="_blank"><img alt="Download PDF" class="header-icon" src="assets/download.png" style="width: 25px; height: 25px;"/></a>
-<nav class="crosslinks-top"> <a href="Introduction.html">Previous</a> <a href="Grouptheory.html">Next</a> </nav>
+<nav class="crosslinks-top"> <a href="Introduction.html">Previous</a> <a href="Rapidreviewofgrouptheory.html">Next</a> </nav>
 <h2 class="chapterHead" id="symmetries-in-physics"><span class="titlemark">Chapter 2</span><br/><a id="x4-30002"></a>Symmetries in physics</h2>
 <div class="center">
 <!--  l. 5  --><p class="noindent">
@@ -33,28 +33,35 @@ Intuitively, a symmetry is a transformation that leaves an object
 unchanged. For example, a plain square has a four-fold rotational
 symmetry: it looks identical rotated once, twice, thrice, or four times by
 <!--  l. 13  --><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>9</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin" stretchy="false">∘</mo></mrow></msup></mrow></math>.
-</p><!--  l. 15  --><p class="indent">   Similarly, in physics, a symmetry is a transformation that leaves the laws of
-physics unchanged. Electromagnetism, for example, is invariant to translations in
-space or time: electric charges and currents should behave the same in San Diego
-5 years ago as in Geneva today. Understanding such symmetries, and accounting
-for them in our mathematical formulation, has been a guiding principle in the
-development of the SM over the 20th century, and is one in understanding it as
-well.
-</p><!--  l. 19  --><p class="indent">   In this chapter, we first introduce the framework for describing symmetries,
-group theory, in Section <a href="Grouptheory.html#group-theory">2.1<!--  tex4ht:ref: sec:01_symmetries_gt   --></a>. We then describe Lie algebras for continuous
                                                                           
 
                                                                           
+</p><!--  l. 15  --><p class="indent">   Similarly, in physics, a symmetry is a transformation that leaves the laws
+of physics unchanged. Electromagnetism, for example, is invariant to
+translations in space or time: electric charges and currents should behave the
+same in San Diego 5 years ago as in Geneva today. Understanding such
+symmetries, and accounting for them in our mathematical formulation, has
+been a guiding principle in the development of the SM over the 20th
+century, and will be a guiding principle in our understanding of it as
+well.
+</p><!--  l. 19  --><p class="indent">   In this chapter, we first introduce the framework for describing symmetries,
+group theory, in Section <a href="Rapidreviewofgrouptheory.html#rapid-review-of-group-theory">2.1<!--  tex4ht:ref: sec:01_symmetries_gt   --></a>. We then describe Lie algebras for continuous
 symmetries, and derive representations for the algebra corresponding to 3D
 rotations, in Section <a href="#x6-7010r2.2">2.2<!--  tex4ht:ref: sec:01_symmetries_so3   --></a>. We conclude in Section <a href="ParticlesareirrepsofthePoincarégroup.html#particles-are-irreps-of-the-poincare-group">2.3<!--  tex4ht:ref: sec:01_symmetries_poincare   --></a> with a discussion of the
 Lorentz and Poincaré groups, comprising the fundamental symmetries of
 spacetime, whose irreducible representations are what we call particles.
 </p>
 <div class="sectionTOCS">
-<span class="sectionToc">2.1 <a href="Grouptheory.html#group-theory">Group theory</a></span>
+<span class="sectionToc">2.1 <a href="Rapidreviewofgrouptheory.html#rapid-review-of-group-theory">Rapid review of group theory</a></span>
+<br/> <span class="subsectionToc">2.1.1 <a href="Rapidreviewofgrouptheory.html#group-representations">Group representations</a></span>
+<br/> <span class="subsectionToc">2.1.2 <a href="Rapidreviewofgrouptheory.html#continuous-symmetries">Continuous symmetries</a></span>
 <br/> <span class="sectionToc">2.2 <a href="Liealgebras.html#lie-algebras">Lie algebras</a></span>
+<br/> <span class="subsectionToc">2.2.1 <a href="Liealgebras.html#the-fundamental-and-adjoint-representations">The fundamental and adjoint representations</a></span>
+<br/> <span class="subsectionToc">2.2.2 <a href="Liealgebras.html#general-representations">General representations</a></span>
 <br/> <span class="sectionToc">2.3 <a href="ParticlesareirrepsofthePoincarégroup.html#particles-are-irreps-of-the-poincare-group">Particles are irreps of the Poincaré group</a></span>
+<br/> <span class="subsectionToc">2.3.1 <a href="ParticlesareirrepsofthePoincarégroup.html#the-lorentz-group">The Lorentz group</a></span>
+<br/> <span class="subsectionToc">2.3.2 <a href="ParticlesareirrepsofthePoincarégroup.html#the-poincare-group">The Poincaré group</a></span>
 </div>
-<nav class="crosslinks-bottom"> <a href="Introduction.html">Previous</a> <a href="Grouptheory.html">Next</a> </nav> <div class="footer"><p>Copyright © 2024 Raghav Kansal. All rights reserved.</p></div></main>
+<nav class="crosslinks-bottom"> <a href="Introduction.html">Previous</a> <a href="Rapidreviewofgrouptheory.html">Next</a> </nav> <div class="footer"><p>Copyright © 2024 Raghav Kansal. All rights reserved.</p></div></main>
 </body>
 </html>
