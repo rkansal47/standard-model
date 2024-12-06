@@ -1,25 +1,53 @@
  
 /* start css.sty */
-.rm-lmb-10x-x-88{font-size:73%;}
-.zplbsy-x-x-88{font-size:73%;}
-.zplbsy-x-x-66{font-size:55%;}
-.msbm-10x-x-88{font-size:73%;}
-.rm-lmr-9x-x-97{font-size:72%;}
-.rm-lmr-7x-x-94{font-size:54%;}
-.NewPXMI_gnu-x-x-88{font-size:73%;}
-.NewPXMI-x-x-88{font-size:73%;}
-.NewPXMI_gnu-x-x-66{font-size:55%;}
-.NewPXMI-x-x-66{font-size:55%;}
-.zplsy-x-x-88{font-size:73%;}
-.zplsy-x-x-66{font-size:55%;}
-.txexs-x-x-126{font-size:105%;}
-.txexs-x-x-92{font-size:76%;}
-.txexs-x-x-69{font-size:57%;}
-.pxmiaX-x-x-88{font-size:73%;}
-.pxmiaX-x-x-66{font-size:55%;}
-.ntxsym-x-x-126{font-size:105%; font-family: 'txsyb', serif;}
+.cmbx-12{ font-weight: bold;}
+.cmbx-12{ font-weight: bold;}
+.cmbx-12{ font-weight: bold;}
+.cmbx-8{font-size:66%; font-weight: bold;}
+.cmbx-8{ font-weight: bold;}
+.cmbx-8{ font-weight: bold;}
+.cmbsy-10x-x-120{font-weight: bold;}
+.cmbsy-10x-x-120{font-weight: bold;}
+.cmbsy-10x-x-120{font-weight: bold;}
+.cmbsy-8{font-size:66%;font-weight: bold;}
+.cmbsy-8{font-weight: bold;}
+.cmbsy-8{font-weight: bold;}
+.cmbsy-6{font-size:50%;font-weight: bold;}
+.cmbsy-6{font-weight: bold;}
+.cmbsy-6{font-weight: bold;}
+.cmex-8{font-size:66%;}
+.cmex-7x-x-85{font-size:49%;}
+.msam-10x-x-80{font-size:66%;}
+.msam-7x-x-85{font-size:49%;}
+.msbm-10x-x-80{font-size:66%;}
+.msbm-7x-x-85{font-size:49%;}
+.cmr-8{font-size:66%;}
+.cmr-6{font-size:50%;}
+.cmmi-12{font-style: italic;}
+.cmmi-8{font-size:66%;font-style: italic;}
+.cmmi-6{font-size:50%;font-style: italic;}
+.cmsy-8{font-size:66%;}
+.cmsy-6{font-size:50%;}
 .ec-lmr-17x-x-120{font-size:170%;}
 .ec-lmr-12x-x-120{font-size:120%;}
+.cmr-10{font-size:83%;}
+.cmr-7{font-size:58%;}
+.cmmi-10{font-size:83%;font-style: italic;}
+.cmmi-7{font-size:58%;font-style: italic;}
+.cmsy-10{font-size:83%;}
+.cmsy-7{font-size:58%;}
+.msbm-7{font-size:58%;}
+.ec-lmbx-12{ font-weight: bold;}
+.ec-lmbx-12{ font-weight: bold;}
+.ec-lmbx-12{ font-weight: bold;}
+.ec-lmbx-12{ font-weight: bold;}
+.ec-lmbx-12{ font-weight: bold;}
+.ec-lmbx-12{ font-weight: bold;}
+.ec-lmbx-12{ font-weight: bold;}
+.ec-lmbx-12{ font-weight: bold;}
+.ec-lmbx-12{ font-weight: bold;}
+.ec-lmbx-12{ font-weight: bold;}
+.ec-lmbx-12{ font-weight: bold;}
 .ec-lmtt-12{ font-family: monospace,monospace;}
 .ec-lmtt-12{ font-family: monospace,monospace;}
 .ec-lmtt-12{ font-family: monospace,monospace;}
@@ -44,17 +72,9 @@
 .ec-lmri-12{ font-style:italic;}
 .ec-lmr-10x-x-109{font-size:90%;}
 .ec-lmr-10{font-size:83%;}
-.rm-lmr-10{font-size:83%;}
-.rm-lmr-7x-x-104{font-size:60%;}
-.NewPXMI_gnu-{font-size:83%;}
-.NewPXMI-{font-size:83%;}
-.NewPXMI_gnu-x-x-73{font-size:60%;}
-.NewPXMI-x-x-73{font-size:60%;}
-.zplsy-{font-size:83%;}
-.zplsy-x-x-73{font-size:60%;}
-.rm-lmb-10x-x-55{font-size:45%;}
-.pxmiaX-{font-size:83%;}
-.pxmiaX-x-x-73{font-size:60%;}
+.cmbx-5{font-size:41%; font-weight: bold;}
+.cmbx-5{ font-weight: bold;}
+.cmbx-5{ font-weight: bold;}
 .dsrom-10{font-size:83%;}
 .ec-lmri-10{font-size:83%; font-style:italic;}
 .ec-lmri-10{ font-style:italic;}
@@ -67,7 +87,17 @@
 .ec-lmri-10{ font-style:italic;}
 .ec-lmri-10{ font-style:italic;}
 .ec-lmri-10{ font-style:italic;}
-.ec-lmb-10{font-size:83%;}
+.ec-lmbx-10{font-size:83%; font-weight: bold;}
+.ec-lmbx-10{ font-weight: bold;}
+.ec-lmbx-10{ font-weight: bold;}
+.ec-lmbx-10{ font-weight: bold;}
+.ec-lmbx-10{ font-weight: bold;}
+.ec-lmbx-10{ font-weight: bold;}
+.ec-lmbx-10{ font-weight: bold;}
+.ec-lmbx-10{ font-weight: bold;}
+.ec-lmbx-10{ font-weight: bold;}
+.ec-lmbx-10{ font-weight: bold;}
+.ec-lmbx-10{ font-weight: bold;}
 .ec-lmcsc-10x-x-120{ font-variant: small-caps;}
 .ec-lmcsc-10x-x-120{ font-variant: small-caps;}
 .ec-lmcsc-10x-x-120{ font-variant: small-caps;}
@@ -221,12 +251,6 @@ figcaption.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-al
 figcaption.caption span.id{font-weight: bold; white-space: nowrap; }
 p + figcaption, img + figcaption{margin-top: 1em;}
 .abstract{margin:1em;}
-.small-caps{font-variant: small-caps;}
-.equation-star td{text-align:center; vertical-align:middle; }
-table.equation-star { width:100%; } 
-.boxed{border: 1px solid black; padding-left:2px; padding-right:2px;}
-mtd.align-odd{margin-left:2em; text-align:right;}
-mtd.align-even{margin-right:2em; text-align:left;}
 div.tabular, div.center div.tabular {text-align: center; margin-top:0.5em; margin-bottom:0.5em; }
 table.tabular td p{margin-top:0em;}
 table.tabular {margin-left: auto; margin-right: auto;}
@@ -252,6 +276,11 @@ table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
 dl.enumerate {display:grid; grid-template-columns: 3ch 1fr; align-items: top; row-gap:1ch;}
 dd.enumerate {margin-left: 0;}
 dl.enumerate-enumitem{display:grid; grid-template-columns: 3ch 1fr; align-items: top; row-gap:1ch;}
+.equation-star td{text-align:center; vertical-align:middle; }
+table.equation-star { width:100%; } 
+.boxed{border: 1px solid black; padding-left:2px; padding-right:2px;}
+mtd.align-odd{margin-left:2em; text-align:right;}
+mtd.align-even{margin-right:2em; text-align:left;}
 .cancel{background: linear-gradient(to left top, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);}
 .bcancel{background: linear-gradient(to bottom left, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);}
 .xcancel{background: linear-gradient(to bottom left, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%), linear-gradient(to left top, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);}

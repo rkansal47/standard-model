@@ -42,6 +42,10 @@ body{
   /* grid-auto-rows: auto; */
 }
 
+main{
+  position: relative
+}
+
 @media screen and (min-width: 50rem) {
   body{
     display: grid;
@@ -194,4 +198,18 @@ nav.TOC.mainToc a:hover{
   li::marker {
     color: #666;
   }
+}
+
+.header-link {
+  position: absolute;
+  display: inline-block;
+}
+
+.header-link:hover .header-icon {
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.header-icon {
+  display: block;
 }
