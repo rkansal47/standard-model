@@ -6,14 +6,14 @@
 \usepackage{setspace}
 
 \usepackage{amsthm}
-\usepackage{newpxtext}
-\usepackage{newpxmath}
 
-% \ifdefined\HCode%
-% \else
-%     \usepackage{fontspec}
-%     \setmainfont{Palatino}
-% \fi
+\ifdefined\HCode%
+    \usepackage{amssymb}
+\else
+    % palatino font (doesn't work with tex4ht, but it can be specified in the CSS):
+    \usepackage{newpxtext}
+    \usepackage{newpxmath}
+\fi
 
 
 % \Configure{FontFamily}{rmfamily}{Palatino}
@@ -121,11 +121,11 @@
 These are a set of notes introducing the standard model (SM) of particle physics and the mathematical frameworks underpinning it: group theory and quantum field theory.
 They were intended as theoretical background for my \href{https://www.raghavkansal.com}{dissertation} but, as is perhaps evident, they quickly grew beyond that scope.
 Instead, they are now presented here as a standalone resource, to complement the many excellent texts available on these subjects (as anyone who has struggled through QFT knows, there can never be too many)!
-With these notes, in particular, I aim as much as possible to highlight the physics behind the math, rather than provide any rigorous derivations, and to clarify those aspects that confused me most as an experimentalist trying to understand the SM.
+I aim in particular to offer as much as possible the physical intuition behind the math, rather than any rigorous derivations, and to clarify those aspects which confused me most as an experimentalist trying to understand the SM.
 
 These notes are available as both a \href{https://github.com/rkansal47/standard-model/blob/gh-pages/standard-model.pdf?raw=true}{PDF} and \href{https://rkansal47.github.io/standard-model}{website}.
 Feedback and corrections are very welcome through e-mail or as \href{https://github.com/rkansal47/standard-model/issues}{issues} on Github.
-In particular, this is my first time trying to convert from LaTeX to a website, so there may be many formatting issues I have missed.
+As this is my first time trying to convert a LaTeX document to a website, I anticipate especially many more formatting issues on the web version.
 Finally, for those interested, some more notes and tutorials I have written up, such as on machine learning and statistics in high energy physics, are available \href{https://www.raghavkansal.com/teaching/}{here}.
 \end{doublespace}
 \end{abstract}
