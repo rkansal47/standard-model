@@ -40,6 +40,7 @@ body{
   padding:0;
   /* display:grid; */
   /* grid-auto-rows: auto; */
+  color-scheme: light;
 }
 
 main{
@@ -184,15 +185,13 @@ nav.TOC.mainToc a:hover{
   }
 
   /* Do not invert media (revert the invert). */
-  img, video, iframe {
+  img:not(.header-icon), video, iframe {
     filter: invert(100%) hue-rotate(180deg);
   }
 
-
-  /* Re-enable code block backgrounds. */
-  pre {
-    filter: invert(6%);
-  }
+  /* .header-icon {
+    filter: invert(100%) hue-rotate(180deg);
+  } */
 
   /* Improve contrast on list item markers. */
   li::marker {
