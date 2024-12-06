@@ -35,6 +35,50 @@ def edit_main(soup: BeautifulSoup):
     main_content_main.insert(2, next_nav)
 
 
+def edit_header(soup: BeautifulSoup):
+    main_content_main = soup.find("main", {"class": "main-content"})
+    if not main_content_main:
+        return
+
+    header_link = soup.new_tag(
+        "a",
+        href="https://github.com/rkansal47/standard-model",
+        **{
+            "class": "header-link",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "style": "top: 10px; right: 12px;",
+        },
+    )
+    header_img = soup.new_tag(
+        "img",
+        src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+        alt="GitHub Repository",
+        **{"class": "header-icon", "style": "width: 32px; height: 32px;"},
+    )
+    header_link.append(header_img)
+    main_content_main.insert(0, header_link)
+
+    pdf_link = soup.new_tag(
+        "a",
+        href="https://github.com/rkansal47/standard-model/blob/gh-pages/standard-model.pdf?raw=true",
+        **{
+            "class": "header-link",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "style": "top: 12px; right: 54px;",
+        },
+    )
+    pdf_img = soup.new_tag(
+        "img",
+        src="assets/download.png",
+        alt="Download PDF",
+        **{"class": "header-icon", "style": "width: 25px; height: 25px;"},
+    )
+    pdf_link.append(pdf_img)
+    main_content_main.insert(1, pdf_link)
+
+
 def edit_footnotes(soup: BeautifulSoup):
     """Move footnotes inside the maincontent div and add a copyright footer"""
     main_content_main = soup.find("main", {"class": "main-content"})
@@ -59,7 +103,7 @@ def edit_toc(soup: BeautifulSoup):
         main_toc_span = soup.new_tag("span", **{"class": "mainToc"})
         main_toc_link = soup.new_tag("a", href="index.html")
         main_toc_img = soup.new_tag(
-            "img", src="logo.png", alt="Symmetries, QFT, & The Standard Model", width="100%"
+            "img", src="assets/logo.png", alt="Symmetries, QFT, & The Standard Model", width="100%"
         )
         main_toc_link.append(main_toc_img)
         main_toc_span.append(main_toc_link)
@@ -95,6 +139,7 @@ if __name__ == "__main__":
 
     # Edit footnotes for all HTML files in the directory
     for html_file in html_files:
+        edit_file(html_file, edit_header)
         edit_file(html_file, edit_footnotes)
         edit_file(html_file, edit_toc)
 
