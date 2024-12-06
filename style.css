@@ -189,10 +189,6 @@ nav.TOC.mainToc a:hover{
     filter: invert(100%) hue-rotate(180deg);
   }
 
-  /* .header-icon {
-    filter: invert(100%) hue-rotate(180deg);
-  } */
-
   /* Improve contrast on list item markers. */
   li::marker {
     color: #666;
