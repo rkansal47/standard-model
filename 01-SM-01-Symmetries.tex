@@ -14,16 +14,13 @@ For example, a plain square has a four-fold rotational symmetry: it looks identi
 
 Similarly, in physics, a symmetry is a transformation that leaves the laws of physics unchanged.
 Electromagnetism, for example, is invariant to translations in space or time: electric charges and currents should behave the same in San Diego 5 years ago as in Geneva today.
-Understanding such symmetries, and accounting for them in our mathematical formulation, has been a guiding principle in the development of the SM over the 20th century, and is one in understanding it as well.
+Understanding such symmetries, and accounting for them in our mathematical formulation, has been a guiding principle in the development of the SM over the 20th century, and will be a guiding principle in our understanding of it as well.
 
 In this chapter, we first introduce the framework for describing symmetries, group theory, in Section~\ref{sec:01_symmetries_gt}.
 We then describe Lie algebras for continuous symmetries, and derive representations for the algebra corresponding to 3D rotations, in Section~\ref{sec:01_symmetries_so3}.
-% in Sections~\ref{sec:01_symmetries_continuous} and~\ref{sec:01_symmetries_lie}, respectively.
-% We then derive representations of the Lie algebra corresponding to 3D rotations in Section~\ref{sec:01_symmetries_so3}.
 We conclude in Section~\ref{sec:01_symmetries_poincare} with a discussion of the Lorentz and Poincaré groups, comprising the fundamental symmetries of spacetime, whose irreducible representations are what we call particles.
-% This  lays the foundations for describing \textit{group-equivariant} machine learning algorithms, an exciting area of research in AI that will be a focus of Chapter~\ref{sec:06_ml4jets}.
 
-\section{Group theory}
+\section{Rapid review of group theory}
 \label{sec:01_symmetries_gt}
 
 The mathematical formalism for describing symmetries is called \textit{group theory}.
@@ -50,7 +47,7 @@ To formalize the four-fold rotation symmetry of a square discussed above, we can
 One can check that $\mathbb Z_4$ satisfies all the properties of an abelian group.
 \end{example}
 
-\subsubsection{Group representations}
+\subsection{Group representations}
 
 To make the abstract mathematical structure of the group more concrete, we next consider \textit{representations} of groups.
 
@@ -126,7 +123,7 @@ For our $\mathbb Z_4$ group, we can use the set of four basis vectors $\{\ket{0}
 The regular representation has some fun properties, such as its reducibility into irreps with each irrep appearing as many times in the decomposition as its dimension.
 For us, it will mostly serve as a useful way to think about the \textit{adjoint} representation we will encounter below.
 
-\subsubsection{Continuous symmetries}
+\subsection{Continuous symmetries}
 \label{sec:01_symmetries_continuous}
 
 Symmetries can be \textit{discrete}, as above, as well as continuous.
@@ -240,9 +237,9 @@ Next, we look at the more interesting \SO[3] and \SU[2] groups, where the power 
 % \subsection{Representations of the \texorpdfstring{\so[3] and \su[2]}{so(3) and su(2)} algebras}
 \label{sec:01_symmetries_so3}
 
-\subsubsection{Fundamental and adjoint representations of the \so[3] and \su[2] algebras}
+\subsection{The fundamental and adjoint representations}
 
-We now turn to the derivation of the Lie algebras and representations of the \SO[3] and \SU[2] groups, both because of their importance in physics, and because the derivation introduces a number of useful concepts and definitions for the following sections.
+We now introduce two important representations of Lie algebras, using the \so[3] and \su[2] algebras as examples --- both because of their importance in physics, and as their derivation introduces a number of useful concepts for the following sections.
 \SO[3] and \SU[2] are very closely related: \SU[2] is a \textit{double cover} of \SO[3], which means that every rotation in \SO[3] can be mapped to two elements of \SU[2].
 Importantly, however, they are locally isomorphic near the identity, meaning they have the same Lie algebra.
 
@@ -346,7 +343,7 @@ The significance of these representations, as we will see, is that the force car
 	\label{tab:01_so_su_dimensions}
 \end{table}
 
-\subsubsection{General representations}
+\subsection{General representations}
 
 So far we have discussed two representations of the \so[3] and \su[2] algebras.
 The general representations can be derived in much the same way as finding the eigenstates of the angular momentum operator in QM.
@@ -415,7 +412,9 @@ In this section, we describe the irreps of the Poincaré group, starting first w
 
 % \subsection{Representations of the Lorentz group}
 
-\subsubsection{The (proper, orthochronous) Lorentz group}
+\subsection{The Lorentz group}
+
+% \subsubsection{The proper, orthochronous Lorentz group}
 
 We know from special relativity that ``flat'' spacetime (i.e., without gravity) is described by 4D Minkowski space $\mathbb R^{1, 3}$.
 This is a real vector space equipped with the metric $\eta_{\mu\nu} = \mathrm{diag}(1, -1, -1, -1)$, which defines distances, or inner products $\langle \cdot, \cdot \rangle$, between 4-vectors $x_\mu = (x_0, x_1, x_2, x_3)$ as:
@@ -570,11 +569,10 @@ We will also see that left- and right-handed representations can be equivalently
 The $(\cnicefrac{1}{2}, 0) \oplus (0, \cnicefrac{1}{2})$ representation technically also includes real \textit{Majorana spinors} as a subspace, which can represent neutral fermions.
 The only candidate for these in the SM are right-handed neutrinos and, in fact, the existence of such Majorana neutrinos could potentially explain the curiously small \textit{left-handed} neutrino masses through a process called the \textit{seesaw mechanism}~\cite{Foot:1988aq, Schechter:1980gr}.
 To date, however, no experimental evidence for these, such as neutrinoless double beta decay~\cite{Rodejohann:2011mu} or same-sign charged dilepton decays~\cite{CMS:2018jxx}, has been observed.
-
 On another technical note, the Lorentz group, similar to \SO[3], does not itself admit half-integer, fermionic representations.
 Thus, the true spacetime symmetry group is actually the double cover of \SO[1, 3], $\mathrm{Spin}(1,3)$!
-Indeed, there are many subtleties to the Lorentz group, some of which will be revisited in the context of Lorentz-group equivariant neural networks in Chapter~\ref{sec:06_lgae}.
-To conclude, however, it is worth emphasizing again the remarkable physical insight these seemingly abstract group-theoretic concepts deliver.
+
+To conclude, it is worth emphasizing again the remarkable physical insight these seemingly abstract group-theoretic concepts deliver.
 We are able to classify a fundamental dichotomy of particle physics --- bosons versus fermions, and their completely different behavior --- simply by their representation under the Lorentz (or, rather, the $\mathrm{Spin}(1,3)$) group!
 
 \begin{table}[ht!]
@@ -603,11 +601,12 @@ We are able to classify a fundamental dichotomy of particle physics --- bosons v
 
 % \subsection{Representations of the Poincaré group}
 
-\subsubsection{Lie algebra of the Poincaré group}
+\subsection{The Poincaré group}
 
 The Poincaré group is Lorentz transformations plus spacetime translations.
 Just as angular momentum generates rotations, translations are generated by the momentum operator $P_\mu$.
-$P_\mu$ and the Lorentz generators $J_i$ and $K_i$ together comprise the generators of the Poincaré group, and its algebra is thus the Lorentz algebra (Eq.~\ref{eq:01_lorentz_algebra}) plus the commutation relations with the $P_\mu$s:\footnote{See Appendix~\ref{app:01_poincare_algebra} for a derivation.}
+$P_\mu$ and the Lorentz generators $J_i$ and $K_i$ together comprise the generators of the Poincaré group, and its algebra is thus the Lorentz algebra (Eq.~\ref{eq:01_lorentz_algebra}) plus the commutation relations with the $P_\mu$s:
+% \footnote{See Appendix~\ref{app:01_poincare_algebra} for a derivation.}
 \begin{equation}
 	\label{eq:01_poincare_algebra}
 	\begin{split}
@@ -718,14 +717,5 @@ Instead, let us consider the next-best state $\ket{p'}$, $p'_\mu = (E, 0, 0, E)$
 Its little group turns out to be $\mathrm{E}(2)$, the Euclidean group in 2D, whose representations and implications for massless particles are considerably more involved.
 However, the upshot is that it as well has irreps characterized by spin $j$ (and mass $m = 0$), but with only two \textit{helicity} eigenstates therein.
 
-As it turns out, physically, the mass of particles is based on the strength of their interactions (or lack thereof) with the Higgs boson, the particle at the center of this dissertation.
-We will discuss the mechanisms for these and all fundamental interactions in the next chapter, and see that symmetries are crucial in understanding them.
-
-% \section{Summary}
-
-% In this section, we introduced group theory, the mathematical framework for describing symmetries.
-% We described properties of continuous symmetry groups, their generators
-
-% and their Lie algebras, defining
-
-% and its applications to physics, emphasizing continuous groups and their Lie algebras.
+% As it turns out, physically, the mass of particles is based on the strength of their interactions (or lack thereof) with the Higgs boson
+% We will discuss the mechanisms for these and all fundamental interactions in the next chapter, and see that symmetries are crucial in understanding them.
