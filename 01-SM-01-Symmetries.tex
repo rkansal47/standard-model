@@ -326,20 +326,17 @@ The significance of these representations, as we will see, is that the force car
 
 \begin{table}[ht!]
 	\centering
+	\caption{Dimensions of the fundamental and adjoint representations of the \SO[n] and \SU[n] groups.}
 	\renewcommand{\arraystretch}{1.5}
 	\setlength{\tabcolsep}{10pt}
-	\begin{tabular}{c|c|c}
+	\begin{tabular}{ccc}
+		\toprule
 		\textbf{Group} & \textbf{dim(Fundamental)} & \textbf{dim(Adjoint)} \\
-		\hline
-		% \SO[2] & 1 & 1 \\
-		% \SO[3] & 3 & 3 \\
+		\midrule
 		\SO[n] & $n$ & $n(n-1)/2$ \\
-		% \SU[2] & 2 & 3 \\
-		% \SU[3] & 3 & 8 \\
 		\SU[n] & $n$ & $n^2 - 1$ \\
+		\bottomrule
 	\end{tabular}
-	\vspace{1em}
-	\caption{Dimensions of the fundamental and adjoint representations of the \SO[n] and \SU[n] groups.}
 	\label{tab:01_so_su_dimensions}
 \end{table}
 
@@ -577,25 +574,21 @@ We are able to classify a fundamental dichotomy of particle physics --- bosons v
 
 \begin{table}[ht!]
 	\centering
+	\caption{Representations of the Lorentz group and their associated particle fields in the SM.}
 	\renewcommand{\arraystretch}{1.5}
-	% \setlength{\tabcolsep}{8pt}
-	% wrap table to textwidth
-	% \begin{wraptable}{r}{0.5\textwidth}
 	\resizebox{\textwidth}{!}{
-	\begin{tabular}{c|c|c}
-		% \toprule
+	\begin{tabular}{ccc}
+		\toprule
 		\textbf{Representation $(j_1, j_2)$} & \textbf{Name} & \textbf{Elementary Fields} \\
-		\hline
+		\midrule
 		$(0, 0)$ & Scalar & Higgs boson \\
 		$(\cnicefrac{1}{2}, 0)$ & Left-handed Weyl spinor & --- \\
 		$(0, \cnicefrac{1}{2})$ & Right-handed Weyl spinor & --- \\
 		$(\cnicefrac{1}{2}, 0) \oplus (0, \cnicefrac{1}{2})$ & Dirac spinor & All fermions \\
 		$(\cnicefrac{1}{2}, \cnicefrac{1}{2})$ & Vector & $g, \gamma, W^\pm,$ and $Z$ gauge bosons \\
-		% \bottomrule
+		\bottomrule
 	\end{tabular}
 	}
-	\vspace{1em}
-	\caption{Representations of the Lorentz group and their associated particle fields in the SM.}
 	\label{tab:01_lorentz_representations}
 \end{table}
 
