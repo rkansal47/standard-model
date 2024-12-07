@@ -148,7 +148,7 @@ nav.TOC,nav.TOC a, nav.TOC a:visited{
   transition: 0.3s;
 }
 
-nav.toc span{
+nav.TOC span{
   transition: 0.3s;
 }
 
@@ -207,4 +207,15 @@ nav.TOC.mainToc a:hover{
 
 .header-icon {
   display: block;
+}
+
+
+/* ***************** */
+/* *** Tables *** */
+/* ***************** */
+
+
+table {
+  border-left: none;
+  border-right: none;
 }
