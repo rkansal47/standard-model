@@ -21,7 +21,7 @@ Written in LaTeX and compiled as both a [PDF](https://github.com/rkansal47/stand
 ## Notes for LaTeX to HTML conversion
 
 Conversion was done using [tex4ht](https://tug.org/tex4ht/) and the [make4ht](https://github.com/michal-h21/make4ht) build system.
-h/t especially to Michal for his work on these tools and responsiveness to issues!
+h/t especially to Michal Hoftich for his work on these tools and responsiveness to issues!
 I tried `latexml` as well but got stuck because of [this](https://github.com/brucemiller/LaTeXML/issues/2268) issue, and also `pandoc` but it does not seem as well supported for LaTeX.
 Some notes below for others' (and my own) future reference.
 
@@ -55,9 +55,12 @@ Some notes:
  - Equation splitting has issues by default, see [config](#config).
  - The `newpx...` fonts mess up the math rendering so I import `amssymb` instead (only for the website) and change the font in CSS.
  - `mathbbm` is not supported $\rightarrow$ switched to `dsfont`.
- - `nicefrac` is not well-supported and `cfrac` gives an error $\rightarrow$ switched to `frac` for web.
+ - `nicefrac` is not well-supported $\rightarrow$ switched to `frac` for web.
+ - `cfrac` gives an error inside equations (I think) $\rightarrow$ switched to `frac`.
  - `slashed` is not supported $\rightarrow$ switched to `cancel` for web.
  - `\vec` doesn't look great on web $\rightarrow$ switched to bold vectors.
+ - underscore / overscore commands need to be in curly brackets: `_{\command}`
+ - `\chi'^2` $\rightarrow$ `\chi^{\prime 2}` for MathJax
 
 Mathjax-alone was briefly attempted. Was able to achieve chapter-wise numbering by following this answer https://tex.stackexchange.com/a/714216 but changing section $\rightarrow$ chapter.
 

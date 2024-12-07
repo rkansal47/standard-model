@@ -110,7 +110,7 @@ def edit_toc(soup: BeautifulSoup):
         toc_nav.insert(0, main_toc_span)
 
 
-def slashedsubscript_fix(file: Path):
+def regex_fixes(file: Path):
     """Workaround for bug with MathML code for subscripts / superscripts with \cancel{}"""
     with file.open("r") as f:
         content = f.read()
@@ -122,6 +122,9 @@ def slashedsubscript_fix(file: Path):
         content,
     )
 
+    # Apply regex to move <msub|...> tag outside of <menclose> tag
+    content = re.sub(r"main.html", r"index.html", content)
+
     with file.open("w") as f:
         f.write(content)
 
@@ -132,7 +135,7 @@ if __name__ == "__main__":
 
     # This has to be done first, otherwise the html parsing will be messed up
     for html_file in html_files:
-        slashedsubscript_fix(html_file)
+        regex_fixes(html_file)
 
     # Edit the main content
     edit_file(main_file, edit_main)
