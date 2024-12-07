@@ -278,11 +278,19 @@ span.dotuline, .dotuline-math {text-decoration:underline dotted;}
 .uuline-math{ border-bottom:3px double black; }
 .dashuline-math {border-bottom: 1px dashed black;}
 .dotuline-math {border-bottom: 1px dotted black;}
+tr#TBL-14-1- {border-top:0.1344em solid #000;} 
+tr#TBL-14-1- {border-bottom:0.084em solid #000}
+tr#TBL-14-3- {border-bottom:0.1344em solid #000}
+tr#TBL-21-1- {border-top:0.1344em solid #000;} 
+tr#TBL-21-1- {border-bottom:0.084em solid #000}
+tr#TBL-21-6- {border-bottom:0.1344em solid #000}
 tr#TBL-51-1- {border-top:0.1344em solid #000;} 
 tr#TBL-51-1- {border-bottom:0.084em solid #000}
 tr#TBL-51-5- {border-bottom:0.1344em solid #000}
 #adjustbox-1{border: 0.03334em solid black;padding: 0.25em;}
 #adjustbox-2{border: 0.03334em solid black;padding: 0.25em;}
+tr#TBL-52-1- {border-top:0.1344em solid #000;} 
 tr#TBL-52-1- {border-bottom:0.084em solid #000}
+tr#TBL-52-8- {border-bottom:0.1344em solid #000}
 /* end css.sty */
 
