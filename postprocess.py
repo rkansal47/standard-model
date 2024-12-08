@@ -142,7 +142,7 @@ def regex_fixes(file: Path):
     content = re.sub(r"main.html", r"index.html", content)
 
     # Remove the weird invisible function character
-    content.replace("⁡", "")
+    content = content.replace("⁡", "")
 
     with file.open("w") as f:
         f.write(content)
