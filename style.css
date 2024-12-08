@@ -30,25 +30,6 @@ div.footer{
   font-size:16px;
 }
 
-table.equation {
-  width: 100%;
-  table-layout: fixed;
-}
-
-table.equation tr {
-  width: auto;
-  clear: both;
-}
-
-table.equation td:not(.eq-no) {
-  float: left;
-  display: table-column;
-  width: 95%;
-  overflow-x: auto;
-  overflow-y: clip;
-  white-space: nowrap;
-}
-
 /* ************** */
 /* *** Layout *** */
 /* ************** */
@@ -261,4 +242,27 @@ nav.crosslinks-top a, nav.crosslinks-bottom a {
 
 dt.enumerate-enumitem {
   width: 60px;
+}
+
+/* ***************** */
+/* ***** Equations ***** */
+/* ***************** */
+
+table.equation {
+  width: 100%;
+  table-layout: fixed;
+}
+
+table.equation tr {
+  width: auto;
+  clear: both;
+}
+
+table.equation td:not(.eq-no) {
+  float: left;
+  display: table-column;
+  width: 95%;
+  overflow-x: auto;
+  overflow-y: clip;
+  white-space: nowrap;
 }
