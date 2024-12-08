@@ -23,7 +23,7 @@ headerlinks = [
     {
         "href": "https://www.raghavkansal.com",
         "src": "assets/icon.png",
-        "alt": "Download PDF",
+        "alt": "My website",
         "style": "width: 26px; height: 26px;",
         "astyle": "top: 13px; right: 12px;",
         "target": "_blank",
@@ -135,21 +135,13 @@ def edit_toc(soup: BeautifulSoup):
 
 
 def regex_fixes(file: Path):
-    """Workaround for bug with MathML code for subscripts / superscripts with \cancel{}"""
     with file.open("r") as f:
         content = f.read()
 
     # Apply regex to move <msub|...> tag outside of <menclose> tag
-    content = re.sub(
-        r'<menclose notation="updiagonalstrike"><(msub|msup|msubsup)>',
-        r'<\1><menclose notation="updiagonalstrike">',
-        content,
-    )
-
-    # Apply regex to move <msub|...> tag outside of <menclose> tag
     content = re.sub(r"main.html", r"index.html", content)
 
-    # Remove the invisible function character
+    # Remove the weird invisible function character
     content.replace("⁡", "")
 
     with file.open("w") as f:
