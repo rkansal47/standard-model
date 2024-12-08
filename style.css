@@ -7,7 +7,7 @@
 /* Font size tricks from https://www.madebymike.com.au/writing/precise-control-responsive-typography/
  * The font size will be adjusted to the screen size.
  * */
-:root{
+ :root{
   font-size: 20px;
   font-family: 'Palatino';
   line-height: 2;
@@ -28,6 +28,25 @@ div.footer{
   text-align: center;
   color: #6c757d;
   font-size:16px;
+}
+
+table.equation {
+  width: 100%;
+  table-layout: fixed;
+}
+
+table.equation tr {
+  width: auto;
+  clear: both;
+}
+
+table.equation td:not(.eq-no) {
+  float: left;
+  display: table-column;
+  width: 95%;
+  overflow-x: auto;
+  overflow-y: clip;
+  white-space: nowrap;
 }
 
 /* ************** */
@@ -61,6 +80,26 @@ main{
     grid-row:1;
     min-height:100vh;
   }
+
+  .smallscreenhide {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 50rem) {
+  body{
+    display: grid;
+  }
+  main.main-content {
+    grid-row: 1;
+  }
+  nav.TOC{
+    grid-row: 2;
+  }
+
+  .smallscreenhide {
+    visibility: visible;
+  }
 }
 
 div.footnotes{
@@ -69,24 +108,6 @@ div.footnotes{
   border-top: solid 1px black;
   border-bottom: solid 1px black;
   font-size: 20px
-}
-
-/* hide the top crosslinks */
-nav.crosslinks-top{
-  display: none;
-}
-
-/* add vertical space above the bottom crosslinks */
-nav.crosslinks-bottom{
-  margin-top: 2rem;
-  border-top: solid 3px #e9ecef;
-  padding-top: 1rem;
-  text-align: center;
-}
-
-nav.crosslinks-bottom a{
-  margin-right: 10rem;
-  font-weight: bold;
 }
 
 div.sectionTOCS {
@@ -195,6 +216,31 @@ nav.TOC.mainToc a:hover{
   }
 }
 
+
+/* ***************************** */
+/* ***** Header and footer ***** */
+/* ***************************** */
+
+
+nav.crosslinks-top {
+  top: -2px;
+  position: absolute;
+}
+
+/* add vertical space above the bottom crosslinks */
+nav.crosslinks-bottom{
+  margin-top: 5rem;
+  border-top: solid 2px #e9ecef;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+nav.crosslinks-top a, nav.crosslinks-bottom a {
+  margin-right: 1rem;
+  font-weight: bold;
+  font-size: 35px;
+}
+
 .header-link {
   position: absolute;
   display: inline-block;
@@ -209,13 +255,10 @@ nav.TOC.mainToc a:hover{
   display: block;
 }
 
-
 /* ***************** */
-/* *** Tables *** */
+/* *** Lists *** */
 /* ***************** */
 
-
-table {
-  border-left: none;
-  border-right: none;
+dt.enumerate-enumitem {
+  width: 60px;
 }
