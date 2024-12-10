@@ -58,9 +58,11 @@ Some notes:
  - `nicefrac` is not well-supported $\rightarrow$ switched to `frac` for web.
  - `cfrac` gives an error inside equations (I think) $\rightarrow$ switched to `frac`.
  - `slashed` is not supported $\rightarrow$ switched to `cancel` for web.
+   - The HTML output for subscripts / superscripts with `cancel` has a bug which I [fix manually with regex](https://github.com/rkansal47/standard-model/blob/e4bf49bfbf221b38e954434a07909cb3decf8dc6/build.mk4#L2).
  - `\vec` doesn't look great on web $\rightarrow$ switched to bold vectors.
- - underscore / overscore commands need to be in curly brackets: `_{\command}`
+ - commands as subscripts / superscripts need to be in curly brackets: `_{\command}`
  - `\chi'^2` $\rightarrow$ `\chi^{\prime 2}` for MathJax
+  
 
 Mathjax-alone was briefly attempted. Was able to achieve chapter-wise numbering by following this answer https://tex.stackexchange.com/a/714216 but changing section $\rightarrow$ chapter.
 
@@ -76,7 +78,7 @@ Mathjax-alone was briefly attempted. Was able to achieve chapter-wise numbering 
    - This also required his `build.mk4` and `filters` files
 - Added favicon in the header.
 - Custom CSS stylesheet, again based on Michal's.
-- Tried doing fancier customization but in the end found it easier to "postprocess" with Python
+- Tried doing fancier customization in the config itself but in the end found it easier to "postprocess" the HTML files in Python.
 
 
 ### Github Action
