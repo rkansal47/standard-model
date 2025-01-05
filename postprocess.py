@@ -3,10 +3,48 @@ from pathlib import Path
 import re
 
 
-def edit_file(file_path: Path, edit_function: callable):
+headerlinks = [
+    {
+        "href": "https://github.com/rkansal47/standard-model",
+        "src": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+        "alt": "GitHub Repository",
+        "style": "width: 32px; height: 32px;",
+        "astyle": "top: 10px; right: 44px;",
+        "target": "_blank",
+    },
+    {
+        "href": "https://github.com/rkansal47/standard-model/blob/gh-pages/standard-model.pdf?raw=true",
+        "src": "assets/download.png",
+        "alt": "Download PDF",
+        "style": "width: 25px; height: 25px;",
+        "astyle": "top: 13px; right: 85px;",
+        "target": "_blank",
+    },
+    {
+        "href": "https://www.raghavkansal.com",
+        "src": "assets/icon.png",
+        "alt": "My website",
+        "style": "width: 26px; height: 26px;",
+        "astyle": "top: 13px; right: 12px;",
+        "target": "_blank",
+    },
+    {
+        "href": "#mainToc",
+        "src": "assets/sidebar.png",
+        "alt": "Table of Contents",
+        "style": "width: 32px; height: 32px;",
+        "astyle": "top: 11px; left: 150px;",
+        "astylemain": "top: 11px; left: 14px;",  # closer to edge for main.html
+        "class": "smallscreenhide",
+        "target": "_self",  # same tab
+    },
+]
+
+
+def edit_file(file_path: Path, edit_function: callable, **kwargs):
     with file_path.open("r") as file:
         soup = BeautifulSoup(file, "html.parser")
-        edit_function(soup)
+        edit_function(soup, **kwargs)
 
     with file_path.open("w") as file:
         file.write(str(soup))
@@ -31,52 +69,38 @@ def edit_main(soup: BeautifulSoup):
     next_nav = soup.new_tag("nav")
     next_nav["class"] = "crosslinks-bottom"
     next_nav.append(soup.new_tag("a", href="contentsname.html"))
-    next_nav.a.string = "Next"
+    next_nav.a.string = "⭢"
     main_content_main.insert(2, next_nav)
 
 
-def edit_header(soup: BeautifulSoup):
+def edit_header(soup: BeautifulSoup, file_name: str):
     main_content_main = soup.find("main", {"class": "main-content"})
     if not main_content_main:
         return
 
-    header_link = soup.new_tag(
-        "a",
-        href="https://github.com/rkansal47/standard-model",
-        **{
-            "class": "header-link",
-            "target": "_blank",
-            "rel": "noopener noreferrer",
-            "style": "top: 10px; right: 12px;",
-        },
-    )
-    header_img = soup.new_tag(
-        "img",
-        src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-        alt="GitHub Repository",
-        **{"class": "header-icon", "style": "width: 32px; height: 32px;"},
-    )
-    header_link.append(header_img)
-    main_content_main.insert(0, header_link)
-
-    pdf_link = soup.new_tag(
-        "a",
-        href="https://github.com/rkansal47/standard-model/blob/gh-pages/standard-model.pdf?raw=true",
-        **{
-            "class": "header-link",
-            "target": "_blank",
-            "rel": "noopener noreferrer",
-            "style": "top: 12px; right: 54px;",
-        },
-    )
-    pdf_img = soup.new_tag(
-        "img",
-        src="assets/download.png",
-        alt="Download PDF",
-        **{"class": "header-icon", "style": "width: 25px; height: 25px;"},
-    )
-    pdf_link.append(pdf_img)
-    main_content_main.insert(1, pdf_link)
+    for i, link in enumerate(headerlinks):
+        header_link = soup.new_tag(
+            "a",
+            href=link["href"],
+            **{
+                "class": "header-link " + link.get("class", ""),
+                "target": link["target"],
+                "rel": "noopener noreferrer",
+                "style": (
+                    link["astyle"]
+                    if not file_name == "main.html"
+                    else link.get("astylemain", link["astyle"])
+                ),
+            },
+        )
+        header_img = soup.new_tag(
+            "img",
+            src=link["src"],
+            alt=link["alt"],
+            **{"class": "header-icon", "style": link["style"]},
+        )
+        header_link.append(header_img)
+        main_content_main.insert(0, header_link)
 
 
 def edit_footnotes(soup: BeautifulSoup):
@@ -100,7 +124,7 @@ def edit_toc(soup: BeautifulSoup):
     """Add logo to the Table of Contents"""
     toc_nav = soup.find("nav", {"class": "TOC"})
     if toc_nav:
-        main_toc_span = soup.new_tag("span", **{"class": "mainToc"})
+        main_toc_span = soup.new_tag("span", **{"class": "mainToc", "id": "mainToc"})
         main_toc_link = soup.new_tag("a", href="index.html")
         main_toc_img = soup.new_tag(
             "img", src="assets/logo.png", alt="Symmetries, QFT, & The Standard Model", width="100%"
@@ -111,27 +135,24 @@ def edit_toc(soup: BeautifulSoup):
 
 
 def regex_fixes(file: Path):
-    """Workaround for bug with MathML code for subscripts / superscripts with \cancel{}"""
     with file.open("r") as f:
         content = f.read()
 
     # Apply regex to move <msub|...> tag outside of <menclose> tag
-    content = re.sub(
-        r'<menclose notation="updiagonalstrike"><(msub|msup|msubsup)>',
-        r'<\1><menclose notation="updiagonalstrike">',
-        content,
-    )
-
-    # Apply regex to move <msub|...> tag outside of <menclose> tag
     content = re.sub(r"main.html", r"index.html", content)
+
+    # Remove the weird invisible function character
+    content = content.replace("⁡", "")
 
     with file.open("w") as f:
         f.write(content)
 
 
 if __name__ == "__main__":
-    html_files = list(Path(".").glob("*.html"))
-    main_file = Path("main.html")
+    outdir = Path("out")
+
+    html_files = list(outdir.glob("*.html"))
+    main_file = outdir / "main.html"
 
     # This has to be done first, otherwise the html parsing will be messed up
     for html_file in html_files:
@@ -142,16 +163,10 @@ if __name__ == "__main__":
 
     # Edit footnotes for all HTML files in the directory
     for html_file in html_files:
-        edit_file(html_file, edit_header)
+        file_name = html_file.name
+        edit_file(html_file, edit_header, file_name=file_name)
         edit_file(html_file, edit_footnotes)
         edit_file(html_file, edit_toc)
 
     # Rename main.html to index.html
-    main_file.rename("index.html")
-
-    # Copy main.pdf to standard-model.pdf
-    main_pdf = Path("main.pdf")
-    notes_pdf = Path("standard-model.pdf")
-    notes_pdf.write_bytes(main_pdf.read_bytes())
-
-    # edit_file(Path("Electroweakinteractions.html"), edit_footnotes)
+    main_file.rename(outdir / "index.html")
