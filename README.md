@@ -62,7 +62,7 @@ Some notes:
  - `\vec` doesn't look great on web $\rightarrow$ switched to bold vectors.
  - commands as subscripts / superscripts need to be in curly brackets: `_{\command}`
  - `\chi'^2` $\rightarrow$ `\chi^{\prime 2}` for MathJax
-  
+
 
 Mathjax-alone was briefly attempted. Was able to achieve chapter-wise numbering by following this answer https://tex.stackexchange.com/a/714216 but changing section $\rightarrow$ chapter.
 
